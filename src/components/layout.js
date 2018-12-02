@@ -6,43 +6,78 @@ import { StaticQuery, graphql } from 'gatsby'
 import Header from './header'
 import './layout.css'
 
-const Layout = ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
+class Layout extends React.Component {
+  state = {
+    scrolledEnough: false,
+  }
+
+  componentDidMount() {
+    console.log('mounted')
+    window.addEventListener('scroll', this.handleScrollToElement)
+  }
+
+  componentWillUnmount() {
+    console.log('UNmounted')
+    window.removeEventListener('scroll', this.handleScrollToElement)
+  }
+
+  handleScrollToElement = event => {
+    console.log('Fired', event.currentTarget.scrollY)
+    if (!this.state.scrolledEnough && event.currentTarget.scrollY > 50) {
+      this.setState({ scrolledEnough: true })
+    }
+    if (this.state.scrolledEnough && event.currentTarget.scrollY < 50) {
+      this.setState({ scrolledEnough: false })
+    }
+  }
+
+  render() {
+    const { children } = this.props
+    return (
+      <StaticQuery
+        query={graphql`
+          query SiteTitleQuery {
+            site {
+              siteMetadata {
+                title
+              }
+            }
           }
-        }
-      }
-    `}
-    render={data => (
-      <>
-        <Helmet
-          title={data.site.siteMetadata.title}
-          meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
-          ]}
-        >
-          <html lang="en" />
-        </Helmet>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <div
-          style={{
-            margin: '0 auto',
-            maxWidth: 960,
-            padding: '0px 1.0875rem 1.45rem',
-            paddingTop: 0,
-          }}
-        >
-          {children}
-        </div>
-      </>
-    )}
-  />
-)
+        `}
+        render={data => (
+          <div>
+            <div style={{ backgroundColor: 'blue', height: 50 }} />
+            <div style={{ marginTop: 50 }}>
+              <Helmet
+                title={data.site.siteMetadata.title}
+                meta={[
+                  { name: 'description', content: 'Sample' },
+                  { name: 'keywords', content: 'sample, something' },
+                ]}
+              >
+                <html lang="en" />
+              </Helmet>
+              <Header
+                scrolledEnough={this.state.scrolledEnough}
+                siteTitle={data.site.siteMetadata.title}
+              />
+              <div
+                style={{
+                  margin: '0 auto',
+                  maxWidth: 960,
+                  padding: '0px 1.0875rem 1.45rem',
+                  paddingTop: 0,
+                }}
+              >
+                {children}
+              </div>
+            </div>
+          </div>
+        )}
+      />
+    )
+  }
+}
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
