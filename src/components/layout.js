@@ -45,9 +45,8 @@ class Layout extends React.Component {
           }
         `}
         render={data => (
-          <div>
-            <div style={{ backgroundColor: 'blue', height: 50 }} />
-            <div style={{ marginTop: 50 }}>
+          <div style={{backgroundColor: '#8a8b8d'}}>
+            <div>
               <Helmet
                 title={data.site.siteMetadata.title}
                 meta={[

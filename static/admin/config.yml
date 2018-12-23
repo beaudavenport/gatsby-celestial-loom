@@ -15,3 +15,17 @@ collections:
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }
+
+  - name: 'events'
+    label: 'Events'
+    folder: events
+    create: true
+    fields:
+      - { name: 'path', label: 'Path' }
+      - { name: 'eventDate', label: 'Event Date', widget: 'date' }
+      - { name: 'eventImage', label: 'Image', widget: 'image' }
+      - { name: 'title', label: 'Title' }
+      - { name: 'location', label: 'Location' }
+      - { name: 'eventPrice', label: 'Price' }
+      - { name: 'publishDate', label: 'Publish Date', widget: 'date' }
+      - { name: 'body', label: 'Body', widget: 'markdown' }

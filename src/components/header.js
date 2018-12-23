@@ -1,15 +1,18 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link } from 'gatsby'
-import AppBar from '@material-ui/core/AppBar'
-import { withStyles } from '@material-ui/core/styles'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
+import AppBar from '@material-ui/core/AppBar';
+import { withStyles } from '@material-ui/core/styles';
 
 const styles = {
-  root: {},
-}
+  root: {
+    height: '100px',
+    backgroundColor: '#444349',
+  },
+};
 
 const Header = ({ siteTitle, classes, scrolledEnough }) => (
-  <AppBar className={scrolledEnough ? null : classes.root} position={'sticky'}>
+  <AppBar className={classes.root} position="sticky">
     <h3 style={{ margin: 0 }}>
       <Link
         to="/"
@@ -22,14 +25,14 @@ const Header = ({ siteTitle, classes, scrolledEnough }) => (
       </Link>
     </h3>
   </AppBar>
-)
+);
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
-}
+};
 
 Header.defaultProps = {
   siteTitle: '',
-}
+};
 
-export default withStyles(styles)(Header)
+export default withStyles(styles)(Header);
