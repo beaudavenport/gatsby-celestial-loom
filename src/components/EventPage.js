@@ -20,7 +20,7 @@ const styles = {
   },
 };
 
-function BlogEntry(props) {
+function EventPage(props) {
   const {
     classes, title, image, eventDate, price, html,
   } = props;
@@ -51,7 +51,7 @@ function BlogEntry(props) {
   );
 }
 
-BlogEntry.propTypes = {
+EventPage.propTypes = {
   classes: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
   title: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
@@ -60,4 +60,4 @@ BlogEntry.propTypes = {
   html: PropTypes.string.isRequired,
 };
 
-export default withStyles(styles)(BlogEntry);
+export default withStyles(styles)(EventPage);
