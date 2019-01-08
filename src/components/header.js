@@ -2,18 +2,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import AppBar from '@material-ui/core/AppBar';
+import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 
-const styles = {
+const styles = () => ({
   root: {
-    height: '100px',
+    padding: '10px',
     backgroundColor: '#444349',
   },
-};
+  typography: {
+    fontFamily: 'Berkshire Swash',
+    fontStyle: 'italic',
+  },
+});
 
 const Header = ({ siteTitle, classes, scrolledEnough }) => (
   <AppBar className={classes.root} position="sticky">
-    <h3 style={{ margin: 0 }}>
+    <Typography component="h1" variant="h5" className={classes.typography}>
       <Link
         to="/"
         style={{
@@ -23,7 +28,7 @@ const Header = ({ siteTitle, classes, scrolledEnough }) => (
       >
         {siteTitle}
       </Link>
-    </h3>
+    </Typography>
   </AppBar>
 );
 
