@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 
 import EventPage from '../components/EventPage';
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 
 function EventTemplate({
   data, // this prop will be injected by the GraphQL query below.

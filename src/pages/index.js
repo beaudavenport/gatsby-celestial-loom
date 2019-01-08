@@ -15,7 +15,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Hidden from '@material-ui/core/Hidden';
 import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 import Stars from '../images/astrology-sunscreen.jpg';
 import Nikki from '../images/nikki.jpg';
 
