@@ -3,6 +3,7 @@ module.exports = {
     title: 'The Celestial Loom',
   },
   plugins: [
+    'gatsby-plugin-sass',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
