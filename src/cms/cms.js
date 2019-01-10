@@ -1,8 +1,7 @@
 import React from 'react';
 import CMS from 'netlify-cms';
-import './styles.css';
 import EventPage from '../components/EventPage';
-import MUICSSInjector from './MUICSSInjector';
+import '../components/layout.scss';
 
 function EventPagePreview({ entry, getAsset }) {
   const eventImage = entry.getIn(['data', 'eventImage']);
@@ -15,9 +14,7 @@ function EventPagePreview({ entry, getAsset }) {
   };
 
   return (
-    <MUICSSInjector>
-      <EventPage {...data} />
-    </MUICSSInjector>
+    <EventPage {...data} />
   );
 }
 
