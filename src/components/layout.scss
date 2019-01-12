@@ -3,6 +3,11 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 @import '~react-md/src/scss/react-md';
+@import '~normalize.css';
 // @import 'theme.scss';
 
 @include react-md-everything;
+
+html {
+ background-color: rgb(210, 210, 210);
+}
