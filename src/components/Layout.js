@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql, Link } from 'gatsby';
 import {
-  NavigationDrawer, FontIcon, Media, Paper,
+  NavigationDrawer, FontIcon, Media, Paper, ListItem, Drawer,
 } from 'react-md';
 import Nikki from '../images/nikki.jpg';
 
@@ -31,9 +31,17 @@ const DrawerHeader = () => (
   </div>
 );
 
-const Layout = ({ children }) => (
-  <StaticQuery
-    query={graphql`
+const Layout = ({ children }) => {
+  const { mobile, tablet } = Drawer.getCurrentMedia(Drawer.defaultProps);
+  let defaultMedia = 'desktop';
+  if (mobile) {
+    defaultMedia = 'mobile';
+  } else if (tablet) {
+    defaultMedia = 'tablet';
+  }
+  return (
+    <StaticQuery
+      query={graphql`
           query SiteTitleQuery {
             site {
               siteMetadata {
@@ -42,42 +50,51 @@ const Layout = ({ children }) => (
             }
           }
         `}
-    render={data => (
-      <NavigationDrawer
-        desktopDrawerType={NavigationDrawer.DrawerTypes.FULL_HEIGHT}
-        tabletDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY}
-        mobileDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY}
-        drawerHeader={<DrawerHeader />}
-        position="left"
-        defaultVisible={false}
-        temporaryIcon={(<FontIcon iconClassName="material-icons">menu</FontIcon>)}
-        drawerStyle={{ backgroundColor: 'white' }}
-        toolbarTitle="The Celestial Loom"
-        toolbarTitleStyle={{ fontFamily: 'Berkshire Swash', fontStyle: 'italic' }}
-        toolbarSingleColor
-        toolbarStyle={{ backgroundColor: 'rgb(47, 47, 47)' }}
-        navItems={navItems.map(({ divider, subheader, ...route }) => {
-          if (divider || subheader) {
-            return { divider, subheader, ...route };
-          }
+      render={data => (
+        <NavigationDrawer
+          desktopDrawerType={NavigationDrawer.DrawerTypes.FULL_HEIGHT}
+          tabletDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY}
+          mobileDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY}
+          drawerHeader={<DrawerHeader />}
+          position="left"
+          defaultVisible={false}
+          temporaryIcon={(<FontIcon iconClassName="material-icons">menu</FontIcon>)}
+          drawerStyle={{ backgroundColor: 'white' }}
+          toolbarTitle="The Celestial Loom"
+          toolbarTitleStyle={{ fontFamily: 'Berkshire Swash', fontStyle: 'italic' }}
+          toolbarSingleColor
+          toolbarStyle={{ backgroundColor: 'rgb(47, 47, 47)' }}
+          defaultMedia={defaultMedia}
+          navItems={navItems.map(({ divider, subheader, ...route }) => {
+            if (divider || subheader) {
+              return { divider, subheader, ...route };
+            }
 
-          return <Link {...route} />;
-        })}
-      >
-        <Helmet
-          title={data.site.siteMetadata.title}
-          meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
-          ]}
+            return (
+              <ListItem
+                component={Link}
+                to={route.to}
+              >
+                {route.children}
+              </ListItem>
+            );
+          })}
         >
-          <html lang="en" />
-        </Helmet>
-        {children}
-      </NavigationDrawer>
-    )}
-  />
-);
+          <Helmet
+            title={data.site.siteMetadata.title}
+            meta={[
+              { name: 'description', content: 'Sample' },
+              { name: 'keywords', content: 'sample, something' },
+            ]}
+          >
+            <html lang="en" />
+          </Helmet>
+          {children}
+        </NavigationDrawer>
+      )}
+    />
+  );
+};
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
