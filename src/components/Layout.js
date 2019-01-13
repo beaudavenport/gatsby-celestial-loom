@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql, Link } from 'gatsby';
 import {
-  NavigationDrawer, FontIcon, Media, Paper, ListItem, Drawer,
+  NavigationDrawer, FontIcon, Media, CardText, ListItem, Drawer, Card,
 } from 'react-md';
 import Nikki from '../images/nikki.jpg';
 
@@ -16,19 +16,22 @@ const navItems = [
 ];
 
 const DrawerHeader = () => (
-  <div style={{ backgroundColor: 'rgb(47, 47, 47)', paddingTop: '50px', borderRight: '1px solid white' }}>
+  <Card style={{
+    width: '80%', margin: '0 auto',
+  }}
+  >
     <div style={{ width: '60%', margin: '0 auto', padding: '20px' }}>
       <Media aspectRatio="1-1" style={{ borderRadius: '50%', border: '2px solid white' }}>
         <img src={Nikki} alt="at da club" />
       </Media>
     </div>
-    <Paper style={{ padding: '10px' }}>
-      <p style={{ color: 'white' }}>
+    <CardText>
+      <p style={{ fontSize: 'smaller', color: 'black', textAlign: 'center' }}>
           Nikki Davenport, astrological consultant, has been a professional
           astrologer for over 35 years.
       </p>
-    </Paper>
-  </div>
+    </CardText>
+  </Card>
 );
 
 const Layout = ({ children }) => {
@@ -52,14 +55,15 @@ const Layout = ({ children }) => {
         `}
       render={data => (
         <NavigationDrawer
-          desktopDrawerType={NavigationDrawer.DrawerTypes.FULL_HEIGHT}
+          desktopDrawerType={NavigationDrawer.DrawerTypes.CLIPPED}
           tabletDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY}
           mobileDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY}
-          drawerHeader={<DrawerHeader />}
           position="left"
+          drawerStyle={{ backgroundColor: 'rgb(47, 47, 47)' }}
           defaultVisible={false}
           temporaryIcon={(<FontIcon iconClassName="material-icons">menu</FontIcon>)}
-          drawerStyle={{ backgroundColor: 'white' }}
+          navStyle={{ height: '30%', backgroundColor: 'rgb(47, 47, 47)' }}
+          drawerChildren={<DrawerHeader />}
           toolbarTitle="The Celestial Loom"
           toolbarTitleStyle={{ fontFamily: 'Berkshire Swash', fontStyle: 'italic' }}
           toolbarSingleColor
@@ -72,6 +76,7 @@ const Layout = ({ children }) => {
 
             return (
               <ListItem
+                tileStyle={{ color: 'white' }}
                 component={Link}
                 to={route.to}
               >

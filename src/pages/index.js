@@ -1,5 +1,7 @@
 import React from 'react';
-import { Paper, Grid, Cell } from 'react-md';
+import {
+  Paper, Grid, Cell, Button,
+} from 'react-md';
 import Layout from '../components/Layout';
 import Stars from '../images/astrology-sunscreen.jpg';
 
@@ -13,7 +15,32 @@ const IndexPage = () => (
       padding: '50px',
     }}
     >
-      <h1 style={{ color: 'white', fontFamily: 'Berkshire Swash' }}>Welcome to the Celestial Loom, where wisdom and service interweave!</h1>
+      <Grid>
+        <Cell size={6}>
+          <p style={{
+            fontStyle: 'italic', fontSize: 'xx-large', color: 'white', fontFamily: 'Berkshire Swash',
+          }}
+          >
+The Celestial Loom
+          </p>
+          <p style={{
+            fontStyle: 'italic', fontSize: 'x-large', color: 'white', fontFamily: 'Berkshire Swash',
+          }}
+          >
+Astrological Services
+          </p>
+        </Cell>
+        <Cell size={6}>
+          <p style={{
+            fontStyle: 'italic', fontSize: 'large', color: 'white', fontFamily: 'Berkshire Swash',
+          }}
+          >
+            Nikki Davenport, Licensed Astrologer,
+            brings the wisdom of the zodiac to your door (and inbox!)
+          </p>
+          <Button style={{ fontSize: 'bigger', color: 'white', fontFamily: 'Berkshire Swash' }}>Get My Chart</Button>
+        </Cell>
+      </Grid>
     </Paper>
     <Grid>
       <h1>Home</h1>
