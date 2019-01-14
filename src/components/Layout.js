@@ -10,28 +10,28 @@ import Nikki from '../images/nikki.jpg';
 import './layout.scss';
 
 const navItems = [
-  { to: '/posts', children: 'Posts' },
-  { to: '/events', children: 'Events' },
-  { to: '/services', children: 'Services' },
+  { to: '/posts', children: (<p style={{ color: 'white' }}>Posts</p>) },
+  { to: '/events', children: (<p style={{ color: 'white' }}>Events</p>) },
+  { to: '/services', children: (<p style={{ color: 'white' }}>Services</p>) },
 ];
 
 const DrawerHeader = () => (
-  <Card style={{
+  <div style={{
     width: '80%', margin: '0 auto',
   }}
   >
     <div style={{ width: '60%', margin: '0 auto', padding: '20px' }}>
-      <Media aspectRatio="1-1" style={{ borderRadius: '50%', border: '2px solid white' }}>
+      <Media aspectRatio="1-1" style={{ borderRadius: '50%', border: '2px solid #ff8013' }}>
         <img src={Nikki} alt="at da club" />
       </Media>
     </div>
     <CardText>
-      <p style={{ fontSize: 'smaller', color: 'black', textAlign: 'center' }}>
+      <p style={{ fontSize: 'smaller', color: '#ff8013', textAlign: 'center' }}>
           Nikki Davenport, astrological consultant, has been a professional
           astrologer for over 35 years.
       </p>
     </CardText>
-  </Card>
+  </div>
 );
 
 const Layout = ({ children }) => {
@@ -76,12 +76,12 @@ const Layout = ({ children }) => {
 
             return (
               <ListItem
-                tileStyle={{ color: 'white' }}
+                tileStyle={{ color: 'white', textAlign: 'left' }}
+                primaryText={route.children}
+                style={{ padding: '0px 10px', color: 'white' }}
                 component={Link}
                 to={route.to}
-              >
-                {route.children}
-              </ListItem>
+              />
             );
           })}
         >

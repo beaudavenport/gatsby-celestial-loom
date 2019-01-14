@@ -6,6 +6,9 @@
 @import '~normalize.css';
 // @import 'theme.scss';
 
+$md-primary-color: $md-orange-a-700;
+$md-font-family: 'Merriweather';
+
 @include react-md-everything;
 
 html {
