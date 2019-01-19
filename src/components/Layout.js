@@ -95,6 +95,10 @@ const Layout = ({ children }) => {
             <html lang="en" />
           </Helmet>
           {children}
+          <div>
+            <hr />
+            <h6 style={{ textAlign: 'center' }}>Copyright 2019, The Celestial Loom. Cover photography by Photo by Anastasia Dulgier on Unsplash. Built with Gatsby and Netflify CMS.</h6>
+          </div>
         </NavigationDrawer>
       )}
     />

@@ -2,19 +2,20 @@ import React from 'react';
 import {
   Paper, Grid, Cell, Button, Card, CardTitle, CardText, MediaOverlay,
 } from 'react-md';
+import { Link } from 'gatsby';
 import Layout from '../components/Layout';
-import Stars from '../images/astrology-sunscreen.jpg';
+import Astroglobe from '../images/astroglobe.jpg';
 import Preview from '../images/2019-Cosmic-Preview.jpg';
 import Pleiades from '../images/pleiades.jpg';
 
 const IndexPage = () => (
   <Layout>
     <Paper style={{
-      background: `url(${Stars})`,
+      background: `url(${Astroglobe})`,
       backgroundPosition: 'center',
       backgroundSize: 'cover',
       width: '100%',
-      padding: '50px',
+      padding: '100px 50px 0 50px',
     }}
     >
       <Grid>
@@ -34,7 +35,7 @@ Astrological Services
         </Cell>
         <Cell size={6}>
           <p style={{
-            fontStyle: 'italic', fontSize: 'large', color: 'white', fontFamily: 'Berkshire Swash',
+            fontStyle: 'italic', textAlign: 'right', fontSize: 'large', color: 'white', fontFamily: 'Merriweather',
           }}
           >
             Nikki Davenport, Licensed Astrologer,
@@ -48,20 +49,25 @@ Astrological Services
     </Paper>
     <Grid>
       <Cell>
-        <h1 style={{ fontStyle: 'italic' }}>Latest Post</h1>
+        <h1 style={{ fontStyle: 'italic' }}>Latest Article</h1>
       </Cell>
       <Cell size={12}>
-        <Card style={{ backgroundColor: 'white' }}>
-          <div style={{ position: 'relative' }}>
-            <img style={{ height: '300px', width: '100%', objectFit: 'cover' }} src={Preview} alt="Preview of feature post" />
-            <MediaOverlay style={{ marginBottom: '5px' }}>
-              <CardTitle title="The Celestial Loom Year 2019 Cosmic Preview" subtitle="12/24/18" />
-            </MediaOverlay>
-          </div>
-          <CardText>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam suscipit lacus nec velit bibendum, fringilla venenatis tortor pulvinar. Nam rhoncus molestie luctus. Duis ac ultricies velit. Aliquam tempor leo ut mattis consectetur. Mauris id ex vel dolor faucibus vehicula. Praesent volutpat, orci id maximus consectetur, neque magna dignissim urna, hendrerit consectetur diam lectus a lorem. Maecenas ultricies feugiat dui in dictum. Donec mattis tincidunt ligula, eget pretium purus blandit vitae. Nam mattis vel magna volutpat luctus. Etiam blandit dui in tellus lacinia, quis congue urna lacinia. Nullam lectus nibh, rhoncus non volutpat ac, auctor in turpis. Nullam tellus elit, venenatis.</p>
-          </CardText>
-        </Card>
+        <Link to="/posts/test1">
+          <Card style={{ backgroundColor: 'white' }}>
+            <div style={{ position: 'relative' }}>
+              <img style={{ height: '200px', width: '100%', objectFit: 'cover' }} src={Preview} alt="Preview of feature post" />
+              <MediaOverlay style={{ marginBottom: '5px' }}>
+                <CardTitle title="The Celestial Loom Year 2019 Cosmic Preview" subtitle="12/24/18" />
+              </MediaOverlay>
+            </div>
+            <CardText>
+              <p style={{ textDecoration: 'none' }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam suscipit lacus nec velit bibendum, fringilla venenatis tortor pulvinar. Nam rhoncus molestie luctus. Duis ac ultricies velit. Aliquam tempor leo ut mattis consectetur. Mauris id ex vel dolor faucibus vehicula. Praesent volutpat, orci id maximus consectetur, neque magna dignissim urna, hendrerit consectetur diam lectus a lorem. Maecenas ultricies feugiat dui in dictum. Donec mattis tincidunt ligula, eget pretium purus blandit vitae. Nam mattis vel magna volutpat luctus. Etiam blandit dui in tellus lacinia, quis congue urna lacinia. Nullam lectus nibh, rhoncus non volutpat ac, auctor in turpis. Nullam tellus elit, venenatis.</p>
+            </CardText>
+          </Card>
+        </Link>
+      </Cell>
+      <Cell>
+        <h1 style={{ fontStyle: 'italic' }}>Earlier Articles</h1>
       </Cell>
       <Cell size={12}>
         <Card style={{ backgroundColor: 'white' }}>
