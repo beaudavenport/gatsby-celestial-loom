@@ -8,6 +8,8 @@
 
 $md-primary-color: $md-orange-a-700;
 $md-font-family: 'Merriweather';
+$md-drawer-mobile-max-width: 225px;
+$md-drawer-desktop-width: 225px;
 
 @include react-md-everything;
 

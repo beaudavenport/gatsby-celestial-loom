@@ -41,17 +41,14 @@ Astrological Services
             Nikki Davenport, Licensed Astrologer,
             brings the wisdom of the zodiac to your door (and inbox!)
           </p>
-          <div style={{ textAlign: 'center' }}>
+          <div style={{ textAlign: 'right' }}>
             <Button flat primary swapTheming style={{ fontStyle: 'bold', fontFamily: 'Merriweather' }}>Get My Chart</Button>
           </div>
         </Cell>
       </Grid>
     </Paper>
-    <Grid>
-      <Cell>
-        <h1 style={{ fontStyle: 'italic' }}>Latest Article</h1>
-      </Cell>
-      <Cell size={12}>
+    <Grid style={{ padding: '20px' }}>
+      <Cell size={8}>
         <Link to="/posts/test1">
           <Card style={{ backgroundColor: 'white' }}>
             <div style={{ position: 'relative' }}>
@@ -65,11 +62,7 @@ Astrological Services
             </CardText>
           </Card>
         </Link>
-      </Cell>
-      <Cell>
         <h1 style={{ fontStyle: 'italic' }}>Earlier Articles</h1>
-      </Cell>
-      <Cell size={12}>
         <Card style={{ backgroundColor: 'white' }}>
           <div style={{ flexDirection: 'row', display: 'flex' }}>
             <div style={{ }}>
@@ -80,44 +73,36 @@ Astrological Services
               <p style={{ fontSize: 'medium' }}>07/30/16</p>
               <CardText>
                 <p>
-                  It can be difficult to get started with astrology.
-                  There can be many resources to understand and it consultant
-                  be difficult to know what is reliable.
+                    It can be difficult to get started with astrology.
+                    There can be many resources to understand and it consultant
+                    be difficult to know what is reliable.
                 </p>
               </CardText>
             </div>
           </div>
         </Card>
       </Cell>
-      <Cell>
-        <h1 style={{ fontStyle: 'italic' }}>Upcoming Events</h1>
-      </Cell>
-      <Cell size={12}>
+      <Cell size={4}>
+        <h3>Upcoming events</h3>
         <Card style={{ backgroundColor: 'white' }}>
           <div style={{ flexDirection: 'row', display: 'flex' }}>
             <div style={{ backgroundColor: 'rgb(255, 128, 19)', padding: '20px 10px' }}>
               <p style={{
-                fontStyle: 'italic', fontSize: '60px', textAlign: 'center', color: 'white', marginBottom: '30px',
+                fontStyle: 'italic', fontSize: '50px', textAlign: 'center', color: 'white', marginBottom: '30px',
               }}
               >
-15
+      15
               </p>
               <p style={{
-                fontStyle: 'italic', fontSize: '30px', textAlign: 'center', color: 'white',
+                fontStyle: 'italic', fontSize: '20px', textAlign: 'center', color: 'white',
               }}
               >
-JUN
+      JUN
               </p>
             </div>
-            <div style={{ padding: '20px' }}>
-              <p style={{ fontSize: 'large' }}>Neptune/Uranus Square PlayShop</p>
-              <p style={{ fontSize: 'medium' }}>Divine Inspirations Boutique</p>
-              <CardText>
-                <p>
-                  The Square of the Century is upon us! Join us for a magical
-                  PlayShop where we can discuss what this event means for you
-                </p>
-              </CardText>
+            <div style={{ padding: '10px' }}>
+              <p style={{ fontSize: '12px', fontWeight: 'bold' }}>Neptune/Uranus Square PlayShop</p>
+              <p style={{ fontSize: '10px' }}>Divine Inspirations Boutique</p>
             </div>
           </div>
         </Card>
