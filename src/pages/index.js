@@ -4,6 +4,7 @@ import {
 } from 'react-md';
 import { Link } from 'gatsby';
 import Layout from '../components/Layout';
+import ThumbnailCard from '../components/ThumbnailCard';
 import Astroglobe from '../images/astroglobe.jpg';
 import Preview from '../images/2019-Cosmic-Preview.jpg';
 import Pleiades from '../images/pleiades.jpg';
@@ -63,22 +64,11 @@ Astrological Services
           </Card>
         </Link>
         <h1 style={{ fontStyle: 'italic' }}>Earlier Articles</h1>
-        <Card style={{ backgroundColor: 'white' }}>
-          <div style={{ flexDirection: 'row', display: 'flex' }}>
-            <div style={{
-              height: '125px',
-              width: '125px',
-              background: `url(${Pleiades})`,
-              backgroundPosition: 'center',
-              backgroundSize: 'cover',
-            }}
-            />
-            <div style={{ padding: '10px' }}>
-              <h4 style={{ fontWeight: 'bold' }}>Getting started with astrology</h4>
-              <caption>07/30/16</caption>
-            </div>
-          </div>
-        </Card>
+        <ThumbnailCard
+          title="Getting started with Astrology"
+          caption="07/12/16"
+          imageUrl={Pleiades}
+        />
       </Cell>
       <Cell size={4}>
         <h3>Upcoming events</h3>
