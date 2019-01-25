@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Card } from 'react-md';
 
-const ThumbnailCard = ({ title, caption, imageUrl }) => (
+const ThumbnailCard = ({ title, caption, thumbnailChildren }) => (
   <Card>
     <div className="flex-row">
-      <div className="thumbnail-image" style={{ backgroundImage: `url(${imageUrl})` }} />
+      {thumbnailChildren}
       <div style={{ padding: '10px' }}>
         <h4 style={{ fontWeight: 'bold' }}>{title}</h4>
         <caption>{caption}</caption>
@@ -17,6 +17,6 @@ const ThumbnailCard = ({ title, caption, imageUrl }) => (
 ThumbnailCard.propTypes = {
   title: PropTypes.string.isRequired,
   caption: PropTypes.string.isRequired,
-  imageUrl: PropTypes.string.isRequired,
+  thumbnailChildren: PropTypes.node.isRequired,
 };
 export default ThumbnailCard;

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql, Link } from 'gatsby';
 import {
-  NavigationDrawer, FontIcon, Media, CardText, ListItem, Drawer, Card,
+  NavigationDrawer, FontIcon, Media, CardText, ListItem, Drawer,
 } from 'react-md';
 import Nikki from '../images/nikki.jpg';
 

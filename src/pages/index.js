@@ -5,6 +5,8 @@ import {
 import { Link } from 'gatsby';
 import Layout from '../components/Layout';
 import ThumbnailCard from '../components/ThumbnailCard';
+import DateThumbnail from '../components/ThumbnailCard/dateThumbnail';
+import ImageThumbnail from '../components/ThumbnailCard/imageThumbnail';
 import Astroglobe from '../images/astroglobe.jpg';
 import Preview from '../images/2019-Cosmic-Preview.jpg';
 import Pleiades from '../images/pleiades.jpg';
@@ -67,27 +69,14 @@ Astrological Services
         <ThumbnailCard
           title="Getting started with Astrology"
           caption="07/12/16"
-          imageUrl={Pleiades}
+          thumbnailChildren={<ImageThumbnail imageUrl={Pleiades} />}
         />
       </Cell>
       <Cell size={4}>
         <h3>Upcoming events</h3>
         <Card style={{ backgroundColor: 'white' }}>
           <div style={{ flexDirection: 'row', display: 'flex' }}>
-            <div style={{ backgroundColor: 'rgb(255, 128, 19)', padding: '20px 10px' }}>
-              <p style={{
-                fontStyle: 'italic', fontSize: '50px', textAlign: 'center', color: 'white', marginBottom: '30px',
-              }}
-              >
-      15
-              </p>
-              <p style={{
-                fontStyle: 'italic', fontSize: '20px', textAlign: 'center', color: 'white',
-              }}
-              >
-      JUN
-              </p>
-            </div>
+            <DateThumbnail day="12" month="JUN" />
             <div style={{ padding: '10px' }}>
               <p style={{ fontSize: '12px', fontWeight: 'bold' }}>Neptune/Uranus Square PlayShop</p>
               <div style={{ display: 'flex', justifyContent: 'baseline' }}>

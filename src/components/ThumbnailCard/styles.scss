@@ -1,6 +1,21 @@
 .thumbnail-image {
-  height: 125px;
-  width: 125px;
-  background-position: center;
-  background-size: cover;
+   height: 125px;
+   width: 125px;
+   background-position: center;
+   background-size: cover;
+}
+
+.thumbnail-day {
+   font-style: italic;
+   font-size: 50px;
+   text-align: center;
+   color: white;
+   margin-bottom: 30px;
+}
+
+.thumbnail-month {
+   font-style: italic;
+   font-size: 20px;
+   text-align: center;
+   color: white;
 }
