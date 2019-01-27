@@ -1,13 +1,13 @@
 ---
 path: /thing1
 eventDate: 2018-12-23T21:50:26.817Z
-eventImage: /assets/img_4944.jpg
-title: Time and Place for 2015
+eventImage: /assets/3d-clock.jpg
+title: Time and Place for 2017
 location: St. Louie
 eventPrice: $6.99 a head
 publishDate: 2018-12-23T21:50:26.861Z
 ---
-Lorem ipsum dolor amet leggings cray you probably haven't heard of them offal poutine. Copper mug wolf flexitarian quinoa cold-pressed etsy. Fanny pack salvia man braid, DIY biodiesel prism pork belly. Tilde leggings microdosing tacos cold-pressed XOXO. Yr prism vape, asymmetrical pinterest scenester plaid.
+You c**an do it **
 
 > Adaptogen art party plaid XOXO biodiesel la croix humblebrag. Prism cred whatever put a bird on it fam drinking vinegar bitters man braid pour-over raclette messenger bag 8-bit gastropub lumbersexual. Selfies actually cardigan lomo. Biodiesel copper mug slow-carb food truck.
 
