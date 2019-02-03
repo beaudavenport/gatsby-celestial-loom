@@ -10,9 +10,9 @@ import Nikki from '../images/nikki.jpg';
 import './layout.scss';
 
 const navItems = [
-  { to: '/posts', children: (<p style={{ color: 'white' }}>Posts</p>) },
-  { to: '/events', children: (<p style={{ color: 'white' }}>Events</p>) },
-  { to: '/services', children: (<p style={{ color: 'white' }}>Services</p>) },
+  { to: '/posts', children: (<p style={{ color: 'white', fontSize: '14px' }}>Posts</p>) },
+  { to: '/events', children: (<p style={{ color: 'white', fontSize: '14px' }}>Events</p>) },
+  { to: '/services', children: (<p style={{ color: 'white', fontSize: '14px' }}>Services</p>) },
 ];
 
 const DrawerHeader = () => (
@@ -31,6 +31,12 @@ const DrawerHeader = () => (
           astrologer for over 35 years.
       </p>
     </CardText>
+  </div>
+);
+
+const DrawerTitle = () => (
+  <div style={{ paddingTop: '10px', paddingLeft: '10px' }}>
+    <h1 className="md-headline" style={{ fontFamily: 'Berkshire Swash', fontStyle: 'italic', color: 'white' }}>The Celestial Loom</h1>
   </div>
 );
 
@@ -55,7 +61,7 @@ const Layout = ({ children }) => {
         `}
       render={data => (
         <NavigationDrawer
-          desktopDrawerType={NavigationDrawer.DrawerTypes.CLIPPED}
+          desktopDrawerType={NavigationDrawer.DrawerTypes.FULL_HEIGHT}
           tabletDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY}
           mobileDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY}
           position="left"
@@ -64,8 +70,10 @@ const Layout = ({ children }) => {
           temporaryIcon={(<FontIcon iconClassName="material-icons">menu</FontIcon>)}
           navStyle={{ height: '30%', backgroundColor: 'rgb(47, 47, 47)' }}
           drawerChildren={<DrawerHeader />}
-          toolbarTitle="The Celestial Loom"
+          toolbarTitle={defaultMedia === 'desktop' ? null : 'The Celestial Loom'}
+          drawerHeader={defaultMedia !== 'desktop' ? null : (<DrawerTitle />)}
           toolbarTitleStyle={{ fontFamily: 'Berkshire Swash', fontStyle: 'italic' }}
+          drawerTitleStyle={{ fontFamily: 'Berkshire Swash', fontStyle: 'italic' }}
           toolbarSingleColor
           toolbarStyle={{ backgroundColor: 'rgb(47, 47, 47)' }}
           defaultMedia={defaultMedia}

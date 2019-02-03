@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Merriweather:300italic,300');
 @import url('https://fonts.googleapis.com/css?family=Berkshire+Swash');
+@import url('https://fonts.googleapis.com/css?family=Martel:700');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 @import '~react-md/src/scss/react-md';
@@ -7,7 +8,7 @@
 // @import 'theme.scss';
 
 $md-primary-color: $md-orange-a-700;
-$md-font-family: 'Merriweather';
+$md-font-family: 'Martel';
 $md-drawer-mobile-max-width: 225px;
 $md-drawer-desktop-width: 225px;
 
