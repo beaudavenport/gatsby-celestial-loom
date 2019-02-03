@@ -38,14 +38,14 @@ Astrological Services
         </Cell>
         <Cell size={6}>
           <p style={{
-            fontStyle: 'italic', textAlign: 'right', fontSize: 'large', color: 'white', fontFamily: 'Merriweather',
+            fontStyle: 'italic', textAlign: 'right', fontSize: 'large', color: 'white', fontFamily: 'Martel',
           }}
           >
             Nikki Davenport, Licensed Astrologer,
             brings the wisdom of the zodiac to your door (and inbox!)
           </p>
           <div style={{ textAlign: 'right' }}>
-            <Button flat primary swapTheming style={{ fontStyle: 'bold', fontFamily: 'Merriweather' }}>Get My Chart</Button>
+            <Button flat primary swapTheming style={{ fontStyle: 'bold', fontFamily: 'Martel' }}>Get My Chart</Button>
           </div>
         </Cell>
       </Grid>
@@ -74,18 +74,20 @@ Astrological Services
       </Cell>
       <Cell size={4}>
         <h3>Upcoming events</h3>
-        <Card style={{ backgroundColor: 'white' }}>
-          <div style={{ flexDirection: 'row', display: 'flex' }}>
-            <DateThumbnail day="12" month="JUN" />
-            <div style={{ padding: '10px' }}>
-              <p style={{ fontSize: '12px', fontWeight: 'bold' }}>Neptune/Uranus Square PlayShop</p>
-              <div style={{ display: 'flex', justifyContent: 'baseline' }}>
-                <FontIcon iconClassName="material-icons" style={{ marginBottom: '-5px' }}>near_me</FontIcon>
-                <p style={{ fontSize: '10px' }}>Divine Inspirations Boutique</p>
+        <Link to="/thing1">
+          <Card style={{ backgroundColor: 'white' }}>
+            <div style={{ flexDirection: 'row', display: 'flex' }}>
+              <DateThumbnail day="12" month="JUN" />
+              <div style={{ padding: '10px' }}>
+                <p style={{ fontSize: '12px', fontWeight: 'bold' }}>Neptune/Uranus Square PlayShop</p>
+                <div style={{ display: 'flex', justifyContent: 'baseline' }}>
+                  <FontIcon iconClassName="material-icons" style={{ marginBottom: '-5px' }}>near_me</FontIcon>
+                  <p style={{ fontSize: '10px' }}>Divine Inspirations Boutique</p>
+                </div>
               </div>
             </div>
-          </div>
-        </Card>
+          </Card>
+        </Link>
       </Cell>
     </Grid>
   </Layout>

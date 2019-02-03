@@ -1,30 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Card, Media, Button } from 'react-md';
+import {
+  Card, CardText, Media, Button, CardTitle,
+} from 'react-md';
 
 function EventPage(props) {
   const {
     title, image, eventDate, price, html,
   } = props;
   return (
-    <Card>
+    <Card style={{ width: '80%', margin: '0 auto' }}>
       <Media>
         <img src={image} alt="event" />
       </Media>
-      <h2>
-        {title}
-      </h2>
-      <h3>
-        {eventDate}
-      </h3>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
-      <p>{price}</p>
-      <Button raised primary>
+      <CardTitle title={title} subtitle={eventDate} />
+      <CardText>
+        <div dangerouslySetInnerHTML={{ __html: html }} />
+        <p>{price}</p>
+        <Button raised primary>
           Share
-      </Button>
-      <Button raised>
+        </Button>
+        <Button raised>
           Learn More
-      </Button>
+        </Button>
+      </CardText>
     </Card>
   );
 }
