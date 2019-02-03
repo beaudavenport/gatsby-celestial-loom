@@ -1,6 +1,7 @@
 ---
 path: /someplace
-date: 2018-12-20T03:17:49.168Z
+publishDate: 2019-02-03T02:26:10.742Z
 title: My New Entry
+image: /assets/3d-clock.jpg
 ---
 1. Checkit it out
