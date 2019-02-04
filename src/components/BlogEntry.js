@@ -23,7 +23,7 @@ function BlogEntry({
 BlogEntry.propTypes = {
   title: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
-  postedDate: PropTypes.string.isRequired,
+  publishDate: PropTypes.string.isRequired,
   html: PropTypes.string.isRequired,
 };
 

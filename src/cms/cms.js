@@ -1,6 +1,7 @@
 import React from 'react';
 import CMS from 'netlify-cms';
 import EventPage from '../components/EventPage';
+import BlogEntry from '../components/BlogEntry';
 import '../components/layout.scss';
 
 function EventPagePreview({ entry, getAsset }) {
@@ -18,4 +19,19 @@ function EventPagePreview({ entry, getAsset }) {
   );
 }
 
+function BlogEntryPreview({ entry, getAsset }) {
+  const image = entry.getIn(['data', 'image']);
+  const data = {
+    title: entry.getIn(['data', 'title']),
+    image: getAsset(image),
+    publishDate: entry.getIn(['data', 'publishDate']).toString(),
+    html: entry.getIn(['data', 'body']),
+  };
+
+  return (
+    <BlogEntry {...data} />
+  );
+}
+
 CMS.registerPreviewTemplate('events', EventPagePreview);
+CMS.registerPreviewTemplate('blog', BlogEntryPreview);

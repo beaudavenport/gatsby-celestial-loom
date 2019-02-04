@@ -1,70 +1,29 @@
 import React from 'react';
 import {
-  Paper, Grid, Cell, Button, Card, CardTitle, CardText, MediaOverlay, FontIcon,
+  Grid, Cell, Card, FontIcon,
 } from 'react-md';
 import { Link } from 'gatsby';
 import Layout from '../components/Layout';
+import Jumbotron from '../components/Jumbotron';
+import FeaturedCard from '../components/FeaturedCard';
 import ThumbnailCard from '../components/ThumbnailCard';
 import DateThumbnail from '../components/ThumbnailCard/dateThumbnail';
 import ImageThumbnail from '../components/ThumbnailCard/imageThumbnail';
-import Astroglobe from '../images/astroglobe.jpg';
-import Preview from '../images/2019-Cosmic-Preview.jpg';
 import Pleiades from '../images/pleiades.jpg';
+import Preview from '../images/2019-Cosmic-Preview.jpg';
 
 const IndexPage = () => (
   <Layout>
-    <Paper style={{
-      background: `url(${Astroglobe})`,
-      backgroundPosition: 'center',
-      backgroundSize: 'cover',
-      width: '100%',
-      padding: '100px 50px 0 50px',
-    }}
-    >
-      <Grid>
-        <Cell size={6}>
-          <p style={{
-            fontStyle: 'italic', fontSize: 'xx-large', color: 'white', fontFamily: 'Berkshire Swash',
-          }}
-          >
-The Celestial Loom
-          </p>
-          <p style={{
-            fontStyle: 'italic', fontSize: 'x-large', color: 'white', fontFamily: 'Berkshire Swash',
-          }}
-          >
-Astrological Services
-          </p>
-        </Cell>
-        <Cell size={6}>
-          <p style={{
-            fontStyle: 'italic', textAlign: 'right', fontSize: 'large', color: 'white', fontFamily: 'Martel',
-          }}
-          >
-            Nikki Davenport, Licensed Astrologer,
-            brings the wisdom of the zodiac to your door (and inbox!)
-          </p>
-          <div style={{ textAlign: 'right' }}>
-            <Button flat primary swapTheming style={{ fontStyle: 'bold', fontFamily: 'Martel' }}>Get My Chart</Button>
-          </div>
-        </Cell>
-      </Grid>
-    </Paper>
+    <Jumbotron />
     <Grid style={{ padding: '20px' }}>
       <Cell size={8}>
-        <Link to="/posts/test1">
-          <Card style={{ backgroundColor: 'white' }}>
-            <div style={{ position: 'relative' }}>
-              <img style={{ height: '200px', width: '100%', objectFit: 'cover' }} src={Preview} alt="Preview of feature post" />
-              <MediaOverlay style={{ marginBottom: '5px' }}>
-                <CardTitle title="The Celestial Loom Year 2019 Cosmic Preview" subtitle="12/24/18" />
-              </MediaOverlay>
-            </div>
-            <CardText>
-              <p style={{ textDecoration: 'none' }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam suscipit lacus nec velit bibendum, fringilla venenatis tortor pulvinar. Nam rhoncus molestie luctus. Duis ac ultricies velit. Aliquam tempor leo ut mattis consectetur. Mauris id ex vel dolor faucibus vehicula. Praesent volutpat, orci id maximus consectetur, neque magna dignissim urna, hendrerit consectetur diam lectus a lorem. Maecenas ultricies feugiat dui in dictum. Donec mattis tincidunt ligula, eget pretium purus blandit vitae. Nam mattis vel magna volutpat luctus.</p>
-            </CardText>
-          </Card>
-        </Link>
+        <FeaturedCard
+          path="/someplace"
+          title="The Celestial Loom Year 2019 Cosmic Preview"
+          subtitle="Posted 12/18/18"
+          image={Preview}
+          excerpt="Lorem ipsum and stuff and things, could not even have said it better myself"
+        />
         <h1 style={{ fontStyle: 'italic' }}>Earlier Articles</h1>
         <ThumbnailCard
           title="Getting started with Astrology"
