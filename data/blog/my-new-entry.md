@@ -1,5 +1,6 @@
 ---
 templateKey: blogTemplate
+type: blog
 path: /someplace
 publishDate: 2019-02-03T02:26:10.742Z
 title: My New Entry

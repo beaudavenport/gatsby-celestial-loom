@@ -1,5 +1,6 @@
 ---
 templateKey: eventTemplate
+type: events
 path: /thing1
 eventDate: 2018-12-23T21:50:26.817Z
 eventImage: /assets/3d-clock.jpg

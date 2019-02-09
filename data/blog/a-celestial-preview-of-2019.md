@@ -1,5 +1,6 @@
 ---
 templateKey: blogTemplate
+type: blog
 path: /elsewhere
 publishDate: 2019-02-09T20:26:07.387Z
 title: A Celestial Preview of 2019
