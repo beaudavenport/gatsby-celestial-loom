@@ -45,6 +45,18 @@ module.exports = {
         icon: 'src/images/celestial-logo.png', // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: '@gatsby-contrib/gatsby-plugin-elasticlunr-search',
+      options: {
+        fields: ['title'],
+        resolvers: {
+          MarkdownRemark: {
+            title: node => node.frontmatter.title,
+            path: node => node.frontmatter.path,
+          },
+        },
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',

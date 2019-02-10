@@ -5,6 +5,7 @@ import { StaticQuery, graphql, Link } from 'gatsby';
 import {
   NavigationDrawer, FontIcon, Media, CardText, ListItem, Drawer,
 } from 'react-md';
+import HeaderSearch from './HeaderSearch';
 import Nikki from '../images/nikki.jpg';
 
 import './layout.scss';
@@ -71,6 +72,7 @@ const Layout = ({ children }) => {
           navStyle={{ height: '30%', backgroundColor: 'rgb(47, 47, 47)' }}
           drawerChildren={<DrawerHeader />}
           toolbarTitle={defaultMedia === 'desktop' ? null : 'The Celestial Loom'}
+          toolbarActions={<HeaderSearch />}
           drawerHeader={defaultMedia !== 'desktop' ? null : (<DrawerTitle />)}
           toolbarTitleStyle={{ fontFamily: 'Berkshire Swash', fontStyle: 'italic' }}
           drawerTitleStyle={{ fontFamily: 'Berkshire Swash', fontStyle: 'italic' }}
