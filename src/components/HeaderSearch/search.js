@@ -1,6 +1,10 @@
-import React, { Component } from 'react';
-import { Index } from 'elasticlunr';
+import {
+  FontIcon, List, ListItem, TextField,
+} from 'react-md';
 import { Link } from 'gatsby';
+import React, { Component } from 'react';
+
+import { Index } from 'elasticlunr';
 
 export default class Search extends Component {
   constructor(props) {
@@ -16,8 +20,7 @@ export default class Search extends Component {
     return this.index ? this.index : Index.load(searchIndex);
   }
 
-  search = (evt) => {
-    const query = evt.target.value;
+  search = (query) => {
     this.index = this.getOrCreateIndex();
     const results = this.index
       .search(query, { expand: true })
@@ -29,18 +32,32 @@ export default class Search extends Component {
     });
   }
 
+  resetSearch = () => {
+    this.setState({
+      query: '',
+      results: [],
+    });
+  }
+
   render() {
     const { query, results } = this.state;
     return (
       <div>
-        <input type="text" value={query} onChange={this.search} />
-        <ul>
+        <TextField
+          type="text"
+          leftIcon={<FontIcon>search</FontIcon>}
+          value={query}
+          onChange={this.search}
+        />
+        <List>
           {results.map(page => (
-            <li key={page.id}>
-              <Link to={`/${page.path}`}>{page.title}</Link>
-            </li>
+            <ListItem
+              primaryText={page.title}
+              component={Link}
+              to={page.path}
+            />
           ))}
-        </ul>
+        </List>
       </div>
     );
   }
