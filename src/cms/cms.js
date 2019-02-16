@@ -1,8 +1,11 @@
 import React from 'react';
 import CMS from 'netlify-cms';
+import { Converter } from 'showdown';
 import EventPage from '../components/EventPage';
 import BlogEntry from '../components/BlogEntry';
 import '../components/layout.scss';
+
+const converter = new Converter();
 
 function EventPagePreview({ entry, getAsset }) {
   const eventImage = entry.getIn(['data', 'eventImage']);
@@ -11,7 +14,7 @@ function EventPagePreview({ entry, getAsset }) {
     image: getAsset(eventImage),
     eventDate: entry.getIn(['data', 'eventDate']).toString(),
     price: entry.getIn(['data', 'eventPrice']),
-    html: entry.getIn(['data', 'body']),
+    html: converter.makeHtml(entry.getIn(['data', 'body'])),
   };
 
   return (
@@ -25,7 +28,7 @@ function BlogEntryPreview({ entry, getAsset }) {
     title: entry.getIn(['data', 'title']),
     image: getAsset(image),
     publishDate: entry.getIn(['data', 'publishDate']).toString(),
-    html: entry.getIn(['data', 'body']),
+    html: converter.makeHtml(entry.getIn(['data', 'body'])),
   };
 
   return (
