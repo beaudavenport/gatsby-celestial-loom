@@ -1,13 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import {
   Grid, Cell,
 } from 'react-md';
 import { graphql } from 'gatsby';
-import Layout from '../components/Layout';
-import FeaturedCard from '../components/FeaturedCard';
-import ThumbnailCard from '../components/ThumbnailCard';
+import PropTypes from 'prop-types';
+import React from 'react';
+
 import DateThumbnail from '../components/ThumbnailCard/dateThumbnail';
+import Layout from '../components/Layout';
+import SidebarContents from '../components/SidebarContents';
+import ThumbnailCard from '../components/ThumbnailCard';
 
 const Events = ({ data }) => {
   const nodes = data.allMarkdownRemark.edges.map(edge => edge.node);
@@ -15,25 +16,28 @@ const Events = ({ data }) => {
 
   return (
     <Layout>
-      <h1>EVENTS</h1>
       <Grid style={{ padding: '20px' }}>
         <Cell size={8}>
-          <FeaturedCard
+          <h1>Upcoming events</h1>
+          <ThumbnailCard
             path={firstEventNode.frontmatter.path}
             title={firstEventNode.frontmatter.title}
-            subtitle="subtitle here"
-            image={firstEventNode.frontmatter.eventImage}
-            excerpt={firstEventNode.excerpt}
+            caption="subtitle here"
+            thumbnailChildren={<DateThumbnail day="4" month="July" />}
           />
           <h1 style={{ fontStyle: 'italic' }}>Past Events</h1>
           { otherEventNodes && otherEventNodes.map(node => (
             <ThumbnailCard
+              path={node.frontmatter.path}
               title={node.frontmatter.title}
               caption="07/12/16"
               thumbnailChildren={<DateThumbnail day="12" month="JUN" />}
             />
           ))
         }
+        </Cell>
+        <Cell size={4}>
+          <SidebarContents eventsQuantity={0} postsQuantity={2} />
         </Cell>
       </Grid>
     </Layout>

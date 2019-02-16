@@ -1,16 +1,15 @@
-import React from 'react';
+import { Grid, Cell } from 'react-md';
+import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-import {
-  Grid, Cell, Card, FontIcon,
-} from 'react-md';
-import { Link, graphql } from 'gatsby';
-import Layout from '../components/Layout';
-import Jumbotron from '../components/Jumbotron';
+import React from 'react';
+
 import FeaturedCard from '../components/FeaturedCard';
-import ThumbnailCard from '../components/ThumbnailCard';
-import DateThumbnail from '../components/ThumbnailCard/dateThumbnail';
 import ImageThumbnail from '../components/ThumbnailCard/imageThumbnail';
+import Jumbotron from '../components/Jumbotron';
+import Layout from '../components/Layout';
 import Pleiades from '../images/pleiades.jpg';
+import SidebarContents from '../components/SidebarContents';
+import ThumbnailCard from '../components/ThumbnailCard';
 
 const IndexPage = ({ data }) => {
   const nodes = data.allMarkdownRemark.edges.map(edge => edge.node);
@@ -39,21 +38,7 @@ const IndexPage = ({ data }) => {
           }
         </Cell>
         <Cell size={4}>
-          <h3>Upcoming events</h3>
-          <Link to="/thing1">
-            <Card style={{ backgroundColor: 'white' }}>
-              <div style={{ flexDirection: 'row', display: 'flex' }}>
-                <DateThumbnail day="12" month="JUN" />
-                <div style={{ padding: '10px' }}>
-                  <p style={{ fontSize: '12px', fontWeight: 'bold' }}>Neptune/Uranus Square PlayShop</p>
-                  <div style={{ display: 'flex', justifyContent: 'baseline' }}>
-                    <FontIcon iconClassName="material-icons" style={{ marginBottom: '-5px' }}>near_me</FontIcon>
-                    <p style={{ fontSize: '10px' }}>Divine Inspirations Boutique</p>
-                  </div>
-                </div>
-              </div>
-            </Card>
-          </Link>
+          <SidebarContents eventsQuantity={2} postsQuantity={0} />
         </Cell>
       </Grid>
     </Layout>
