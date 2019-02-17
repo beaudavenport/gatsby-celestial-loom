@@ -31,6 +31,6 @@ collections:
       - { name: 'eventImage', label: 'Image', widget: 'image' }
       - { name: 'title', label: 'Title' }
       - { name: 'location', label: 'Location' }
-      - { name: 'eventPrice', label: 'Price' }
+      - { name: 'eventPrice', label: 'Price (increments of $5.00)', widget: 'number', default: '3', min: 0, valueType: 'float', step: 5.00 }
       - { name: 'publishDate', label: 'Publish Date', widget: 'date' }
       - { name: 'body', label: 'Body', widget: 'markdown' }

@@ -9,19 +9,31 @@ function EventPage(props) {
     title, image, eventDate, price, html,
   } = props;
   return (
-    <Card style={{ width: '80%', margin: '0 auto' }}>
-      <Media>
-        <img src={image} alt="event" />
-      </Media>
-      <CardTitle title={title} subtitle={eventDate} />
-      <CardText>
+    <Card>
+      <h1 style={{ textAlign: 'center' }}>{title}</h1>
+      <div style={{ maxWidth: '300px', margin: '0 auto' }}>
+        <img style={{ maxWidth: '100%' }} src={image} alt="event" />
+      </div>
+      <CardText style={{ maxWidth: '400px', margin: '0 auto' }}>
         <div dangerouslySetInnerHTML={{ __html: html }} />
-        <p>{price}</p>
-        <Button raised primary>
-          Share
-        </Button>
-        <Button raised>
-          Learn More
+        <strong>{`$${Number(price).toFixed(2)}`}</strong>
+        <br />
+        <Button
+          raised
+          primary
+          className="snipcart-add-item"
+          data-item-id="2"
+          data-item-name={title}
+          data-item-price={price}
+          data-item-weight="20"
+          data-item-url="http://boring-einstein-e60f31.netlify.com"
+          data-item-description="Event"
+          data-item-custom1-name="Name"
+          data-item-custom1-required="true"
+          data-item-custom2-name="Date of Birth"
+          data-item-custom2-required="true"
+        >
+          Sign Up
         </Button>
       </CardText>
     </Card>

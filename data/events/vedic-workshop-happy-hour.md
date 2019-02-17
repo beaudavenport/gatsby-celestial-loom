@@ -6,7 +6,7 @@ eventDate: 2019-05-01T19:16:37.757Z
 eventImage: /assets/3d-clock.jpg
 title: Vedic Workshop Happy Hour
 location: Stone Spiral Cafe
-eventPrice: $30.00 per person
+eventPrice: 30.00
 publishDate: 2019-02-16T20:16:37.868Z
 ---
 **Everything** you wanted to know about vedic astrology but where afraid to ask.
