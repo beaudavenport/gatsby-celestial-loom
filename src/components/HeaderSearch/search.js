@@ -1,5 +1,5 @@
 import {
-  FontIcon, List, ListItem, TextField,
+  DropdownMenu, FontIcon, ListItem, TextField,
 } from 'react-md';
 import { Link } from 'gatsby';
 import React, { Component } from 'react';
@@ -42,23 +42,32 @@ export default class Search extends Component {
   render() {
     const { query, results } = this.state;
     return (
-      <div>
+      <DropdownMenu
+        toggle={this}
+        visible={results.length > 0}
+        menuItems={
+          results.map(page => (
+            <ListItem
+              primaryText={page.title}
+              component={Link}
+              to={`/${page.path}`}
+            />
+          ))
+        }
+        anchor={{
+          x: DropdownMenu.HorizontalAnchors.INNER_RIGHT,
+          y: DropdownMenu.VerticalAnchors.BOTTOM,
+        }}
+        position={DropdownMenu.Positions.BELOW}
+      >
         <TextField
           type="text"
           leftIcon={<FontIcon>search</FontIcon>}
           value={query}
           onChange={this.search}
+          onBlur={this.resetSearch}
         />
-        <List>
-          {results.map(page => (
-            <ListItem
-              primaryText={page.title}
-              component={Link}
-              to={page.path}
-            />
-          ))}
-        </List>
-      </div>
+      </DropdownMenu>
     );
   }
 }
