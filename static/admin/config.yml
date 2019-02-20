@@ -4,11 +4,13 @@ backend:
 
 media_folder: static/assets
 public_folder: assets
+site_url: https://boring-einstein-e60f31.netlify.com
 
 collections:
   - name: blog
     label: Blog
     folder: data/blog
+    preview_path: 'blog/{{slug}}'
     create: true
     fields:
       - { name: 'templateKey', label: 'Template Key', widget: 'hidden', default: 'blogTemplate'}
@@ -22,6 +24,7 @@ collections:
   - name: 'events'
     label: 'Events'
     folder: data/events
+    preview_path: 'events/{{slug}}'
     create: true
     fields:
       - { name: 'templateKey', label: 'Template Key', widget: 'hidden', default: 'eventTemplate'}
