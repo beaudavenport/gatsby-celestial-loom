@@ -21,7 +21,7 @@ const IndexPage = ({ data }) => {
       <Grid style={{ padding: '20px' }}>
         <Cell size={8}>
           <FeaturedCard
-            path={firstBlogNode.frontmatter.path}
+            path={firstBlogNode.fields.slug}
             title={firstBlogNode.frontmatter.title}
             subtitle="subtitle here"
             image={firstBlogNode.frontmatter.image}
@@ -59,13 +59,15 @@ export const query = graphql`
         node {
           id
           frontmatter {
-            path
             title
             image
             publishDate(formatString: "DD MMMM, YYYY")
             type
           }
           excerpt
+          fields {
+            slug
+          }
         }
       }
     }

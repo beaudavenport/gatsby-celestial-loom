@@ -52,7 +52,7 @@ module.exports = {
         resolvers: {
           MarkdownRemark: {
             title: node => node.frontmatter.title,
-            path: node => node.frontmatter.path,
+            path: node => node.fields.slug,
           },
         },
       },

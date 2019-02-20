@@ -16,13 +16,15 @@ const SidebarContents = ({ eventsQuantity, postsQuantity }) => (
              node {
                id
                frontmatter {
-                 path
                  title
                  image
                  publishDate(formatString: "DD MMMM, YYYY")
                  type
                }
                excerpt
+               fields {
+                 slug
+               }
              }
            }
          }
@@ -37,7 +39,7 @@ const SidebarContents = ({ eventsQuantity, postsQuantity }) => (
           {eventNodes.length > 0 && <h1 style={{ fontStyle: 'italic' }}>Upcoming events</h1>}
           { eventNodes.length > 0 && eventNodes.map(node => (
             <ThumbnailCard
-              path={node.frontmatter.path}
+              path={node.fields.slug}
               title={node.frontmatter.title}
               caption="07/12/16"
               thumbnailChildren={<DateThumbnail day="12" month="JUN" />}
@@ -47,7 +49,7 @@ const SidebarContents = ({ eventsQuantity, postsQuantity }) => (
           {blogNodes.length > 0 && <h1 style={{ fontStyle: 'italic' }}>Latest Articles</h1>}
           { blogNodes.length > 0 && blogNodes.map(node => (
             <ThumbnailCard
-              path={node.frontmatter.path}
+              path={node.fields.slug}
               title={node.frontmatter.title}
               caption="07/12/16"
               thumbnailChildren={<ImageThumbnail imageUrl={node.frontmatter.image} />}

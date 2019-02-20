@@ -32,15 +32,17 @@ export default EventTemplate;
 
 export const pageQuery = graphql`
   query($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+    markdownRemark(fields: { slug: { eq: $path } }) {
       html
       frontmatter {
         eventDate(formatString: "MMMM DD, YYYY")
-        path
         title
         eventImage
         location
         eventPrice
+      }
+      fields {
+        slug
       }
     }
   }

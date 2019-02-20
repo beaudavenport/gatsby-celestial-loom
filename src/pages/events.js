@@ -20,7 +20,7 @@ const Events = ({ data }) => {
         <Cell size={8}>
           <h1>Upcoming events</h1>
           <ThumbnailCard
-            path={firstEventNode.frontmatter.path}
+            path={firstEventNode.fields.slug}
             title={firstEventNode.frontmatter.title}
             caption="subtitle here"
             thumbnailChildren={<DateThumbnail day="4" month="July" />}
@@ -28,7 +28,7 @@ const Events = ({ data }) => {
           <h1 style={{ fontStyle: 'italic' }}>Past Events</h1>
           { otherEventNodes && otherEventNodes.map(node => (
             <ThumbnailCard
-              path={node.frontmatter.path}
+              path={node.fields.slug}
               title={node.frontmatter.title}
               caption="07/12/16"
               thumbnailChildren={<DateThumbnail day="12" month="JUN" />}
@@ -58,13 +58,15 @@ export const query = graphql`
         node {
           id
           frontmatter {
-            path
             title
             eventImage
             publishDate(formatString: "DD MMMM, YYYY")
             type
           }
           excerpt
+          fields {
+            slug
+          }
         }
       }
     }
