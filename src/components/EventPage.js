@@ -26,7 +26,7 @@ function EventPage(props) {
           data-item-name={title}
           data-item-price={price}
           data-item-weight="20"
-          data-item-url="http://boring-einstein-e60f31.netlify.com"
+          data-item-url="/"
           data-item-description="Event"
           data-item-custom1-name="Name"
           data-item-custom1-required="true"
