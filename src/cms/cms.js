@@ -1,9 +1,12 @@
-import React from 'react';
-import CMS from 'netlify-cms';
-import { Converter } from 'showdown';
-import EventPage from '../components/EventPage';
-import BlogEntry from '../components/BlogEntry';
 import '../components/layout.scss';
+
+import { Converter } from 'showdown';
+import CMS from 'netlify-cms';
+import React from 'react';
+
+import BlogEntry from '../components/BlogEntry';
+import EventPage from '../components/EventPage';
+import ServicePage from '../components/ServicePage';
 
 const converter = new Converter();
 
@@ -38,5 +41,17 @@ function BlogEntryPreview({ entry, getAsset }) {
   );
 }
 
+function ServicePreview({ entry }) {
+  const data = {
+    title: entry.getIn(['data', 'title']),
+    html: converter.makeHtml(entry.getIn(['data', 'body'])),
+  };
+
+  return (
+    <ServicePage {...data} />
+  );
+}
+
 CMS.registerPreviewTemplate('events', EventPagePreview);
 CMS.registerPreviewTemplate('blog', BlogEntryPreview);
+CMS.registerPreviewTemplate('blog', ServicePreview);

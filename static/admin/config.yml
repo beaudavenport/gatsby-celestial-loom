@@ -38,3 +38,14 @@ collections:
       - { name: 'eventPrice', label: 'Price (increments of $5.00)', widget: 'number', default: '3', min: 0, valueType: 'float', step: 5.00 }
       - { name: 'publishDate', label: 'Publish Date', widget: 'date' }
       - { name: 'body', label: 'Body', widget: 'markdown' }
+
+  - name: 'services'
+    label: 'Services'
+    folder: data/services
+    preview_path: 'services/{{slug}}'
+    create: true
+    fields:
+      - { name: 'templateKey', label: 'Template Key', widget: 'hidden', default: 'serviceTemplate'}
+      - { name: 'type', label: 'type', widget: 'hidden', default: 'services'}
+      - { name: 'title', label: 'Title' }
+      - { name: 'body', label: 'Body', widget: 'markdown' }
