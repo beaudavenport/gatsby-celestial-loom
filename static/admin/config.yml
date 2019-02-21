@@ -33,7 +33,8 @@ collections:
       - { name: 'eventDate', label: 'Event Date', widget: 'date' }
       - { name: 'eventImage', label: 'Image', widget: 'image' }
       - { name: 'title', label: 'Title' }
-      - { name: 'location', label: 'Location' }
+      - { name: 'location', label: 'Name of Venue' }
+      - { name: 'mapsLink', label: 'Google Maps Link' }
       - { name: 'eventPrice', label: 'Price (increments of $5.00)', widget: 'number', default: '3', min: 0, valueType: 'float', step: 5.00 }
       - { name: 'publishDate', label: 'Publish Date', widget: 'date' }
       - { name: 'body', label: 'Body', widget: 'markdown' }

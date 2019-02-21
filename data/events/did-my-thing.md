@@ -6,6 +6,7 @@ eventDate: 2018-12-23T21:50:26.817Z
 eventImage: /assets/3d-clock.jpg
 title: Time and Place for 2017
 location: St. Louie
+mapsLink: 'https://www.google.com'
 eventPrice: 90
 publishDate: 2018-12-23T21:50:26.861Z
 ---

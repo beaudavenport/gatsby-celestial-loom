@@ -14,6 +14,8 @@ function EventPagePreview({ entry, getAsset }) {
     image: getAsset(eventImage),
     eventDate: entry.getIn(['data', 'eventDate']).toString(),
     price: entry.getIn(['data', 'eventPrice']),
+    location: entry.getIn(['data', 'location']),
+    mapsLink: entry.getIn(['data', 'mapsLink']),
     html: converter.makeHtml(entry.getIn(['data', 'body'])),
   };
 

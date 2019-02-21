@@ -18,6 +18,7 @@ function EventTemplate({
         eventDate={frontmatter.eventDate}
         price={frontmatter.eventPrice}
         location={frontmatter.location}
+        mapsLink={frontmatter.mapsLink}
         html={html}
       />
     </Layout>
@@ -39,6 +40,7 @@ export const pageQuery = graphql`
         title
         eventImage
         location
+        mapsLink
         eventPrice
       }
       fields {

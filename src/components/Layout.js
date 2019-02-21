@@ -107,18 +107,6 @@ const Layout = ({ children }) => {
             <script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" data-api-key="Y2NiNmUxNzEtMGNlZS00NTlkLTg1NDEtZjJjMGRjMWNjZThjNjM2ODU2Njg0NDE5MzU2MDg3" id="snipcart" />
             <link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" rel="stylesheet" type="text/css" />
           </Helmet>
-          <button
-            type="button"
-            className="snipcart-add-item"
-            data-item-id="2"
-            data-item-name="Natal Chart Online"
-            data-item-price="100.00"
-            data-item-weight="20"
-            data-item-url="http://boring-einstein-e60f31.netlify.com"
-            data-item-description="Natal Chart"
-          >
-        Buy Natal Chart Online
-          </button>
           {children}
           <div>
             <hr />

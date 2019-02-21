@@ -1,20 +1,21 @@
-import React from 'react';
+import { Card, CardText, Button } from 'react-md';
 import PropTypes from 'prop-types';
-import {
-  Card, CardText, Media, Button, CardTitle,
-} from 'react-md';
+import React from 'react';
 
 function EventPage(props) {
   const {
-    title, image, eventDate, price, html,
+    title, image, eventDate, price, html, location, mapsLink,
   } = props;
   return (
     <Card>
       <h1 style={{ textAlign: 'center' }}>{title}</h1>
+      <h2 style={{ textAlign: 'center' }}>{eventDate}</h2>
       <div style={{ maxWidth: '300px', margin: '0 auto' }}>
         <img style={{ maxWidth: '100%' }} src={image} alt="event" />
       </div>
       <CardText style={{ maxWidth: '400px', margin: '0 auto' }}>
+        <h3>{location}</h3>
+        <a href={mapsLink}>View on Google Maps</a>
         <div dangerouslySetInnerHTML={{ __html: html }} />
         <strong>{`$${Number(price).toFixed(2)}`}</strong>
         <br />
@@ -46,6 +47,8 @@ EventPage.propTypes = {
   eventDate: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
   html: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  mapsLink: PropTypes.string.isRequired,
 };
 
 export default EventPage;
