@@ -50,5 +50,6 @@ exports.createPages = ({ actions, graphql }) => {
         context: {}, // additional data can be passed via context
       });
     });
+    Promise.resolve();
   });
 };

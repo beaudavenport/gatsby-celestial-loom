@@ -51,3 +51,39 @@ collections:
       - { name: 'origin', label: 'Origin', widget: 'select', options: ['Western', 'Vedic', 'Celtic', 'Native American']}
       - { name: 'price', label: 'Price (increments of $5.00)', widget: 'number', default: '3', min: 0, valueType: 'float', step: 5.00 }
       - { name: 'body', label: 'Body', widget: 'markdown' }
+
+  - name: 'signs'
+    label: 'Signs'
+    folder: data/signs
+    preview_path: 'signs/{{slug}}'
+    create: true
+    fields:
+      - { name: 'templateKey', label: 'Template Key', widget: 'hidden', default: 'toolboxTemplate'}
+      - { name: 'type', label: 'type', widget: 'hidden', default: 'signs'}
+      - { name: 'title', label: 'Title' }
+      - { name: 'icon', label: 'Icon' }
+      - { name: 'body', label: 'Body', widget: 'markdown' }
+
+  - name: 'planets'
+    label: 'Planets'
+    folder: data/planets
+    preview_path: 'planets/{{slug}}'
+    create: true
+    fields:
+      - { name: 'templateKey', label: 'Template Key', widget: 'hidden', default: 'toolboxTemplate'}
+      - { name: 'type', label: 'type', widget: 'hidden', default: 'planets'}
+      - { name: 'title', label: 'Title' }
+      - { name: 'icon', label: 'Icon' }
+      - { name: 'body', label: 'Body', widget: 'markdown' }
+
+  - name: 'houses'
+    label: 'Houses'
+    folder: data/houses
+    preview_path: 'houses/{{slug}}'
+    create: true
+    fields:
+      - { name: 'templateKey', label: 'Template Key', widget: 'hidden', default: 'toolboxTemplate'}
+      - { name: 'type', label: 'type', widget: 'hidden', default: 'houses'}
+      - { name: 'title', label: 'Title' }
+      - { name: 'icon', label: 'Icon' }
+      - { name: 'body', label: 'Body', widget: 'markdown' }

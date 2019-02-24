@@ -7,6 +7,7 @@ import React from 'react';
 import BlogEntry from '../components/BlogEntry';
 import EventPage from '../components/EventPage';
 import ServicePage from '../components/ServicePage';
+import ToolboxPage from '../components/ToolboxPage';
 
 const converter = new Converter();
 
@@ -54,6 +55,21 @@ function ServicePreview({ entry }) {
   );
 }
 
+function ToolboxPreview({ entry }) {
+  const data = {
+    title: entry.getIn(['data', 'title']),
+    icon: entry.getIn(['data', 'icon']),
+    html: converter.makeHtml(entry.getIn(['data', 'body'])),
+  };
+
+  return (
+    <ToolboxPage {...data} />
+  );
+}
+
 CMS.registerPreviewTemplate('events', EventPagePreview);
 CMS.registerPreviewTemplate('blog', BlogEntryPreview);
 CMS.registerPreviewTemplate('services', ServicePreview);
+CMS.registerPreviewTemplate('signs', ToolboxPreview);
+CMS.registerPreviewTemplate('houses', ToolboxPreview);
+CMS.registerPreviewTemplate('planets', ToolboxPreview);

@@ -14,6 +14,7 @@ const navItems = [
   { to: '/posts', children: (<p style={{ color: 'white', fontSize: '14px' }}>Posts</p>) },
   { to: '/events', children: (<p style={{ color: 'white', fontSize: '14px' }}>Events</p>) },
   { to: '/services', children: (<p style={{ color: 'white', fontSize: '14px' }}>Services</p>) },
+  { to: '/toolbox', children: (<p style={{ color: 'white', fontSize: '14px' }}>Astro Toolbox</p>) },
 ];
 
 const DrawerHeader = () => (
