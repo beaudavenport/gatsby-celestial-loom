@@ -48,4 +48,6 @@ collections:
       - { name: 'templateKey', label: 'Template Key', widget: 'hidden', default: 'serviceTemplate'}
       - { name: 'type', label: 'type', widget: 'hidden', default: 'services'}
       - { name: 'title', label: 'Title' }
+      - { name: 'origin', label: 'Origin', widget: 'select', options: ['Western', 'Vedic', 'Celtic', 'Native American']}
+      - { name: 'price', label: 'Price (increments of $5.00)', widget: 'number', default: '3', min: 0, valueType: 'float', step: 5.00 }
       - { name: 'body', label: 'Body', widget: 'markdown' }

@@ -44,6 +44,8 @@ function BlogEntryPreview({ entry, getAsset }) {
 function ServicePreview({ entry }) {
   const data = {
     title: entry.getIn(['data', 'title']),
+    origin: entry.getIn(['data', 'origin']),
+    price: entry.getIn(['data', 'price']),
     html: converter.makeHtml(entry.getIn(['data', 'body'])),
   };
 
@@ -54,4 +56,4 @@ function ServicePreview({ entry }) {
 
 CMS.registerPreviewTemplate('events', EventPagePreview);
 CMS.registerPreviewTemplate('blog', BlogEntryPreview);
-CMS.registerPreviewTemplate('blog', ServicePreview);
+CMS.registerPreviewTemplate('services', ServicePreview);
