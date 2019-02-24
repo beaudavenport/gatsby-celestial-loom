@@ -8,6 +8,12 @@ const ServiceCard = ({
 }) => (
   <Link to={path}>
     <Card style={{ backgroundColor: 'white' }}>
+      <div style={{ backgroundColor: 'black', padding: '10px' }}>
+        <h3 style={{ color: 'white', fontSize: '15px' }}>
+          <span style={{ fontSize: '50px' }}>☿</span>
+          WESTERN
+        </h3>
+      </div>
       <CardText>
         <h3>{title}</h3>
       </CardText>
