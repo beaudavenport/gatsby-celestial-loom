@@ -18,22 +18,24 @@ const navItems = [
 ];
 
 const DrawerHeader = () => (
-  <div style={{
-    width: '80%', margin: '0 auto',
-  }}
-  >
-    <div style={{ width: '60%', margin: '0 auto', padding: '20px' }}>
-      <Media aspectRatio="1-1" style={{ borderRadius: '50%', border: '2px solid #ff8013' }}>
-        <img src={Nikki} alt="at da club" />
-      </Media>
-    </div>
-    <CardText>
-      <p style={{ fontSize: 'smaller', color: '#ff8013', textAlign: 'center' }}>
+  <Link to="/about-nikki">
+    <div style={{
+      width: '80%', margin: '0 auto',
+    }}
+    >
+      <div style={{ width: '60%', margin: '0 auto', padding: '20px' }}>
+        <Media aspectRatio="1-1" style={{ borderRadius: '50%', border: '2px solid #ff8013' }}>
+          <img src={Nikki} alt="at da club" />
+        </Media>
+      </div>
+      <CardText>
+        <p style={{ fontSize: 'smaller', color: '#ff8013', textAlign: 'center' }}>
           Nikki Davenport, astrological consultant, has been a professional
           astrologer for over 35 years.
-      </p>
-    </CardText>
-  </div>
+        </p>
+      </CardText>
+    </div>
+  </Link>
 );
 
 const DrawerTitle = () => (
