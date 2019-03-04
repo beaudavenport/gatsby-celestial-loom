@@ -12,8 +12,7 @@ import SidebarContents from '../components/SidebarContents';
 import ThumbnailCard from '../components/ThumbnailCard';
 
 const IndexPage = ({ data }) => {
-  const nodes = data.allMarkdownRemark.edges.map(edge => edge.node);
-  const [firstBlogNode, ...otherBlogNodes] = nodes.filter(node => node.frontmatter.type === 'blog');
+  const [firstBlogNode, ...otherBlogNodes] = data.allMarkdownRemark.edges.map(edge => edge.node);
 
   return (
     <Layout>
@@ -52,24 +51,26 @@ IndexPage.propTypes = {
 export default IndexPage;
 
 export const query = graphql`
-  query {
-    allMarkdownRemark(sort: { fields: [frontmatter___publishDate], order: DESC }) {
-      totalCount
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            image
-            publishDate(formatString: "DD MMMM, YYYY")
-            type
-          }
-          excerpt
-          fields {
-            slug
-          }
+query {
+  allMarkdownRemark(
+    filter: { frontmatter: { type: { eq: "blog"} } },
+    sort: { fields: [frontmatter___publishDate], order: DESC }
+  ) {
+    totalCount
+    edges {
+      node {
+        id
+        frontmatter {
+          title
+          image
+          publishDate(formatString: "MMMM YYYY")
+        }
+        excerpt
+        fields {
+          slug
         }
       }
     }
   }
+}
 `;

@@ -1,8 +1,7 @@
 import { Card, CardText } from 'react-md';
 import { Link, StaticQuery, graphql } from 'gatsby';
-import PropTypes from 'prop-types';
-import React from 'react';
 import { uniq } from 'lodash';
+import React from 'react';
 
 const SidebarContents = () => (
   <StaticQuery
