@@ -1,18 +1,25 @@
-import React from 'react';
 import {
-  Grid, Cell, Card, CardTitle, CardText, MediaOverlay, FontIcon,
+  Card,
+  CardText,
+  CardTitle,
+  Cell,
+  FontIcon,
+  Grid,
+  MediaOverlay,
 } from 'react-md';
 import { Link } from 'gatsby';
-import Layout from '../components/Layout';
-import ThumbnailCard from '../components/ThumbnailCard';
+import React from 'react';
+
+import ArchiveCard from '../components/ArchiveCard';
 import DateThumbnail from '../components/ThumbnailCard/dateThumbnail';
 import ImageThumbnail from '../components/ThumbnailCard/imageThumbnail';
-import Preview from '../images/2019-Cosmic-Preview.jpg';
+import Layout from '../components/Layout';
 import Pleiades from '../images/pleiades.jpg';
+import Preview from '../images/2019-Cosmic-Preview.jpg';
+import ThumbnailCard from '../components/ThumbnailCard';
 
 const Posts = () => (
   <Layout>
-    <h1>POSTS</h1>
     <Grid style={{ padding: '20px' }}>
       <Cell size={8}>
         <Link to="/posts/test1">
@@ -36,20 +43,7 @@ const Posts = () => (
         />
       </Cell>
       <Cell size={4}>
-        <h3>Archive</h3>
-        <Card>
-          <CardText>
-            <h5>August 2018</h5>
-            <ul>
-              <li><Link to="/">Quincunx of the Century</Link></li>
-              <li><Link to="/">Surviving Mercury Retrograde</Link></li>
-            </ul>
-            <h5>June 2018</h5>
-            <ul>
-              <li><Link to="/">Another great article</Link></li>
-            </ul>
-          </CardText>
-        </Card>
+        <ArchiveCard />
         <h3>Upcoming events</h3>
         <Card style={{ backgroundColor: 'white' }}>
           <div style={{ flexDirection: 'row', display: 'flex' }}>
