@@ -23,3 +23,27 @@ html {
   flex-direction: row;
   display: flex;
 }
+
+@media #{$md-desktop-media} {
+  .mobile-nav-drawer {
+    display: none;
+    color: 'blue';
+  }
+
+  .desktop-nav-drawer {
+    display: initial;
+    color: 'green';
+  }
+}
+
+@media #{$md-mobile-media} {
+  .mobile-nav-drawer {
+    display: initial;
+    color: 'blue';
+  }
+
+  .desktop-nav-drawer {
+    display: none;
+    color: 'green';
+  }
+}
