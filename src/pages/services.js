@@ -13,7 +13,7 @@ const Services = ({ data }) => {
   const [firstServiceNode, ...otherServiceNodes] = nodes.filter(node => node.frontmatter.type === 'services');
 
   return (
-    <Layout>
+    <Layout title="Services">
       <Paper style={{
         background: `url(${WesternChart})`,
         backgroundPosition: 'center',

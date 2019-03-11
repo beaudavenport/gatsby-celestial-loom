@@ -11,7 +11,7 @@ function ServiceTemplate({
   const { markdownRemark } = data; // data.markdownRemark holds our post data
   const { frontmatter, html } = markdownRemark;
   return (
-    <Layout>
+    <Layout title="Services">
       <ServicePage
         title={frontmatter.title}
         price={frontmatter.price}

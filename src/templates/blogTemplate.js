@@ -9,7 +9,7 @@ export default function BlogTemplate({ data }) {
   const { frontmatter, html } = markdownRemark;
 
   return (
-    <Layout>
+    <Layout title="Posts">
       <BlogEntry
         title={frontmatter.title}
         image={frontmatter.image}

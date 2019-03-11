@@ -7,7 +7,7 @@ import TwitterIcon from '../images/iconmonstr-twitter-4.svg';
 import FacebookIcon from '../images/iconmonstr-facebook-4.svg';
 
 const AboutNikki = () => (
-  <Layout>
+  <Layout title="About Nikki">
     <Paper style={{ backgroundColor: 'white' }}>
       <Grid>
         <Cell size={6}>

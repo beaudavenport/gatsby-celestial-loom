@@ -15,7 +15,7 @@ const Events = ({ data }) => {
   const [firstEventNode, ...otherEventNodes] = nodes.filter(node => node.frontmatter.type === 'events');
 
   return (
-    <Layout>
+    <Layout title="Events">
       <Grid style={{ padding: '20px' }}>
         <Cell size={8}>
           <h1>Upcoming events</h1>

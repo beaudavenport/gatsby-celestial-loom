@@ -1,16 +1,22 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
-import { StaticQuery, graphql, Link } from 'gatsby';
+import './layout.scss';
+
 import {
-  NavigationDrawer, FontIcon, Media, CardText, ListItem, Drawer,
+  NavigationDrawer,
+  FontIcon,
+  Media,
+  CardText,
+  ListItem,
 } from 'react-md';
+import { StaticQuery, graphql, Link } from 'gatsby';
+import Helmet from 'react-helmet';
+import PropTypes from 'prop-types';
+import React, { useState } from 'react';
+
 import HeaderSearch from './HeaderSearch';
 import Nikki from '../images/nikki.jpg';
 
-import './layout.scss';
-
 const navItems = [
+  { to: '/', children: (<p style={{ color: 'white', fontSize: '14px' }}>Home</p>) },
   { to: '/posts', children: (<p style={{ color: 'white', fontSize: '14px' }}>Posts</p>) },
   { to: '/events', children: (<p style={{ color: 'white', fontSize: '14px' }}>Events</p>) },
   { to: '/services', children: (<p style={{ color: 'white', fontSize: '14px' }}>Services</p>) },
@@ -44,14 +50,9 @@ const DrawerTitle = () => (
   </div>
 );
 
-const Layout = ({ children }) => {
-  const { mobile, tablet } = Drawer.getCurrentMedia(Drawer.defaultProps);
-  let defaultMedia = 'desktop';
-  if (mobile) {
-    defaultMedia = 'mobile';
-  } else if (tablet) {
-    defaultMedia = 'tablet';
-  }
+const Layout = ({ children, title }) => {
+  const [isSearching, setIsSearching] = useState(false);
+
   return (
     <StaticQuery
       query={graphql`
@@ -65,7 +66,7 @@ const Layout = ({ children }) => {
         `}
       render={data => (
         <NavigationDrawer
-          desktopDrawerType={NavigationDrawer.DrawerTypes.FULL_HEIGHT}
+          desktopDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY}
           tabletDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY}
           mobileDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY}
           position="left"
@@ -74,14 +75,15 @@ const Layout = ({ children }) => {
           temporaryIcon={(<FontIcon iconClassName="material-icons">menu</FontIcon>)}
           navStyle={{ height: '30%', backgroundColor: 'rgb(47, 47, 47)' }}
           drawerChildren={<DrawerHeader />}
-          toolbarTitle={defaultMedia === 'desktop' ? null : 'The Celestial Loom'}
-          toolbarActions={<HeaderSearch />}
-          drawerHeader={defaultMedia !== 'desktop' ? null : (<DrawerTitle />)}
+          toolbarTitle={isSearching ? null : title}
+          toolbarActions={
+            <HeaderSearch isSearching={isSearching} setIsSearching={setIsSearching} />
+          }
+          drawerHeader={<DrawerTitle />}
           toolbarTitleStyle={{ fontFamily: 'Berkshire Swash', fontStyle: 'italic' }}
           drawerTitleStyle={{ fontFamily: 'Berkshire Swash', fontStyle: 'italic' }}
           toolbarSingleColor
           toolbarStyle={{ backgroundColor: 'rgb(47, 47, 47)' }}
-          defaultMedia={defaultMedia}
           navItems={navItems.map(({ divider, subheader, ...route }) => {
             if (divider || subheader) {
               return { divider, subheader, ...route };
@@ -123,6 +125,7 @@ const Layout = ({ children }) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  title: PropTypes.string.isRequired,
 };
 
 export default Layout;

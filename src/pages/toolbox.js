@@ -14,7 +14,7 @@ const Toolbox = ({ data }) => {
   const houseNodes = nodes.filter(node => node.frontmatter.type === 'houses');
 
   return (
-    <Layout>
+    <Layout title="Astro Toolbox">
       <Grid style={{ padding: '20px' }}>
         <Cell size={8}>
           <h3>Your Astro Toolbox</h3>

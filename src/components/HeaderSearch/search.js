@@ -44,25 +44,29 @@ export default class Search extends Component {
     return (
       <DropdownMenu
         toggle={this}
+        block
         visible={results.length > 0}
         menuItems={
           results.map(page => (
             <ListItem
+              style={{ paddingLeft: 10, paddingRight: 10 }}
               primaryText={page.title}
+              secondaryText={`${page.type} - ${page.publishDate}`}
               component={Link}
               to={`/${page.path}`}
             />
           ))
         }
         anchor={{
-          x: DropdownMenu.HorizontalAnchors.INNER_RIGHT,
+          x: DropdownMenu.HorizontalAnchors.INNER_LEFT,
           y: DropdownMenu.VerticalAnchors.BOTTOM,
         }}
-        position={DropdownMenu.Positions.BELOW}
+        position={DropdownMenu.Positions.BOTTOM_RIGHT}
       >
         <TextField
+          ref={input => input && input.focus()}
           type="text"
-          leftIcon={<FontIcon>search</FontIcon>}
+          placeholder="Search"
           value={query}
           onChange={this.search}
           onBlur={this.resetSearch}

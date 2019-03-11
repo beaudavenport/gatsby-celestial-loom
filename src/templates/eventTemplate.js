@@ -11,7 +11,7 @@ function EventTemplate({
   const { markdownRemark } = data; // data.markdownRemark holds our post data
   const { frontmatter, html } = markdownRemark;
   return (
-    <Layout>
+    <Layout title="Events">
       <EventPage
         title={frontmatter.title}
         image={frontmatter.eventImage}

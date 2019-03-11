@@ -52,6 +52,8 @@ module.exports = {
         resolvers: {
           MarkdownRemark: {
             title: node => node.frontmatter.title,
+            type: node => node.frontmatter.type,
+            publishDate: node => node.frontmatter.publishDate,
             path: node => node.fields.slug,
           },
         },

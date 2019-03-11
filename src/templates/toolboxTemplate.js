@@ -11,7 +11,7 @@ function ToolboxTemplate({
   const { markdownRemark } = data; // data.markdownRemark holds our post data
   const { frontmatter, html } = markdownRemark;
   return (
-    <Layout>
+    <Layout title="Astro Toolbox">
       <ToolboxPage
         title={frontmatter.title}
         icon={frontmatter.icon}

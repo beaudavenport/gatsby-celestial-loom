@@ -15,7 +15,7 @@ const IndexPage = ({ data }) => {
   const [firstBlogNode, ...otherBlogNodes] = data.allMarkdownRemark.edges.map(edge => edge.node);
 
   return (
-    <Layout>
+    <Layout title="Home">
       <Jumbotron />
       <Grid style={{ padding: '20px' }}>
         <Cell size={8}>
