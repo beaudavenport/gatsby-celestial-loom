@@ -66,7 +66,7 @@ export default class Search extends Component {
         <TextField
           ref={input => input && input.focus()}
           type="text"
-          placeholder="Search"
+          label="Search"
           value={query}
           onChange={this.search}
           onBlur={this.resetSearch}
