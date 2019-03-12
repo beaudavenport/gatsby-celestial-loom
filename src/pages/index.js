@@ -17,9 +17,10 @@ const IndexPage = ({ data }) => {
   return (
     <Layout title="Home">
       <Jumbotron />
-      <Grid style={{ maxWidth: 900 }}>
+      <Grid style={{ maxWidth: 1000 }}>
         <Cell size={8}>
           <FeaturedCard
+            style={{ marginBottom: 10 }}
             path={firstBlogNode.fields.slug}
             title={firstBlogNode.frontmatter.title}
             subtitle="subtitle here"
@@ -29,6 +30,7 @@ const IndexPage = ({ data }) => {
           <h1 style={{ fontStyle: 'italic' }}>Earlier Articles</h1>
           { otherBlogNodes && otherBlogNodes.map(node => (
             <ThumbnailCard
+              style={{ marginBottom: 10 }}
               title={node.frontmatter.title}
               caption="07/12/16"
               thumbnailChildren={<ImageThumbnail imageUrl={Pleiades} />}
@@ -36,7 +38,7 @@ const IndexPage = ({ data }) => {
           ))
           }
         </Cell>
-        <Cell desktopOffset={1} size={3}>
+        <Cell desktopOffset={1} desktopSize={3} size={4}>
           <SidebarContents eventsQuantity={2} postsQuantity={0} />
         </Cell>
       </Grid>

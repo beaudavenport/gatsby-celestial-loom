@@ -1,6 +1,4 @@
-import {
-  DropdownMenu, FontIcon, ListItem, TextField,
-} from 'react-md';
+import { DropdownMenu, ListItem, TextField } from 'react-md';
 import { Link } from 'gatsby';
 import React, { Component } from 'react';
 
@@ -66,7 +64,7 @@ export default class Search extends Component {
         <TextField
           ref={input => input && input.focus()}
           type="text"
-          label="Search"
+          placeholder="Search"
           value={query}
           onChange={this.search}
           onBlur={this.resetSearch}

@@ -30,3 +30,29 @@ html {
   align-items: center;
   vertical-align: middle;
 }
+
+.search-enter {
+  max-width: 0;
+}
+
+.search-enter-active {
+  max-width: 100%;
+  transition: max-width 500ms ease-in-out;
+}
+
+.search-exit {
+  max-width: 100%;
+}
+
+.search-exit-active {
+  max-width: 0;
+  transition: max-width 300ms ease-in-out;
+}
+
+.sidebar-header {
+  font-style: italic;
+  font-weight: bold;
+  margin-right: 10px;
+  margin-top: 10px;
+  text-align: right;
+}

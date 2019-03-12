@@ -13,7 +13,7 @@ const Jumbotron = () => (
     padding: '100px 50px 0 50px',
   }}
   >
-    <Grid style={{ maxWidth: 900 }}>
+    <Grid style={{ maxWidth: 1000 }}>
       <Cell size={6}>
         <p style={{
           fontStyle: 'italic', fontSize: 'xx-large', color: 'white', fontFamily: 'Berkshire Swash',

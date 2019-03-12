@@ -4,15 +4,15 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 const ThumbnailCard = ({
-  title, path = '/', caption, thumbnailChildren,
+  title, path = '/', caption, thumbnailChildren, small,
 }) => (
   <Link to={path}>
-    <Card>
+    <Card style={{ marginBottom: 10 }}>
       <div className="flex-row">
         {thumbnailChildren}
         <div style={{ padding: '10px' }}>
-          <h4 style={{ fontWeight: 'bold' }}>{title}</h4>
-          <caption>{caption}</caption>
+          <h4 style={{ fontWeight: 'bold', fontSize: small ? 11 : 16 }}>{title}</h4>
+          <caption style={{ fontSize: small ? 9 : 14 }}>{caption}</caption>
         </div>
       </div>
     </Card>
