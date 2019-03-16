@@ -1,5 +1,4 @@
 import { Button, FontIcon } from 'react-md';
-import { CSSTransition } from 'react-transition-group';
 import { StaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -17,16 +16,14 @@ const Header = ({ isSearching, setIsSearching }) => (
       }
     `}
     render={data => (
-      <div className="search-container">
+      <div style={{ display: 'flex', height: '100%' }}>
         <Button onClick={() => setIsSearching(!isSearching)}><FontIcon>search</FontIcon></Button>
-        <CSSTransition
-          classNames="search"
-          in={isSearching}
-          timeout={300}
-          unmountOnExit
-        >
-          <Search searchIndex={data.siteSearchIndex.index} />
-        </CSSTransition>
+        <div className="search-container" style={{ position: 'relative' }}>
+          <div className={isSearching ? 'search-searching' : 'search'}>
+            <Search searchIndex={data.siteSearchIndex.index} />
+            <Button onClick={() => setIsSearching(!isSearching)}><FontIcon>close</FontIcon></Button>
+          </div>
+        </div>
       </div>
     )}
   />

@@ -75,7 +75,8 @@ const Layout = ({ children, title }) => {
           temporaryIcon={(<FontIcon iconClassName="material-icons">menu</FontIcon>)}
           navStyle={{ height: '30%', backgroundColor: 'rgb(47, 47, 47)' }}
           drawerChildren={<DrawerHeader />}
-          toolbarTitle={isSearching ? null : title}
+          toolbarTitle={title}
+          toolbarTitleClassName={isSearching ? 'toolbar-title-searching' : 'toolbar-title'}
           toolbarActions={
             <HeaderSearch isSearching={isSearching} setIsSearching={setIsSearching} />
           }

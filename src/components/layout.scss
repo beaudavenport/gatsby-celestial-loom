@@ -31,22 +31,27 @@ html {
   vertical-align: middle;
 }
 
-.search-enter {
-  max-width: 0;
+.toolbar-title-searching {
+  transform: translateX(-200px);
+  transition: all 500ms;
 }
 
-.search-enter-active {
-  max-width: 100%;
-  transition: max-width 500ms ease-in-out;
+.toolbar-title {
+  transform: translateX(0);
+  transition: all 500ms;
 }
 
-.search-exit {
-  max-width: 100%;
+.search {
+  display: flex;
+  width: 0;
+  transition: width 500ms;
+  overflow: hidden;
 }
 
-.search-exit-active {
-  max-width: 0;
-  transition: max-width 300ms ease-in-out;
+.search-searching {
+  display: flex;
+  width: 200px;
+  transition: width 500ms;
 }
 
 .sidebar-header {
