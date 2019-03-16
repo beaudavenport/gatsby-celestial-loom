@@ -33,18 +33,23 @@ html {
 
 .toolbar-title-searching {
   transform: translateX(-200px);
+  -webkit-transform: translateX(-200px);
   transition: all 500ms;
+  -webkit-transition: all 500ms;
 }
 
 .toolbar-title {
   transform: translateX(0);
+  -webkit-transform: translateX(0);
   transition: all 500ms;
+  -webkit-transition: all 500ms;
 }
 
 .search {
   display: flex;
   width: 0;
   transition: width 500ms;
+  -webkit-transition: width 500ms;
   overflow: hidden;
 }
 
@@ -52,6 +57,7 @@ html {
   display: flex;
   width: 200px;
   transition: width 500ms;
+  -webkit-transition: width 500ms;
 }
 
 .sidebar-header {
