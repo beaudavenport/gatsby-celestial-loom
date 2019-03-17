@@ -41,7 +41,7 @@ export default class Search extends Component {
     const { query, results } = this.state;
     return (
       <DropdownMenu
-        style={{ flex: 1 }}
+        className="search-dropdown"
         toggle={this}
         block
         visible={results.length > 0}

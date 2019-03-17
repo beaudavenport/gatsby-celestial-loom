@@ -16,10 +16,10 @@ const Header = ({ isSearching, setIsSearching }) => (
       }
     `}
     render={data => (
-      <div style={{ display: 'flex', height: '100%' }}>
+      <div className="header-search-container">
         <Button onClick={() => setIsSearching(!isSearching)}><FontIcon>search</FontIcon></Button>
-        <div className="search-container" style={{ position: 'relative' }}>
-          <div className={isSearching ? 'search-searching' : 'search'}>
+        <div className={`search-container ${isSearching ? 'search-searching' : 'search'}`}>
+          <div className="search-input">
             <Search searchIndex={data.siteSearchIndex.index} />
             <Button onClick={() => setIsSearching(!isSearching)}><FontIcon>close</FontIcon></Button>
           </div>
