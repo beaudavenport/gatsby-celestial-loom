@@ -19,10 +19,15 @@ const Header = ({ isSearching, setIsSearching }) => (
       <div className="header-search-container">
         <Button onClick={() => setIsSearching(!isSearching)}><FontIcon>search</FontIcon></Button>
         <div className={`search-container ${isSearching ? 'search-searching' : 'search'}`}>
+          {isSearching
+          && (
           <div className="search-input">
-            <Search searchIndex={data.siteSearchIndex.index} />
-            <Button onClick={() => setIsSearching(!isSearching)}><FontIcon>close</FontIcon></Button>
+            <Search searchIndex={data.siteSearchIndex.index} isSearching={isSearching} />
+            <Button onClick={() => setIsSearching(!isSearching)}>
+              <FontIcon>close</FontIcon>
+            </Button>
           </div>
+          )}
         </div>
       </div>
     )}
