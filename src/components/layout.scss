@@ -24,6 +24,20 @@ html {
   display: flex;
 }
 
+.flex-column-start {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.flex-column-end {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+}
+
 .search-container {
   height: 100%;
   display: flex;

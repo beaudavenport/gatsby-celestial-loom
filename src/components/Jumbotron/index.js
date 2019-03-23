@@ -10,37 +10,40 @@ const Jumbotron = () => (
     backgroundPosition: 'center',
     backgroundSize: 'cover',
     width: '100%',
-    padding: '100px 50px 0 50px',
+    padding: 25,
+    height: 300,
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
   }}
   >
-    <Grid style={{ maxWidth: 1000 }}>
-      <Cell size={6}>
-        <p style={{
-          fontStyle: 'italic', fontSize: 'xx-large', color: 'white', fontFamily: 'Berkshire Swash',
-        }}
-        >
+    <div>
+      <p style={{
+        fontStyle: 'italic', fontSize: '3rem', lineHeight: '3rem', color: 'white', fontFamily: 'Berkshire Swash',
+      }}
+      >
 The Celestial Loom
-        </p>
-        <p style={{
-          fontStyle: 'italic', fontSize: 'x-large', color: 'white', fontFamily: 'Berkshire Swash',
-        }}
-        >
+      </p>
+      <p style={{
+        fontStyle: 'italic', fontSize: '2rem', lineHeight: '2rem', color: 'white', fontFamily: 'Berkshire Swash',
+      }}
+      >
 Astrological Services
-        </p>
-      </Cell>
-      <Cell size={6}>
-        <p style={{
-          fontStyle: 'italic', textAlign: 'right', fontSize: 'large', color: 'white', fontFamily: 'Martel',
-        }}
-        >
+      </p>
+    </div>
+    <div>
+      <p style={{
+        fontStyle: 'italic', textAlign: 'right', fontSize: 'large', color: 'white', fontFamily: 'Martel',
+      }}
+      >
             Nikki Davenport, Licensed Astrologer,
             brings the wisdom of the zodiac to your door (and inbox!)
-        </p>
-        <div style={{ textAlign: 'right' }}>
-          <Button flat primary swapTheming style={{ fontStyle: 'bold', fontFamily: 'Martel' }}>Get My Chart</Button>
-        </div>
-      </Cell>
-    </Grid>
+      </p>
+      <div style={{ textAlign: 'right' }}>
+        <Button flat primary swapTheming style={{ fontStyle: 'bold', fontFamily: 'Martel', marginRight: 10 }}>Get My Chart</Button>
+        <Button flat primary style={{ fontStyle: 'bold', fontFamily: 'Martel', border: '1px solid' }}>About Nikki</Button>
+      </div>
+    </div>
   </Paper>
 );
 

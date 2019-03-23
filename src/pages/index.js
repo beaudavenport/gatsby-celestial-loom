@@ -16,9 +16,10 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout title="Home">
-      <Jumbotron />
-      <Grid style={{ maxWidth: 1000 }}>
+      <Grid style={{ maxWidth: 1100 }}>
         <Cell size={8}>
+          <Jumbotron />
+          <div style={{ height: 20 }} />
           <FeaturedCard
             style={{ marginBottom: 10 }}
             path={firstBlogNode.fields.slug}
@@ -38,7 +39,7 @@ const IndexPage = ({ data }) => {
           ))
           }
         </Cell>
-        <Cell desktopOffset={1} desktopSize={3} size={4}>
+        <Cell size={4}>
           <SidebarContents eventsQuantity={2} postsQuantity={0} />
         </Cell>
       </Grid>
