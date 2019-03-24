@@ -1,5 +1,5 @@
 import {
-  Cell, FontIcon, Grid, Paper,
+  Button, Card, CardText, Cell, FontIcon, Grid, Media,
 } from 'react-md';
 import { Link, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
@@ -9,6 +9,7 @@ import FeaturedCard from '../components/FeaturedCard';
 import ImageThumbnail from '../components/ThumbnailCard/imageThumbnail';
 import Jumbotron from '../components/Jumbotron';
 import Layout from '../components/Layout';
+import Nikki from '../images/nikki.jpg';
 import SidebarContents from '../components/SidebarContents';
 import ThumbnailCard from '../components/ThumbnailCard';
 
@@ -55,6 +56,33 @@ const IndexPage = ({ data }) => {
           }
         </Cell>
         <Cell size={4}>
+          <Card style={{ backgroundColor: 'rgb(47, 47, 47)' }}>
+            <div style={{
+              width: '80%', margin: '0 auto',
+            }}
+            >
+              <div style={{ width: '60%', margin: '0 auto', padding: '20px' }}>
+                <Media aspectRatio="1-1" style={{ borderRadius: '50%', border: '2px solid #ff8013' }}>
+                  <img src={Nikki} alt="at da club" />
+                </Media>
+              </div>
+              <CardText>
+                <p style={{ fontSize: 'smaller', color: '#ff8013', textAlign: 'center' }}>
+                  Nikki Davenport, astrological consultant, has been a professional
+                  astrologer for over 35 years.
+                </p>
+                <Button
+                  flat
+                  primary
+                  style={{
+                    fontStyle: 'bold', fontFamily: 'Martel', border: '1px solid', textAlign: 'center',
+                  }}
+                >
+                  About Nikki
+                </Button>
+              </CardText>
+            </div>
+          </Card>
           <SidebarContents eventsQuantity={2} postsQuantity={0} />
         </Cell>
       </Grid>
