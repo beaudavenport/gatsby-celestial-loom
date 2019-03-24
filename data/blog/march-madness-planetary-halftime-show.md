@@ -4,7 +4,7 @@ type: blog
 path: /ignoreme
 publishDate: 2019-03-04T21:43:55.925Z
 title: March Madness - Planetary Halftime Show
-image: /assets/2019-cosmic-preview.jpg
+image: /assets/astro-book.jpg
 ---
 # GET READY TO RUMBLE
 
