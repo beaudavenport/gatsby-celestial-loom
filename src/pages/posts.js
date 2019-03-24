@@ -41,7 +41,7 @@ const Posts = ({ data }) => {
 
   return (
     <Layout title="Posts">
-      <Grid style={{ padding: '20px' }}>
+      <Grid style={{ maxWidth: 1100 }}>
         <Cell size={8}>
           <FeaturedCard
             path={firstNode.fields.slug}

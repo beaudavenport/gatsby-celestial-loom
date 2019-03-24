@@ -16,7 +16,7 @@ const Events = ({ data }) => {
 
   return (
     <Layout title="Events">
-      <Grid style={{ padding: '20px' }}>
+      <Grid style={{ maxWidth: 1100 }}>
         <Cell size={8}>
           <h1>Upcoming events</h1>
           <ThumbnailCard

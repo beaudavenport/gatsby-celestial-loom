@@ -14,27 +14,28 @@ const Services = ({ data }) => {
 
   return (
     <Layout title="Services">
-      <Paper style={{
-        background: `url(${WesternChart})`,
-        backgroundPosition: 'center',
-        backgroundSize: 'cover',
-        width: '100%',
-        padding: '100px',
-      }}
-      >
-        <div>
-          <p style={{
-            fontStyle: 'italic', fontSize: 'xx-large', color: 'white', fontFamily: 'Berkshire Swash',
-          }}
-          >
-        The Wisdom of the Zodiac - online or in person!
-          </p>
-        </div>
-      </Paper>
-      <Grid style={{ padding: '20px' }}>
+      <Grid style={{ maxWidth: 1100 }}>
         <Cell size={8}>
-          <h1>Services</h1>
           <Grid>
+            <Cell size={12}>
+              <Paper style={{
+                background: `url(${WesternChart})`,
+                backgroundPosition: 'center',
+                backgroundSize: 'cover',
+                width: '100%',
+                padding: '100px',
+              }}
+              >
+                <div>
+                  <p style={{
+                    fontStyle: 'italic', fontSize: 'xx-large', color: 'white', fontFamily: 'Berkshire Swash',
+                  }}
+                  >
+            The Wisdom of the Zodiac - online or in person!
+                  </p>
+                </div>
+              </Paper>
+            </Cell>
             <Cell size={6}>
               <ServiceCard
                 path={firstServiceNode.fields.slug}

@@ -15,7 +15,7 @@ const Toolbox = ({ data }) => {
 
   return (
     <Layout title="Astro Toolbox">
-      <Grid style={{ padding: '20px' }}>
+      <Grid style={{ padding: '20px', maxWidth: 1100 }}>
         <Cell size={8}>
           <h3>Your Astro Toolbox</h3>
           <h4>All the components of your Chart</h4>

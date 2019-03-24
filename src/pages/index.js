@@ -1,4 +1,6 @@
-import { Cell, FontIcon, Grid } from 'react-md';
+import {
+  Cell, FontIcon, Grid, Paper,
+} from 'react-md';
 import { Link, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -19,17 +21,23 @@ const IndexPage = ({ data }) => {
         <Cell size={8}>
           <Jumbotron />
           <div style={{
-            padding: '30px 0px 15px 0px', fontSize: '1.25rem', display: 'flex', justifyContent: 'space-between', alignItems: 'baseline',
+            paddingTop: 30, fontSize: '1.25rem', display: 'flex', justifyContent: 'space-between', alignItems: 'baseline',
           }}
           >
-            <p style={{ fontStyle: 'italic', fontSize: '1.5rem' }}>LATEST POSTS</p>
+            <p style={{
+              fontStyle: 'italic', fontSize: '1.25rem', fontWeight: 'bold', color: 'rgba(0, 0, 0, 0.54)',
+            }}
+            >
+              New Blog Entries
+            </p>
             <Link to="/posts" style={{ display: 'flex', textDecoration: 'none' }}>
-              <p style={{ fontStyle: 'italic', color: 'rgba(0, 0, 0, 0.54)' }}>VIEW ALL</p>
+              <p style={{ fontStyle: 'italic', fontWeight: 'bold', color: 'rgba(0, 0, 0, 0.54)' }}>View All</p>
               <FontIcon style={{ height: 14 }}>chevron_right</FontIcon>
             </Link>
           </div>
+          <hr style={{ marginTop: 0 }} />
           <FeaturedCard
-            style={{ marginBottom: 10 }}
+            style={{ marginBottom: 10, marginTop: 20 }}
             path={firstBlogNode.fields.slug}
             title={firstBlogNode.frontmatter.title}
             publishDate={firstBlogNode.frontmatter.publishDate}
