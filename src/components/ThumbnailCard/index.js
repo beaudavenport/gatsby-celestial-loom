@@ -6,7 +6,7 @@ import React from 'react';
 const ThumbnailCard = ({
   title, path = '/', caption, thumbnailChildren, small,
 }) => (
-  <Link to={path}>
+  <Link to={path} style={{ textDecoration: 'none' }}>
     <Card style={{ marginBottom: 10 }}>
       <div className="flex-row">
         {thumbnailChildren}

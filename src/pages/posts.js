@@ -55,7 +55,7 @@ const Posts = ({ data }) => {
             <ThumbnailCard
               title={node.frontmatter.title}
               caption="07/12/16"
-              thumbnailChildren={<ImageThumbnail imageUrl={Pleiades} />}
+              thumbnailChildren={<ImageThumbnail imageUrl={node.frontmatter.image} />}
             />
           ))
       }

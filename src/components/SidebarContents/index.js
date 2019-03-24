@@ -19,6 +19,8 @@ const SidebarContents = ({ eventsQuantity, postsQuantity }) => (
                  title
                  image
                  publishDate(formatString: "DD MMMM, YYYY")
+                 eventDay: publishDate(formatString: "DD")
+                 eventMonth: publishDate(formatString: "MMM")
                  type
                }
                excerpt
@@ -42,8 +44,13 @@ const SidebarContents = ({ eventsQuantity, postsQuantity }) => (
               small
               path={node.fields.slug}
               title={node.frontmatter.title}
-              caption="07/12/16"
-              thumbnailChildren={<DateThumbnail day="12" month="JUN" />}
+              caption={node.frontmatter.publishDate}
+              thumbnailChildren={(
+                <DateThumbnail
+                  day={node.frontmatter.eventDay}
+                  month={node.frontmatter.eventMonth}
+                />
+)}
             />
           ))
            }
@@ -53,7 +60,7 @@ const SidebarContents = ({ eventsQuantity, postsQuantity }) => (
               small
               path={node.fields.slug}
               title={node.frontmatter.title}
-              caption="07/12/16"
+              caption={node.frontmatter.publishDate}
               thumbnailChildren={<ImageThumbnail imageUrl={node.frontmatter.image} />}
             />
           ))

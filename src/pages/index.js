@@ -1,5 +1,5 @@
-import { Grid, Cell } from 'react-md';
-import { graphql } from 'gatsby';
+import { Cell, FontIcon, Grid } from 'react-md';
+import { Link, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -7,7 +7,6 @@ import FeaturedCard from '../components/FeaturedCard';
 import ImageThumbnail from '../components/ThumbnailCard/imageThumbnail';
 import Jumbotron from '../components/Jumbotron';
 import Layout from '../components/Layout';
-import Pleiades from '../images/pleiades.jpg';
 import SidebarContents from '../components/SidebarContents';
 import ThumbnailCard from '../components/ThumbnailCard';
 
@@ -19,7 +18,16 @@ const IndexPage = ({ data }) => {
       <Grid style={{ maxWidth: 1100 }}>
         <Cell size={8}>
           <Jumbotron />
-          <div style={{ height: 20 }} />
+          <div style={{
+            padding: '30px 0px 15px 0px', fontSize: '1.25rem', display: 'flex', justifyContent: 'space-between', alignItems: 'baseline',
+          }}
+          >
+            <p style={{ fontStyle: 'italic', fontSize: '1.5rem' }}>LATEST POSTS</p>
+            <Link to="/posts" style={{ display: 'flex', textDecoration: 'none' }}>
+              <p style={{ fontStyle: 'italic' }}>VIEW ALL</p>
+              <FontIcon style={{ height: 14 }}>chevron_right</FontIcon>
+            </Link>
+          </div>
           <FeaturedCard
             style={{ marginBottom: 10 }}
             path={firstBlogNode.fields.slug}
@@ -28,13 +36,12 @@ const IndexPage = ({ data }) => {
             image={firstBlogNode.frontmatter.image}
             excerpt={firstBlogNode.excerpt}
           />
-          <h1 style={{ fontStyle: 'italic' }}>Earlier Articles</h1>
           { otherBlogNodes && otherBlogNodes.map(node => (
             <ThumbnailCard
               style={{ marginBottom: 10 }}
               title={node.frontmatter.title}
               caption="07/12/16"
-              thumbnailChildren={<ImageThumbnail imageUrl={Pleiades} />}
+              thumbnailChildren={<ImageThumbnail imageUrl={node.frontmatter.image} />}
             />
           ))
           }

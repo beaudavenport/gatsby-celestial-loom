@@ -11,7 +11,7 @@ const ServiceCard = ({
   const { color, icon } = getOrigin(origin);
 
   return (
-    <Link to={path}>
+    <Link to={path} style={{ textDecoration: 'none' }}>
       <Card style={{ backgroundColor: 'white' }}>
         <div style={{ backgroundColor: color, padding: '10px' }}>
           <h3 style={{ color: 'white', fontSize: '15px' }}>

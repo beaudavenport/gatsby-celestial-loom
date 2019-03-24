@@ -6,10 +6,10 @@ import {
 import { Link } from 'gatsby';
 
 const FeaturedCard = ({
-  path, image, title, subtitle, excerpt,
+  path, image, title, subtitle, excerpt, style,
 }) => (
-  <Link to={path}>
-    <Card style={{ backgroundColor: 'white' }}>
+  <Link to={path} style={{ textDecoration: 'none' }}>
+    <Card style={{ backgroundColor: 'white', ...style }}>
       <div style={{ position: 'relative' }}>
         <img style={{ height: '200px', width: '100%', objectFit: 'cover' }} src={image} alt="Preview of featured post" />
         <MediaOverlay style={{ marginBottom: '5px' }}>
