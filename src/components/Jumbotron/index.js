@@ -1,7 +1,6 @@
+import { Paper, Button } from 'react-md';
 import React from 'react';
-import {
-  Paper, Grid, Cell, Button,
-} from 'react-md';
+
 import Astroglobe from '../../images/astroglobe.jpg';
 
 const Jumbotron = () => (
@@ -11,7 +10,7 @@ const Jumbotron = () => (
     backgroundSize: 'cover',
     width: '100%',
     padding: 25,
-    height: 300,
+    minHeight: 350,
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',

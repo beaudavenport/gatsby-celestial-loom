@@ -24,7 +24,7 @@ const IndexPage = ({ data }) => {
           >
             <p style={{ fontStyle: 'italic', fontSize: '1.5rem' }}>LATEST POSTS</p>
             <Link to="/posts" style={{ display: 'flex', textDecoration: 'none' }}>
-              <p style={{ fontStyle: 'italic' }}>VIEW ALL</p>
+              <p style={{ fontStyle: 'italic', color: 'rgba(0, 0, 0, 0.54)' }}>VIEW ALL</p>
               <FontIcon style={{ height: 14 }}>chevron_right</FontIcon>
             </Link>
           </div>
@@ -32,7 +32,7 @@ const IndexPage = ({ data }) => {
             style={{ marginBottom: 10 }}
             path={firstBlogNode.fields.slug}
             title={firstBlogNode.frontmatter.title}
-            subtitle="subtitle here"
+            publishDate={firstBlogNode.frontmatter.publishDate}
             image={firstBlogNode.frontmatter.image}
             excerpt={firstBlogNode.excerpt}
           />
@@ -73,7 +73,7 @@ query {
         frontmatter {
           title
           image
-          publishDate(formatString: "MMMM YYYY")
+          publishDate(formatString: "MMM DD, YYYY")
         }
         excerpt
         fields {
