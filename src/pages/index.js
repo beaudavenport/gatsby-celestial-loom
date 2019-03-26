@@ -66,7 +66,7 @@ const IndexPage = ({ data }) => {
                   <img src={Nikki} alt="at da club" />
                 </Media>
               </div>
-              <CardText>
+              <CardText style={{ display: 'flex', flexDirection: 'column' }}>
                 <p style={{ fontSize: 'smaller', color: '#ff8013', textAlign: 'center' }}>
                   Nikki Davenport, astrological consultant, has been a professional
                   astrologer for over 35 years.
@@ -75,8 +75,11 @@ const IndexPage = ({ data }) => {
                   flat
                   primary
                   style={{
-                    fontStyle: 'bold', fontFamily: 'Martel', border: '1px solid', textAlign: 'center',
+                    fontStyle: 'bold', fontFamily: 'Martel', border: '1px solid', margin: '0 auto',
                   }}
+                  to="/about-nikki"
+                  type={null}
+                  component={Link}
                 >
                   About Nikki
                 </Button>
