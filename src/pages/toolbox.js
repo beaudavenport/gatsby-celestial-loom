@@ -1,4 +1,4 @@
-import { Cell, Grid, List } from 'react-md';
+import { List } from 'react-md';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -14,55 +14,53 @@ const Toolbox = ({ data }) => {
   const houseNodes = nodes.filter(node => node.frontmatter.type === 'houses');
 
   return (
-    <Layout title="Astro Toolbox">
-      <Grid style={{ padding: '20px', maxWidth: 1100 }}>
-        <Cell size={8}>
-          <h3>Your Astro Toolbox</h3>
-          <h4>All the components of your Chart</h4>
-          <p>Planets</p>
-          <p>Signs</p>
-          <p>Houses</p>
-          <h3>Signs</h3>
-          <List>
-            { signNodes.map(node => (
-              <ToolboxRow
-                path={node.fields.slug}
-                title={node.frontmatter.title}
-                icon={node.frontmatter.icon}
-                excerpt={node.frontmatter.excerpt}
-              />
-            ))
+    <Layout
+      title="Astro Toolbox"
+      sidebarChildren={(
+        <SidebarContents eventsQuantity={2} postsQuantity={0} />
+  )}
+    >
+      <h3>Your Astro Toolbox</h3>
+      <h4>All the components of your Chart</h4>
+      <p>Planets</p>
+      <p>Signs</p>
+      <p>Houses</p>
+      <h3>Signs</h3>
+      <List>
+        { signNodes.map(node => (
+          <ToolboxRow
+            path={node.fields.slug}
+            title={node.frontmatter.title}
+            icon={node.frontmatter.icon}
+            excerpt={node.frontmatter.excerpt}
+          />
+        ))
             }
-          </List>
-          <h3>Houses</h3>
-          <List>
-            { houseNodes.map(node => (
-              <ToolboxRow
-                path={node.fields.slug}
-                title={node.frontmatter.title}
-                icon={node.frontmatter.icon}
-                excerpt={node.frontmatter.excerpt}
-              />
-            ))
+      </List>
+      <h3>Houses</h3>
+      <List>
+        { houseNodes.map(node => (
+          <ToolboxRow
+            path={node.fields.slug}
+            title={node.frontmatter.title}
+            icon={node.frontmatter.icon}
+            excerpt={node.frontmatter.excerpt}
+          />
+        ))
             }
-          </List>
-          <h3>Planets</h3>
-          <List>
-            { planetNodes.map(node => (
-              <ToolboxRow
-                path={node.fields.slug}
-                title={node.frontmatter.title}
-                icon={node.frontmatter.icon}
-                excerpt={node.frontmatter.excerpt}
-              />
-            ))
+      </List>
+      <h3>Planets</h3>
+      <List>
+        { planetNodes.map(node => (
+          <ToolboxRow
+            path={node.fields.slug}
+            title={node.frontmatter.title}
+            icon={node.frontmatter.icon}
+            excerpt={node.frontmatter.excerpt}
+          />
+        ))
             }
-          </List>
-        </Cell>
-        <Cell size={4}>
-          <SidebarContents eventsQuantity={2} postsQuantity={2} />
-        </Cell>
-      </Grid>
+      </List>
     </Layout>
   );
 };

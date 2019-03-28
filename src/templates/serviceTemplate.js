@@ -1,9 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
+import PropTypes from 'prop-types';
+import React from 'react';
 
-import ServicePage from '../components/ServicePage';
 import Layout from '../components/Layout';
+import ServicePage from '../components/ServicePage';
+import SidebarContents from '../components/SidebarContents';
 
 function ServiceTemplate({
   data, // this prop will be injected by the GraphQL query below.
@@ -11,7 +12,12 @@ function ServiceTemplate({
   const { markdownRemark } = data; // data.markdownRemark holds our post data
   const { frontmatter, html } = markdownRemark;
   return (
-    <Layout title="Services">
+    <Layout
+      title="Services"
+      sidebarChildren={(
+        <SidebarContents eventsQuantity={2} postsQuantity={2} />
+    )}
+    >
       <ServicePage
         title={frontmatter.title}
         price={frontmatter.price}

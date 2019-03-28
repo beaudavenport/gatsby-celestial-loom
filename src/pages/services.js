@@ -13,55 +13,54 @@ const Services = ({ data }) => {
   const [firstServiceNode, ...otherServiceNodes] = nodes.filter(node => node.frontmatter.type === 'services');
 
   return (
-    <Layout title="Services">
-      <Grid style={{ maxWidth: 1100 }}>
-        <Cell size={8}>
-          <Grid>
-            <Cell size={12}>
-              <Paper style={{
-                background: `url(${WesternChart})`,
-                backgroundPosition: 'center',
-                backgroundSize: 'cover',
-                width: '100%',
-                padding: '100px',
+    <Layout
+      title="Services"
+      sidebarChildren={(
+        <SidebarContents eventsQuantity={2} postsQuantity={0} />
+  )}
+
+    >
+      <Grid>
+        <Cell size={12}>
+          <Paper style={{
+            background: `url(${WesternChart})`,
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            width: '100%',
+            padding: '100px',
+          }}
+          >
+            <div>
+              <p style={{
+                fontStyle: 'italic', fontSize: 'xx-large', color: 'white', fontFamily: 'Berkshire Swash',
               }}
               >
-                <div>
-                  <p style={{
-                    fontStyle: 'italic', fontSize: 'xx-large', color: 'white', fontFamily: 'Berkshire Swash',
-                  }}
-                  >
             The Wisdom of the Zodiac - online or in person!
-                  </p>
-                </div>
-              </Paper>
-            </Cell>
-            <Cell size={6}>
-              <ServiceCard
-                path={firstServiceNode.fields.slug}
-                title={firstServiceNode.frontmatter.title}
-                origin={firstServiceNode.frontmatter.origin}
-                price={firstServiceNode.frontmatter.price}
-                excerpt={firstServiceNode.excerpt}
-              />
-            </Cell>
-            { otherServiceNodes && otherServiceNodes.map(node => (
-              <Cell size={6}>
-                <ServiceCard
-                  path={node.fields.slug}
-                  title={node.frontmatter.title}
-                  origin={node.frontmatter.origin}
-                  price={node.frontmatter.price}
-                  excerpt={node.excerpt}
-                />
-              </Cell>
-            ))
+              </p>
+            </div>
+          </Paper>
+        </Cell>
+        <Cell size={6}>
+          <ServiceCard
+            path={firstServiceNode.fields.slug}
+            title={firstServiceNode.frontmatter.title}
+            origin={firstServiceNode.frontmatter.origin}
+            price={firstServiceNode.frontmatter.price}
+            excerpt={firstServiceNode.excerpt}
+          />
+        </Cell>
+        { otherServiceNodes && otherServiceNodes.map(node => (
+          <Cell size={6}>
+            <ServiceCard
+              path={node.fields.slug}
+              title={node.frontmatter.title}
+              origin={node.frontmatter.origin}
+              price={node.frontmatter.price}
+              excerpt={node.excerpt}
+            />
+          </Cell>
+        ))
             }
-          </Grid>
-        </Cell>
-        <Cell size={4}>
-          <SidebarContents eventsQuantity={2} postsQuantity={2} />
-        </Cell>
       </Grid>
     </Layout>
   );
