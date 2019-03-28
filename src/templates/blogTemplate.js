@@ -1,7 +1,8 @@
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { Fragment } from 'react';
 
+import ArchiveCard from '../components/ArchiveCard';
 import BlogEntry from '../components/BlogEntry';
 import Layout from '../components/Layout';
 import SidebarContents from '../components/SidebarContents';
@@ -14,7 +15,10 @@ export default function BlogTemplate({ data }) {
     <Layout
       title="Posts"
       sidebarChildren={(
-        <SidebarContents eventsQuantity={2} postsQuantity={0} />
+        <Fragment>
+          <ArchiveCard />
+          <SidebarContents eventsQuantity={2} postsQuantity={0} />
+        </Fragment>
       )}
     >
       <BlogEntry

@@ -7,13 +7,11 @@ const ThumbnailCard = ({
   title, path = '/', caption, thumbnailChildren, small,
 }) => (
   <Link to={path} style={{ textDecoration: 'none' }}>
-    <Card style={{ marginBottom: 10 }}>
-      <div className="flex-row">
-        {thumbnailChildren}
-        <div style={{ padding: '10px' }}>
-          <h4 style={{ fontWeight: 'bold', fontSize: small ? 11 : 16 }}>{title}</h4>
-          <caption style={{ fontSize: small ? 9 : 14 }}>{caption}</caption>
-        </div>
+    <Card className="thumbnail-card">
+      {thumbnailChildren}
+      <div className="thumbnail-text">
+        <h4 style={{ fontWeight: 'bold', fontSize: small ? 11 : 16 }}>{title}</h4>
+        <caption style={{ fontSize: small ? 9 : 14 }}>{caption}</caption>
       </div>
     </Card>
   </Link>

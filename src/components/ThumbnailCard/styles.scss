@@ -1,6 +1,12 @@
+.thumbnail-card {
+  flex-direction: row;
+  display: flex;
+  height: 150px;
+  margin-bottom: 20px;
+}
+
 .thumbnail-image {
-   height: 125px;
-   width: 125px;
+   width: 100px;
    background-position: center;
    background-size: cover;
 }
@@ -18,4 +24,9 @@
    font-size: 20px;
    text-align: center;
    color: white;
+}
+
+.thumbnail-text {
+  padding: 20px;
+  max-width: 175px;
 }

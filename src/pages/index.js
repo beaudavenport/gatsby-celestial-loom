@@ -1,4 +1,4 @@
-import { FontIcon } from 'react-md';
+import { Cell, FontIcon, Grid } from 'react-md';
 import { Link, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
@@ -18,46 +18,58 @@ const IndexPage = ({ data }) => {
     <Layout
       title="Home"
       sidebarChildren={(
-        <Fragment>
-          <AboutNikkiCard />
-          <SidebarContents eventsQuantity={2} postsQuantity={0} />
-        </Fragment>
+        <Grid>
+          <Cell size={12} tabletSize={4}>
+            <AboutNikkiCard />
+          </Cell>
+          <Cell size={12} tabletSize={4}>
+            <SidebarContents eventsQuantity={2} postsQuantity={0} />
+          </Cell>
+        </Grid>
       )}
     >
       <Jumbotron />
-      <div style={{
-        paddingTop: 30, fontSize: '1.25rem', display: 'flex', justifyContent: 'space-between', alignItems: 'baseline',
-      }}
-      >
-        <p style={{
-          fontStyle: 'italic', fontSize: '1.25rem', fontWeight: 'bold', color: 'rgba(0, 0, 0, 0.54)',
-        }}
-        >
-              New Blog Entries
-        </p>
-        <Link to="/posts" style={{ display: 'flex', textDecoration: 'none' }}>
-          <p style={{ fontStyle: 'italic', fontWeight: 'bold', color: 'rgba(0, 0, 0, 0.54)' }}>View All</p>
-          <FontIcon style={{ height: 14 }}>chevron_right</FontIcon>
-        </Link>
-      </div>
-      <hr style={{ marginTop: 0 }} />
-      <FeaturedCard
-        style={{ marginBottom: 10, marginTop: 20 }}
-        path={firstBlogNode.fields.slug}
-        title={firstBlogNode.frontmatter.title}
-        publishDate={firstBlogNode.frontmatter.publishDate}
-        image={firstBlogNode.frontmatter.image}
-        excerpt={firstBlogNode.excerpt}
-      />
-      { otherBlogNodes && otherBlogNodes.map(node => (
-        <ThumbnailCard
-          style={{ marginBottom: 10 }}
-          title={node.frontmatter.title}
-          caption="07/12/16"
-          thumbnailChildren={<ImageThumbnail imageUrl={node.frontmatter.image} />}
-        />
-      ))
+      <Grid>
+        <Cell size={12}>
+          <div style={{
+            paddingTop: 30, fontSize: '1.25rem', display: 'flex', justifyContent: 'space-between', alignItems: 'baseline',
+          }}
+          >
+            <p style={{
+              fontStyle: 'italic', fontSize: '1.25rem', fontWeight: 'bold', color: 'rgba(0, 0, 0, 0.54)',
+            }}
+            >
+      New Blog Entries
+            </p>
+            <Link to="/posts" style={{ display: 'flex', textDecoration: 'none' }}>
+              <p style={{ fontStyle: 'italic', fontWeight: 'bold', color: 'rgba(0, 0, 0, 0.54)' }}>View All</p>
+              <FontIcon style={{ height: 14 }}>chevron_right</FontIcon>
+            </Link>
+          </div>
+          <hr style={{ marginTop: 0 }} />
+        </Cell>
+        <Cell size={12}>
+          <FeaturedCard
+            style={{ marginBottom: 10, marginTop: 20 }}
+            path={firstBlogNode.fields.slug}
+            title={firstBlogNode.frontmatter.title}
+            publishDate={firstBlogNode.frontmatter.publishDate}
+            image={firstBlogNode.frontmatter.image}
+            excerpt={firstBlogNode.excerpt}
+          />
+        </Cell>
+        { otherBlogNodes && otherBlogNodes.map(node => (
+          <Cell size={6} tabletSize={4}>
+            <ThumbnailCard
+              style={{ marginBottom: 10 }}
+              title={node.frontmatter.title}
+              caption="07/12/16"
+              thumbnailChildren={<ImageThumbnail imageUrl={node.frontmatter.image} />}
+            />
+          </Cell>
+        ))
           }
+      </Grid>
     </Layout>
   );
 };

@@ -12,20 +12,23 @@ const FeaturedCard = ({
     <Card style={{ backgroundColor: 'white', ...style }}>
       <div style={{ position: 'relative' }}>
         <img style={{ height: '200px', width: '100%', objectFit: 'cover' }} src={image} alt="Preview of featured post" />
+        <div style={{
+          position: 'absolute', top: 0, left: 0, display: 'flex', alignItems: 'middle', marginBottom: 10, backgroundColor: '#ff6d00',
+        }}
+        >
+          <FontIcon style={{ color: 'white' }}>create</FontIcon>
+          <p style={{
+            color: 'white', fontStyle: 'italic', lineHeight: '24px', marginLeft: 5,
+          }}
+          >
+        Blog
+          </p>
+        </div>
         <MediaOverlay style={{ marginBottom: '5px' }}>
           <CardTitle title={title} subtitle={publishDate} />
         </MediaOverlay>
       </div>
       <CardText>
-        <div style={{ display: 'flex', marginBottom: 10 }}>
-          <FontIcon style={{ color: 'rgb(255, 128, 19)' }}>create</FontIcon>
-          <p style={{
-            color: 'rgb(255, 128, 19)', fontStyle: 'italic', lineHeight: '24px', marginLeft: 5,
-          }}
-          >
-          Blog
-          </p>
-        </div>
         <p style={{ textDecoration: 'none' }}>
           {excerpt}
           {' '}

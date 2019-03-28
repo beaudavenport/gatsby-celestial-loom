@@ -95,7 +95,7 @@ const Layout = ({ children, sidebarChildren, title }) => {
             <Cell size={8}>
               {children}
             </Cell>
-            <Cell size={4} style={{ padding: 10 }}>
+            <Cell size={4} tabletSize={8}>
               {sidebarChildren}
             </Cell>
           </Grid>

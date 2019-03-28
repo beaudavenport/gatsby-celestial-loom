@@ -1,7 +1,8 @@
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { Fragment } from 'react';
 
+import ArchiveCard from '../components/ArchiveCard';
 import FeaturedCard from '../components/FeaturedCard';
 import ImageThumbnail from '../components/ThumbnailCard/imageThumbnail';
 import Layout from '../components/Layout';
@@ -40,8 +41,11 @@ const Posts = ({ data }) => {
     <Layout
       title="Posts"
       sidebarChildren={(
-        <SidebarContents eventsQuantity={2} postsQuantity={0} />
-    )}
+        <Fragment>
+          <ArchiveCard />
+          <SidebarContents eventsQuantity={2} postsQuantity={0} />
+        </Fragment>
+      )}
     >
       <FeaturedCard
         path={firstNode.fields.slug}
