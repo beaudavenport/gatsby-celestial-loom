@@ -40,7 +40,6 @@ Astrological Services
       </p>
       <div style={{ textAlign: 'right' }}>
         <Button flat primary swapTheming style={{ fontStyle: 'bold', fontFamily: 'Martel', marginRight: 10 }}>Get My Chart</Button>
-        <Button flat primary style={{ fontStyle: 'bold', fontFamily: 'Martel', border: '1px solid' }}>About Nikki</Button>
       </div>
     </div>
   </Paper>

@@ -1,51 +1,26 @@
 import './layout.scss';
 
-import {
-  NavigationDrawer,
-  FontIcon,
-  Media,
-  CardText,
-  ListItem,
-} from 'react-md';
+import { NavigationDrawer, FontIcon, ListItem } from 'react-md';
 import { StaticQuery, graphql, Link } from 'gatsby';
 import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 
 import HeaderSearch from './HeaderSearch';
-import Nikki from '../images/nikki.jpg';
 
 const navItems = [
-  { to: '/', children: (<p style={{ color: 'white', fontSize: '14px' }}>Home</p>) },
-  { to: '/posts', children: (<p style={{ color: 'white', fontSize: '14px' }}>Posts</p>) },
-  { to: '/events', children: (<p style={{ color: 'white', fontSize: '14px' }}>Events</p>) },
-  { to: '/services', children: (<p style={{ color: 'white', fontSize: '14px' }}>Services</p>) },
-  { to: '/toolbox', children: (<p style={{ color: 'white', fontSize: '14px' }}>Astro Toolbox</p>) },
+  { icon: 'home', to: '/', title: 'Home' },
+  { icon: 'create', to: '/posts', title: 'Posts' },
+  { icon: 'event', to: '/events', title: 'Events' },
+  { icon: 'shopping_cart', to: '/services', title: 'Services' },
+  { icon: 'work', to: '/toolbox', title: 'Astro Toolbox' },
 ];
 
-const DrawerHeader = () => (
-  <Link to="/about-nikki">
-    <div style={{
-      width: '80%', margin: '0 auto',
-    }}
-    >
-      <div style={{ width: '60%', margin: '0 auto', padding: '20px' }}>
-        <Media aspectRatio="1-1" style={{ borderRadius: '50%', border: '2px solid #ff8013' }}>
-          <img src={Nikki} alt="at da club" />
-        </Media>
-      </div>
-      <CardText>
-        <p style={{ fontSize: 'smaller', color: '#ff8013', textAlign: 'center' }}>
-          Nikki Davenport, astrological consultant, has been a professional
-          astrologer for over 35 years.
-        </p>
-      </CardText>
-    </div>
-  </Link>
-);
-
 const DrawerTitle = () => (
-  <div style={{ paddingTop: '10px', paddingLeft: '10px' }}>
+  <div style={{
+    height: 64, paddingTop: '10px', display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: '#ff6d00',
+  }}
+  >
     <h1 className="md-headline" style={{ fontFamily: 'Berkshire Swash', fontStyle: 'italic', color: 'white' }}>The Celestial Loom</h1>
   </div>
 );
@@ -73,8 +48,7 @@ const Layout = ({ children, title }) => {
           drawerStyle={{ backgroundColor: 'rgb(47, 47, 47)' }}
           defaultVisible={false}
           temporaryIcon={(<FontIcon iconClassName="material-icons">menu</FontIcon>)}
-          navStyle={{ height: '30%', backgroundColor: 'rgb(47, 47, 47)' }}
-          drawerChildren={<DrawerHeader />}
+          navStyle={{ backgroundColor: 'rgb(47, 47, 47)' }}
           toolbarTitle={title}
           toolbarTitleClassName={isSearching ? 'toolbar-title-searching' : 'toolbar-title'}
           toolbarActions={
@@ -92,9 +66,9 @@ const Layout = ({ children, title }) => {
 
             return (
               <ListItem
-                tileStyle={{ color: 'white', textAlign: 'left' }}
-                primaryText={route.children}
-                style={{ padding: '0px 10px', color: 'white' }}
+                primaryText={route.title}
+                primaryTextStyle={{ color: 'white' }}
+                leftIcon={<FontIcon style={{ color: 'white' }}>{route.icon}</FontIcon>}
                 component={Link}
                 to={route.to}
               />
