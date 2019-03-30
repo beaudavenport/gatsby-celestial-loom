@@ -3,7 +3,7 @@ templateKey: eventTemplate
 type: events
 path: /event2
 eventDate: 2019-05-01T19:16:37.757Z
-eventImage: /assets/3d-clock.jpg
+image: /assets/pleiades.jpg
 title: Vedic Workshop Happy Hour
 location: Stone Spiral Coffee and Curious
 mapsLink: 'https://goo.gl/maps/EdDfi537h142'
