@@ -45,12 +45,7 @@ const SidebarContents = ({ eventsQuantity, postsQuantity }) => (
               path={node.fields.slug}
               title={node.frontmatter.title}
               caption={node.frontmatter.publishDate}
-              thumbnailChildren={(
-                <DateThumbnail
-                  day={node.frontmatter.eventDay}
-                  month={node.frontmatter.eventMonth}
-                />
-)}
+              thumbnailChildren={<ImageThumbnail imageUrl={node.frontmatter.image} />}
             />
           ))
            }

@@ -54,7 +54,7 @@ export const query = graphql`
           id
           frontmatter {
             title
-            eventImage
+            image
             publishDate(formatString: "DD MMMM, YYYY")
             type
           }

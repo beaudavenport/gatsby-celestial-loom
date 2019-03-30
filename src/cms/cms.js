@@ -12,10 +12,10 @@ import ToolboxPage from '../components/ToolboxPage';
 const converter = new Converter();
 
 function EventPagePreview({ entry, getAsset }) {
-  const eventImage = entry.getIn(['data', 'eventImage']);
+  const image = entry.getIn(['data', 'image']);
   const data = {
     title: entry.getIn(['data', 'title']),
-    image: getAsset(eventImage),
+    image: getAsset(image),
     eventDate: entry.getIn(['data', 'eventDate']).toString(),
     price: entry.getIn(['data', 'eventPrice']),
     location: entry.getIn(['data', 'location']),

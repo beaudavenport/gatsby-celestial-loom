@@ -31,7 +31,7 @@ collections:
       - { name: 'type', label: 'type', widget: 'hidden', default: 'events'}
       - { name: 'path', label: 'Path' }
       - { name: 'eventDate', label: 'Event Date', widget: 'date' }
-      - { name: 'eventImage', label: 'Image', widget: 'image' }
+      - { name: 'image', label: 'Image', widget: 'image' }
       - { name: 'title', label: 'Title' }
       - { name: 'location', label: 'Name of Venue' }
       - { name: 'mapsLink', label: 'Google Maps Link' }
