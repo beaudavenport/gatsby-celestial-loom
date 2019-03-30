@@ -13,12 +13,12 @@ const FeaturedCard = ({
       <div style={{ position: 'relative' }}>
         <img style={{ height: '200px', width: '100%', objectFit: 'cover' }} src={image} alt="Preview of featured post" />
         <div style={{
-          position: 'absolute', top: 0, left: 0, display: 'flex', alignItems: 'middle', marginBottom: 10, backgroundColor: '#ff6d00',
+          padding: 5, position: 'absolute', top: 0, left: 0, display: 'flex', alignItems: 'middle', marginBottom: 10, backgroundColor: '#ff6d00',
         }}
         >
           <FontIcon style={{ color: 'white' }}>create</FontIcon>
           <p style={{
-            color: 'white', fontStyle: 'italic', lineHeight: '24px', marginLeft: 5,
+            color: 'white', fontStyle: 'italic', lineHeight: '24px', marginLeft: 3, marginBottom: 0,
           }}
           >
         Blog
