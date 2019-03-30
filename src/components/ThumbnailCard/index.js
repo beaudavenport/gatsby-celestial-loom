@@ -23,8 +23,11 @@ const ThumbnailCard = ({
         }}
         >
           <FontIcon style={{ marginLeft: 5, marginRight: 5, color: '#ff8013' }}>local_offer</FontIcon>
-          <p style={{ marginLeft: 5, marginRight: 5, color: '#ff8013' }}>
-ARIES, POTATOES, 2019
+          <p style={{
+            marginLeft: 5, marginRight: 5, fontWeight: 'bold', color: '#ff8013',
+          }}
+          >
+Aries, Potatoes, 2019
           </p>
         </div>
       </div>

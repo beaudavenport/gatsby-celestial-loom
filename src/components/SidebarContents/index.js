@@ -18,7 +18,7 @@ const SidebarContents = ({ eventsQuantity, postsQuantity }) => (
                frontmatter {
                  title
                  image
-                 publishDate(formatString: "DD MMMM, YYYY")
+                 publishDate(formatString: "MMM DD, YYYY")
                  eventDay: publishDate(formatString: "DD")
                  eventMonth: publishDate(formatString: "MMM")
                  type

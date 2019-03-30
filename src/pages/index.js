@@ -38,6 +38,8 @@ const IndexPage = ({ data }) => {
             publishDate={firstBlogNode.frontmatter.publishDate}
             image={firstBlogNode.frontmatter.image}
             excerpt={firstBlogNode.excerpt}
+            cornerIconName="create"
+            cornerTitle="Blog"
           />
         </Cell>
         { otherBlogNodes && otherBlogNodes.map(node => (
@@ -45,7 +47,7 @@ const IndexPage = ({ data }) => {
             <ThumbnailCard
               style={{ marginBottom: 10 }}
               title={node.frontmatter.title}
-              caption="07/12/16"
+              caption={node.frontmatter.publishDate}
               thumbnailChildren={<ImageThumbnail imageUrl={node.frontmatter.image} />}
             />
           </Cell>
