@@ -1,4 +1,4 @@
-import { Card } from 'react-md';
+import { Card, FontIcon } from 'react-md';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -10,8 +10,23 @@ const ThumbnailCard = ({
     <Card className="thumbnail-card">
       {thumbnailChildren}
       <div className="thumbnail-text">
-        <h4 style={{ fontWeight: 'bold', fontSize: small ? 11 : 16 }}>{title}</h4>
-        <caption style={{ fontSize: small ? 9 : 14 }}>{caption}</caption>
+        <div style={{ padding: 10 }}>
+          <h4 style={{ fontWeight: 'bold', fontSize: '1.1rem' }}>{title}</h4>
+          <p style={{ fontSize: '1rem', color: 'rgba(0, 0, 0, 0.54)' }}>
+            {caption}
+            {' '}
+- 2 min read
+          </p>
+        </div>
+        <div style={{
+          padding: 5, display: 'flex', justifyContent: 'flex-start',
+        }}
+        >
+          <FontIcon style={{ marginLeft: 5, marginRight: 5, color: '#ff8013' }}>local_offer</FontIcon>
+          <p style={{ marginLeft: 5, marginRight: 5, color: '#ff8013' }}>
+ARIES, POTATOES, 2019
+          </p>
+        </div>
       </div>
     </Card>
   </Link>

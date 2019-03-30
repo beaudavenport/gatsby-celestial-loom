@@ -38,7 +38,7 @@ const SidebarContents = ({ eventsQuantity, postsQuantity }) => (
       const blogNodes = nodes.filter(node => node.frontmatter.type === 'blog').slice(0, postsQuantity);
       return (
         <div>
-          {eventNodes.length > 0 && <h5 className="sidebar-header">Upcoming Events</h5>}
+          <h5 className="sidebar-header">You may also like...</h5>
           { eventNodes.length > 0 && eventNodes.map(node => (
             <ThumbnailCard
               small
@@ -54,7 +54,6 @@ const SidebarContents = ({ eventsQuantity, postsQuantity }) => (
             />
           ))
            }
-          {blogNodes.length > 0 && <h5 className="sidebar-header">Latest Articles</h5>}
           { blogNodes.length > 0 && blogNodes.map(node => (
             <ThumbnailCard
               small

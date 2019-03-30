@@ -11,7 +11,7 @@ const FeaturedCard = ({
   <Link to={path} style={{ textDecoration: 'none' }}>
     <Card style={{ backgroundColor: 'white', ...style }}>
       <div style={{ position: 'relative' }}>
-        <img style={{ height: '200px', width: '100%', objectFit: 'cover' }} src={image} alt="Preview of featured post" />
+        <img style={{ height: '250px', width: '100%', objectFit: 'cover' }} src={image} alt="Preview of featured post" />
         <div style={{
           padding: 5, position: 'absolute', top: 0, left: 0, display: 'flex', alignItems: 'middle', marginBottom: 10, backgroundColor: '#ff6d00',
         }}
@@ -32,7 +32,11 @@ const FeaturedCard = ({
         <p style={{ textDecoration: 'none' }}>
           {excerpt}
           {' '}
-          <span style={{ fontWeight: 'bold' }}> Read More...</span>
+          <span style={{ fontWeight: 'bold' }}>
+            {' '}
+Read More
+            <FontIcon style={{ fontSize: '14px' }}>chevron_right</FontIcon>
+          </span>
         </p>
       </CardText>
     </Card>

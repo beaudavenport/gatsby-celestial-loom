@@ -77,7 +77,7 @@ query {
           image
           publishDate(formatString: "MMM DD, YYYY")
         }
-        excerpt
+        excerpt(pruneLength: 250)
         fields {
           slug
         }
