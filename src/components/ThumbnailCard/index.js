@@ -11,8 +11,8 @@ const ThumbnailCard = ({
       {thumbnailChildren}
       <div className="thumbnail-text">
         <div style={{ padding: 10 }}>
-          <h4 style={{ fontWeight: 'bold', fontSize: '1.1rem' }}>{title}</h4>
-          <p style={{ fontSize: '1rem', color: 'rgba(0, 0, 0, 0.54)' }}>
+          <h4 style={{ fontWeight: 'bold', fontSize: '1.1rem', color: 'rgb(47, 47, 47)' }}>{title}</h4>
+          <p style={{ fontSize: '0.9rem', fontWeight: 'bold', color: 'rgba(0, 0, 0, 0.54)' }}>
             {caption}
             {' '}
 - 2 min read
@@ -22,9 +22,9 @@ const ThumbnailCard = ({
           padding: 5, display: 'flex', justifyContent: 'flex-start',
         }}
         >
-          <FontIcon style={{ marginLeft: 5, marginRight: 5, color: '#ff8013' }}>local_offer</FontIcon>
+          <FontIcon style={{ marginLeft: 5, marginRight: 5, color: 'rgb(47, 47, 47)' }}>local_offer</FontIcon>
           <p style={{
-            marginLeft: 5, marginRight: 5, fontWeight: 'bold', color: '#ff8013',
+            marginLeft: 5, fontStyle: 'italic', marginRight: 5, fontWeight: 'bold', color: 'rgb(47, 47, 47)',
           }}
           >
 Aries, Potatoes, 2019

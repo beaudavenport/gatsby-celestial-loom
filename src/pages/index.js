@@ -1,7 +1,7 @@
-import { Cell, FontIcon, Grid } from 'react-md';
-import { Link, graphql } from 'gatsby';
+import { Card, Cell, Grid } from 'react-md';
+import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-import React, { Fragment } from 'react';
+import React from 'react';
 
 import AboutNikkiCard from '../components/AboutNikkiCard';
 import FeaturedCard from '../components/FeaturedCard';
@@ -21,6 +21,17 @@ const IndexPage = ({ data }) => {
         <Grid>
           <Cell size={12} tabletSize={4}>
             <AboutNikkiCard />
+          </Cell>
+          <Cell size={12} tabletSize={4}>
+            <Card style={{ padding: 5 }}>
+              <a
+                className="twitter-timeline"
+                href="https://twitter.com/nikiastro?ref_src=twsrc%5Etfw"
+                data-tweet-limit="1"
+              >
+            Tweets by nikiastro
+              </a>
+            </Card>
           </Cell>
           <Cell size={12} tabletSize={4}>
             <SidebarContents eventsQuantity={2} postsQuantity={0} />
