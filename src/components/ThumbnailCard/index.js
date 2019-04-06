@@ -7,7 +7,7 @@ const ThumbnailCard = ({
   title, path = '/', caption, thumbnailChildren, small, cornerIconName, cornerTitle,
 }) => (
   <Link to={path} style={{ textDecoration: 'none' }}>
-    <Card className="thumbnail-card">
+    <div className="thumbnail-card" style={{ backgroundColor: 'white' }}>
       {thumbnailChildren}
       <div className="thumbnail-text">
         <div style={{ padding: 10 }}>
@@ -31,7 +31,7 @@ Aries, Potatoes, 2019
           </p>
         </div>
       </div>
-    </Card>
+    </div>
   </Link>
 );
 

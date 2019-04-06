@@ -16,7 +16,21 @@ $md-drawer-desktop-width: 225px;
 @import './ThumbnailCard/styles';
 
 html {
- background-color: rgb(210, 210, 210);
+ background-color: #f3f3f3;
+}
+
+.sidebar-contents {
+  padding-top: 10px;
+}
+
+@media only screen and (min-width: 839px) {
+  .sidebar-contents {
+    padding-left: 10px;
+  }
+
+  .main-contents {
+    padding-top: 10px
+  }
 }
 
 .snip-header__title {

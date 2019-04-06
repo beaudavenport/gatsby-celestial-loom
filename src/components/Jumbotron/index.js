@@ -14,6 +14,7 @@ const Jumbotron = () => (
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
+    marginBottom: 10,
   }}
   >
     <div>

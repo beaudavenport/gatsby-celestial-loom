@@ -6,12 +6,12 @@ import React from 'react';
 import Nikki from '../../images/nikki.jpg';
 
 const AboutNikkiCard = () => (
-  <Card style={{ backgroundColor: 'rgb(47, 47, 47)' }}>
+  <div>
     <div style={{
-      width: '80%', margin: '0 auto',
+      width: '90%', margin: '0 auto', marginBottom: '10px',
     }}
     >
-      <div style={{ width: '60%', margin: '0 auto', padding: '20px' }}>
+      <div style={{ width: '40%', margin: '0 auto', paddingTop: '20px' }}>
         <Media aspectRatio="1-1" style={{ borderRadius: '50%', border: '2px solid #ff8013' }}>
           <img src={Nikki} alt="at da club" />
         </Media>
@@ -35,7 +35,7 @@ const AboutNikkiCard = () => (
         </Button>
       </CardText>
     </div>
-  </Card>
+  </div>
 );
 
 export default AboutNikkiCard;

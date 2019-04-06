@@ -18,53 +18,55 @@ const IndexPage = ({ data }) => {
     <Layout
       title="Home"
       sidebarChildren={(
-        <Grid>
-          <Cell size={12} tabletSize={4}>
-            <AboutNikkiCard />
-          </Cell>
-          <Cell size={12} tabletSize={4}>
-            <Card style={{ padding: 5 }}>
-              <a
-                className="twitter-timeline"
-                href="https://twitter.com/nikiastro?ref_src=twsrc%5Etfw"
-                data-tweet-limit="1"
-              >
-            Tweets by nikiastro
-              </a>
-            </Card>
-          </Cell>
-          <Cell size={12} tabletSize={4}>
-            <SidebarContents eventsQuantity={2} postsQuantity={0} />
-          </Cell>
-        </Grid>
+        <Card>
+          <Grid noSpacing>
+            <Cell size={12} tabletSize={4}>
+              <AboutNikkiCard />
+              <div style={{ paddingRight: 1 }}>
+                <a
+                  className="twitter-timeline"
+                  href="https://twitter.com/nikiastro?ref_src=twsrc%5Etfw"
+                  data-tweet-limit="1"
+                >
+                  Tweets by nikiastro
+                </a>
+              </div>
+            </Cell>
+            <Cell size={12} tabletSize={4}>
+              <SidebarContents eventsQuantity={2} postsQuantity={0} />
+            </Cell>
+          </Grid>
+        </Card>
       )}
     >
       <Jumbotron />
-      <Grid>
-        <Cell size={12}>
-          <FeaturedCard
-            style={{ marginBottom: 10, marginTop: 20 }}
-            path={firstBlogNode.fields.slug}
-            title={firstBlogNode.frontmatter.title}
-            publishDate={firstBlogNode.frontmatter.publishDate}
-            image={firstBlogNode.frontmatter.image}
-            excerpt={firstBlogNode.excerpt}
-            cornerIconName="create"
-            cornerTitle="Blog"
-          />
-        </Cell>
-        { otherBlogNodes && otherBlogNodes.map(node => (
-          <Cell size={6} tabletSize={4}>
-            <ThumbnailCard
-              style={{ marginBottom: 10 }}
-              title={node.frontmatter.title}
-              caption={node.frontmatter.publishDate}
-              thumbnailChildren={<ImageThumbnail imageUrl={node.frontmatter.image} />}
+      <Card>
+        <Grid>
+          <Cell size={12} style={{ borderBottom: '1px solid rgba(15,70,100,.12)' }}>
+            <FeaturedCard
+              style={{ marginBottom: 10, marginTop: 20 }}
+              path={firstBlogNode.fields.slug}
+              title={firstBlogNode.frontmatter.title}
+              publishDate={firstBlogNode.frontmatter.publishDate}
+              image={firstBlogNode.frontmatter.image}
+              excerpt={firstBlogNode.excerpt}
+              cornerIconName="create"
+              cornerTitle="Blog"
             />
           </Cell>
-        ))
+          { otherBlogNodes && otherBlogNodes.map(node => (
+            <Cell size={6} tabletSize={4}>
+              <ThumbnailCard
+                style={{ marginBottom: 10 }}
+                title={node.frontmatter.title}
+                caption={node.frontmatter.publishDate}
+                thumbnailChildren={<ImageThumbnail imageUrl={node.frontmatter.image} />}
+              />
+            </Cell>
+          ))
           }
-      </Grid>
+        </Grid>
+      </Card>
     </Layout>
   );
 };

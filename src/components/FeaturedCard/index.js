@@ -1,5 +1,5 @@
 import {
-  Card, CardText, CardTitle, FontIcon, MediaOverlay,
+  CardText, CardTitle, FontIcon, MediaOverlay, Paper,
 } from 'react-md';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
@@ -11,7 +11,7 @@ const FeaturedCard = ({
   path, image, title, subtitle, excerpt, style, publishDate, cornerIconName, cornerTitle,
 }) => (
   <Link to={path} style={{ textDecoration: 'none' }}>
-    <Card style={{ backgroundColor: 'white', ...style }}>
+    <div style={{ backgroundColor: 'white', ...style }}>
       <div style={{ position: 'relative' }}>
         <img style={{ height: '250px', width: '100%', objectFit: 'cover' }} src={image} alt="Preview of featured post" />
         {cornerIconName && <CardCornerHighlight iconName={cornerIconName} title={cornerTitle} />}
@@ -30,7 +30,7 @@ Read More
           </span>
         </p>
       </CardText>
-    </Card>
+    </div>
   </Link>
 );
 

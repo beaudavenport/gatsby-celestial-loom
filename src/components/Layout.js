@@ -92,11 +92,11 @@ const Layout = ({ children, sidebarChildren, title }) => {
             <script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" data-api-key="Y2NiNmUxNzEtMGNlZS00NTlkLTg1NDEtZjJjMGRjMWNjZThjNjM2ODU2Njg0NDE5MzU2MDg3" id="snipcart" />
             <link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" rel="stylesheet" type="text/css" />
           </Helmet>
-          <Grid style={{ maxWidth: 1100, paddingTop: 10 }} noSpacing>
-            <Cell size={8}>
+          <Grid style={{ maxWidth: 1100 }} noSpacing>
+            <Cell className="main-contents" size={8}>
               {children}
             </Cell>
-            <Cell size={4} tabletSize={8}>
+            <Cell size={4} tabletSize={8} className="sidebar-contents">
               {sidebarChildren}
             </Cell>
           </Grid>
