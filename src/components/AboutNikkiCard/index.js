@@ -3,10 +3,11 @@ import {
 } from 'react-md';
 import { Link } from 'gatsby';
 import React from 'react';
+
 import Nikki from '../../images/nikki.jpg';
 
 const AboutNikkiCard = () => (
-  <div>
+  <Card>
     <div style={{
       width: '90%', margin: '0 auto', marginBottom: '10px',
     }}
@@ -35,7 +36,7 @@ const AboutNikkiCard = () => (
         </Button>
       </CardText>
     </div>
-  </div>
+  </Card>
 );
 
 export default AboutNikkiCard;

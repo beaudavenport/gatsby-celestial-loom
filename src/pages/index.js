@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import AboutNikkiCard from '../components/AboutNikkiCard';
+import CardCornerHighlight from '../components/CardCornerHighlight';
 import FeaturedCard from '../components/FeaturedCard';
 import ImageThumbnail from '../components/ThumbnailCard/imageThumbnail';
 import Jumbotron from '../components/Jumbotron';
@@ -18,10 +19,10 @@ const IndexPage = ({ data }) => {
     <Layout
       title="Home"
       sidebarChildren={(
-        <Card>
-          <Grid noSpacing>
-            <Cell size={12} tabletSize={4}>
-              <AboutNikkiCard />
+        <Grid noSpacing>
+          <Cell size={12} tabletSize={4}>
+            <AboutNikkiCard />
+            <Card>
               <div style={{ paddingRight: 1 }}>
                 <a
                   className="twitter-timeline"
@@ -31,20 +32,17 @@ const IndexPage = ({ data }) => {
                   Tweets by nikiastro
                 </a>
               </div>
-            </Cell>
-            <Cell size={12} tabletSize={4}>
-              <SidebarContents eventsQuantity={2} postsQuantity={0} />
-            </Cell>
-          </Grid>
-        </Card>
+            </Card>
+          </Cell>
+        </Grid>
       )}
     >
       <Jumbotron />
       <Card>
-        <Grid>
+        <Grid noSpacing>
           <Cell size={12} style={{ borderBottom: '1px solid rgba(15,70,100,.12)' }}>
             <FeaturedCard
-              style={{ marginBottom: 10, marginTop: 20 }}
+              style={{ marginBottom: 10 }}
               path={firstBlogNode.fields.slug}
               title={firstBlogNode.frontmatter.title}
               publishDate={firstBlogNode.frontmatter.publishDate}
@@ -55,7 +53,7 @@ const IndexPage = ({ data }) => {
             />
           </Cell>
           { otherBlogNodes && otherBlogNodes.map(node => (
-            <Cell size={6} tabletSize={4}>
+            <Cell size={6} tabletSize={4} style={{ padding: 10 }}>
               <ThumbnailCard
                 style={{ marginBottom: 10 }}
                 title={node.frontmatter.title}
