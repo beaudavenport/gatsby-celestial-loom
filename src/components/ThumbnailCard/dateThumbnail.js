@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const DateThumbnail = ({ day, month }) => (
-  <div style={{ backgroundColor: 'rgb(255, 128, 19)', padding: '20px 10px' }}>
+  <div style={{ backgroundColor: 'rgb(247, 105, 0)', padding: '20px 10px' }}>
     <p className="thumbnail-day">
       { day }
     </p>

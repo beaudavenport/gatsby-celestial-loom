@@ -4,7 +4,7 @@ import React from 'react';
 
 const CardCornerHighlight = ({ iconName, title }) => (
   <div style={{
-    padding: 5, position: 'absolute', top: 0, left: 0, display: 'flex', alignItems: 'middle', marginBottom: 10, backgroundColor: '#ff6d00',
+    padding: 5, position: 'absolute', top: 0, left: 0, display: 'flex', alignItems: 'middle', marginBottom: 10, backgroundColor: 'rgb(247, 105, 0)',
   }}
   >
     <FontIcon style={{ color: 'white' }}>{iconName}</FontIcon>
