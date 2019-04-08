@@ -11,10 +11,11 @@ import Jumbotron from '../components/Jumbotron';
 import Layout from '../components/Layout';
 import SidebarContents from '../components/SidebarContents';
 import ThumbnailCard from '../components/ThumbnailCard';
+import WesternChart from '../images/western-chart.jpg';
 
 const IndexPage = ({ data }) => {
-  const [firstBlogNode, ...otherBlogNodes] = data.allMarkdownRemark.edges.map(edge => edge.node);
-
+  const [firstBlogNode, ...otherBlogNodes] = data.blog.edges.map(edge => edge.node);
+  const [firstEventNode] = data.events.edges.map(edge => edge.node);
   return (
     <Layout
       title="Home"
@@ -65,6 +66,22 @@ const IndexPage = ({ data }) => {
           }
         </Grid>
       </Card>
+      <Card style={{ marginTop: 10 }}>
+        <Grid noSpacing>
+          <Cell size={12}>
+            <FeaturedCard
+              style={{ marginBottom: 10 }}
+              path={firstEventNode.fields.slug}
+              title={firstEventNode.frontmatter.title}
+              eventDate={firstEventNode.frontmatter.eventDate}
+              image={firstEventNode.frontmatter.image}
+              excerpt={firstEventNode.excerpt}
+              cornerIconName="event"
+              cornerTitle="Event"
+            />
+          </Cell>
+        </Grid>
+      </Card>
     </Layout>
   );
 };
@@ -77,8 +94,28 @@ export default IndexPage;
 
 export const query = graphql`
 query {
-  allMarkdownRemark(
+  blog: allMarkdownRemark(
     filter: { frontmatter: { type: { eq: "blog"} } },
+    sort: { fields: [frontmatter___publishDate], order: DESC }
+  ) {
+    totalCount
+    edges {
+      node {
+        id
+        frontmatter {
+          title
+          image
+          publishDate(formatString: "MMM DD, YYYY")
+        }
+        excerpt(pruneLength: 250)
+        fields {
+          slug
+        }
+      }
+    }
+  }
+  events: allMarkdownRemark(
+    filter: { frontmatter: { type: { eq: "events"} } },
     sort: { fields: [frontmatter___publishDate], order: DESC }
   ) {
     totalCount
