@@ -90,7 +90,6 @@ const Layout = ({ children, sidebarChildren, title }) => {
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js" />
             <script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" data-api-key="Y2NiNmUxNzEtMGNlZS00NTlkLTg1NDEtZjJjMGRjMWNjZThjNjM2ODU2Njg0NDE5MzU2MDg3" id="snipcart" />
             <link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" rel="stylesheet" type="text/css" />
-            <script id="twitter-wjs" type="text/javascript" async defer src="//platform.twitter.com/widgets.js" />
           </Helmet>
           <Grid style={{ maxWidth: 1100 }} noSpacing>
             <Cell className="main-contents" size={8}>

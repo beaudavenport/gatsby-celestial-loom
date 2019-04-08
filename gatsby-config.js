@@ -11,6 +11,7 @@ module.exports = {
         name: 'markdown-pages',
       },
     },
+    'gatsby-plugin-twitter',
     'gatsby-plugin-postcss',
     'gatsby-transformer-remark',
     {
