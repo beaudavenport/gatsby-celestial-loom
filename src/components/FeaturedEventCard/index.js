@@ -1,5 +1,5 @@
 import {
-  CardText, CardTitle, FontIcon, MediaOverlay, Paper,
+  CardTitle, Cell, FontIcon, Grid,
 } from 'react-md';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
@@ -12,26 +12,39 @@ const FeaturedEventCard = ({
 }) => (
   <Link to={path} style={{ textDecoration: 'none' }}>
     <div style={{ backgroundColor: 'white', ...style }}>
-      <div style={{ position: 'relative' }}>
-        <img style={{ height: '250px', width: '100%', objectFit: 'cover' }} src={image} alt="Preview of featured post" />
-        {cornerIconName && <CardCornerHighlight iconName={cornerIconName} title={cornerTitle} />}
-      </div>
-      <CardTitle
-        style={{ padding: 10 }}
-        title={title}
-        subtitle={(
-          <div>
-            <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
-              <FontIcon style={{ marginRight: 5 }}>place</FontIcon>
-              <p>Hartford Coffee Company</p>
-            </div>
-            <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
-              <FontIcon style={{ marginRight: 5 }}>event</FontIcon>
-              <p style={{ fontWeight: 'bold' }}>Feb 17, 2019</p>
-            </div>
+      <Grid noSpacing>
+        <Cell size={6}>
+          <div style={{ position: 'relative' }}>
+            <img style={{ height: '250px', width: '100%', objectFit: 'cover' }} src={image} alt="Preview of featured post" />
+            {cornerIconName && <CardCornerHighlight iconName={cornerIconName} title={cornerTitle} />}
           </div>
+        </Cell>
+        <Cell>
+          <CardTitle
+            style={{ paddingLeft: 20 }}
+            title={title}
+            subtitle={(
+              <div>
+                <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
+                  <FontIcon style={{ marginRight: 5 }}>place</FontIcon>
+                  <p>Hartford Coffee Company</p>
+                </div>
+                <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
+                  <FontIcon style={{ marginRight: 5 }}>event</FontIcon>
+                  <p style={{ fontWeight: 'bold' }}>Feb 17, 2019 - 3:00 PM</p>
+                </div>
+                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                  <p>Cost: $30</p>
+                </div>
+                <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
+                  <p style={{ fontWeight: 'bold' }}>SIGN UP</p>
+                  <FontIcon>chevron_right</FontIcon>
+                </div>
+              </div>
 )}
-      />
+          />
+        </Cell>
+      </Grid>
     </div>
   </Link>
 );
