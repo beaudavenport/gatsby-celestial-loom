@@ -4,14 +4,12 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import AboutNikkiCard from '../components/AboutNikkiCard';
-import CardCornerHighlight from '../components/CardCornerHighlight';
 import FeaturedCard from '../components/FeaturedCard';
+import FeaturedEventCard from '../components/FeaturedEventCard';
 import ImageThumbnail from '../components/ThumbnailCard/imageThumbnail';
 import Jumbotron from '../components/Jumbotron';
 import Layout from '../components/Layout';
-import SidebarContents from '../components/SidebarContents';
 import ThumbnailCard from '../components/ThumbnailCard';
-import WesternChart from '../images/western-chart.jpg';
 
 const IndexPage = ({ data }) => {
   const [firstBlogNode, ...otherBlogNodes] = data.blog.edges.map(edge => edge.node);
@@ -40,7 +38,7 @@ const IndexPage = ({ data }) => {
     >
       <Jumbotron />
       <Card>
-        <Grid noSpacing>
+        <Grid>
           <Cell size={12} style={{ borderBottom: '1px solid rgba(15,70,100,.12)' }}>
             <FeaturedCard
               style={{ marginBottom: 10 }}
@@ -67,9 +65,9 @@ const IndexPage = ({ data }) => {
         </Grid>
       </Card>
       <Card style={{ marginTop: 10 }}>
-        <Grid noSpacing>
+        <Grid>
           <Cell size={12}>
-            <FeaturedCard
+            <FeaturedEventCard
               style={{ marginBottom: 10 }}
               path={firstEventNode.fields.slug}
               title={firstEventNode.frontmatter.title}
