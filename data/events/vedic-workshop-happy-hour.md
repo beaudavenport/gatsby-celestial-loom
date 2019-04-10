@@ -4,6 +4,7 @@ priceDescription: 3-Hour Playshop
 type: events
 path: /event2
 eventDate: 2019-05-01T20:00:00.000Z
+eventTime: 3:00 PM
 image: /assets/pleiades.jpg
 title: Vedic Workshop Happy Hour
 location: Stone Spiral Coffee and Curious

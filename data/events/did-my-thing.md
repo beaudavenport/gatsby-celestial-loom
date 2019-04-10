@@ -3,6 +3,7 @@ templateKey: eventTemplate
 type: events
 path: /thing1
 eventDate: 2018-12-23T21:50:26.817Z
+eventTime: 9:30 AM
 image: /assets/getty-astro-clock.jpg
 title: Time and Place for 2017
 location: St. Louie

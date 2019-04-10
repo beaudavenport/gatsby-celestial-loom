@@ -68,14 +68,15 @@ const IndexPage = ({ data }) => {
         <Grid>
           <Cell size={12}>
             <FeaturedEventCard
-              style={{ marginBottom: 10 }}
               path={firstEventNode.fields.slug}
               title={firstEventNode.frontmatter.title}
               eventDate={firstEventNode.frontmatter.eventDate}
+              eventTime={firstEventNode.frontmatter.eventTime}
+              eventDateShort={firstEventNode.frontmatter.eventDateShort}
               image={firstEventNode.frontmatter.image}
-              excerpt={firstEventNode.excerpt}
-              cornerIconName="event"
-              cornerTitle="Feb 27"
+              eventPrice={firstEventNode.frontmatter.eventPrice}
+              priceDescription={firstEventNode.frontmatter.priceDescription}
+              location={firstEventNode.frontmatter.location}
             />
           </Cell>
         </Grid>
@@ -123,7 +124,12 @@ query {
         frontmatter {
           title
           image
-          publishDate(formatString: "MMM DD, YYYY")
+          eventDate(formatString: "MMM DD, YYYY")
+          eventTime
+          eventDateShort: eventDate(formatString: "MMM DD")
+          eventPrice
+          priceDescription
+          location
         }
         excerpt(pruneLength: 250)
         fields {

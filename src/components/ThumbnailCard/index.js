@@ -10,24 +10,21 @@ const ThumbnailCard = ({
     <div className="thumbnail-card" style={{ backgroundColor: 'white' }}>
       {thumbnailChildren}
       <div className="thumbnail-text">
-        <div style={{ padding: 10 }}>
-          <h4 style={{ fontWeight: 'bold', fontSize: '1.1rem', color: 'rgb(47, 47, 47)' }}>{title}</h4>
+        <h4 style={{ fontWeight: 'bold', fontSize: '1.1rem', color: 'rgb(47, 47, 47)' }}>{title}</h4>
+        <div style={{
+          display: 'flex', justifyContent: 'flex-end', flexDirection: 'column',
+        }}
+        >
           <p style={{ fontSize: '0.9rem', fontWeight: 'bold', color: 'rgba(0, 0, 0, 0.54)' }}>
             {caption}
             {' '}
 - 2 min read
           </p>
-        </div>
-        <div style={{
-          padding: 5, display: 'flex', justifyContent: 'flex-start',
-        }}
-        >
-          <FontIcon style={{ marginLeft: 5, marginRight: 5, color: 'rgb(47, 47, 47)' }}>local_offer</FontIcon>
           <p style={{
-            marginLeft: 5, fontStyle: 'italic', marginRight: 5, fontWeight: 'bold', color: 'rgb(47, 47, 47)',
+            fontStyle: 'italic', marginRight: 5, fontWeight: 'bold', color: 'rgb(47, 47, 47)',
           }}
           >
-Aries, Potatoes, 2019
+          #aries, #potatoes, #2019
           </p>
         </div>
       </div>

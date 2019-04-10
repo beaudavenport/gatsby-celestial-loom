@@ -9,7 +9,7 @@ import CardCornerHighlight from '../CardCornerHighlight';
 import TextWithChevron from '../TextWithChevron';
 
 const FeaturedEventCard = ({
-  path, image, title, subtitle, excerpt, style, publishDate, cornerIconName, cornerTitle,
+  path, image, title, style, eventDate, eventTime, eventDateShort, eventPrice, location, priceDescription,
 }) => (
   <Link to={path} style={{ textDecoration: 'none' }}>
     <div style={{ backgroundColor: 'white', ...style }}>
@@ -17,7 +17,7 @@ const FeaturedEventCard = ({
         <Cell size={6}>
           <div style={{ position: 'relative' }}>
             <img style={{ height: '250px', width: '100%', objectFit: 'cover' }} src={image} alt="Preview of featured post" />
-            {cornerIconName && <CardCornerHighlight iconName={cornerIconName} title={cornerTitle} />}
+            <CardCornerHighlight iconName="event" title={eventDateShort} />
           </div>
         </Cell>
         <Cell size={6}>
@@ -31,18 +31,18 @@ const FeaturedEventCard = ({
                 }}
                 >
                   <FontIcon style={{ marginRight: 5 }}>place</FontIcon>
-                  <p>Hartford Coffee Company</p>
+                  <p>{location}</p>
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'flex-start', marginLeft: 10 }}>
                   <FontIcon style={{ marginRight: 5 }}>event</FontIcon>
-                  <p style={{ }}>Feb 17, 2019 - 3:00 PM</p>
+                  <p>{`${eventDate} - ${eventTime}`}</p>
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: 20 }}>
-                  <p style={{ fontWeight: 'bold' }}>3 Hour Playshop: $30.00</p>
+                  <p style={{ fontWeight: 'bold' }}>{`${priceDescription} • $${Number(eventPrice).toFixed(2)}`}</p>
                   <TextWithChevron text="SIGN UP" />
                 </div>
               </div>
-)}
+            )}
           />
         </Cell>
       </Grid>
@@ -53,16 +53,14 @@ const FeaturedEventCard = ({
 FeaturedEventCard.propTypes = {
   path: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  subtitle: PropTypes.string.isRequired,
+  eventDate: PropTypes.string.isRequired,
+  eventTime: PropTypes.string.isRequired,
+  eventDateShort: PropTypes.string.isRequired,
+  eventPrice: PropTypes.string.isRequired,
+  priceDescription: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
-  excerpt: PropTypes.string.isRequired,
-  cornerIconName: PropTypes.string,
-  cornerTitle: PropTypes.string,
-};
-
-FeaturedEventCard.defaultProps = {
-  cornerIconName: '',
-  cornerTitle: '',
+  style: PropTypes.object, // eslint-disable-line
 };
 
 export default FeaturedEventCard;

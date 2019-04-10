@@ -28,14 +28,16 @@ collections:
     create: true
     fields:
       - { name: 'templateKey', label: 'Template Key', widget: 'hidden', default: 'eventTemplate'}
+      - { name: 'priceDescription', label: 'Price Description'}
       - { name: 'type', label: 'type', widget: 'hidden', default: 'events'}
       - { name: 'path', label: 'Path' }
       - { name: 'eventDate', label: 'Event Date', widget: 'date' }
+      - { name: 'eventTime', label: 'Event Time' }
       - { name: 'image', label: 'Image', widget: 'image' }
       - { name: 'title', label: 'Title' }
       - { name: 'location', label: 'Name of Venue' }
       - { name: 'mapsLink', label: 'Google Maps Link' }
-      - { name: 'eventPrice', label: 'Price (increments of $5.00)', widget: 'number', default: '3', min: 0, valueType: 'float', step: 5.00 }
+      - { name: 'eventPrice', label: 'Price (increments of $5.00)', widget: 'number', default: '3', mi, n: 0, valueType: 'float', step: 5.00 }
       - { name: 'publishDate', label: 'Publish Date', widget: 'date' }
       - { name: 'body', label: 'Body', widget: 'markdown' }
 
