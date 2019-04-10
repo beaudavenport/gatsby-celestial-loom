@@ -4,7 +4,7 @@ import React from 'react';
 
 function EventPage(props) {
   const {
-    title, image, eventDate, price, html, location, mapsLink,
+    title, image, eventDate, price, html, location, mapsLink, slug,
   } = props;
   return (
     <Card>
@@ -27,7 +27,7 @@ function EventPage(props) {
           data-item-name={title}
           data-item-price={price}
           data-item-weight="20"
-          data-item-url="/events/native-american-medicine-wheel-earth-astrology/"
+          data-item-url={slug}
           data-item-description="Event"
           data-item-custom1-name="Name"
           data-item-custom1-required="true"

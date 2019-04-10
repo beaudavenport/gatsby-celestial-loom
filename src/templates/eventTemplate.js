@@ -10,7 +10,7 @@ function EventTemplate({
   data, // this prop will be injected by the GraphQL query below.
 }) {
   const { markdownRemark } = data; // data.markdownRemark holds our post data
-  const { frontmatter, html } = markdownRemark;
+  const { frontmatter, html, fields } = markdownRemark;
   return (
     <Layout
       title="Events"
@@ -26,6 +26,7 @@ function EventTemplate({
         location={frontmatter.location}
         mapsLink={frontmatter.mapsLink}
         html={html}
+        slug={fields.slug}
       />
     </Layout>
   );
