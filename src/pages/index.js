@@ -1,4 +1,6 @@
-import { Card, Cell, Grid } from 'react-md';
+import {
+  Button, Card, Cell, Grid,
+} from 'react-md';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -36,6 +38,23 @@ const IndexPage = ({ data }) => {
         </Grid>
       )}
     >
+      <Button
+        raised
+        primary
+        className="snipcart-add-item"
+        data-item-id="2"
+        data-item-name="Thing"
+        data-item-price={30.00}
+        data-item-weight="20"
+        data-item-url="/"
+        data-item-description="Event"
+        data-item-custom1-name="Name"
+        data-item-custom1-required="true"
+        data-item-custom2-name="Date of Birth"
+        data-item-custom2-required="true"
+      >
+ugh
+      </Button>
       <Jumbotron />
       <Card>
         <Grid>
