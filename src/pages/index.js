@@ -75,7 +75,7 @@ const IndexPage = ({ data }) => {
               image={firstEventNode.frontmatter.image}
               excerpt={firstEventNode.excerpt}
               cornerIconName="event"
-              cornerTitle="Event"
+              cornerTitle="Feb 27"
             />
           </Cell>
         </Grid>

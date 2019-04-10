@@ -26,7 +26,7 @@ const AboutNikkiCard = () => (
           flat
           primary
           style={{
-            fontStyle: 'bold', lineHeight: '14px', fontFamily: 'Martel', border: '1px solid', margin: '0 auto',
+            height: 'auto', fontStyle: 'bold', lineHeight: '14px', fontFamily: 'Martel', border: '1px solid', margin: '0 auto',
           }}
           to="/about-nikki"
           type={null}

@@ -19,26 +19,29 @@ const FeaturedEventCard = ({
             {cornerIconName && <CardCornerHighlight iconName={cornerIconName} title={cornerTitle} />}
           </div>
         </Cell>
-        <Cell>
+        <Cell size={6}>
           <CardTitle
-            style={{ paddingLeft: 20 }}
+            style={{ padding: 20 }}
             title={title}
             subtitle={(
               <div>
-                <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
+                <div style={{
+                  display: 'flex', justifyContent: 'flex-start', marginLeft: 10, marginTop: 20,
+                }}
+                >
                   <FontIcon style={{ marginRight: 5 }}>place</FontIcon>
                   <p>Hartford Coffee Company</p>
                 </div>
-                <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
+                <div style={{ display: 'flex', justifyContent: 'flex-start', marginLeft: 10 }}>
                   <FontIcon style={{ marginRight: 5 }}>event</FontIcon>
-                  <p style={{ fontWeight: 'bold' }}>Feb 17, 2019 - 3:00 PM</p>
+                  <p style={{ }}>Feb 17, 2019 - 3:00 PM</p>
                 </div>
-                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                  <p>Cost: $30</p>
-                </div>
-                <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
-                  <p style={{ fontWeight: 'bold' }}>SIGN UP</p>
-                  <FontIcon>chevron_right</FontIcon>
+                <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: 20 }}>
+                  <p style={{ fontWeight: 'bold' }}>3 Hour Playshop: $30.00</p>
+                  <div style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center' }}>
+                    <p style={{ fontWeight: 'bold', color: '#ff8013' }}>SIGN UP</p>
+                    <FontIcon style={{ color: '#ff8013' }}>chevron_right</FontIcon>
+                  </div>
                 </div>
               </div>
 )}
