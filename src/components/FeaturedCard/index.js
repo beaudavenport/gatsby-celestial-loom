@@ -1,11 +1,10 @@
-import {
-  CardText, CardTitle, FontIcon, MediaOverlay, Paper,
-} from 'react-md';
+import { CardText, CardTitle, MediaOverlay } from 'react-md';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 import CardCornerHighlight from '../CardCornerHighlight';
+import TextWithChevron from '../TextWithChevron';
 
 const FeaturedCard = ({
   path, image, title, subtitle, excerpt, style, publishDate, cornerIconName, cornerTitle,
@@ -22,13 +21,8 @@ const FeaturedCard = ({
       <CardText>
         <p style={{ textDecoration: 'none' }}>
           {excerpt}
-          {' '}
-          <span style={{ fontWeight: 'bold' }}>
-            {' '}
-Read More
-            <FontIcon style={{ fontSize: '14px' }}>chevron_right</FontIcon>
-          </span>
         </p>
+        <TextWithChevron text="READ MORE" />
       </CardText>
     </div>
   </Link>

@@ -1,0 +1,15 @@
+.chevron-text {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.chevron-text--chevron {
+   color: #ff8013;
+}
+
+.chevron-text--text {
+   color: #ff8013;
+   font-weight: bold;
+   margin: 0;
+}

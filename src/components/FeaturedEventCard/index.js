@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import CardCornerHighlight from '../CardCornerHighlight';
+import TextWithChevron from '../TextWithChevron';
 
 const FeaturedEventCard = ({
   path, image, title, subtitle, excerpt, style, publishDate, cornerIconName, cornerTitle,
@@ -38,10 +39,7 @@ const FeaturedEventCard = ({
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: 20 }}>
                   <p style={{ fontWeight: 'bold' }}>3 Hour Playshop: $30.00</p>
-                  <div style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center' }}>
-                    <p style={{ fontWeight: 'bold', color: '#ff8013' }}>SIGN UP</p>
-                    <FontIcon style={{ color: '#ff8013' }}>chevron_right</FontIcon>
-                  </div>
+                  <TextWithChevron text="SIGN UP" />
                 </div>
               </div>
 )}
