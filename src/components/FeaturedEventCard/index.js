@@ -9,14 +9,23 @@ import CardCornerHighlight from '../CardCornerHighlight';
 import TextWithChevron from '../TextWithChevron';
 
 const FeaturedEventCard = ({
-  path, image, title, style, eventDate, eventTime, eventDateShort, eventPrice, location, priceDescription,
+  path,
+  image,
+  title,
+  style,
+  eventDate,
+  eventTime,
+  eventDateShort,
+  eventPrice,
+  location,
+  priceDescription,
 }) => (
   <Link to={path} style={{ textDecoration: 'none' }}>
     <div style={{ backgroundColor: 'white', ...style }}>
       <Grid noSpacing>
         <Cell size={6}>
-          <div style={{ position: 'relative' }}>
-            <img style={{ height: '250px', width: '100%', objectFit: 'cover' }} src={image} alt="Preview of featured post" />
+          <div className="image-container">
+            <img className="image-container--image" src={image} alt="Preview of featured post" />
             <CardCornerHighlight iconName="event" title={eventDateShort} />
           </div>
         </Cell>
@@ -25,20 +34,17 @@ const FeaturedEventCard = ({
             style={{ padding: 20 }}
             title={title}
             subtitle={(
-              <div>
-                <div style={{
-                  display: 'flex', justifyContent: 'flex-start', marginLeft: 10, marginTop: 20,
-                }}
-                >
+              <div className="event-detail-container">
+                <div className="event-detail">
                   <FontIcon style={{ marginRight: 5 }}>place</FontIcon>
                   <p>{location}</p>
                 </div>
-                <div style={{ display: 'flex', justifyContent: 'flex-start', marginLeft: 10 }}>
+                <div className="event-detail">
                   <FontIcon style={{ marginRight: 5 }}>event</FontIcon>
                   <p>{`${eventDate} - ${eventTime}`}</p>
                 </div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: 20 }}>
-                  <p style={{ fontWeight: 'bold' }}>{`${priceDescription} • $${Number(eventPrice).toFixed(2)}`}</p>
+                <div className="event-signup">
+                  <p className="event-signup--price">{`${priceDescription} • $${Number(eventPrice).toFixed(2)}`}</p>
                   <TextWithChevron text="SIGN UP" />
                 </div>
               </div>

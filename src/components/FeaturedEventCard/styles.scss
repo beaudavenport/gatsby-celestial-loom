@@ -1,0 +1,30 @@
+.image-container {
+  position: relative;
+}
+
+.image-container--image {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.event-detail-container {
+  padding-top: 20px;
+}
+
+.event-detail {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.event-signup {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.event-signup--price {
+  font-weight: bold;
+  margin: 0;
+}

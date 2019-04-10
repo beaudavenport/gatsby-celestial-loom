@@ -1,15 +1,14 @@
+import { Card, Cell, Grid } from 'react-md';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import DateThumbnail from '../components/ThumbnailCard/dateThumbnail';
+import FeaturedEventCard from '../components/FeaturedEventCard';
 import Layout from '../components/Layout';
 import SidebarContents from '../components/SidebarContents';
-import ThumbnailCard from '../components/ThumbnailCard';
 
 const Events = ({ data }) => {
   const nodes = data.allMarkdownRemark.edges.map(edge => edge.node);
-  const [firstEventNode, ...otherEventNodes] = nodes.filter(node => node.frontmatter.type === 'events');
 
   return (
     <Layout
@@ -18,23 +17,25 @@ const Events = ({ data }) => {
         <SidebarContents eventsQuantity={0} postsQuantity={2} />
       )}
     >
-      <h1>Upcoming events</h1>
-      <ThumbnailCard
-        path={firstEventNode.fields.slug}
-        title={firstEventNode.frontmatter.title}
-        caption="subtitle here"
-        thumbnailChildren={<DateThumbnail day="4" month="July" />}
-      />
-      <h1 style={{ fontStyle: 'italic' }}>Past Events</h1>
-      { otherEventNodes && otherEventNodes.map(node => (
-        <ThumbnailCard
-          path={node.fields.slug}
-          title={node.frontmatter.title}
-          caption="07/12/16"
-          thumbnailChildren={<DateThumbnail day="12" month="JUN" />}
-        />
-      ))
-        }
+      <Grid>
+        {nodes.map(node => (
+          <Cell size={12}>
+            <Card style={{ padding: 10 }}>
+              <FeaturedEventCard
+                path={node.fields.slug}
+                title={node.frontmatter.title}
+                eventDate={node.frontmatter.eventDate}
+                eventTime={node.frontmatter.eventTime}
+                eventDateShort={node.frontmatter.eventDateShort}
+                image={node.frontmatter.image}
+                eventPrice={node.frontmatter.eventPrice}
+                priceDescription={node.frontmatter.priceDescription}
+                location={node.frontmatter.location}
+              />
+            </Card>
+          </Cell>
+        ))}
+      </Grid>
     </Layout>
   );
 };
@@ -47,7 +48,10 @@ export default Events;
 
 export const query = graphql`
   query {
-    allMarkdownRemark(sort: { fields: [frontmatter___publishDate], order: DESC }) {
+    allMarkdownRemark(
+      filter: { frontmatter: { type: { eq: "events"} } },
+      sort: { fields: [frontmatter___publishDate], order: DESC }
+    ) {
       totalCount
       edges {
         node {
@@ -55,10 +59,14 @@ export const query = graphql`
           frontmatter {
             title
             image
-            publishDate(formatString: "DD MMMM, YYYY")
-            type
+            eventDate(formatString: "MMM DD, YYYY")
+            eventTime
+            eventDateShort: eventDate(formatString: "MMM DD")
+            eventPrice
+            priceDescription
+            location
           }
-          excerpt
+          excerpt(pruneLength: 250)
           fields {
             slug
           }
