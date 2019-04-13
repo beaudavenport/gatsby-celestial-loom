@@ -8,10 +8,7 @@ import Nikki from '../../images/nikki.jpg';
 
 const AboutNikkiCard = () => (
   <Card>
-    <div style={{
-      width: '90%', margin: '0 auto', marginBottom: '10px',
-    }}
-    >
+    <div>
       <div style={{ width: '40%', margin: '0 auto', paddingTop: '20px' }}>
         <Media aspectRatio="1-1" style={{ borderRadius: '50%', border: '2px solid #ff8013' }}>
           <img src={Nikki} alt="at da club" />

@@ -4,18 +4,20 @@ import React from 'react';
 import Astroglobe from '../../images/astroglobe.jpg';
 
 const Jumbotron = () => (
-  <Paper style={{
-    background: `url(${Astroglobe})`,
-    backgroundPosition: 'center',
-    backgroundSize: 'cover',
-    width: '100%',
-    padding: 25,
-    minHeight: 350,
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-    marginBottom: 10,
-  }}
+  <Paper
+    style={{
+      background: `url(${Astroglobe})`,
+      backgroundPosition: 'center',
+      backgroundSize: 'cover',
+      width: '100%',
+      padding: 25,
+      minHeight: 350,
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'space-between',
+      marginBottom: 10,
+    }}
+    zDepth={0}
   >
     <div>
       <p style={{

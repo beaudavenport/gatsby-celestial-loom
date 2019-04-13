@@ -19,8 +19,10 @@ const IndexPage = ({ data }) => {
       title="Home"
       sidebarChildren={(
         <Grid noSpacing>
-          <Cell size={12} tabletSize={4}>
+          <Cell size={12} tabletSize={4} className="about-nikki--card">
             <AboutNikkiCard />
+          </Cell>
+          <Cell size={12} tabletSize={4}>
             <Card>
               <div style={{ paddingRight: 1 }}>
                 <a

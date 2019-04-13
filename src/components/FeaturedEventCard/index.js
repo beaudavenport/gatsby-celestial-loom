@@ -23,13 +23,13 @@ const FeaturedEventCard = ({
   <Link to={path} style={{ textDecoration: 'none' }}>
     <div style={{ backgroundColor: 'white', ...style }}>
       <Grid noSpacing>
-        <Cell size={6}>
+        <Cell size={6} tabletSize={4}>
           <div className="image-container">
             <img className="image-container--image" src={image} alt="Preview of featured post" />
             <CardCornerHighlight iconName="event" title={eventDateShort} />
           </div>
         </Cell>
-        <Cell size={6}>
+        <Cell size={6} tabletSize={4}>
           <CardTitle
             style={{ padding: 20 }}
             title={title}
