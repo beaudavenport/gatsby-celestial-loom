@@ -1,4 +1,6 @@
-import { Card, CardText } from 'react-md';
+import {
+  Card, CardText, CardTitle, List, ListItem,
+} from 'react-md';
 import { Link, StaticQuery, graphql } from 'gatsby';
 import { uniq } from 'lodash';
 import React from 'react';
@@ -18,6 +20,7 @@ const SidebarContents = () => (
                frontmatter {
                  title
                  publishMonthAndYear: publishDate(formatString: "MMMM YYYY")
+                 publishDate(formatString: "MMMM YYYY")
                }
                fields {
                  slug
@@ -38,19 +41,28 @@ const SidebarContents = () => (
 
       return (
         <div>
-          <h3>Archive</h3>
           <Card>
+            <CardTitle
+              title="Archive"
+              subtitle="Browse previous entries by month and year"
+            />
             <CardText>
-              {sections.map(section => (
-                <div>
-                  <h5>{section.monthAndYear}</h5>
-                  <ul>
-                    {section.posts.map(post => (
-                      <li><Link to={post.fields.slug}>{post.frontmatter.title}</Link></li>
+              <List>
+                {sections.map(section => (
+                  <ListItem
+                    primaryText={section.monthAndYear}
+                    secondaryText={`${section.posts && section.posts.length} entries`}
+                    nestedItems={section.posts.map(post => (
+                      <ListItem
+                        primaryText={post.frontmatter.title}
+                        secondaryText={post.frontmatter.publishDate}
+                        component={Link}
+                        to={post.fields.slug}
+                      />
                     ))}
-                  </ul>
-                </div>
-              ))}
+                  />
+                ))}
+              </List>
             </CardText>
           </Card>
         </div>
