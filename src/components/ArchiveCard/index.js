@@ -46,6 +46,7 @@ const SidebarContents = () => (
               title="Archive"
               subtitle="Browse previous entries by month and year"
             />
+            <h1 style={{ fontFamily: 'AstroGadget' }}>B</h1>
             <CardText>
               <List>
                 {sections.map(section => (

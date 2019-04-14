@@ -13,6 +13,11 @@ $md-drawer-desktop-width: 225px;
 
 @include react-md-everything;
 
+@font-face {
+  font-family: 'AstroGadget';
+  src: url('AstroGadget.ttf')  format('truetype');
+}
+
 @import './ThumbnailCard/styles';
 @import './TextWithChevron/styles';
 @import './FeaturedEventCard/styles';
