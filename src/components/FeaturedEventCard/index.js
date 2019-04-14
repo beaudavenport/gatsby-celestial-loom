@@ -31,25 +31,27 @@ const FeaturedEventCard = ({
         </Cell>
         <Cell size={6} tabletSize={4}>
           <CardTitle
-            style={{ padding: 20 }}
             title={title}
-            subtitle={(
-              <div className="event-detail-container">
-                <div className="event-detail">
-                  <FontIcon style={{ marginRight: 5 }}>place</FontIcon>
-                  <p>{location}</p>
-                </div>
-                <div className="event-detail">
-                  <FontIcon style={{ marginRight: 5 }}>event</FontIcon>
-                  <p>{`${eventDate} - ${eventTime}`}</p>
-                </div>
-                <div className="event-signup">
-                  <p className="event-signup--price">{`${priceDescription} • $${Number(eventPrice).toFixed(2)}`}</p>
-                  <TextWithChevron text="SIGN UP" />
-                </div>
-              </div>
-            )}
           />
+          <div className="event-detail-container">
+            <div className="event-detail-thumbnail">
+              <FontIcon style={{ marginRight: 5 }}>place</FontIcon>
+              <p>{location}</p>
+            </div>
+            <div className="event-detail-thumbnail">
+              <FontIcon style={{ marginRight: 5 }}>event</FontIcon>
+              <p>{`${eventDate} - ${eventTime}`}</p>
+            </div>
+          </div>
+          <div className="event-signup-thumbnail">
+            <div>
+              <p className="event-signup-thumbnail--price-description">{priceDescription}</p>
+              <p className="event-signup-thumbnail--price">{`$${Number(eventPrice).toFixed(2)}`}</p>
+            </div>
+            <div>
+              <TextWithChevron text="SIGN UP" />
+            </div>
+          </div>
         </Cell>
       </Grid>
     </div>

@@ -1,11 +1,14 @@
 import '../components/layout.scss';
 
+import { Card, Cell, Grid } from 'react-md';
 import { Converter } from 'showdown';
 import CMS from 'netlify-cms';
 import React from 'react';
+import moment from 'moment';
 
 import BlogEntry from '../components/BlogEntry';
 import EventPage from '../components/EventPage';
+import FeaturedEventCard from '../components/FeaturedEventCard';
 import ServicePage from '../components/ServicePage';
 import ToolboxPage from '../components/ToolboxPage';
 
@@ -16,15 +19,26 @@ function EventPagePreview({ entry, getAsset }) {
   const data = {
     title: entry.getIn(['data', 'title']),
     image: getAsset(image),
-    eventDate: entry.getIn(['data', 'eventDate']).toString(),
-    price: entry.getIn(['data', 'eventPrice']),
+    eventDate: moment(entry.getIn(['data', 'eventDate']).toString()).format('MMMM DD, YYYY'),
+    eventTime: entry.getIn(['data', 'eventTime']),
+    priceDescription: entry.getIn(['data', 'priceDescription']),
+    eventPrice: entry.getIn(['data', 'eventPrice']),
     location: entry.getIn(['data', 'location']),
     mapsLink: entry.getIn(['data', 'mapsLink']),
     html: converter.makeHtml(entry.getIn(['data', 'body'])),
   };
 
   return (
-    <EventPage {...data} />
+    <Grid>
+      <Cell size={12}>
+        <h2>Event Page Preview: </h2>
+        <EventPage {...data} />
+        <h2 style={{ marginTop: 20 }}>Event Thumbnail Preview: </h2>
+        <Card style={{ padding: 16 }}>
+          <FeaturedEventCard {...data} />
+        </Card>
+      </Cell>
+    </Grid>
   );
 }
 

@@ -9,23 +9,56 @@
 }
 
 .event-detail-container {
-  padding-top: 20px;
+  padding-left: 30px;
 }
 
 .event-detail {
   display: flex;
   justify-content: flex-start;
+  padding: 5px;
+  font-size: 1.1rem;
+}
+
+.event-detail-thumbnail {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 1.1rem;
 }
 
 .event-signup {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-top: 20px;
+}
+
+.event-signup--price-description {
+  font-weight: bold;
+  font-size: 1.1rem;
 }
 
 .event-signup--price {
   font-weight: bold;
+  font-size: 1.5rem;
+  color: $md-primary-color;
+}
+
+.event-signup-thumbnail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  margin-left: 20px;
+  border-top: 1px solid rgba(15,70,100,.12);
+}
+
+.event-signup-thumbnail--price-description {
+  font-weight: bold;
   font-size: 1.1rem;
-  margin: 0;
+}
+
+.event-signup-thumbnail--price {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: $md-primary-color;
 }

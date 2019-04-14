@@ -1,42 +1,47 @@
-import {
-  Button, Card, CardText, FontIcon,
-} from 'react-md';
+import { Button, Card, FontIcon } from 'react-md';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 function EventPage(props) {
   const {
-    title, image, eventDate, price, html, location, mapsLink, slug, eventTime, priceDescription,
+    title, image, eventDate, eventPrice, html, location, mapsLink, slug, eventTime, priceDescription,
   } = props;
   return (
-    <Card style={{ padding: 10 }}>
+    <Card style={{ padding: 20 }}>
       <h1 style={{ textAlign: 'center', color: 'black' }}>{title}</h1>
-      <div style={{ maxWidth: '300px', margin: '0 auto' }}>
+      <div style={{ maxWidth: '400px', margin: '0 auto' }}>
         <img style={{ maxWidth: '100%' }} src={image} alt="event" />
       </div>
-      <CardText style={{ maxWidth: '500px', margin: '0 auto' }}>
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <div style={{ maxWidth: '500px', margin: '0 auto' }}>
+        <div style={{
+          display: 'flex', flexDirection: 'column', alignItems: 'center', padding: 10,
+        }}
+        >
           <div className="event-detail">
             <FontIcon style={{ marginRight: 5 }}>place</FontIcon>
             <a href={mapsLink}>{location}</a>
           </div>
           <div className="event-detail">
             <FontIcon style={{ marginRight: 5 }}>event</FontIcon>
-            <p>{`${eventDate} - ${eventTime}`}</p>
+            <p style={{ fontSize: '1.1rem' }}>{`${eventDate} • ${eventTime}`}</p>
           </div>
         </div>
-        <hr />
-        <div dangerouslySetInnerHTML={{ __html: html }} />
-        <hr />
+        <div style={{ padding: 20, border: '1px solid rgba(15,70,100,.12)', borderRadius: 5 }} dangerouslySetInnerHTML={{ __html: html }} />
         <div className="event-signup">
-          <p className="event-signup--price">{`${priceDescription} • $${Number(price).toFixed(2)}`}</p>
+          <div>
+            <p className="event-signup--price-description">{priceDescription}</p>
+            <p className="event-signup--price">{`$${Number(eventPrice).toFixed(2)}`}</p>
+          </div>
           <Button
-            raised
             primary
+            flat
+            style={{
+              height: 'auto', fontSize: '1.3rem', fontWeight: 'bold', fontFamily: 'Martel', border: '1px solid',
+            }}
             className="snipcart-add-item"
             data-item-id="2"
             data-item-name={title}
-            data-item-price={price}
+            data-item-price={eventPrice}
             data-item-weight="20"
             data-item-url={slug}
             data-item-description="Event"
@@ -48,7 +53,7 @@ function EventPage(props) {
           Sign Up
           </Button>
         </div>
-      </CardText>
+      </div>
     </Card>
   );
 }
@@ -58,7 +63,7 @@ EventPage.propTypes = {
   image: PropTypes.string.isRequired,
   eventDate: PropTypes.string.isRequired,
   eventTime: PropTypes.string.isRequired,
-  price: PropTypes.string.isRequired,
+  eventPrice: PropTypes.string.isRequired,
   html: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   mapsLink: PropTypes.string.isRequired,

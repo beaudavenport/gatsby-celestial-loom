@@ -24,7 +24,7 @@ function EventTemplate({
         priceDescription={frontmatter.priceDescription}
         eventDate={frontmatter.eventDate}
         eventTime={frontmatter.eventTime}
-        price={frontmatter.eventPrice}
+        eventPrice={frontmatter.eventPrice}
         location={frontmatter.location}
         mapsLink={frontmatter.mapsLink}
         html={html}
