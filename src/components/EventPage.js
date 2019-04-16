@@ -7,7 +7,7 @@ function EventPage(props) {
     title, image, eventDate, eventPrice, html, location, mapsLink, slug, eventTime, priceDescription,
   } = props;
   return (
-    <Card style={{ padding: 20 }}>
+    <div style={{ padding: 20 }}>
       <h1 style={{ textAlign: 'center', color: 'black' }}>{title}</h1>
       <div style={{ maxWidth: '400px', margin: '0 auto' }}>
         <img style={{ maxWidth: '100%' }} src={image} alt="event" />
@@ -54,7 +54,7 @@ function EventPage(props) {
           </Button>
         </div>
       </div>
-    </Card>
+    </div>
   );
 }
 

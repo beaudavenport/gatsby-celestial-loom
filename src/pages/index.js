@@ -17,6 +17,7 @@ const IndexPage = ({ data }) => {
   return (
     <Layout
       title="Home"
+      jumbotron={<Jumbotron />}
       sidebarChildren={(
         <Grid noSpacing>
           <Cell size={12} tabletSize={4} className="about-nikki--card">
@@ -38,7 +39,6 @@ const IndexPage = ({ data }) => {
         </Grid>
       )}
     >
-      <Jumbotron />
       <Card>
         <Grid>
           <Cell size={12} style={{ borderBottom: '1px solid rgba(15,70,100,.12)' }}>

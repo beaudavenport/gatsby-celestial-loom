@@ -43,7 +43,9 @@ const DrawerTitle = () => (
   </div>
 );
 
-const Layout = ({ children, sidebarChildren, title }) => {
+const Layout = ({
+  jumbotron, children, sidebarChildren, title,
+}) => {
   const [isSearching, setIsSearching] = useState(false);
 
   return (
@@ -91,6 +93,7 @@ const Layout = ({ children, sidebarChildren, title }) => {
             <script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" data-api-key="Y2NiNmUxNzEtMGNlZS00NTlkLTg1NDEtZjJjMGRjMWNjZThjNjM2ODU2Njg0NDE5MzU2MDg3" id="snipcart" />
             <link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" rel="stylesheet" type="text/css" />
           </Helmet>
+          {jumbotron}
           <Grid style={{ maxWidth: 1100 }} noSpacing>
             <Cell className="main-contents" size={8}>
               {children}
