@@ -24,16 +24,16 @@ const Jumbotron = () => (
     }}
     >
       <div style={{ display: 'flex', alignItems: 'center' }}>
-        <img src={CelestialLogo} alt="Celestial Loom Logo" />
+        <img src={CelestialLogo} alt="Celestial Loom Logo" style={{ marginRight: 10, width: '4rem' }} />
         <div>
-          <p style={{
-            fontStyle: 'italic', fontSize: '4rem', lineHeight: '4rem', color: 'white', fontFamily: 'Berkshire Swash',
+          <h1 style={{
+            fontStyle: 'italic', marginTop: 0, marginBottom: 0, fontSize: '3.5rem', lineHeight: '4rem', color: 'white', fontFamily: 'Berkshire Swash',
           }}
           >
 The Celestial Loom
-          </p>
+          </h1>
           <p style={{
-            fontStyle: 'italic', fontSize: '2.5rem', lineHeight: '2.5rem', color: 'white', fontFamily: 'Berkshire Swash',
+            fontStyle: 'italic', fontSize: '2rem', lineHeight: '2rem', color: 'white', fontFamily: 'Berkshire Swash',
           }}
           >
 Astrological Services
