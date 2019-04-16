@@ -1,14 +1,12 @@
-import React from 'react';
+import { CardTitle, CardText, Media } from 'react-md';
 import PropTypes from 'prop-types';
-import {
-  Card, CardTitle, CardText, Media,
-} from 'react-md';
+import React from 'react';
 
 function BlogEntry({
   title, image, publishDate, html,
 }) {
   return (
-    <Card>
+    <div>
       <Media>
         <img src={image} alt="blog-post" />
       </Media>
@@ -16,7 +14,7 @@ function BlogEntry({
       <CardText>
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </CardText>
-    </Card>
+    </div>
   );
 }
 

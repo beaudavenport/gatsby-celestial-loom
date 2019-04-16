@@ -23,7 +23,7 @@ const Jumbotron = () => (
       width: '90%', maxWidth: 1100, display: 'flex', flexDirection: 'column', minHeight: 250, margin: '0 auto', justifyContent: 'space-between',
     }}
     >
-      <div style={{ display: 'flex', alignItems: 'center' }}>
+      <div style={{ display: 'flex', alignItems: 'center', marginBottom: 30 }}>
         <img src={CelestialLogo} alt="Celestial Loom Logo" style={{ marginRight: 10, width: '4rem' }} />
         <div>
           <h1 style={{
@@ -40,7 +40,7 @@ Astrological Services
           </p>
         </div>
       </div>
-      <div>
+      <div style={{ maxWidth: 500, alignSelf: 'flex-end' }}>
         <p style={{
           fontStyle: 'italic', textAlign: 'right', fontSize: 'large', color: 'white', fontFamily: 'Martel',
         }}

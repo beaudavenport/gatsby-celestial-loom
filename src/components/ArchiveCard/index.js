@@ -1,5 +1,5 @@
 import {
-  Card, CardText, CardTitle, List, ListItem,
+  CardText, CardTitle, List, ListItem,
 } from 'react-md';
 import { Link, StaticQuery, graphql } from 'gatsby';
 import { uniq } from 'lodash';
@@ -41,31 +41,28 @@ const SidebarContents = () => (
 
       return (
         <div>
-          <Card>
-            <CardTitle
-              title="Archive"
-              subtitle="Browse previous entries by month and year"
-            />
-            <h1 style={{ fontFamily: 'AstroGadget' }}>B</h1>
-            <CardText>
-              <List>
-                {sections.map(section => (
-                  <ListItem
-                    primaryText={section.monthAndYear}
-                    secondaryText={`${section.posts && section.posts.length} entries`}
-                    nestedItems={section.posts.map(post => (
-                      <ListItem
-                        primaryText={post.frontmatter.title}
-                        secondaryText={post.frontmatter.publishDate}
-                        component={Link}
-                        to={post.fields.slug}
-                      />
-                    ))}
-                  />
-                ))}
-              </List>
-            </CardText>
-          </Card>
+          <CardTitle
+            title="Archive"
+            subtitle="Browse previous entries by month and year"
+          />
+          <CardText>
+            <List>
+              {sections.map(section => (
+                <ListItem
+                  primaryText={section.monthAndYear}
+                  secondaryText={`${section.posts && section.posts.length} entries`}
+                  nestedItems={section.posts.map(post => (
+                    <ListItem
+                      primaryText={post.frontmatter.title}
+                      secondaryText={post.frontmatter.publishDate}
+                      component={Link}
+                      to={post.fields.slug}
+                    />
+                  ))}
+                />
+              ))}
+            </List>
+          </CardText>
         </div>
       );
     }}

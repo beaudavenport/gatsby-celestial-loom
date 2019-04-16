@@ -24,7 +24,7 @@ $md-drawer-desktop-width: 225px;
 @import './AboutNikkiCard/styles';
 
 html {
- background-color: 'white';
+ background-color: #fff;
 }
 
 .sidebar-contents {
@@ -33,7 +33,7 @@ html {
 
 @media only screen and (min-width: 839px) {
   .sidebar-contents {
-    padding-left: 10px;
+    padding-left: 20px;
   }
 
   .main-contents {

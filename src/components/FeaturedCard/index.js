@@ -14,11 +14,9 @@ const FeaturedCard = ({
       <div style={{ position: 'relative' }}>
         <img style={{ height: '250px', width: '100%', objectFit: 'cover' }} src={image} alt="Preview of featured post" />
         {cornerIconName && <CardCornerHighlight iconName={cornerIconName} title={cornerTitle} />}
-        <MediaOverlay style={{ marginBottom: '5px' }}>
-          <CardTitle title={title} subtitle={publishDate} />
-        </MediaOverlay>
       </div>
-      <CardText>
+      <CardTitle title={title} subtitle={publishDate} />
+      <CardText style={{ padding: 24 }}>
         <p style={{ textDecoration: 'none' }}>
           {excerpt}
         </p>
