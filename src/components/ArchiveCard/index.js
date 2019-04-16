@@ -20,7 +20,7 @@ const SidebarContents = () => (
                frontmatter {
                  title
                  publishMonthAndYear: publishDate(formatString: "MMMM YYYY")
-                 publishDate(formatString: "MMMM YYYY")
+                 publishDate(formatString: "MMMM DD, YYYY")
                }
                fields {
                  slug
