@@ -38,27 +38,31 @@ const SidebarContents = ({ eventsQuantity, postsQuantity }) => (
       const blogNodes = nodes.filter(node => node.frontmatter.type === 'blog').slice(0, postsQuantity);
       return (
         <div>
-          <h5 className="sidebar-header">You may also like...</h5>
-          { eventNodes.length > 0 && eventNodes.map(node => (
-            <ThumbnailCard
-              small
-              path={node.fields.slug}
-              title={node.frontmatter.title}
-              caption={node.frontmatter.publishDate}
-              thumbnailChildren={<ImageThumbnail imageUrl={node.frontmatter.image} />}
-            />
-          ))
+          <div style={{ borderBottom: '3px solid #ec6602', marginBottom: 20, paddingRight: 10 }}>
+            <h5 className="sidebar-header">Latest Updates</h5>
+          </div>
+          <div style={{ padding: 10 }}>
+            { eventNodes.length > 0 && eventNodes.map(node => (
+              <ThumbnailCard
+                small
+                path={node.fields.slug}
+                title={node.frontmatter.title}
+                caption={node.frontmatter.publishDate}
+                thumbnailChildren={<ImageThumbnail imageUrl={node.frontmatter.image} />}
+              />
+            ))
            }
-          { blogNodes.length > 0 && blogNodes.map(node => (
-            <ThumbnailCard
-              small
-              path={node.fields.slug}
-              title={node.frontmatter.title}
-              caption={node.frontmatter.publishDate}
-              thumbnailChildren={<ImageThumbnail imageUrl={node.frontmatter.image} />}
-            />
-          ))
+            { blogNodes.length > 0 && blogNodes.map(node => (
+              <ThumbnailCard
+                small
+                path={node.fields.slug}
+                title={node.frontmatter.title}
+                caption={node.frontmatter.publishDate}
+                thumbnailChildren={<ImageThumbnail imageUrl={node.frontmatter.image} />}
+              />
+            ))
            }
+          </div>
         </div>
       );
     }}

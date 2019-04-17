@@ -1,5 +1,5 @@
 import {
-  CardText, CardTitle, List, ListItem,
+  Divider, FontIcon, List, ListItem,
 } from 'react-md';
 import { Link, StaticQuery, graphql } from 'gatsby';
 import { uniq } from 'lodash';
@@ -40,12 +40,16 @@ const SidebarContents = () => (
       }));
 
       return (
-        <div>
-          <CardTitle
-            title="Archive"
-            subtitle="Browse previous entries by month and year"
-          />
-          <CardText>
+        <div style={{ marginBottom: 30 }}>
+          <div style={{ textAlign: 'right', paddingTop: 20, paddingRight: 10 }}>
+            <h3 style={{ marginBottom: 5 }}>
+              <FontIcon style={{ marginRight: 10 }}>create</FontIcon>
+                Blog Archive
+            </h3>
+            <p style={{ color: 'rgba(0, 0, 0, 0.54)' }}>Browse by month and year</p>
+          </div>
+          <Divider />
+          <div>
             <List>
               {sections.map(section => (
                 <ListItem
@@ -62,7 +66,7 @@ const SidebarContents = () => (
                 />
               ))}
             </List>
-          </CardText>
+          </div>
         </div>
       );
     }}
