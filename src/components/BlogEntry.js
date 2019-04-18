@@ -7,10 +7,10 @@ function BlogEntry({
 }) {
   return (
     <div>
-      <Media>
+      <CardTitle title={title} subtitle={publishDate} />
+      <Media style={{ width: '80%', margin: '0 auto' }}>
         <img src={image} alt="blog-post" />
       </Media>
-      <CardTitle title={title} subtitle={publishDate} />
       <CardText>
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </CardText>
