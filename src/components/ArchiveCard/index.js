@@ -41,29 +41,33 @@ const SidebarContents = () => (
 
       return (
         <div style={{ marginBottom: 30 }}>
-          <div style={{ textAlign: 'right', paddingTop: 20, paddingRight: 10 }}>
-            <h3 style={{ marginBottom: 5 }}>
+          <div style={{ borderBottom: '3px solid #ec6602', marginBottom: 20, paddingRight: 10 }}>
+            <h4 className="sidebar-header">
               <FontIcon style={{ marginRight: 10 }}>create</FontIcon>
-                Blog Archive
-            </h3>
-            <p style={{ color: 'rgba(0, 0, 0, 0.54)' }}>Browse by month and year</p>
+             Blog Archives
+            </h4>
           </div>
-          <Divider />
           <div>
             <List>
-              {sections.map(section => (
-                <ListItem
-                  primaryText={section.monthAndYear}
-                  secondaryText={`${section.posts && section.posts.length} entries`}
-                  nestedItems={section.posts.map(post => (
-                    <ListItem
-                      primaryText={post.frontmatter.title}
-                      secondaryText={post.frontmatter.publishDate}
-                      component={Link}
-                      to={post.fields.slug}
-                    />
-                  ))}
-                />
+              {sections.map((section, index) => (
+                <div>
+                  { index > 0 && <Divider />}
+                  <ListItem
+                    primaryText={section.monthAndYear}
+                    secondaryText={`${section.posts && section.posts.length} entries`}
+                    nestedItems={section.posts.map((post, nestedIndex) => (
+                      <div>
+                        { nestedIndex > 0 && <Divider inset />}
+                        <ListItem
+                          primaryText={post.frontmatter.title}
+                          secondaryText={post.frontmatter.publishDate}
+                          component={Link}
+                          to={post.fields.slug}
+                        />
+                      </div>
+                    ))}
+                  />
+                </div>
               ))}
             </List>
           </div>

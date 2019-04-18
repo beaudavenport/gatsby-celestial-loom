@@ -54,7 +54,6 @@ const Posts = ({ data }) => {
         image={firstNode.frontmatter.image}
         excerpt={firstNode.excerpt}
       />
-      <h1 style={{ fontStyle: 'italic' }}>Earlier Articles</h1>
       { otherNodes && otherNodes.map(node => (
         <ThumbnailCard
           title={node.frontmatter.title}
