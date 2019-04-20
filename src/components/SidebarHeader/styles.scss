@@ -1,0 +1,14 @@
+.sidebar-header {
+    display: flex;
+    border-bottom: 3px solid #ec6602;
+    margin-bottom: 20;
+    padding-right: 5;
+}
+
+.sidebar-header--title {
+  margin-bottom: 0;
+  background-color: #ec6602;
+  color: white;
+  padding: 5px 10px 0 10px;
+  font-size: 1rem;
+}

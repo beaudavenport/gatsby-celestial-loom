@@ -2,8 +2,8 @@ import { StaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import DateThumbnail from '../ThumbnailCard/dateThumbnail';
 import ImageThumbnail from '../ThumbnailCard/imageThumbnail';
+import SidebarHeader from '../SidebarHeader';
 import ThumbnailCard from '../ThumbnailCard';
 
 const SidebarContents = ({ eventsQuantity, postsQuantity }) => (
@@ -38,9 +38,7 @@ const SidebarContents = ({ eventsQuantity, postsQuantity }) => (
       const blogNodes = nodes.filter(node => node.frontmatter.type === 'blog').slice(0, postsQuantity);
       return (
         <div>
-          <div style={{ borderBottom: '3px solid #ec6602', marginBottom: 20, paddingRight: 10 }}>
-            <h5 className="sidebar-header">Latest Updates</h5>
-          </div>
+          <SidebarHeader title="Latest Updates" />
           <div style={{ padding: 10 }}>
             { eventNodes.length > 0 && eventNodes.map(node => (
               <ThumbnailCard

@@ -1,9 +1,11 @@
 import {
-  Divider, FontIcon, List, ListItem,
+  Avatar, FontIcon, List, ListItem,
 } from 'react-md';
 import { Link, StaticQuery, graphql } from 'gatsby';
 import { uniq } from 'lodash';
 import React from 'react';
+
+import SidebarHeader from '../SidebarHeader';
 
 const SidebarContents = () => (
   <StaticQuery
@@ -40,25 +42,21 @@ const SidebarContents = () => (
       }));
 
       return (
-        <div style={{ marginBottom: 30 }}>
-          <div style={{ borderBottom: '3px solid #ec6602', marginBottom: 20, paddingRight: 10 }}>
-            <h4 className="sidebar-header">
-              <FontIcon style={{ marginRight: 10 }}>create</FontIcon>
-             Blog Archives
-            </h4>
-          </div>
+        <div style={{ marginBottom: 30, marginTop: 20 }}>
+          <SidebarHeader title="Archives" />
           <div>
             <List>
-              {sections.map((section, index) => (
+              {sections.map(section => (
                 <div>
-                  { index > 0 && <Divider />}
                   <ListItem
+                    primaryTextStyle={{ fontWeight: 'bold' }}
                     primaryText={section.monthAndYear}
                     secondaryText={`${section.posts && section.posts.length} entries`}
-                    nestedItems={section.posts.map((post, nestedIndex) => (
+                    nestedItems={section.posts.map(post => (
                       <div>
-                        { nestedIndex > 0 && <Divider inset />}
                         <ListItem
+                          leftAvatar={<Avatar icon={<FontIcon>create</FontIcon>} />}
+                          primaryTextStyle={{ fontWeight: 'bold' }}
                           primaryText={post.frontmatter.title}
                           secondaryText={post.frontmatter.publishDate}
                           component={Link}

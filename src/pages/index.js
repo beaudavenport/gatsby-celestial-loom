@@ -9,6 +9,7 @@ import FeaturedEventCard from '../components/FeaturedEventCard';
 import ImageThumbnail from '../components/ThumbnailCard/imageThumbnail';
 import Jumbotron from '../components/Jumbotron';
 import Layout from '../components/Layout';
+import SidebarHeader from '../components/SidebarHeader';
 import ThumbnailCard from '../components/ThumbnailCard';
 
 const IndexPage = ({ data }) => {
@@ -20,21 +21,25 @@ const IndexPage = ({ data }) => {
       jumbotron={<Jumbotron />}
       sidebarChildren={(
         <Grid noSpacing>
+          <Cell size={12}>
+            <SidebarHeader title="About Nikki" />
+          </Cell>
           <Cell size={12} tabletSize={4} className="about-nikki--card">
             <AboutNikkiCard />
           </Cell>
+          <Cell size={12}>
+            <SidebarHeader title="Stay Connected" />
+          </Cell>
           <Cell size={12} tabletSize={4}>
-            <Card>
-              <div style={{ paddingRight: 1 }}>
-                <a
-                  className="twitter-timeline"
-                  href="https://twitter.com/nikiastro?ref_src=twsrc%5Etfw"
-                  data-tweet-limit="1"
-                >
+            <div style={{ paddingRight: 1 }}>
+              <a
+                className="twitter-timeline"
+                href="https://twitter.com/nikiastro?ref_src=twsrc%5Etfw"
+                data-tweet-limit="1"
+              >
                   Tweets by nikiastro
-                </a>
-              </div>
-            </Card>
+              </a>
+            </div>
           </Cell>
         </Grid>
       )}

@@ -22,6 +22,7 @@ $md-drawer-desktop-width: 225px;
 @import './TextWithChevron/styles';
 @import './FeaturedEventCard/styles';
 @import './AboutNikkiCard/styles';
+@import './SidebarHeader/styles';
 
 html {
  background-color: #fff;
@@ -96,13 +97,4 @@ html {
 .search-input {
   width: 100%;
   display: flex;
-}
-
-.sidebar-header {
-  font-style: italic;
-  font-weight: bold;
-  margin-right: 10px;
-  margin-top: 10px;
-  text-align: right;
-  font-size: 1rem
 }
