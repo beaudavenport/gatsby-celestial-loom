@@ -14,7 +14,10 @@ const AboutNikkiCard = () => (
       </Media>
     </div>
     <CardText style={{ display: 'flex', flexDirection: 'column' }}>
-      <p style={{ fontSize: 'smaller', color: '#ff8013', textAlign: 'center' }}>
+      <p style={{
+        fontSize: 'smaller', color: 'rgb(236, 102, 2)', fontWeight: 'bold', textAlign: 'center',
+      }}
+      >
       Nikki Davenport, astrological consultant, has been a professional
       astrologer for over 35 years.
       </p>
@@ -22,7 +25,7 @@ const AboutNikkiCard = () => (
         flat
         primary
         style={{
-          height: 'auto', fontStyle: 'bold', lineHeight: '14px', fontFamily: 'Martel', border: '1px solid', margin: '0 auto',
+          height: 'auto', color: 'rgb(236, 102, 2)', fontWeight: 'bold', lineHeight: '14px', fontFamily: 'Martel', border: '1px solid', margin: '0 auto',
         }}
         to="/about-nikki"
         type={null}

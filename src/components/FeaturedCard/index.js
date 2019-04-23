@@ -1,4 +1,4 @@
-import { CardText, CardTitle, MediaOverlay } from 'react-md';
+import { CardText } from 'react-md';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -15,8 +15,16 @@ const FeaturedCard = ({
         <img style={{ height: '250px', width: '100%', objectFit: 'cover' }} src={image} alt="Preview of featured post" />
         {cornerIconName && <CardCornerHighlight iconName={cornerIconName} title={cornerTitle} />}
       </div>
-      <CardTitle title={title} subtitle={publishDate} />
-      <CardText style={{ padding: 24 }}>
+      <div style={{ padding: 16 }}>
+        <h2 style={{ fontWeight: 'bold', marginBottom: 5 }}>{title}</h2>
+        <h3 style={{
+          color: 'rgba(0, 0, 0, 0.54)', fontWeight: 'bold', marginBottom: 0, marginLeft: 5, fontSize: '1.1rem',
+        }}
+        >
+          {publishDate}
+        </h3>
+      </div>
+      <CardText style={{ padding: 16 }}>
         <p style={{ textDecoration: 'none' }}>
           {excerpt}
         </p>

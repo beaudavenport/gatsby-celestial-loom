@@ -1,13 +1,12 @@
+import { Cell, Grid } from 'react-md';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
 
 import ArchiveCard from '../components/ArchiveCard';
 import FeaturedCard from '../components/FeaturedCard';
-import ImageThumbnail from '../components/ThumbnailCard/imageThumbnail';
 import Layout from '../components/Layout';
 import SidebarContents from '../components/SidebarContents';
-import ThumbnailCard from '../components/ThumbnailCard';
 
 export const query = graphql`
    query {
@@ -22,7 +21,7 @@ export const query = graphql`
            frontmatter {
              title
              image
-             publishDate(formatString: "MMMM YYYY")
+             publishDate(formatString: "MMMM DD, YYYY")
            }
            excerpt
            fields {
@@ -35,7 +34,7 @@ export const query = graphql`
  `;
 
 const Posts = ({ data }) => {
-  const [firstNode, ...otherNodes] = data.allMarkdownRemark.edges.map(edge => edge.node);
+  const first3Nodes = data.allMarkdownRemark.edges.slice(0, 3).map(edge => edge.node);
 
   return (
     <Layout
@@ -47,21 +46,21 @@ const Posts = ({ data }) => {
         </Fragment>
       )}
     >
-      <FeaturedCard
-        path={firstNode.fields.slug}
-        title={firstNode.frontmatter.title}
-        subtitle="subtitle here"
-        image={firstNode.frontmatter.image}
-        excerpt={firstNode.excerpt}
-      />
-      { otherNodes && otherNodes.map(node => (
-        <ThumbnailCard
-          title={node.frontmatter.title}
-          caption="07/12/16"
-          thumbnailChildren={<ImageThumbnail imageUrl={node.frontmatter.image} />}
-        />
-      ))
+      <Grid>
+        { first3Nodes.map(node => (
+          <Cell size={12}>
+            <FeaturedCard
+              style={{ marginBottom: 30 }}
+              path={node.fields.slug}
+              title={node.frontmatter.title}
+              publishDate={node.frontmatter.publishDate}
+              image={node.frontmatter.image}
+              excerpt={node.excerpt}
+            />
+          </Cell>
+        ))
       }
+      </Grid>
     </Layout>
   );
 };

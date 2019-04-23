@@ -1,11 +1,14 @@
-import { Cell, Grid, Paper } from 'react-md';
+import {
+  CardText, Cell, Grid, Paper,
+} from 'react-md';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import Layout from '../components/Layout';
 import ServiceCard from '../components/ServiceCard';
 import SidebarContents from '../components/SidebarContents';
+import SidebarHeader from '../components/SidebarHeader';
 import WesternChart from '../images/western-chart.jpg';
 
 const Services = ({ data }) => {
@@ -16,7 +19,15 @@ const Services = ({ data }) => {
     <Layout
       title="Services"
       sidebarChildren={(
-        <SidebarContents eventsQuantity={2} postsQuantity={0} />
+        <Fragment>
+          <div style={{ marginBottom: 30, marginTop: 20 }}>
+            <SidebarHeader title="Services" />
+            <CardText>
+              <p>Available Online or In-Person, a consultation is the best way to grow your understanding.</p>
+            </CardText>
+          </div>
+          <SidebarContents eventsQuantity={1} postsQuantity={1} />
+        </Fragment>
   )}
 
     >
@@ -27,15 +38,26 @@ const Services = ({ data }) => {
             backgroundPosition: 'center',
             backgroundSize: 'cover',
             width: '100%',
-            padding: '100px',
+            height: '300px',
+            padding: 0,
           }}
           >
-            <div>
+            <div style={{
+              background: 'rgba(39,62,84,0.82)',
+              overflow: 'hidden',
+              height: '300px',
+              zIndex: 2,
+              display: 'flex',
+              flexDirection: 'column',
+              padding: 20,
+              justifyContent: 'center',
+            }}
+            >
               <p style={{
                 fontStyle: 'italic', fontSize: 'xx-large', color: 'white', fontFamily: 'Berkshire Swash',
               }}
               >
-            The Wisdom of the Zodiac - online or in person!
+          The Wisdom of the Zodiac - online or in person!
               </p>
             </div>
           </Paper>

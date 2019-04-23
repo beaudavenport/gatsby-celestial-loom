@@ -44,50 +44,47 @@ const IndexPage = ({ data }) => {
         </Grid>
       )}
     >
-      <Card>
-        <Grid>
-          <Cell size={12} style={{ borderBottom: '1px solid rgba(15,70,100,.12)' }}>
-            <FeaturedCard
+      <Grid style={{ borderBottom: '1px solid rgba(15,70,100,.2)', marginBottom: 20 }}>
+        <Cell size={12} style={{ borderBottom: '1px solid rgba(15,70,100,.2)' }}>
+          <FeaturedCard
+            style={{ marginBottom: 10 }}
+            path={firstBlogNode.fields.slug}
+            title={firstBlogNode.frontmatter.title}
+            publishDate={firstBlogNode.frontmatter.publishDate}
+            image={firstBlogNode.frontmatter.image}
+            excerpt={firstBlogNode.excerpt}
+            cornerIconName="create"
+            cornerTitle="Blog"
+          />
+        </Cell>
+        { otherBlogNodes && otherBlogNodes.map(node => (
+          <Cell size={6} tabletSize={4} style={{ padding: 10 }}>
+            <ThumbnailCard
               style={{ marginBottom: 10 }}
-              path={firstBlogNode.fields.slug}
-              title={firstBlogNode.frontmatter.title}
-              publishDate={firstBlogNode.frontmatter.publishDate}
-              image={firstBlogNode.frontmatter.image}
-              excerpt={firstBlogNode.excerpt}
-              cornerIconName="create"
-              cornerTitle="Blog"
+              path={node.fields.slug}
+              title={node.frontmatter.title}
+              caption={node.frontmatter.publishDate}
+              thumbnailChildren={<ImageThumbnail imageUrl={node.frontmatter.image} />}
             />
           </Cell>
-          { otherBlogNodes && otherBlogNodes.map(node => (
-            <Cell size={6} tabletSize={4} style={{ padding: 10 }}>
-              <ThumbnailCard
-                style={{ marginBottom: 10 }}
-                title={node.frontmatter.title}
-                caption={node.frontmatter.publishDate}
-                thumbnailChildren={<ImageThumbnail imageUrl={node.frontmatter.image} />}
-              />
-            </Cell>
-          ))
+        ))
           }
-        </Grid>
-      </Card>
-      <Card style={{ marginTop: 10 }}>
-        <Grid>
-          <Cell size={12}>
-            <FeaturedEventCard
-              path={firstEventNode.fields.slug}
-              title={firstEventNode.frontmatter.title}
-              eventDate={firstEventNode.frontmatter.eventDate}
-              eventTime={firstEventNode.frontmatter.eventTime}
-              eventDateShort={firstEventNode.frontmatter.eventDateShort}
-              image={firstEventNode.frontmatter.image}
-              eventPrice={firstEventNode.frontmatter.eventPrice}
-              priceDescription={firstEventNode.frontmatter.priceDescription}
-              location={firstEventNode.frontmatter.location}
-            />
-          </Cell>
-        </Grid>
-      </Card>
+      </Grid>
+      <Grid style={{ borderBottom: '1px solid rgba(15,70,100,.2)', marginBottom: 20 }}>
+        <Cell size={12}>
+          <FeaturedEventCard
+            path={firstEventNode.fields.slug}
+            title={firstEventNode.frontmatter.title}
+            eventDate={firstEventNode.frontmatter.eventDate}
+            eventTime={firstEventNode.frontmatter.eventTime}
+            eventDateShort={firstEventNode.frontmatter.eventDateShort}
+            image={firstEventNode.frontmatter.image}
+            eventPrice={firstEventNode.frontmatter.eventPrice}
+            priceDescription={firstEventNode.frontmatter.priceDescription}
+            location={firstEventNode.frontmatter.location}
+          />
+        </Cell>
+      </Grid>
     </Layout>
   );
 };
@@ -111,7 +108,7 @@ query {
         frontmatter {
           title
           image
-          publishDate(formatString: "MMM DD, YYYY")
+          publishDate(formatString: "MMMM DD, YYYY")
         }
         excerpt(pruneLength: 250)
         fields {
@@ -131,7 +128,7 @@ query {
         frontmatter {
           title
           image
-          eventDate(formatString: "MMM DD, YYYY")
+          eventDate(formatString: "MMMM DD, YYYY")
           eventTime
           eventDateShort: eventDate(formatString: "MMM DD")
           eventPrice

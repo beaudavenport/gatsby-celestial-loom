@@ -1,10 +1,11 @@
-import { List } from 'react-md';
+import { CardText, List } from 'react-md';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import Layout from '../components/Layout';
 import SidebarContents from '../components/SidebarContents';
+import SidebarHeader from '../components/SidebarHeader';
 import ToolboxRow from '../components/ToolboxRow';
 
 const Toolbox = ({ data }) => {
@@ -17,7 +18,15 @@ const Toolbox = ({ data }) => {
     <Layout
       title="Astro Toolbox"
       sidebarChildren={(
-        <SidebarContents eventsQuantity={2} postsQuantity={0} />
+        <Fragment>
+          <div style={{ marginBottom: 30, marginTop: 20 }}>
+            <SidebarHeader title="Your Toolbox" />
+            <CardText>
+              <p>Your Astro Toolbox is your guide to understanding the planets, signs, houses, and what they mean!</p>
+            </CardText>
+          </div>
+          <SidebarContents eventsQuantity={2} postsQuantity={0} />
+        </Fragment>
   )}
     >
       <h3>Your Astro Toolbox</h3>
