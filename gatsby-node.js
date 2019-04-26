@@ -28,6 +28,7 @@ exports.createPages = ({ actions, graphql }) => {
           node {
             frontmatter {
               templateKey
+              type
             }
             fields {
               slug
@@ -49,6 +50,26 @@ exports.createPages = ({ actions, graphql }) => {
         ),
         context: {}, // additional data can be passed via context
       });
+      if (node.frontmatter.type === 'services') {
+        createPage({
+          path: `${node.fields.slug}online/`,
+          component: path.resolve(
+            'src/templates/serviceOnline.js',
+          ),
+          context: {
+            serviceSlug: node.fields.slug,
+          },
+        });
+        createPage({
+          path: `${node.fields.slug}in-person/`,
+          component: path.resolve(
+            'src/templates/serviceInPerson.js',
+          ),
+          context: {
+            serviceSlug: node.fields.slug,
+          },
+        });
+      }
     });
     Promise.resolve();
   });

@@ -1,4 +1,5 @@
-import { Button, Card, CardText } from 'react-md';
+import { Card, CardText } from 'react-md';
+import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -10,6 +11,7 @@ function ServicePage(props) {
     origin = 'Western',
     price,
     html,
+    slug,
   } = props;
   const { color, icon } = getOrigin(origin);
   return (
@@ -23,23 +25,8 @@ function ServicePage(props) {
         <div dangerouslySetInnerHTML={{ __html: html }} />
         <strong>{`$${Number(price).toFixed(2)}`}</strong>
         <br />
-        <Button
-          raised
-          primary
-          className="snipcart-add-item"
-          data-item-id="2"
-          data-item-name={title}
-          data-item-price={price}
-          data-item-weight="20"
-          data-item-url="/"
-          data-item-description="Event"
-          data-item-custom1-name="Name"
-          data-item-custom1-required="true"
-          data-item-custom2-name="Date of Birth"
-          data-item-custom2-required="true"
-        >
-          Sign Up
-        </Button>
+        <Link to={`${slug}/online`}>Buy Online</Link>
+        <Link to={`${slug}/in-person`}>Buy In-Person</Link>
       </CardText>
     </Card>
   );
