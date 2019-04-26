@@ -1,4 +1,6 @@
-import { Card, CardText } from 'react-md';
+import {
+  Card, CardText, Cell, Grid,
+} from 'react-md';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -15,7 +17,7 @@ function ServicePage(props) {
   } = props;
   const { color, icon } = getOrigin(origin);
   return (
-    <Card>
+    <div>
       <CardText>
         <h1 style={{ textAlign: 'center' }}>{title}</h1>
         <h3 style={{ backgroundColor: color, color: 'white', fontSize: '15px' }}>
@@ -23,12 +25,29 @@ function ServicePage(props) {
           {origin.toUpperCase()}
         </h3>
         <div dangerouslySetInnerHTML={{ __html: html }} />
-        <strong>{`$${Number(price).toFixed(2)}`}</strong>
-        <br />
-        <Link to={`${slug}/online`}>Buy Online</Link>
-        <Link to={`${slug}/in-person`}>Buy In-Person</Link>
+        <Grid>
+          <Cell size={12}>
+            <h3>Choose an Option:</h3>
+          </Cell>
+          <Cell size={6}>
+            <Card>
+              <Link to={`${slug}/online`}>
+                <p>Online Consultation</p>
+                <p style={{ fontWeight: 'bold', fontSize: '1.5rem' }}>{`$${Number(price).toFixed(2)}`}</p>
+              </Link>
+            </Card>
+          </Cell>
+          <Cell>
+            <Card>
+              <Link to={`${slug}/online`}>
+                <p>In-Person Consultation</p>
+                <p style={{ fontWeight: 'bold', fontSize: '1.5rem' }}>{`$${Number(price).toFixed(2)}`}</p>
+              </Link>
+            </Card>
+          </Cell>
+        </Grid>
       </CardText>
-    </Card>
+    </div>
   );
 }
 
@@ -37,6 +56,7 @@ ServicePage.propTypes = {
   origin: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
   html: PropTypes.string.isRequired,
+  slug: PropTypes.string.isRequired,
 };
 
 export default ServicePage;

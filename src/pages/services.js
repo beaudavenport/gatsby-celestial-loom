@@ -9,7 +9,6 @@ import Layout from '../components/Layout';
 import ServiceCard from '../components/ServiceCard';
 import SidebarContents from '../components/SidebarContents';
 import SidebarHeader from '../components/SidebarHeader';
-import WesternChart from '../images/western-chart.jpg';
 
 const Services = ({ data }) => {
   const nodes = data.allMarkdownRemark.edges.map(edge => edge.node);
@@ -33,33 +32,8 @@ const Services = ({ data }) => {
     >
       <Grid>
         <Cell size={12}>
-          <Paper style={{
-            background: `url(${WesternChart})`,
-            backgroundPosition: 'center',
-            backgroundSize: 'cover',
-            width: '100%',
-            height: '300px',
-            padding: 0,
-          }}
-          >
-            <div style={{
-              background: 'rgba(39,62,84,0.82)',
-              overflow: 'hidden',
-              height: '300px',
-              zIndex: 2,
-              display: 'flex',
-              flexDirection: 'column',
-              padding: 20,
-              justifyContent: 'center',
-            }}
-            >
-              <p style={{
-                fontStyle: 'italic', fontSize: 'xx-large', color: 'white', fontFamily: 'Berkshire Swash',
-              }}
-              >
-          The Wisdom of the Zodiac - online or in person!
-              </p>
-            </div>
+          <Paper style={{ backgroundColor: 'white' }}>
+            <p>Not sure where to begin? Check out our GETTING STARTED GUIDE</p>
           </Paper>
         </Cell>
         <Cell size={6}>

@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import getOrigin from '../../helpers/originService';
+import WesternChart from '../../images/western-chart.jpg';
 
 const ServiceCard = ({
   path, title, origin = 'Western', price, excerpt,
@@ -13,11 +14,30 @@ const ServiceCard = ({
   return (
     <Link to={path} style={{ textDecoration: 'none' }}>
       <Card style={{ backgroundColor: 'white' }}>
-        <div style={{ backgroundColor: color, padding: '10px' }}>
-          <h3 style={{ color: 'white', fontSize: '15px' }}>
-            <span style={{ fontSize: '50px' }}>{icon}</span>
-            {origin.toUpperCase()}
-          </h3>
+        <div style={{
+          background: `url(${WesternChart})`,
+          backgroundPosition: 'center',
+          backgroundSize: 'cover',
+          width: '100%',
+          height: '75px',
+          padding: 0,
+        }}
+        >
+          <div style={{
+            background: 'rgba(39,62,84,0.75)',
+            overflow: 'hidden',
+            height: '75px',
+            zIndex: 2,
+            display: 'flex',
+            flexDirection: 'column',
+            padding: 20,
+            justifyContent: 'center',
+          }}
+          >
+            <p style={{ color: 'white', fontSize: '1.3rem' }}>
+              <span style={{ fontStyle: 'italic' }}>Western Astrology</span>
+            </p>
+          </div>
         </div>
         <CardText>
           <h3>{title}</h3>

@@ -16,7 +16,7 @@ function ServicePage(props) {
   const { color, icon } = getOrigin(origin);
   return (
     <Grid>
-      <Cell>
+      <Cell size={6}>
         <Card>
           <CardText>
             <h1 style={{ textAlign: 'center' }}>{title}</h1>
