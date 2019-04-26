@@ -3,6 +3,12 @@
   display: flex;
   height: 150px;
   margin-bottom: 20px;
+  transition-duration: 0.15s;
+  transition-property: background;
+}
+
+.thumbnail-card:hover {
+  background: rgba(0, 0, 0, 0.12);
 }
 
 .thumbnail-image {

@@ -1,12 +1,14 @@
 import { Link } from 'gatsby';
+import { injectInk } from 'react-md';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 const ThumbnailCard = ({
-  title, path = '/', caption, thumbnailChildren, small, cornerIconName, cornerTitle,
+  title, path = '/', caption, thumbnailChildren, small, cornerIconName, cornerTitle, ink,
 }) => (
   <Link to={path} style={{ textDecoration: 'none' }}>
-    <div className="thumbnail-card" style={{ backgroundColor: 'white' }}>
+    <div className="thumbnail-card" style={{ position: 'relative' }}>
+      {ink}
       {thumbnailChildren}
       <div className="thumbnail-text">
         <h2 style={{ fontWeight: 'bold', fontSize: '1.2rem', color: 'rgb(47, 47, 47)' }}>{title}</h2>
@@ -40,4 +42,4 @@ ThumbnailCard.defaultProps = {
   cornerTitle: '',
 };
 
-export default ThumbnailCard;
+export default injectInk(ThumbnailCard);
