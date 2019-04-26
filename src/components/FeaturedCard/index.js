@@ -1,37 +1,35 @@
 import { CardText } from 'react-md';
-import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 import CardCornerHighlight from '../CardCornerHighlight';
 import TextWithChevron from '../TextWithChevron';
+import TouchableLink from '../TouchableLink';
 
 const FeaturedCard = ({
   path, image, title, subtitle, excerpt, style, publishDate, cornerIconName, cornerTitle,
 }) => (
-  <Link to={path} style={{ textDecoration: 'none' }}>
-    <div style={{ backgroundColor: 'white', ...style }}>
-      <div style={{ position: 'relative' }}>
-        <img style={{ height: '250px', width: '100%', objectFit: 'cover' }} src={image} alt="Preview of featured post" />
-        {cornerIconName && <CardCornerHighlight iconName={cornerIconName} title={cornerTitle} />}
-      </div>
-      <div style={{ padding: 16 }}>
-        <h2 style={{ fontWeight: 'bold', marginBottom: 5 }}>{title}</h2>
-        <h3 style={{
-          color: 'rgba(0, 0, 0, 0.54)', fontWeight: 'bold', marginBottom: 0, marginLeft: 5, fontSize: '1.1rem',
-        }}
-        >
-          {publishDate}
-        </h3>
-      </div>
-      <CardText style={{ padding: 16 }}>
-        <p style={{ textDecoration: 'none' }}>
-          {excerpt}
-        </p>
-        <TextWithChevron text="READ MORE" />
-      </CardText>
+  <TouchableLink to={path} style={style}>
+    <div style={{ position: 'relative' }}>
+      <img style={{ height: '250px', width: '100%', objectFit: 'cover' }} src={image} alt="Preview of featured post" />
+      {cornerIconName && <CardCornerHighlight iconName={cornerIconName} title={cornerTitle} />}
     </div>
-  </Link>
+    <div style={{ padding: 16 }}>
+      <h2 style={{ fontWeight: 'bold', marginBottom: 5 }}>{title}</h2>
+      <h3 style={{
+        color: 'rgba(0, 0, 0, 0.54)', fontWeight: 'bold', marginBottom: 0, marginLeft: 5, fontSize: '1.1rem',
+      }}
+      >
+        {publishDate}
+      </h3>
+    </div>
+    <CardText style={{ padding: 16 }}>
+      <p style={{ textDecoration: 'none' }}>
+        {excerpt}
+      </p>
+      <TextWithChevron text="READ MORE" />
+    </CardText>
+  </TouchableLink>
 );
 
 FeaturedCard.propTypes = {

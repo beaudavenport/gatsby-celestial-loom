@@ -1,12 +1,12 @@
 import {
   CardTitle, Cell, FontIcon, Grid,
 } from 'react-md';
-import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 import CardCornerHighlight from '../CardCornerHighlight';
 import TextWithChevron from '../TextWithChevron';
+import TouchableLink from '../TouchableLink';
 
 const FeaturedEventCard = ({
   path,
@@ -20,42 +20,40 @@ const FeaturedEventCard = ({
   location,
   priceDescription,
 }) => (
-  <Link to={path} style={{ textDecoration: 'none' }}>
-    <div style={{ backgroundColor: 'white', ...style }}>
-      <Grid noSpacing>
-        <Cell size={6} tabletSize={4}>
-          <div className="image-container">
-            <img className="image-container--image" src={image} alt="Preview of featured post" />
-            <CardCornerHighlight iconName="event" title={eventDateShort} />
+  <TouchableLink to={path} style={style}>
+    <Grid noSpacing>
+      <Cell size={6} tabletSize={4}>
+        <div className="image-container">
+          <img className="image-container--image" src={image} alt="Preview of featured post" />
+          <CardCornerHighlight iconName="event" title={eventDateShort} />
+        </div>
+      </Cell>
+      <Cell size={6} tabletSize={4}>
+        <CardTitle
+          title={title}
+        />
+        <div className="event-detail-container">
+          <div className="event-detail-thumbnail">
+            <FontIcon style={{ marginRight: 5 }}>place</FontIcon>
+            <p>{location}</p>
           </div>
-        </Cell>
-        <Cell size={6} tabletSize={4}>
-          <CardTitle
-            title={title}
-          />
-          <div className="event-detail-container">
-            <div className="event-detail-thumbnail">
-              <FontIcon style={{ marginRight: 5 }}>place</FontIcon>
-              <p>{location}</p>
-            </div>
-            <div className="event-detail-thumbnail">
-              <FontIcon style={{ marginRight: 5 }}>event</FontIcon>
-              <p>{`${eventDate} - ${eventTime}`}</p>
-            </div>
+          <div className="event-detail-thumbnail">
+            <FontIcon style={{ marginRight: 5 }}>event</FontIcon>
+            <p>{`${eventDate} - ${eventTime}`}</p>
           </div>
-          <div className="event-signup-thumbnail">
-            <div>
-              <p className="event-signup-thumbnail--price-description">{priceDescription}</p>
-              <p className="event-signup-thumbnail--price">{`$${Number(eventPrice).toFixed(2)}`}</p>
-            </div>
-            <div>
-              <TextWithChevron text="SIGN UP" />
-            </div>
+        </div>
+        <div className="event-signup-thumbnail">
+          <div>
+            <p className="event-signup-thumbnail--price-description">{priceDescription}</p>
+            <p className="event-signup-thumbnail--price">{`$${Number(eventPrice).toFixed(2)}`}</p>
           </div>
-        </Cell>
-      </Grid>
-    </div>
-  </Link>
+          <div>
+            <TextWithChevron text="SIGN UP" />
+          </div>
+        </div>
+      </Cell>
+    </Grid>
+  </TouchableLink>
 );
 
 FeaturedEventCard.propTypes = {

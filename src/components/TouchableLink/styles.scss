@@ -1,0 +1,9 @@
+.touchable-link {
+  position: relative;
+  transition-duration: 0.15s;
+  transition-property: background;
+}
+
+.touchable-link:hover {
+  background: rgba(0, 0, 0, 0.12);
+}
