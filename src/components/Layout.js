@@ -6,7 +6,7 @@ import {
 import { StaticQuery, graphql, Link } from 'gatsby';
 import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
-import React, { useState } from 'react';
+import React from 'react';
 
 import HeaderSearch from './HeaderSearch';
 
@@ -45,12 +45,9 @@ const DrawerTitle = () => (
 
 const Layout = ({
   jumbotron, children, sidebarChildren, title,
-}) => {
-  const [isSearching, setIsSearching] = useState(false);
-
-  return (
-    <StaticQuery
-      query={graphql`
+}) => (
+  <StaticQuery
+    query={graphql`
           query SiteTitleQuery {
             site {
               siteMetadata {
@@ -59,58 +56,54 @@ const Layout = ({
             }
           }
         `}
-      render={data => (
-        <NavigationDrawer
-          desktopDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY}
-          tabletDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY}
-          mobileDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY}
-          position="left"
-          drawerStyle={{ backgroundColor: 'rgb(47, 47, 47)' }}
-          defaultVisible={false}
-          temporaryIcon={(<FontIcon iconClassName="material-icons">menu</FontIcon>)}
-          navStyle={{ backgroundColor: 'rgb(47, 47, 47)' }}
-          toolbarTitle={title}
-          toolbarTitleClassName={isSearching ? 'toolbar-title-searching' : 'toolbar-title'}
-          toolbarActions={
-            <HeaderSearch isSearching={isSearching} setIsSearching={setIsSearching} />
-          }
-          drawerHeader={<DrawerTitle />}
-          toolbarTitleStyle={{ fontFamily: 'Berkshire Swash', fontStyle: 'italic' }}
-          drawerTitleStyle={{ fontFamily: 'Berkshire Swash', fontStyle: 'italic' }}
-          toolbarSingleColor
-          toolbarStyle={{ backgroundColor: 'rgb(47, 47, 47)' }}
-          navItems={navItems.map(getNavItem)}
+    render={data => (
+      <NavigationDrawer
+        desktopDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY}
+        tabletDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY}
+        mobileDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY}
+        position="left"
+        drawerStyle={{ backgroundColor: 'rgb(47, 47, 47)' }}
+        defaultVisible={false}
+        temporaryIcon={(<FontIcon iconClassName="material-icons">menu</FontIcon>)}
+        navStyle={{ backgroundColor: 'rgb(47, 47, 47)' }}
+        toolbarTitle={title}
+        toolbarActions={<HeaderSearch />}
+        drawerHeader={<DrawerTitle />}
+        toolbarTitleStyle={{ fontFamily: 'Berkshire Swash', fontStyle: 'italic' }}
+        drawerTitleStyle={{ fontFamily: 'Berkshire Swash', fontStyle: 'italic' }}
+        toolbarSingleColor
+        toolbarStyle={{ backgroundColor: 'rgb(47, 47, 47)' }}
+        navItems={navItems.map(getNavItem)}
+      >
+        <Helmet
+          title={data.site.siteMetadata.title}
+          meta={[
+            { name: 'description', content: 'Sample' },
+            { name: 'keywords', content: 'sample, something' },
+          ]}
         >
-          <Helmet
-            title={data.site.siteMetadata.title}
-            meta={[
-              { name: 'description', content: 'Sample' },
-              { name: 'keywords', content: 'sample, something' },
-            ]}
-          >
-            <html lang="en" />
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js" />
-            <script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" data-api-key="Y2NiNmUxNzEtMGNlZS00NTlkLTg1NDEtZjJjMGRjMWNjZThjNjM2ODU2Njg0NDE5MzU2MDg3" id="snipcart" />
-            <link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" rel="stylesheet" type="text/css" />
-          </Helmet>
-          {jumbotron}
-          <Grid style={{ maxWidth: 1100 }} noSpacing>
-            <Cell className="main-contents" size={8}>
-              {children}
-            </Cell>
-            <Cell size={4} tabletSize={8} className="sidebar-contents">
-              {sidebarChildren}
-            </Cell>
-          </Grid>
-          <div>
-            <hr />
-            <h6 style={{ textAlign: 'center' }}>Copyright 2019, The Celestial Loom. Cover photography by Photo by Anastasia Dulgier on Unsplash. Built with Gatsby and Netflify CMS.</h6>
-          </div>
-        </NavigationDrawer>
-      )}
-    />
-  );
-};
+          <html lang="en" />
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js" />
+          <script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" data-api-key="Y2NiNmUxNzEtMGNlZS00NTlkLTg1NDEtZjJjMGRjMWNjZThjNjM2ODU2Njg0NDE5MzU2MDg3" id="snipcart" />
+          <link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" rel="stylesheet" type="text/css" />
+        </Helmet>
+        {jumbotron}
+        <Grid style={{ maxWidth: 1100 }} noSpacing>
+          <Cell className="main-contents" size={8}>
+            {children}
+          </Cell>
+          <Cell size={4} tabletSize={8} className="sidebar-contents">
+            {sidebarChildren}
+          </Cell>
+        </Grid>
+        <div>
+          <hr />
+          <h6 style={{ textAlign: 'center' }}>Copyright 2019, The Celestial Loom. Cover photography by Photo by Anastasia Dulgier on Unsplash. Built with Gatsby and Netflify CMS.</h6>
+        </div>
+      </NavigationDrawer>
+    )}
+  />
+);
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

@@ -61,22 +61,23 @@ html {
   height: 100%;
 }
 
+.dialog-container-style {
+  padding: 10;
+  min-width: 300px;
+}
+
+@media only screen and (min-width: 839px) {
+  .dialog-container-style {
+    min-width: 600px;
+  }
+}
+
 .search-container {
   height: 100%;
   display: flex;
   align-items: center;
   vertical-align: middle;
   position: relative;
-}
-
-.toolbar-title-searching {
-  transform: translateX(-200px);
-  transition: all 500ms;
-}
-
-.toolbar-title {
-  transform: translateX(0);
-  transition: all 500ms;
 }
 
 .header-search-container {

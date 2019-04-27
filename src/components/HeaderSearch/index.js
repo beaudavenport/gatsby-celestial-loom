@@ -1,42 +1,39 @@
 import { Button, FontIcon } from 'react-md';
 import { StaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { Fragment, useState } from 'react';
+import { Index } from 'elasticlunr';
 
-import Search from './search';
+import SearchModal from './SearchModal';
 
 
-const Header = ({ isSearching, setIsSearching }) => (
-  <StaticQuery
-    query={graphql`
+const Header = () => {
+  const [isSearching, setIsSearching] = useState(false);
+  return (
+    <StaticQuery
+      query={graphql`
       query SearchIndexQuery {
         siteSearchIndex {
           index
         }
       }
     `}
-    render={data => (
-      <div className="header-search-container">
-        <Button onClick={() => setIsSearching(!isSearching)}><FontIcon>search</FontIcon></Button>
-        <div className={`search-container ${isSearching ? 'search-searching' : 'search'}`}>
-          {isSearching
-          && (
-          <div className="search-input">
-            <Search searchIndex={data.siteSearchIndex.index} isSearching={isSearching} />
-            <Button onClick={() => setIsSearching(!isSearching)}>
-              <FontIcon>close</FontIcon>
-            </Button>
+      render={data => (
+        <Fragment>
+          <div className="header-search-container">
+            <Button onClick={() => setIsSearching(true)}><FontIcon>search</FontIcon></Button>
           </div>
+          {isSearching && (
+          <SearchModal
+            visible={isSearching}
+            searchIndex={data.siteSearchIndex.index}
+            onClose={() => setIsSearching(false)}
+          />
           )}
-        </div>
-      </div>
-    )}
-  />
-);
-
-Header.propTypes = {
-  isSearching: PropTypes.bool.isRequired,
-  setIsSearching: PropTypes.func.isRequired,
+        </Fragment>
+      )}
+    />
+  );
 };
 
 export default Header;
