@@ -16,6 +16,7 @@ const navItems = [
   { icon: 'event', to: '/events', title: 'Events' },
   { icon: 'shopping_cart', to: '/services', title: 'Services' },
   { icon: 'work', to: '/toolbox', title: 'Astro Toolbox' },
+  { icon: 'info', to: '/getting-started', title: 'Astrology 101' },
 ];
 
 const getNavItem = ({ divider, subheader, ...route }) => {
