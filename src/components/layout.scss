@@ -62,7 +62,6 @@ html {
 }
 
 .dialog-container-style {
-  padding: 10;
   min-width: 300px;
 }
 
@@ -99,4 +98,25 @@ html {
 .search-input {
   width: 100%;
   display: flex;
+}
+
+.search-modal--header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $md-primary-color;
+  margin-bottom: 10;
+  padding: 5px 10px;
+  * {
+    color: white;
+    margin-bottom: 0;
+    font-weight: bold;
+  }
+}
+
+.search-modal--input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
 }

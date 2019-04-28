@@ -1,4 +1,5 @@
 import {
+  Avatar,
   Button,
   DialogContainer,
   FontIcon,
@@ -9,8 +10,18 @@ import {
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
+import moment from 'moment';
 
 import { Index } from 'elasticlunr';
+
+const avatarMap = new Map();
+avatarMap.set('blog', 'create');
+avatarMap.set('events', 'event');
+avatarMap.set('services', 'shopping_cart');
+
+const getAvatar = type => (
+  <Avatar icon={<FontIcon>{avatarMap.get(type) || 'work'}</FontIcon>} />
+);
 
 class SearchModal extends React.PureComponent {
   constructor(props) {
@@ -52,23 +63,16 @@ class SearchModal extends React.PureComponent {
       <DialogContainer
         id="search-dialog"
         visible={visible}
-        dialogClassName="dialog-container-style "
-        contentStyle={{ padding: 20 }}
+        dialogClassName="dialog-container-style"
         autosizeContent={false}
         focusOnMount={false}
         onHide={onClose}
       >
-        <div style={{
-          display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 10,
-        }}
-        >
-          <h3 style={{ marginBottom: 0 }}>Search</h3>
-          <Button onClick={onClose}><FontIcon style={{ color: 'black' }}>close</FontIcon></Button>
+        <div className="search-modal--header">
+          <h3 className="search-modal--header--text">Search</h3>
+          <Button style={{ padding: 0 }} onClick={onClose}><FontIcon>close</FontIcon></Button>
         </div>
-        <div style={{
-          display: 'flex', alignItems: 'center', justifyContent: 'center', maxWidth: '90%',
-        }}
-        >
+        <div className="search-modal--input">
           <FontIcon style={{ color: '#ec6602', marginRight: 10 }}>search</FontIcon>
           <TextField
             ref={input => input && input.focus()}
@@ -79,13 +83,14 @@ class SearchModal extends React.PureComponent {
             onChange={this.search}
           />
         </div>
-        <List onClick={onClose}>
+        <List className="search-modal--results" onClick={onClose}>
           {results.map(page => (
             <ListItem
               style={{ paddingLeft: 10, paddingRight: 10 }}
               primaryText={page.title}
               primaryTextStyle={{ fontWeight: 'bold' }}
-              secondaryText={`${page.type} - ${page.publishDate}`}
+              leftAvatar={getAvatar(page.type)}
+              secondaryText={`Posted on: ${moment(page.publishDate).format('MMM DD, YYYY')}`}
               component={Link}
               to={`/${page.path}`}
             />
