@@ -1,4 +1,4 @@
-import { Card, Cell, Grid } from 'react-md';
+import { Cell, Grid } from 'react-md';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -44,8 +44,16 @@ const IndexPage = ({ data }) => {
         </Grid>
       )}
     >
-      <Grid style={{ borderBottom: '1px solid rgba(15,70,100,.2)', marginBottom: 20 }}>
-        <Cell size={12} style={{ borderBottom: '1px solid rgba(15,70,100,.2)' }}>
+      <Grid style={{ marginBottom: 20, borderBottom: '1px solid rgba(15,70,100,.2)' }}>
+        <Cell size={12}>
+          <p style={{
+            color: 'rgb(247, 105, 0)', fontWeight: 'bold', fontSize: '1.5rem', marginBottom: 10,
+          }}
+          >
+Featured Post
+          </p>
+        </Cell>
+        <Cell size={12}>
           <FeaturedCard
             style={{ marginBottom: 10 }}
             path={firstBlogNode.fields.slug}
@@ -53,9 +61,17 @@ const IndexPage = ({ data }) => {
             publishDate={firstBlogNode.frontmatter.publishDate}
             image={firstBlogNode.frontmatter.image}
             excerpt={firstBlogNode.excerpt}
-            cornerIconName="create"
-            cornerTitle="Blog"
           />
+        </Cell>
+      </Grid>
+      <Grid style={{ borderBottom: '1px solid rgba(15,70,100,.2)', marginBottom: 20 }}>
+        <Cell size={12}>
+          <p style={{
+            color: 'rgb(247, 105, 0)', fontWeight: 'bold', fontSize: '1.5rem', marginBottom: 10,
+          }}
+          >
+Previous Posts
+          </p>
         </Cell>
         { otherBlogNodes && otherBlogNodes.map(node => (
           <Cell size={6} tabletSize={4} style={{ padding: 10 }}>
@@ -71,6 +87,14 @@ const IndexPage = ({ data }) => {
           }
       </Grid>
       <Grid style={{ borderBottom: '1px solid rgba(15,70,100,.2)', marginBottom: 20 }}>
+        <Cell size={12}>
+          <p style={{
+            color: 'rgb(247, 105, 0)', fontWeight: 'bold', fontSize: '1.5rem', marginBottom: 10,
+          }}
+          >
+Next Event
+          </p>
+        </Cell>
         <Cell size={12}>
           <FeaturedEventCard
             path={firstEventNode.fields.slug}
