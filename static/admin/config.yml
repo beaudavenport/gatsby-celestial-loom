@@ -19,6 +19,13 @@ collections:
       - { name: 'publishDate', label: 'Publish Date', widget: 'date' }
       - { name: title, label: Title }
       - { name: 'image', label: 'Image', widget: 'image' }
+      - label: "Related Signs"
+        name: "relatedSigns"
+        widget: "relation"
+        collection: "signs"
+        searchFields: ["title"]
+        valueField: "title"
+        muliple: true
       - { name: body, label: Body, widget: markdown }
 
   - name: 'events'
@@ -61,7 +68,7 @@ collections:
     create: true
     fields:
       - { name: 'templateKey', label: 'Template Key', widget: 'hidden', default: 'toolboxTemplate'}
-      - { name: 'type', label: 'type', widget: 'hidden', default: 'signs'}
+      - { name: 'slug', label: 'slug', default: '{{slug}}'}
       - { name: 'title', label: 'Title' }
       - { name: 'icon', label: 'Icon' }
       - { name: 'body', label: 'Body', widget: 'markdown' }

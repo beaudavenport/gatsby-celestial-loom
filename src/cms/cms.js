@@ -47,10 +47,13 @@ function BlogEntryPreview({ entry, getAsset }) {
   const image = entry.getIn(['data', 'image']);
   const data = {
     title: entry.getIn(['data', 'title']),
+    relatedSigns: entry.getIn(['data', 'relatedSigns']),
     image: getAsset(image),
     publishDate: entry.getIn(['data', 'publishDate']).toString(),
     html: converter.makeHtml(entry.getIn(['data', 'body'])),
   };
+
+  console.log('you working with: ', data.relatedSigns);
 
   return (
     <BlogEntry {...data} />

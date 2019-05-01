@@ -2,8 +2,10 @@ import { CardText, Media } from 'react-md';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import TouchableLink from './TouchableLink';
+
 function BlogEntry({
-  title, image, publishDate, html,
+  title, image, publishDate, html, relatedSigns = [],
 }) {
   return (
     <div style={{ padding: '20px 10px' }}>
@@ -17,6 +19,8 @@ function BlogEntry({
       <CardText>
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </CardText>
+      <p>Mentioned in this post:</p>
+      {relatedSigns}
     </div>
   );
 }
