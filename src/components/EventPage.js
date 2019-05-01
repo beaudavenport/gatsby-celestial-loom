@@ -1,17 +1,32 @@
-import { Button, Card, FontIcon } from 'react-md';
+import { Button, FontIcon, Media } from 'react-md';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import { Subtitle, Title } from './Common';
+
 function EventPage(props) {
   const {
-    title, image, eventDate, eventPrice, html, location, mapsLink, slug, eventTime, priceDescription,
+    title,
+    subtitle,
+    image,
+    eventDate,
+    eventPrice,
+    html,
+    location,
+    mapsLink,
+    slug,
+    eventTime,
+    priceDescription,
   } = props;
   return (
     <div style={{ padding: 20 }}>
-      <h1 style={{ textAlign: 'center', color: 'black' }}>{title}</h1>
-      <div style={{ maxWidth: '400px', margin: '0 auto' }}>
-        <img style={{ maxWidth: '100%' }} src={image} alt="event" />
+      <div style={{ textAlign: 'center', marginBottom: 30 }}>
+        <Title>{title}</Title>
+        <Subtitle>{subtitle}</Subtitle>
       </div>
+      <Media style={{ width: '80%', margin: '0 auto' }}>
+        <img src={image} alt="event-page" />
+      </Media>
       <div style={{ maxWidth: '500px', margin: '0 auto' }}>
         <div style={{
           display: 'flex', flexDirection: 'column', alignItems: 'center', padding: 10,
@@ -60,6 +75,7 @@ function EventPage(props) {
 
 EventPage.propTypes = {
   title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   eventDate: PropTypes.string.isRequired,
   eventTime: PropTypes.string.isRequired,
@@ -67,6 +83,8 @@ EventPage.propTypes = {
   html: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   mapsLink: PropTypes.string.isRequired,
+  slug: PropTypes.string.isRequired,
+  priceDescription: PropTypes.string.isRequired,
 };
 
 export default EventPage;

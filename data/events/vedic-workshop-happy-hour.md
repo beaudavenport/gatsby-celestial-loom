@@ -7,6 +7,7 @@ eventDate: 2019-05-01T20:00:00.000Z
 eventTime: 3:00 PM
 image: /assets/pleiades.jpg
 title: Vedic Workshop Happy Hour
+subtitle: 
 location: Stone Spiral Coffee and Curious
 mapsLink: 'https://goo.gl/maps/EdDfi537h142'
 eventPrice: 30

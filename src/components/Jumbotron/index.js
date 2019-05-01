@@ -24,7 +24,6 @@ const Jumbotron = () => (
     }}
     >
       <div style={{ display: 'flex', alignItems: 'center', marginBottom: 30 }}>
-        <img src={CelestialLogo} alt="Celestial Loom Logo" style={{ marginRight: 10, width: '4rem' }} />
         <div>
           <h1 style={{
             fontStyle: 'italic', marginTop: 0, marginBottom: 0, fontSize: '3.5rem', lineHeight: '4rem', color: 'white', fontFamily: 'Berkshire Swash',
@@ -45,8 +44,8 @@ Astrological Services
           fontStyle: 'italic', textAlign: 'right', fontSize: 'large', color: 'white', fontFamily: 'Martel',
         }}
         >
-            Nikki Davenport, Licensed Astrologer,
-            brings the wisdom of the zodiac to your door (and inbox!)
+            Nikki Davenport, Astrological Consultant,
+            weaves timeless wisdom with modern service.
         </p>
         <div style={{ textAlign: 'right' }}>
           <Button flat primary swapTheming style={{ fontStyle: 'bold', fontFamily: 'Martel', marginRight: 10 }}>Get My Chart</Button>

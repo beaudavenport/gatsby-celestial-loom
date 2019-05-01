@@ -1,9 +1,8 @@
-import {
-  CardTitle, Cell, FontIcon, Grid,
-} from 'react-md';
+import { Cell, FontIcon, Grid } from 'react-md';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import { Title } from '../Common';
 import CardCornerHighlight from '../CardCornerHighlight';
 import TextWithChevron from '../TextWithChevron';
 import TouchableLink from '../TouchableLink';
@@ -29,9 +28,9 @@ const FeaturedEventCard = ({
         </div>
       </Cell>
       <Cell size={6} tabletSize={4}>
-        <CardTitle
-          title={title}
-        />
+        <div style={{ padding: 16 }}>
+          <Title>{title}</Title>
+        </div>
         <div className="event-detail-container">
           <div className="event-detail-thumbnail">
             <FontIcon style={{ marginRight: 5 }}>place</FontIcon>

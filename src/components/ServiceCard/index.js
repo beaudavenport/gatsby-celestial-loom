@@ -3,8 +3,9 @@ import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import getOrigin from '../../helpers/originService';
+import { Title } from '../Common';
 import WesternChart from '../../images/western-chart.jpg';
+import getOrigin from '../../helpers/originService';
 
 const ServiceCard = ({
   path, title, origin = 'Western', price, excerpt,
@@ -34,13 +35,16 @@ const ServiceCard = ({
             justifyContent: 'center',
           }}
           >
-            <p style={{ color: 'white', fontSize: '1.3rem' }}>
-              <span style={{ fontStyle: 'italic' }}>Western Astrology</span>
+            <p style={{
+              color: 'white', fontSize: '1.3rem', fontWeight: 'bold', opacity: 0.9,
+            }}
+            >
+              Western Astrology
             </p>
           </div>
         </div>
         <CardText>
-          <h3>{title}</h3>
+          <Title>{title}</Title>
           <p>{excerpt}</p>
           <strong>{`$${Number(price).toFixed(2)}`}</strong>
         </CardText>

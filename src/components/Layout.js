@@ -97,9 +97,8 @@ const Layout = ({
             {sidebarChildren}
           </Cell>
         </Grid>
-        <div>
-          <hr />
-          <h6 style={{ textAlign: 'center' }}>Copyright 2019, The Celestial Loom. Cover photography by Photo by Anastasia Dulgier on Unsplash. Built with Gatsby and Netflify CMS.</h6>
+        <div style={{ backgroundColor: 'rgb(47, 47, 47)', padding: 30 }}>
+          <h6 style={{ textAlign: 'center', color: 'white', marginBottom: 0 }}>Copyright 2019, The Celestial Loom. Cover photography by Photo by Anastasia Dulgier on Unsplash. Built with Gatsby and Netflify CMS.</h6>
         </div>
       </NavigationDrawer>
     )}

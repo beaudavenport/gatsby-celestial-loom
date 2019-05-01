@@ -6,7 +6,8 @@ path: hjkjjkk
 eventDate: 2019-04-20T05:00:00.000Z
 eventTime: 1-4 PM
 image: /assets/namedicinewheel.jpg
-title: Native American Medicine Wheel - Earth Astrology
+title: Native American Medicine Wheel
+subtitle: Earth Astrology
 location: DeMun Healing
 mapsLink: 'https://goo.gl/maps/6oC2MtqcZDp'
 eventPrice: 35

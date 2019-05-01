@@ -20,6 +20,7 @@ function EventTemplate({
     >
       <EventPage
         title={frontmatter.title}
+        subtitle={frontmatter.subtitle}
         image={frontmatter.image}
         priceDescription={frontmatter.priceDescription}
         eventDate={frontmatter.eventDate}
@@ -48,6 +49,7 @@ export const pageQuery = graphql`
         eventDate(formatString: "MMMM DD, YYYY")
         eventTime
         title
+        subtitle
         image
         location
         mapsLink

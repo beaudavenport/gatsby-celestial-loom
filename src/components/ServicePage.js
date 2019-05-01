@@ -4,7 +4,9 @@ import {
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
+import WesternChart from '../images/western-chart.jpg';
 
+import { Title } from './Common';
 import getOrigin from '../helpers/originService';
 
 function ServicePage(props) {
@@ -18,12 +20,36 @@ function ServicePage(props) {
   const { color, icon } = getOrigin(origin);
   return (
     <div>
+      <div style={{
+        background: `url(${WesternChart})`,
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+        width: '100%',
+        height: '75px',
+        padding: 0,
+      }}
+      >
+        <div style={{
+          background: 'rgba(39,62,84,0.75)',
+          overflow: 'hidden',
+          height: '75px',
+          zIndex: 2,
+          display: 'flex',
+          flexDirection: 'column',
+          padding: 20,
+          justifyContent: 'center',
+        }}
+        >
+          <p style={{
+            color: 'white', fontSize: '1.3rem', fontWeight: 'bold', opacity: 0.9,
+          }}
+          >
+            Western Astrology
+          </p>
+        </div>
+      </div>
       <CardText>
-        <h1 style={{ textAlign: 'center' }}>{title}</h1>
-        <h3 style={{ backgroundColor: color, color: 'white', fontSize: '15px' }}>
-          <span style={{ fontSize: '50px' }}>{icon}</span>
-          {origin.toUpperCase()}
-        </h3>
+        <Title>{title}</Title>
         <div dangerouslySetInnerHTML={{ __html: html }} />
         <Grid>
           <Cell size={12}>

@@ -18,6 +18,7 @@ function EventPagePreview({ entry, getAsset }) {
   const image = entry.getIn(['data', 'image']);
   const data = {
     title: entry.getIn(['data', 'title']),
+    title: entry.getIn(['data', 'subtitle']),
     image: getAsset(image),
     eventDate: moment(entry.getIn(['data', 'eventDate']).toString()).format('MMMM DD, YYYY'),
     eventTime: entry.getIn(['data', 'eventTime']),

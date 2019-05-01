@@ -2,6 +2,7 @@ import { CardText } from 'react-md';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import { Title } from '../Common';
 import CardCornerHighlight from '../CardCornerHighlight';
 import TextWithChevron from '../TextWithChevron';
 import TouchableLink from '../TouchableLink';
@@ -15,7 +16,7 @@ const FeaturedCard = ({
       {cornerIconName && <CardCornerHighlight iconName={cornerIconName} title={cornerTitle} />}
     </div>
     <div style={{ padding: 16 }}>
-      <h2 style={{ fontWeight: 'bold', marginBottom: 5 }}>{title}</h2>
+      <Title>{title}</Title>
       <h3 style={{
         color: 'rgba(0, 0, 0, 0.54)', fontWeight: 'bold', marginBottom: 0, marginLeft: 5, fontSize: '1.1rem',
       }}
