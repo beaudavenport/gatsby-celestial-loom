@@ -1,10 +1,12 @@
 ---
 templateKey: blogTemplate
 type: blog
-path: /elsewhere
 publishDate: 2019-02-09T20:26:07.387Z
 title: A Celestial Preview of 2019
 image: /assets/2019-cosmic-preview.jpg
+relatedSigns:
+  - Aries
+  - Taurus
 ---
 _“We must do something every day to satisfy the Cosmic Plan for which we were sent here.” - Paramahansa Yogananda_
 
