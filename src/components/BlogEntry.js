@@ -1,8 +1,10 @@
-import { CardText, Media } from 'react-md';
+import {
+  Avatar, CardText, Chip, Media,
+} from 'react-md';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import TouchableLink from './TouchableLink';
+import { getSymbolSpan } from '../helpers/symbolHelper';
 
 function BlogEntry({
   title, image, publishDate, html, relatedSigns = [],
@@ -20,7 +22,14 @@ function BlogEntry({
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </CardText>
       <p>Mentioned in this post:</p>
-      {relatedSigns.map(sign => <p>{sign}</p>)}
+      {relatedSigns.map(sign => (
+        <div>
+          <Chip
+            label={sign}
+            avatar={<Avatar>{getSymbolSpan(sign)}</Avatar>}
+          />
+        </div>
+      ))}
     </div>
   );
 }

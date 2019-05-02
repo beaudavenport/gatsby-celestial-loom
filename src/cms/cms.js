@@ -18,7 +18,7 @@ function EventPagePreview({ entry, getAsset }) {
   const image = entry.getIn(['data', 'image']);
   const data = {
     title: entry.getIn(['data', 'title']),
-    title: entry.getIn(['data', 'subtitle']),
+    subtitle: entry.getIn(['data', 'subtitle']),
     image: getAsset(image),
     eventDate: moment(entry.getIn(['data', 'eventDate']).toString()).format('MMMM DD, YYYY'),
     eventTime: entry.getIn(['data', 'eventTime']),
@@ -50,7 +50,7 @@ function BlogEntryPreview({ entry, getAsset }) {
     title: entry.getIn(['data', 'title']),
     relatedSigns: relatedSigns ? relatedSigns.toJS() : [],
     image: getAsset(image),
-    publishDate: entry.getIn(['data', 'publishDate']).toString(),
+    publishDate: moment(entry.getIn(['data', 'publishDate']).toString()).format('MMMM DD, YYYY'),
     html: converter.makeHtml(entry.getIn(['data', 'body'])),
   };
 
