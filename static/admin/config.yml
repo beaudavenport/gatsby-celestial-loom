@@ -22,10 +22,10 @@ collections:
       - label: "Related Signs"
         name: "relatedSigns"
         widget: "relation"
+        multiple: true
         collection: "signs"
         searchFields: ["title"]
         valueField: "title"
-        muliple: true
       - { name: body, label: Body, widget: markdown }
 
   - name: 'events'

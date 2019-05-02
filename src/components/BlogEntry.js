@@ -20,7 +20,7 @@ function BlogEntry({
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </CardText>
       <p>Mentioned in this post:</p>
-      {relatedSigns}
+      {relatedSigns.map(sign => <p>{sign}</p>)}
     </div>
   );
 }
