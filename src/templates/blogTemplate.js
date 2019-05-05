@@ -7,7 +7,8 @@ import BlogEntry from '../components/BlogEntry';
 import Layout from '../components/Layout';
 import SidebarContents from '../components/SidebarContents';
 
-export default function BlogTemplate({ data }) {
+export default function BlogTemplate({ data, pageContext }) {
+  const { relatedItems } = pageContext;
   const { markdownRemark } = data; // data.markdownRemark holds our post data
   const { frontmatter, html } = markdownRemark;
 
@@ -26,6 +27,7 @@ export default function BlogTemplate({ data }) {
         image={frontmatter.image}
         html={html}
         publishDate={frontmatter.publishDate}
+        relatedItems={relatedItems}
       />
     </Layout>
   );

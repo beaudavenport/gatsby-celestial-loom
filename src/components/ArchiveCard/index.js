@@ -7,7 +7,7 @@ import React from 'react';
 
 import SidebarHeader from '../SidebarHeader';
 
-const SidebarContents = () => (
+const ArchiveCard = () => (
   <StaticQuery
     query={graphql`
        query {
@@ -75,4 +75,4 @@ const SidebarContents = () => (
   />
 );
 
-export default SidebarContents;
+export default ArchiveCard;

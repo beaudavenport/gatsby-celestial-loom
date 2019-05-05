@@ -28,6 +28,8 @@ exports.createPages = ({ actions, graphql }) => {
           node {
             frontmatter {
               templateKey
+              title
+              relatedSigns
               type
             }
             fields {
@@ -43,12 +45,15 @@ exports.createPages = ({ actions, graphql }) => {
     }
 
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+      const relatedItems = result.data.allMarkdownRemark.edges.filter(edge => node.frontmatter.relatedSigns && node.frontmatter.relatedSigns.includes(edge.node.frontmatter.title));
       createPage({
         path: node.fields.slug,
         component: path.resolve(
           `src/templates/${String(node.frontmatter.templateKey)}.js`,
         ),
-        context: {}, // additional data can be passed via context
+        context: {
+          relatedItems: relatedItems.map(relatedItem => ({ title: relatedItem.node.frontmatter.title, slug: relatedItem.node.fields.slug })),
+        }, // additional data can be passed via context
       });
       if (node.frontmatter.type === 'services') {
         createPage({

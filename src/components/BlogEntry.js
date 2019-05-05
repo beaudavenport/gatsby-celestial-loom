@@ -1,13 +1,14 @@
 import {
   Avatar, CardText, Chip, Media,
 } from 'react-md';
+import { navigate } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 import { getSymbolSpan } from '../helpers/symbolHelper';
 
 function BlogEntry({
-  title, image, publishDate, html, relatedSigns = [],
+  title, image, publishDate, html, relatedItems = [],
 }) {
   return (
     <div style={{ padding: '20px 10px' }}>
@@ -22,11 +23,12 @@ function BlogEntry({
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </CardText>
       <p>Mentioned in this post:</p>
-      {relatedSigns.map(sign => (
+      {relatedItems.map(item => (
         <div>
           <Chip
-            label={sign}
-            avatar={<Avatar>{getSymbolSpan(sign)}</Avatar>}
+            onClick={() => navigate(item.slug)}
+            label={item.title}
+            avatar={<Avatar>{getSymbolSpan(item.title)}</Avatar>}
           />
         </div>
       ))}
