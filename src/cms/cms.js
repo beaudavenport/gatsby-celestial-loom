@@ -45,10 +45,10 @@ function EventPagePreview({ entry, getAsset }) {
 
 function BlogEntryPreview({ entry, getAsset }) {
   const image = entry.getIn(['data', 'image']);
-  const relatedSigns = entry.getIn(['data', 'relatedSigns']);
+  const relatedItems = entry.getIn(['data', 'relatedItems']);
   const data = {
     title: entry.getIn(['data', 'title']),
-    relatedSigns: relatedSigns ? relatedSigns.toJS() : [],
+    relatedItems: relatedItems ? relatedItems.toJS() : [],
     image: getAsset(image),
     publishDate: moment(entry.getIn(['data', 'publishDate']).toString()).format('MMMM DD, YYYY'),
     html: converter.makeHtml(entry.getIn(['data', 'body'])),

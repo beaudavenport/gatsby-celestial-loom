@@ -1,8 +1,8 @@
 ---
 templateKey: toolboxTemplate
-type: signs
+toolboxType: signs
+type: toolbox
 title: Taurus
-icon: ♈︎
 ---
 _Key Phrase:_ I HAVE
 

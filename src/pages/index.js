@@ -61,6 +61,7 @@ Featured Post
             publishDate={firstBlogNode.frontmatter.publishDate}
             image={firstBlogNode.frontmatter.image}
             excerpt={firstBlogNode.excerpt}
+            relatedItems={firstBlogNode.relatedItems}
           />
         </Cell>
       </Grid>
@@ -133,6 +134,7 @@ query {
           title
           image
           publishDate(formatString: "MMMM DD, YYYY")
+          relatedItems
         }
         excerpt(pruneLength: 250)
         fields {

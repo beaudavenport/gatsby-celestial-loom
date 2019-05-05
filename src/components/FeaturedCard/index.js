@@ -8,7 +8,7 @@ import TextWithChevron from '../TextWithChevron';
 import TouchableLink from '../TouchableLink';
 
 const FeaturedCard = ({
-  path, image, title, subtitle, excerpt, style, publishDate, cornerIconName, cornerTitle,
+  path, image, title, subtitle, excerpt, style, publishDate, cornerIconName, cornerTitle, relatedItems = [],
 }) => (
   <TouchableLink to={path} style={style}>
     <div style={{ position: 'relative' }}>
@@ -25,10 +25,14 @@ const FeaturedCard = ({
       </h3>
     </div>
     <CardText style={{ padding: 16 }}>
+      <p>
+Tags:
+        {relatedItems.map(item => item.title).join(', ')}
+      </p>
       <p style={{ textDecoration: 'none' }}>
         {excerpt}
       </p>
-      <TextWithChevron text="READ MORE" />
+      <TextWithChevron text="Read more" />
     </CardText>
   </TouchableLink>
 );

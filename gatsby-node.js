@@ -29,7 +29,7 @@ exports.createPages = ({ actions, graphql }) => {
             frontmatter {
               templateKey
               title
-              relatedSigns
+              relatedItems
               type
             }
             fields {
@@ -45,7 +45,7 @@ exports.createPages = ({ actions, graphql }) => {
     }
 
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      const relatedItems = result.data.allMarkdownRemark.edges.filter(edge => node.frontmatter.relatedSigns && node.frontmatter.relatedSigns.includes(edge.node.frontmatter.title));
+      const relatedItems = result.data.allMarkdownRemark.edges.filter(edge => node.frontmatter.relatedItems && node.frontmatter.relatedItems.includes(edge.node.frontmatter.title));
       createPage({
         path: node.fields.slug,
         component: path.resolve(

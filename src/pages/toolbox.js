@@ -10,9 +10,9 @@ import ToolboxRow from '../components/ToolboxRow';
 
 const Toolbox = ({ data }) => {
   const nodes = data.allMarkdownRemark.edges.map(edge => edge.node);
-  const planetNodes = nodes.filter(node => node.frontmatter.type === 'planets');
-  const signNodes = nodes.filter(node => node.frontmatter.type === 'signs');
-  const houseNodes = nodes.filter(node => node.frontmatter.type === 'houses');
+  const planetNodes = nodes.filter(node => node.frontmatter.toolboxType === 'planets');
+  const signNodes = nodes.filter(node => node.frontmatter.toolboxType === 'signs');
+  const houseNodes = nodes.filter(node => node.frontmatter.toolboxType === 'houses');
 
   return (
     <Layout
@@ -82,15 +82,18 @@ export default Toolbox;
 
 export const query = graphql`
   query {
-    allMarkdownRemark(sort: { fields: [frontmatter___publishDate], order: DESC }) {
+    allMarkdownRemark(
+      filter: { frontmatter: { type: { eq: "toolbox"} } },
+      sort: { fields: [frontmatter___publishDate], order: DESC }
+    ) {
       totalCount
       edges {
         node {
           id
           frontmatter {
             title
-            icon
             type
+            toolboxType
           }
           excerpt
           fields {
