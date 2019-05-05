@@ -1,10 +1,12 @@
 ---
 templateKey: blogTemplate
 type: blog
-path: /ignoreme
 publishDate: 2019-03-04T21:43:55.925Z
 title: March Madness - Planetary Halftime Show
 image: /assets/astro-book.jpg
+relatedItems:
+  - First House
+  - Sun
 ---
 # GET READY TO RUMBLE
 
