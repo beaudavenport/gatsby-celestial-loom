@@ -26,7 +26,7 @@ function BlogEntry({
       {relatedItems.map(item => (
         <div>
           <Chip
-            onClick={() => navigate(item.slug)}
+            onClick={() => item.slug && navigate(item.slug)}
             label={item.title}
             avatar={<Avatar>{getSymbolSpan(item.title)}</Avatar>}
           />

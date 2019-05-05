@@ -45,10 +45,13 @@ function EventPagePreview({ entry, getAsset }) {
 
 function BlogEntryPreview({ entry, getAsset }) {
   const image = entry.getIn(['data', 'image']);
-  const relatedItems = entry.getIn(['data', 'relatedItems']);
+  const relatedItemData = entry.getIn(['data', 'relatedItems']);
+  const relatedItems = relatedItemData
+    ? relatedItemData.toJS().map(relatedItem => ({ title: relatedItem }))
+    : [];
   const data = {
     title: entry.getIn(['data', 'title']),
-    relatedItems: relatedItems ? relatedItems.toJS() : [],
+    relatedItems,
     image: getAsset(image),
     publishDate: moment(entry.getIn(['data', 'publishDate']).toString()).format('MMMM DD, YYYY'),
     html: converter.makeHtml(entry.getIn(['data', 'body'])),

@@ -18,11 +18,11 @@ collections:
       - { name: 'publishDate', label: 'Publish Date', widget: 'date' }
       - { name: title, label: Title }
       - { name: 'image', label: 'Image', widget: 'image' }
-      - label: "Related Signs"
+      - label: "Related Signs/Planets/Houses"
         name: "relatedItems"
         widget: "relation"
         multiple: true
-        collection: "signs"
+        collection: "toolboxEntries"
         searchFields: ["title"]
         valueField: "title"
       - { name: body, label: Body, widget: markdown }
