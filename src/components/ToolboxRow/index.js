@@ -4,12 +4,13 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 const ToolboxRow = ({
-  path, title, excerpt, icon,
+  path, title, excerpt, avatar,
 }) => (
   <ListItem
+    primaryTextStyle={{ fontWeight: 'bold' }}
     primaryText={title}
     secondaryText={excerpt}
-    leftIcon={<p style={{ fontSize: '30px' }}>{icon}</p>}
+    leftAvatar={avatar}
     component={Link}
     to={path}
   />
@@ -18,7 +19,7 @@ const ToolboxRow = ({
 ToolboxRow.propTypes = {
   path: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  icon: PropTypes.string.isRequired,
+  avatar: PropTypes.node.isRequired,
   excerpt: PropTypes.string.isRequired,
 };
 

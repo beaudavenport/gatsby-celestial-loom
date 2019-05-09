@@ -10,11 +10,18 @@ Title.propTypes = {
 };
 
 const Subtitle = ({ children }) => (
-  <h3 className="subtitle">{children}</h3>
+  <h4 className="subtitle">{children}</h4>
 );
 
 Subtitle.propTypes = {
   children: PropTypes.string.isRequired,
 };
 
-export { Title, Subtitle };
+const HeyMom = ({ children }) => (
+  <p style={{ fontSize: '1rem', color: 'red' }}>
+    <span style={{ fontWeight: 'bold' }}>HEY MOM: </span>
+    {children}
+  </p>
+);
+
+export { Title, Subtitle, HeyMom };

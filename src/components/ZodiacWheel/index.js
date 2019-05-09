@@ -139,7 +139,7 @@ const ZodiacWheel = ({ title }) => (
                   className="testhover"
                   d={d}
                   stroke={isMatch(title, id) ? '#ec6602' : 'rgba(0, 0, 0, 0.87)'}
-                  fill="white"
+                  fill={isMatch(title, id) ? 'rgba(247, 105, 0, 0.25)' : 'white'}
                   onClick={() => navigate(matchingLink(id, nodes))}
                   strokeWidth={isMatch(title, id) ? 4 : 2}
                 />
@@ -149,7 +149,7 @@ const ZodiacWheel = ({ title }) => (
               <circle
                 {...path}
                 className="testhovertext"
-                fill="transparent"
+                fill={isMatch(title, path.id) ? 'rgba(247, 105, 0, 0.25)' : 'transparent'}
                 onClick={() => navigate(matchingLink(path.id, nodes))}
               />
             ))}

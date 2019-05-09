@@ -1,9 +1,11 @@
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { Fragment } from 'react';
 
+import { HeyMom } from '../components/Common';
 import Layout from '../components/Layout';
 import SidebarContents from '../components/SidebarContents';
+import SidebarHeader from '../components/SidebarHeader';
 import ToolboxPage from '../components/ToolboxPage';
 
 function ToolboxTemplate({
@@ -15,12 +17,21 @@ function ToolboxTemplate({
     <Layout
       title="Astro Toolbox"
       sidebarChildren={(
-        <SidebarContents eventsQuantity={2} postsQuantity={2} />
+        <Fragment>
+          <SidebarHeader title="Toolbox Stuff ?????" />
+          <div style={{
+            width: '100%', margin: 10, padding: 10, height: 200, border: '2px dashed red',
+          }}
+          >
+            <HeyMom>What do you want here?</HeyMom>
+          </div>
+          <SidebarContents eventsQuantity={2} postsQuantity={2} />
+        </Fragment>
       )}
     >
       <ToolboxPage
         title={frontmatter.title}
-        icon={frontmatter.icon}
+        toolboxType={frontmatter.toolboxType}
         html={html}
       />
     </Layout>
@@ -39,8 +50,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        icon
-        type
+        toolboxType
       }
       fields {
         slug
