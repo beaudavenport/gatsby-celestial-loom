@@ -14,6 +14,8 @@ import moment from 'moment';
 
 import { Index } from 'elasticlunr';
 
+import { HeyMom } from '../Common';
+
 const avatarMap = new Map();
 avatarMap.set('blog', 'create');
 avatarMap.set('events', 'event');
@@ -67,6 +69,7 @@ class SearchModal extends React.PureComponent {
         autosizeContent={false}
         focusOnMount={false}
         onHide={onClose}
+        fullPage
       >
         <div className="search-modal--header">
           <h3 className="search-modal--header--text">Search</h3>
@@ -82,6 +85,13 @@ class SearchModal extends React.PureComponent {
             value={query}
             onChange={this.search}
           />
+        </div>
+        <div style={{
+          width: '100%', margin: 10, padding: 10, height: 200, border: '2px dashed red',
+        }}
+        >
+          <HeyMom>Would you prefer these search results, or thumbnail cards (with pictures?)</HeyMom>
+          <HeyMom>Would you like a filter to the left? Might save it for last, time is crunched</HeyMom>
         </div>
         <List className="search-modal--results" onClick={onClose}>
           {results.map(page => (

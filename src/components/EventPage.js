@@ -1,4 +1,4 @@
-import { Button, FontIcon, Media } from 'react-md';
+import { Button, FontIcon } from 'react-md';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -24,9 +24,9 @@ function EventPage(props) {
         <Title>{title}</Title>
         <Subtitle>{subtitle}</Subtitle>
       </div>
-      <Media style={{ width: '80%', margin: '0 auto' }}>
-        <img src={image} alt="event-page" />
-      </Media>
+      <div style={{ margin: '0 auto', maxWidth: 400 }}>
+        <img style={{ width: '100%', objectFit: 'cover', margin: '0 auto' }} src={image} alt="event-page" />
+      </div>
       <div style={{ maxWidth: '500px', margin: '0 auto' }}>
         <div style={{
           display: 'flex', flexDirection: 'column', alignItems: 'center', padding: 10,

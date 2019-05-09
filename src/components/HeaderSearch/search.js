@@ -70,6 +70,12 @@ export default class Search extends Component {
           onChange={this.search}
           onBlur={this.resetSearch}
         />
+        <div style={{
+          width: '100%', margin: 10, padding: 10, height: 200, border: '2px dashed red',
+        }}
+        >
+          <HeyMom>Would you prefer these search results, or thumbnail cards (with pictures?)</HeyMom>
+        </div>
       </DropdownMenu>
     );
   }

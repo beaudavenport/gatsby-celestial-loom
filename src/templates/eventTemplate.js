@@ -1,10 +1,12 @@
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { Fragment } from 'react';
 
+import { HeyMom } from '../components/Common';
 import EventPage from '../components/EventPage';
 import Layout from '../components/Layout';
 import SidebarContents from '../components/SidebarContents';
+import SidebarHeader from '../components/SidebarHeader';
 
 function EventTemplate({
   data, // this prop will be injected by the GraphQL query below.
@@ -15,7 +17,16 @@ function EventTemplate({
     <Layout
       title="Events"
       sidebarChildren={(
-        <SidebarContents eventsQuantity={0} postsQuantity={2} />
+        <Fragment>
+          <SidebarHeader title="Toolbox Stuff ?????" />
+          <div style={{
+            width: '100%', margin: 10, padding: 10, height: 200, border: '2px dashed red',
+          }}
+          >
+            <HeyMom>What do you want here?</HeyMom>
+          </div>
+          <SidebarContents eventsQuantity={2} postsQuantity={2} />
+        </Fragment>
     )}
     >
       <EventPage

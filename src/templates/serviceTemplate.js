@@ -1,10 +1,13 @@
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { Fragment } from 'react';
 
+import { HeyMom } from '../components/Common';
 import Layout from '../components/Layout';
 import ServicePage from '../components/ServicePage';
 import SidebarContents from '../components/SidebarContents';
+import SidebarHeader from '../components/SidebarHeader';
+
 
 function ServiceTemplate({
   data, // this prop will be injected by the GraphQL query below.
@@ -15,7 +18,16 @@ function ServiceTemplate({
     <Layout
       title="Services"
       sidebarChildren={(
-        <SidebarContents eventsQuantity={2} postsQuantity={2} />
+        <Fragment>
+          <SidebarHeader title="Toolbox Stuff ?????" />
+          <div style={{
+            width: '100%', margin: 10, padding: 10, height: 200, border: '2px dashed red',
+          }}
+          >
+            <HeyMom>What do you want here?</HeyMom>
+          </div>
+          <SidebarContents eventsQuantity={2} postsQuantity={2} />
+        </Fragment>
     )}
     >
       <ServicePage
