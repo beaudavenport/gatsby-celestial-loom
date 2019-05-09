@@ -30,6 +30,16 @@ html {
  background-color: #fff;
 }
 
+
+.testhover:hover {
+  fill: rgba(247, 105, 0, 0.50);
+}
+
+.testhovertext:hover {
+  fill: rgba(247, 111, 0, 0.50);
+  padding: 20px;
+}
+
 .sidebar-contents {
   padding: 10px;
 }
