@@ -132,7 +132,7 @@ const ZodiacWheel = ({ title }) => (
       const nodes = data.allMarkdownRemark.edges.map(edge => edge.node);
       return (
         <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <svg width="500" height="450" viewBox="0 0 533 594" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg className="zodiac-wheel" viewBox="0 0 533 594" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g>
               {shapeSvgPaths.map(({ d, id }) => (
                 <path
