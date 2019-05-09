@@ -1,31 +1,34 @@
-import { Card, CardText } from 'react-md';
+import { CardText, Cell, Grid } from 'react-md';
 import PropTypes from 'prop-types';
 import React from 'react';
+
+import { Title } from './Common';
 import ZodiacWheel from './ZodiacWheel';
 
 function ToolboxPage(props) {
   const {
     title,
-    icon,
     html,
   } = props;
   return (
-    <Card>
-      <div>
-        <ZodiacWheel title={title} />
-      </div>
-      <CardText>
-        <h1 style={{ textAlign: 'center' }}>{title}</h1>
-        <p style={{ textSize: '30px', textAlign: 'center' }}>{icon}</p>
-        <div dangerouslySetInnerHTML={{ __html: html }} />
-      </CardText>
-    </Card>
+    <Grid>
+      <Cell size={12}>
+        <div style={{ textAlign: 'center' }}>
+          <Title>{title}</Title>
+        </div>
+        <div>
+          <ZodiacWheel title={title} />
+        </div>
+        <CardText>
+          <div dangerouslySetInnerHTML={{ __html: html }} />
+        </CardText>
+      </Cell>
+    </Grid>
   );
 }
 
 ToolboxPage.propTypes = {
   title: PropTypes.string.isRequired,
-  icon: PropTypes.string.isRequired,
   html: PropTypes.string.isRequired,
 };
 

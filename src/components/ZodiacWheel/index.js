@@ -58,40 +58,40 @@ const symbolSvgPaths = [
 
 const symbolBgSvgPaths = [
   {
-    id: 'Neptune-BG-12', cx: '142', cy: '264', r: '25', fill: '#C4C4C4',
+    id: 'Neptune-BG-12', cx: '142', cy: '264', r: '40', fill: '#C4C4C4',
   },
   {
-    id: 'Uranus-BG-11', cx: '173', cy: '206', r: '25', fill: '#C4C4C4',
+    id: 'Uranus-BG-11', cx: '173', cy: '206', r: '40', fill: '#C4C4C4',
   },
   {
-    id: 'Saturn-BG-10', cx: '233', cy: '168', r: '25', fill: '#C4C4C4',
+    id: 'Saturn-BG-10', cx: '233', cy: '168', r: '40', fill: '#C4C4C4',
   },
   {
-    id: 'Jupiter-BG-9', cx: '300', cy: '168', r: '25', fill: '#C4C4C4',
+    id: 'Jupiter-BG-9', cx: '300', cy: '168', r: '40', fill: '#C4C4C4',
   },
   {
-    id: 'Pluto-BG-8', cx: '358', cy: '205', r: '25', fill: '#C4C4C4',
+    id: 'Pluto-BG-8', cx: '358', cy: '205', r: '40', fill: '#C4C4C4',
   },
   {
-    id: 'Venus-BG-7', cx: '391', cy: '263', r: '25', fill: '#C4C4C4',
+    id: 'Venus-BG-7', cx: '391', cy: '263', r: '40', fill: '#C4C4C4',
   },
   {
-    id: 'Mercury-BG-6', cx: '391', cy: '330', r: '25', fill: '#C4C4C4',
+    id: 'Mercury-BG-6', cx: '391', cy: '330', r: '40', fill: '#C4C4C4',
   },
   {
-    id: 'Sun-BG-5', cx: '355', cy: '386', r: '25', fill: '#C4C4C4',
+    id: 'Sun-BG-5', cx: '355', cy: '386', r: '40', fill: '#C4C4C4',
   },
   {
-    id: 'Moon-BG-4', cx: '300', cy: '419', r: '25', fill: '#C4C4C4',
+    id: 'Moon-BG-4', cx: '300', cy: '419', r: '40', fill: '#C4C4C4',
   },
   {
-    id: 'Mercury-BG-3', cx: '233', cy: '419', r: '25', fill: '#C4C4C4',
+    id: 'Mercury-BG-3', cx: '233', cy: '419', r: '40', fill: '#C4C4C4',
   },
   {
-    id: 'Venus-BG-2', cx: '176', cy: '386', r: '25', fill: '#C4C4C4',
+    id: 'Venus-BG-2', cx: '176', cy: '386', r: '40', fill: '#C4C4C4',
   },
   {
-    id: 'Mars-BG-1', cx: '142', cy: '330', r: '25', fill: '#C4C4C4',
+    id: 'Mars-BG-1', cx: '142', cy: '330', r: '40', fill: '#C4C4C4',
   },
 ];
 
@@ -132,7 +132,7 @@ const ZodiacWheel = ({ title }) => (
       const nodes = data.allMarkdownRemark.edges.map(edge => edge.node);
       return (
         <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <svg width="533" height="594" viewBox="0 0 533 594" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg width="500" height="450" viewBox="0 0 533 594" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g>
               {shapeSvgPaths.map(({ d, id }) => (
                 <path
