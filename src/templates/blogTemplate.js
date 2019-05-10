@@ -7,8 +7,7 @@ import BlogEntry from '../components/BlogEntry';
 import Layout from '../components/Layout';
 import SidebarContents from '../components/SidebarContents';
 
-export default function BlogTemplate({ data, pageContext }) {
-  const { relatedItems } = pageContext;
+export default function BlogTemplate({ data }) {
   const { markdownRemark } = data; // data.markdownRemark holds our post data
   const { frontmatter, html } = markdownRemark;
 
@@ -27,7 +26,7 @@ export default function BlogTemplate({ data, pageContext }) {
         image={frontmatter.image}
         html={html}
         publishDate={frontmatter.publishDate}
-        relatedItems={relatedItems}
+        relatedItems={frontmatter.relatedItems}
       />
     </Layout>
   );
@@ -45,6 +44,7 @@ export const pageQuery = graphql`
         publishDate(formatString: "MMMM DD, YYYY")
         title
         image
+        relatedItems
       }
     }
   }

@@ -61,7 +61,7 @@ Featured Post
             publishDate={firstBlogNode.frontmatter.publishDate}
             image={firstBlogNode.frontmatter.image}
             excerpt={firstBlogNode.excerpt}
-            relatedItems={firstBlogNode.relatedItems}
+            relatedItems={firstBlogNode.frontmatter.relatedItems}
           />
         </Cell>
       </Grid>

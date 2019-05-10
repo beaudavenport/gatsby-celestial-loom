@@ -6,6 +6,7 @@ import { Title } from '../Common';
 import CardCornerHighlight from '../CardCornerHighlight';
 import TextWithChevron from '../TextWithChevron';
 import TouchableLink from '../TouchableLink';
+import RelatedItemChip from '../RelatedItemChip';
 
 const FeaturedCard = ({
   path, image, title, subtitle, excerpt, style, publishDate, cornerIconName, cornerTitle, relatedItems = [],
@@ -26,8 +27,8 @@ const FeaturedCard = ({
     </div>
     <CardText style={{ padding: 16 }}>
       <p>
-Tags:
-        {relatedItems.map(item => item.title).join(', ')}
+Mentioned in this post:
+        {relatedItems.map(item => <RelatedItemChip title={item} />)}
       </p>
       <p style={{ textDecoration: 'none' }}>
         {excerpt}

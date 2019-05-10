@@ -1,11 +1,9 @@
-import {
-  Avatar, CardText, Chip, Media,
-} from 'react-md';
-import { navigate } from 'gatsby';
+import { CardText, Media } from 'react-md';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import { getSymbolSpan } from '../helpers/symbolHelper';
+import RelatedItemChip from './RelatedItemChip';
+
 
 function BlogEntry({
   title, image, publishDate, html, relatedItems = [],
@@ -19,19 +17,15 @@ function BlogEntry({
       <Media style={{ width: '80%', margin: '0 auto' }}>
         <img src={image} alt="blog-post" />
       </Media>
+      <div style={{ padding: 20 }}>
+        <p style={{ color: '#ec6602', fontWeight: 'bold' }}>Mentioned in this post:</p>
+        <div style={{ display: 'flex', justifyContent: 'flex-start', flexWrap: 1 }}>
+          {relatedItems.map(item => (<RelatedItemChip style={{ margin: 10 }} title={item} />))}
+        </div>
+      </div>
       <CardText>
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </CardText>
-      <p>Mentioned in this post:</p>
-      {relatedItems.map(item => (
-        <div>
-          <Chip
-            onClick={() => item.slug && navigate(item.slug)}
-            label={item.title}
-            avatar={<Avatar>{getSymbolSpan(item.title)}</Avatar>}
-          />
-        </div>
-      ))}
     </div>
   );
 }

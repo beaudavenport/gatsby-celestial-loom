@@ -45,15 +45,12 @@ exports.createPages = ({ actions, graphql }) => {
     }
 
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      const relatedItems = result.data.allMarkdownRemark.edges.filter(edge => node.frontmatter.relatedItems && node.frontmatter.relatedItems.includes(edge.node.frontmatter.title));
       createPage({
         path: node.fields.slug,
         component: path.resolve(
           `src/templates/${String(node.frontmatter.templateKey)}.js`,
         ),
-        context: {
-          relatedItems: relatedItems.map(relatedItem => ({ title: relatedItem.node.frontmatter.title, slug: relatedItem.node.fields.slug })),
-        }, // additional data can be passed via context
+        context: {}, // additional data can be passed via context
       });
       if (node.frontmatter.type === 'services') {
         createPage({

@@ -22,6 +22,7 @@ export const query = graphql`
              title
              image
              publishDate(formatString: "MMMM DD, YYYY")
+             relatedItems
            }
            excerpt
            fields {
@@ -55,6 +56,7 @@ const Posts = ({ data }) => {
               title={node.frontmatter.title}
               publishDate={node.frontmatter.publishDate}
               image={node.frontmatter.image}
+              relatedItems={node.frontmatter.relatedItems}
               excerpt={node.excerpt}
             />
           </Cell>
