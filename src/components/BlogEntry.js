@@ -20,7 +20,7 @@ function BlogEntry({
       <div style={{ padding: 20 }}>
         <p style={{ color: '#ec6602', fontWeight: 'bold' }}>Mentioned in this post:</p>
         <div style={{ display: 'flex', justifyContent: 'flex-start', flexWrap: 1 }}>
-          {relatedItems.map(item => (<RelatedItemChip style={{ margin: 10 }} title={item} />))}
+          {Boolean(relatedItems) && relatedItems.map(item => (<RelatedItemChip style={{ margin: 10 }} title={item} />))}
         </div>
       </div>
       <CardText>

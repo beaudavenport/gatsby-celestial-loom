@@ -25,11 +25,13 @@ const FeaturedCard = ({
         {publishDate}
       </h3>
     </div>
+    <div style={{ padding: 10 }}>
+      <p style={{ color: '#ec6602', fontWeight: 'bold' }}>Mentioned in this post:</p>
+      <div style={{ display: 'flex', justifyContent: 'flex-start', flexWrap: 1 }}>
+        {Boolean(relatedItems) && relatedItems.map(item => (<RelatedItemChip style={{ margin: 10 }} title={item} />))}
+      </div>
+    </div>
     <CardText style={{ padding: 16 }}>
-      <p>
-Mentioned in this post:
-        {relatedItems.map(item => <RelatedItemChip title={item} />)}
-      </p>
       <p style={{ textDecoration: 'none' }}>
         {excerpt}
       </p>
