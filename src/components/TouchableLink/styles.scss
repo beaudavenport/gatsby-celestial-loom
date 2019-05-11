@@ -4,6 +4,12 @@
   transition-property: background;
 }
 
-.touchable-link:hover {
+@media only screen and (min-width: 839px) {
+  .touchable-link:hover {
+    background: rgba(0, 0, 0, 0.12);
+  }
+}
+
+.touchable-link:active {
   background: rgba(0, 0, 0, 0.12);
 }
