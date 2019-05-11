@@ -10,13 +10,13 @@ import getOrigin from '../../helpers/originService';
 const ServiceCard = ({
   path, title, origin = 'Western', price, excerpt,
 }) => {
-  const { color, icon } = getOrigin(origin);
+  const { backgroundUrl, overlayColor } = getOrigin(origin);
 
   return (
     <Link to={path} style={{ textDecoration: 'none' }}>
       <Card style={{ backgroundColor: 'white' }}>
         <div style={{
-          background: `url(${WesternChart})`,
+          background: `url(${backgroundUrl})`,
           backgroundPosition: 'center',
           backgroundSize: 'cover',
           width: '100%',
@@ -25,7 +25,7 @@ const ServiceCard = ({
         }}
         >
           <div style={{
-            background: 'rgba(39,62,84,0.75)',
+            background: overlayColor,
             overflow: 'hidden',
             height: '75px',
             zIndex: 2,
@@ -39,7 +39,7 @@ const ServiceCard = ({
               color: 'white', fontSize: '1.3rem', fontWeight: 'bold', opacity: 0.9,
             }}
             >
-              Western Astrology
+              {origin}
             </p>
           </div>
         </div>
