@@ -2,7 +2,6 @@ import { StaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import ImageThumbnail from '../ThumbnailCard/imageThumbnail';
 import SidebarHeader from '../SidebarHeader';
 import ThumbnailCard from '../ThumbnailCard';
 import ThumbnailEventCard from '../ThumbnailCard/ThumbnailEventCard';
@@ -43,7 +42,7 @@ const SidebarContents = ({ eventsQuantity, postsQuantity }) => (
                frontmatter {
                  title
                  image
-                 eventDate(formatString: "MMMM DD, YYYY")
+                 eventDate(formatString: "dddd, MMM DD")
                  eventTime
                  eventDateShort: eventDate(formatString: "MMM DD")
                  eventPrice
@@ -68,13 +67,12 @@ const SidebarContents = ({ eventsQuantity, postsQuantity }) => (
           <div style={{ padding: 10 }}>
             { eventNodes.length > 0 && eventNodes.map(node => (
               <ThumbnailEventCard
-                small
                 path={node.fields.slug}
                 title={node.frontmatter.title}
                 image={node.frontmatter.image}
                 location={node.frontmatter.location}
                 eventTime={node.frontmatter.eventTime}
-                eventDateShort={node.frontmatter.eventDateShort}
+                eventDate={node.frontmatter.eventDate}
               />
             ))
            }
@@ -84,7 +82,7 @@ const SidebarContents = ({ eventsQuantity, postsQuantity }) => (
                 path={node.fields.slug}
                 title={node.frontmatter.title}
                 caption={node.frontmatter.publishDate}
-                thumbnailChildren={<ImageThumbnail imageUrl={node.frontmatter.image} />}
+                image={node.frontmatter.image}
               />
             ))
            }

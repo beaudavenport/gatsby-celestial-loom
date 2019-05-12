@@ -3,13 +3,18 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import { HeyMom, Subtitle, Title } from './Common';
+import ThumbnailCard from './ThumbnailCard';
+import ThumbnailEventCard from './ThumbnailCard/ThumbnailEventCard';
 import ZodiacWheel from './ZodiacWheel';
+
 
 function ToolboxPage(props) {
   const {
     title,
     toolboxType,
     html,
+    eventNodes,
+    blogNodes,
   } = props;
   return (
     <Grid>
@@ -27,6 +32,34 @@ function ToolboxPage(props) {
         <CardText>
           <div dangerouslySetInnerHTML={{ __html: html }} />
         </CardText>
+        <p style={{ color: '#ec6602', fontWeight: 'bold' }}>
+          {title}
+          {' '}
+is mentioned in...
+        </p>
+        <div style={{ padding: 10 }}>
+          { eventNodes.length > 0 && eventNodes.map(node => (
+            <ThumbnailEventCard
+              path={node.fields.slug}
+              title={node.frontmatter.title}
+              image={node.frontmatter.image}
+              location={node.frontmatter.location}
+              eventTime={node.frontmatter.eventTime}
+              eventDate={node.frontmatter.eventDate}
+            />
+          ))
+         }
+          { blogNodes.length > 0 && blogNodes.map(node => (
+            <ThumbnailCard
+              small
+              path={node.fields.slug}
+              title={node.frontmatter.title}
+              caption={node.frontmatter.publishDate}
+              image={node.frontmatter.image}
+            />
+          ))
+         }
+        </div>
       </Cell>
     </Grid>
   );
