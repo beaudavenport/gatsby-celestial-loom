@@ -27,6 +27,11 @@ const Events = ({ data }) => {
       )}
     >
       <Grid>
+        <Cell size={12}>
+          <CardText>
+            <p>Nikki provides playshops, speaking engagements, and more around the St. Louis area.</p>
+          </CardText>
+        </Cell>
         {nodes.map(node => (
           <Cell size={12} style={{ padding: '20px 0px' }}>
             <FeaturedEventCard

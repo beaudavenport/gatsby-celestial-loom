@@ -1,5 +1,6 @@
 import {
   Avatar,
+  Card,
   Cell,
   ExpansionList,
   ExpansionPanel,
@@ -10,7 +11,7 @@ import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
 
-import { HeyMom, Subtitle, Title } from '../components/Common';
+import { Subtitle, Title } from '../components/Common';
 import { getSymbolSpan } from '../helpers/symbolHelper';
 import Layout from '../components/Layout';
 import SidebarContents from '../components/SidebarContents';
@@ -30,11 +31,48 @@ const Toolbox = ({ data }) => {
       sidebarChildren={(
         <Fragment>
           <SidebarHeader title="Toolbox Stuff ?????" />
-          <div style={{
-            width: '100%', margin: 10, padding: 10, height: 200, border: '2px dashed red',
-          }}
-          >
-            <HeyMom>What do you want here?</HeyMom>
+          <div style={{ padding: 10 }}>
+            <ExpansionList>
+              <ExpansionPanel label="Signs" footer={null} headerStyle={{ fontWeight: 'bold' }}>
+                <List>
+                  { signNodes.map(node => (
+                    <ToolboxRow
+                      path={node.fields.slug}
+                      title={node.frontmatter.title}
+                      avatar={<Avatar>{getSymbolSpan(node.frontmatter.title)}</Avatar>}
+                      excerpt={node.frontmatter.excerpt}
+                    />
+                  ))
+            }
+                </List>
+              </ExpansionPanel>
+              <ExpansionPanel label="Houses" footer={null} headerStyle={{ fontWeight: 'bold' }}>
+                <List>
+                  { houseNodes.map(node => (
+                    <ToolboxRow
+                      path={node.fields.slug}
+                      title={node.frontmatter.title}
+                      avatar={<Avatar>{getSymbolSpan(node.frontmatter.title)}</Avatar>}
+                      excerpt={node.frontmatter.excerpt}
+                    />
+                  ))
+            }
+                </List>
+              </ExpansionPanel>
+              <ExpansionPanel label="Planets" footer={null} headerStyle={{ fontWeight: 'bold' }}>
+                <List>
+                  { planetNodes.map(node => (
+                    <ToolboxRow
+                      path={node.fields.slug}
+                      title={node.frontmatter.title}
+                      avatar={<Avatar>{getSymbolSpan(node.frontmatter.title)}</Avatar>}
+                      excerpt={node.frontmatter.excerpt}
+                    />
+                  ))
+            }
+                </List>
+              </ExpansionPanel>
+            </ExpansionList>
           </div>
           <SidebarContents eventsQuantity={2} postsQuantity={2} />
         </Fragment>
@@ -45,53 +83,10 @@ const Toolbox = ({ data }) => {
           <Title>Your Astrology Toolbox</Title>
           <Subtitle>Explore the interactive zodiac wheel, or select a sign, house or planet</Subtitle>
         </Cell>
-        <Cell size={8}>
-          <div>
+        <Cell size={12}>
+          <Card style={{ paddingRight: 20, paddingLeft: 20 }}>
             <ZodiacWheel />
-          </div>
-        </Cell>
-        <Cell size={4}>
-          <ExpansionList>
-            <ExpansionPanel label="Signs" footer={null} headerStyle={{ fontWeight: 'bold' }}>
-              <List>
-                { signNodes.map(node => (
-                  <ToolboxRow
-                    path={node.fields.slug}
-                    title={node.frontmatter.title}
-                    avatar={<Avatar>{getSymbolSpan(node.frontmatter.title)}</Avatar>}
-                    excerpt={node.frontmatter.excerpt}
-                  />
-                ))
-            }
-              </List>
-            </ExpansionPanel>
-            <ExpansionPanel label="Houses" footer={null} headerStyle={{ fontWeight: 'bold' }}>
-              <List>
-                { houseNodes.map(node => (
-                  <ToolboxRow
-                    path={node.fields.slug}
-                    title={node.frontmatter.title}
-                    avatar={<Avatar>{getSymbolSpan(node.frontmatter.title)}</Avatar>}
-                    excerpt={node.frontmatter.excerpt}
-                  />
-                ))
-            }
-              </List>
-            </ExpansionPanel>
-            <ExpansionPanel label="Planets" footer={null} headerStyle={{ fontWeight: 'bold' }}>
-              <List>
-                { planetNodes.map(node => (
-                  <ToolboxRow
-                    path={node.fields.slug}
-                    title={node.frontmatter.title}
-                    avatar={<Avatar>{getSymbolSpan(node.frontmatter.title)}</Avatar>}
-                    excerpt={node.frontmatter.excerpt}
-                  />
-                ))
-            }
-              </List>
-            </ExpansionPanel>
-          </ExpansionList>
+          </Card>
         </Cell>
       </Grid>
     </Layout>

@@ -35,3 +35,16 @@
   justify-content: space-between;
   padding: 0px 10px;
 }
+
+.thumbnail-text--title {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: rgb(47, 47, 47);
+  margin-bottom: 0;
+}
+
+.thumbnail-text--subtitle {
+  font-weight: bold;
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.54);
+}

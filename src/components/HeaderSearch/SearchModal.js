@@ -73,39 +73,34 @@ class SearchModal extends React.PureComponent {
       >
         <div className="search-modal--header">
           <h3 className="search-modal--header--text">Search</h3>
-          <Button style={{ padding: 0 }} onClick={onClose}><FontIcon>close</FontIcon></Button>
+          <Button style={{ padding: 0 }} onClick={onClose}><FontIcon style={{ fontSize: 30 }}>close</FontIcon></Button>
         </div>
-        <div className="search-modal--input">
-          <FontIcon style={{ color: '#ec6602', marginRight: 10 }}>search</FontIcon>
-          <TextField
-            ref={input => input && input.focus()}
-            type="text"
-            style={{ color: 'black' }}
-            placeholder="Search"
-            value={query}
-            onChange={this.search}
-          />
-        </div>
-        <div style={{
-          width: '100%', margin: 10, padding: 10, height: 200, border: '2px dashed red',
-        }}
-        >
-          <HeyMom>Would you prefer these search results, or thumbnail cards (with pictures?)</HeyMom>
-          <HeyMom>Would you like a filter to the left? Might save it for last, time is crunched</HeyMom>
-        </div>
-        <List className="search-modal--results" onClick={onClose}>
-          {results.map(page => (
-            <ListItem
-              style={{ paddingLeft: 10, paddingRight: 10 }}
-              primaryText={page.title}
-              primaryTextStyle={{ fontWeight: 'bold' }}
-              leftAvatar={getAvatar(page.type)}
-              secondaryText={`Posted on: ${moment(page.publishDate).format('MMM DD, YYYY')}`}
-              component={Link}
-              to={`/${page.path}`}
+        <div style={{ maxWidth: 800, margin: '0 auto' }}>
+          <div className="search-modal--input">
+            <FontIcon style={{ color: '#ec6602', marginRight: 10 }}>search</FontIcon>
+            <TextField
+              ref={input => input && input.focus()}
+              type="text"
+              style={{ color: 'black' }}
+              placeholder="Search"
+              value={query}
+              onChange={this.search}
             />
-          ))}
-        </List>
+          </div>
+          <List className="search-modal--results" onClick={onClose}>
+            {results.map(page => (
+              <ListItem
+                style={{ paddingLeft: 10, paddingRight: 10 }}
+                primaryText={page.title}
+                primaryTextStyle={{ fontWeight: 'bold' }}
+                leftAvatar={getAvatar(page.type)}
+                secondaryText={`Posted on: ${moment(page.publishDate).format('MMM DD, YYYY')}`}
+                component={Link}
+                to={`/${page.path}`}
+              />
+            ))}
+          </List>
+        </div>
       </DialogContainer>
     );
   }

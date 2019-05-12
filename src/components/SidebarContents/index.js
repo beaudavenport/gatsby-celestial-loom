@@ -5,12 +5,16 @@ import React from 'react';
 import ImageThumbnail from '../ThumbnailCard/imageThumbnail';
 import SidebarHeader from '../SidebarHeader';
 import ThumbnailCard from '../ThumbnailCard';
+import ThumbnailEventCard from '../ThumbnailCard/ThumbnailEventCard';
 
 const SidebarContents = ({ eventsQuantity, postsQuantity }) => (
   <StaticQuery
     query={graphql`
        query {
-         allMarkdownRemark(sort: { fields: [frontmatter___publishDate], order: DESC }) {
+         blog: allMarkdownRemark(
+           filter: { frontmatter: { type: { eq: "blog"} } },
+           sort: { fields: [frontmatter___publishDate], order: DESC }
+         ) {
            totalCount
            edges {
              node {
@@ -18,12 +22,35 @@ const SidebarContents = ({ eventsQuantity, postsQuantity }) => (
                frontmatter {
                  title
                  image
-                 publishDate(formatString: "MMM DD, YYYY")
-                 eventDay: publishDate(formatString: "DD")
-                 eventMonth: publishDate(formatString: "MMM")
-                 type
+                 publishDate(formatString: "MMMM DD, YYYY")
+                 relatedItems
                }
-               excerpt
+               excerpt(pruneLength: 250)
+               fields {
+                 slug
+               }
+             }
+           }
+         }
+         events: allMarkdownRemark(
+           filter: { frontmatter: { type: { eq: "events"} } },
+           sort: { fields: [frontmatter___publishDate], order: DESC }
+         ) {
+           totalCount
+           edges {
+             node {
+               id
+               frontmatter {
+                 title
+                 image
+                 eventDate(formatString: "MMMM DD, YYYY")
+                 eventTime
+                 eventDateShort: eventDate(formatString: "MMM DD")
+                 eventPrice
+                 priceDescription
+                 location
+               }
+               excerpt(pruneLength: 250)
                fields {
                  slug
                }
@@ -33,20 +60,21 @@ const SidebarContents = ({ eventsQuantity, postsQuantity }) => (
        }
      `}
     render={(data) => {
-      const nodes = data.allMarkdownRemark.edges.map(edge => edge.node);
-      const eventNodes = nodes.filter(node => node.frontmatter.type === 'events').slice(0, eventsQuantity);
-      const blogNodes = nodes.filter(node => node.frontmatter.type === 'blog').slice(0, postsQuantity);
+      const blogNodes = data.blog.edges.map(edge => edge.node).slice(0, postsQuantity);
+      const eventNodes = data.events.edges.map(edge => edge.node).slice(0, eventsQuantity);
       return (
         <div>
           <SidebarHeader title="Latest Updates" />
           <div style={{ padding: 10 }}>
             { eventNodes.length > 0 && eventNodes.map(node => (
-              <ThumbnailCard
+              <ThumbnailEventCard
                 small
                 path={node.fields.slug}
                 title={node.frontmatter.title}
-                caption={node.frontmatter.publishDate}
-                thumbnailChildren={<ImageThumbnail imageUrl={node.frontmatter.image} />}
+                image={node.frontmatter.image}
+                location={node.frontmatter.location}
+                eventTime={node.frontmatter.eventTime}
+                eventDateShort={node.frontmatter.eventDateShort}
               />
             ))
            }
