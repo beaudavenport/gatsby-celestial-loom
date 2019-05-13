@@ -1,6 +1,6 @@
 import '../components/layout.scss';
 
-import { Card, Cell, Grid } from 'react-md';
+import { Cell, Grid } from 'react-md';
 import { Converter } from 'showdown';
 import CMS from 'netlify-cms';
 import React from 'react';
@@ -8,7 +8,9 @@ import moment from 'moment';
 
 import BlogEntry from '../components/BlogEntry';
 import EventPage from '../components/EventPage';
+import FeaturedCard from '../components/FeaturedCard';
 import FeaturedEventCard from '../components/FeaturedEventCard';
+import RelatedItemChip from '../components/RelatedItemChip';
 import ServicePage from '../components/ServicePage';
 import ToolboxPage from '../components/ToolboxPage';
 
@@ -34,10 +36,10 @@ function EventPagePreview({ entry, getAsset }) {
       <Cell size={12}>
         <h2>Event Page Preview: </h2>
         <EventPage {...data} />
+      </Cell>
+      <Cell size={12}>
         <h2 style={{ marginTop: 20 }}>Event Thumbnail Preview: </h2>
-        <Card style={{ padding: 16 }}>
-          <FeaturedEventCard {...data} />
-        </Card>
+        <FeaturedEventCard {...data} />
       </Cell>
     </Grid>
   );
@@ -47,18 +49,31 @@ function BlogEntryPreview({ entry, getAsset }) {
   const image = entry.getIn(['data', 'image']);
   const relatedItemData = entry.getIn(['data', 'relatedItems']);
   const relatedItems = relatedItemData
-    ? relatedItemData.toJS().map(relatedItem => ({ title: relatedItem }))
+    ? relatedItemData.toJS()
     : [];
   const data = {
     title: entry.getIn(['data', 'title']),
-    relatedItems,
     image: getAsset(image),
     publishDate: moment(entry.getIn(['data', 'publishDate']).toString()).format('MMMM DD, YYYY'),
     html: converter.makeHtml(entry.getIn(['data', 'body'])),
+    relatedItemChips: relatedItems.map(relatedItem => (
+      <RelatedItemChip
+        item={{ frontmatter: { title: relatedItem }, fields: {} }}
+      />
+    )),
   };
 
   return (
-    <BlogEntry {...data} />
+    <Grid>
+      <Cell size={12}>
+        <h2>Blog Page Preview: </h2>
+        <BlogEntry {...data} />
+      </Cell>
+      <Cell size={12}>
+        <h2 style={{ marginTop: 20 }}>Blog Thumbnail Preview: </h2>
+        <FeaturedCard {...data} />
+      </Cell>
+    </Grid>
   );
 }
 

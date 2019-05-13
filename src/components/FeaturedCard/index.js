@@ -6,10 +6,9 @@ import { Title } from '../Common';
 import CardCornerHighlight from '../CardCornerHighlight';
 import TextWithChevron from '../TextWithChevron';
 import TouchableLink from '../TouchableLink';
-import RelatedItemChip from '../RelatedItemChip';
 
 const FeaturedCard = ({
-  path, image, title, subtitle, excerpt, style, publishDate, cornerIconName, cornerTitle, relatedItems = [],
+  path, image, title, subtitle, excerpt, style, publishDate, cornerIconName, cornerTitle, relatedItemChips,
 }) => (
   <div>
     <TouchableLink to={path} style={style}>
@@ -36,7 +35,7 @@ const FeaturedCard = ({
     <div style={{ padding: 10 }}>
       <p style={{ color: '#ec6602', fontWeight: 'bold' }}>Mentioned in this post:</p>
       <div style={{ display: 'flex', justifyContent: 'flex-start', flexWrap: 1 }}>
-        {Boolean(relatedItems) && relatedItems.map(item => (<RelatedItemChip style={{ margin: 10 }} title={item} />))}
+        {relatedItemChips}
       </div>
     </div>
   </div>
@@ -50,11 +49,13 @@ FeaturedCard.propTypes = {
   excerpt: PropTypes.string.isRequired,
   cornerIconName: PropTypes.string,
   cornerTitle: PropTypes.string,
+  relatedItemChips: PropTypes.node,
 };
 
 FeaturedCard.defaultProps = {
   cornerIconName: '',
   cornerTitle: '',
+  relatedItemChips: null,
 };
 
 export default FeaturedCard;

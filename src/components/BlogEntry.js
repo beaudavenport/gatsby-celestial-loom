@@ -2,11 +2,8 @@ import { CardText, Media } from 'react-md';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import RelatedItemChip from './RelatedItemChip';
-
-
 function BlogEntry({
-  title, image, publishDate, html, relatedItems = [],
+  title, image, publishDate, html, relatedItemChips,
 }) {
   return (
     <div style={{ padding: '20px 10px' }}>
@@ -20,7 +17,7 @@ function BlogEntry({
       <div style={{ padding: 20 }}>
         <p style={{ color: '#ec6602', fontWeight: 'bold' }}>Mentioned in this post:</p>
         <div style={{ display: 'flex', justifyContent: 'flex-start', flexWrap: 1 }}>
-          {Boolean(relatedItems) && relatedItems.map(item => (<RelatedItemChip style={{ margin: 10 }} title={item} />))}
+          {relatedItemChips}
         </div>
       </div>
       <CardText>
@@ -35,6 +32,12 @@ BlogEntry.propTypes = {
   image: PropTypes.string.isRequired,
   publishDate: PropTypes.string.isRequired,
   html: PropTypes.string.isRequired,
+  relatedItemChips: PropTypes.node,
 };
+
+BlogEntry.defaultProps = {
+  relatedItemChips: null,
+};
+
 
 export default BlogEntry;

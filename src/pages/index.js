@@ -9,6 +9,7 @@ import FeaturedEventCard from '../components/FeaturedEventCard';
 import ImageThumbnail from '../components/ThumbnailCard/imageThumbnail';
 import Jumbotron from '../components/Jumbotron';
 import Layout from '../components/Layout';
+import RelatedItemChipList from '../components/RelatedItemChipList';
 import SidebarHeader from '../components/SidebarHeader';
 import ThumbnailCard from '../components/ThumbnailCard';
 
@@ -61,7 +62,9 @@ Featured Post
             publishDate={firstBlogNode.frontmatter.publishDate}
             image={firstBlogNode.frontmatter.image}
             excerpt={firstBlogNode.excerpt}
-            relatedItems={firstBlogNode.frontmatter.relatedItems}
+            relatedItemChips={
+              <RelatedItemChipList relatedItems={firstBlogNode.frontmatter.relatedItems} />
+            }
           />
         </Cell>
       </Grid>
