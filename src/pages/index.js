@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import { BigSubheader } from '../components/Common';
 import AboutNikkiCard from '../components/AboutNikkiCard';
 import FeaturedCard from '../components/FeaturedCard';
 import FeaturedEventCard from '../components/FeaturedEventCard';
@@ -10,12 +11,15 @@ import ImageThumbnail from '../components/ThumbnailCard/imageThumbnail';
 import Jumbotron from '../components/Jumbotron';
 import Layout from '../components/Layout';
 import RelatedItemChipList from '../components/RelatedItemChipList';
+import ServiceCard from '../components/ServiceCard';
 import SidebarHeader from '../components/SidebarHeader';
 import ThumbnailCard from '../components/ThumbnailCard';
 
 const IndexPage = ({ data }) => {
   const [firstBlogNode, ...otherBlogNodes] = data.blog.edges.map(edge => edge.node);
   const [firstEventNode] = data.events.edges.map(edge => edge.node);
+  const { featuredService } = data;
+
   return (
     <Layout
       title="Home"
@@ -47,12 +51,7 @@ const IndexPage = ({ data }) => {
     >
       <Grid style={{ marginBottom: 20, borderBottom: '1px solid rgba(15,70,100,.2)' }}>
         <Cell size={12}>
-          <p style={{
-            color: 'rgb(247, 105, 0)', fontWeight: 'bold', fontSize: '1.5rem', marginBottom: 10,
-          }}
-          >
-Featured Post
-          </p>
+          <BigSubheader>Featured Post</BigSubheader>
         </Cell>
         <Cell size={12}>
           <FeaturedCard
@@ -92,12 +91,7 @@ Previous Posts
       </Grid>
       <Grid style={{ borderBottom: '1px solid rgba(15,70,100,.2)', marginBottom: 20 }}>
         <Cell size={12}>
-          <p style={{
-            color: 'rgb(247, 105, 0)', fontWeight: 'bold', fontSize: '1.5rem', marginBottom: 10,
-          }}
-          >
-Next Event
-          </p>
+          <BigSubheader>Upcoming Event</BigSubheader>
         </Cell>
         <Cell size={12}>
           <FeaturedEventCard
@@ -110,6 +104,21 @@ Next Event
             eventPrice={firstEventNode.frontmatter.eventPrice}
             priceDescription={firstEventNode.frontmatter.priceDescription}
             location={firstEventNode.frontmatter.location}
+          />
+        </Cell>
+      </Grid>
+      <Grid style={{ borderBottom: '1px solid rgba(15,70,100,.2)', marginBottom: 20 }}>
+        <Cell size={12}>
+          <BigSubheader>Featured Service</BigSubheader>
+        </Cell>
+        <Cell size={12}>
+          <ServiceCard
+            path={featuredService.fields.slug}
+            title={featuredService.frontmatter.title}
+            origin={featuredService.frontmatter.origin}
+            onlinePrice={featuredService.frontmatter.onlinePrice}
+            inPersonPrice={featuredService.frontmatter.inPersonPrice}
+            excerpt={featuredService.excerpt}
           />
         </Cell>
       </Grid>
@@ -169,6 +178,18 @@ query {
           slug
         }
       }
+    }
+  }
+  featuredService: markdownRemark(frontmatter: { type: { eq: "services" } isFeatured: { eq: true} }) {
+    html
+    frontmatter {
+      title
+      origin
+      onlinePrice
+      inPersonPrice
+    }
+    fields {
+      slug
     }
   }
 }

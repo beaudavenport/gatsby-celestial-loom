@@ -13,14 +13,14 @@ function ServiceTemplate({
   const { frontmatter, html } = markdownRemark;
   return (
     <Layout
-      title="Service - Online"
+      title="Service - In Person"
       sidebarChildren={(
         <SidebarContents eventsQuantity={2} postsQuantity={2} />
     )}
     >
       <ServicePageInPerson
         title={frontmatter.title}
-        price={frontmatter.price}
+        price={frontmatter.inPersonPrice}
         origin={frontmatter.origin}
         html={html}
       />
@@ -41,7 +41,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         origin
-        price
+        inPersonPrice
       }
       fields {
         slug

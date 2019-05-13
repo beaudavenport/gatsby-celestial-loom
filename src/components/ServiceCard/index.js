@@ -4,11 +4,10 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import { Title } from '../Common';
-import WesternChart from '../../images/western-chart.jpg';
 import getOrigin from '../../helpers/originService';
 
 const ServiceCard = ({
-  path, title, origin = 'Western', price, excerpt,
+  path, title, origin = 'Western', onlinePrice, inPersonPrice, excerpt,
 }) => {
   const { backgroundUrl, overlayColor } = getOrigin(origin);
 
@@ -46,7 +45,8 @@ const ServiceCard = ({
         <CardText>
           <Title>{title}</Title>
           <p>{excerpt}</p>
-          <strong>{`$${Number(price).toFixed(2)}`}</strong>
+          <strong>{`Online: $${Number(onlinePrice).toFixed(2)}`}</strong>
+          <strong>{`In-Person: $${Number(inPersonPrice).toFixed(2)}`}</strong>
         </CardText>
       </Card>
     </Link>
@@ -57,7 +57,8 @@ ServiceCard.propTypes = {
   path: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   origin: PropTypes.string.isRequired,
-  price: PropTypes.string.isRequired,
+  onlinePrice: PropTypes.string.isRequired,
+  inPersonPrice: PropTypes.string.isRequired,
   excerpt: PropTypes.string.isRequired,
 };
 

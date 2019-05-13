@@ -1,9 +1,12 @@
 ---
 templateKey: serviceTemplate
+isFeatured: false
 type: services
 title: Cross-Quarter Analysis
 origin: Celtic
-price: 60
+onlinePrice: 60
+inPersonPrice: 75
+
 ---
 You've heard of **Beltane**, **Imbolc**, and **Yule**, but what about **Lughnasadh**? _Do you even know the cross-quarter days AT ALL?_
 

@@ -4,7 +4,6 @@ import {
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
-import WesternChart from '../images/western-chart.jpg';
 
 import { Title } from './Common';
 import getOrigin from '../helpers/originService';
@@ -13,15 +12,16 @@ function ServicePage(props) {
   const {
     title,
     origin = 'Western',
-    price,
+    onlinePrice,
+    inPersonPrice,
     html,
     slug,
   } = props;
-  const { color, icon } = getOrigin(origin);
+  const { backgroundUrl, overlayColor } = getOrigin(origin);
   return (
     <div>
       <div style={{
-        background: `url(${WesternChart})`,
+        background: `url(${backgroundUrl})`,
         backgroundPosition: 'center',
         backgroundSize: 'cover',
         width: '100%',
@@ -30,7 +30,7 @@ function ServicePage(props) {
       }}
       >
         <div style={{
-          background: 'rgba(39,62,84,0.75)',
+          background: overlayColor,
           overflow: 'hidden',
           height: '75px',
           zIndex: 2,
@@ -44,7 +44,7 @@ function ServicePage(props) {
             color: 'white', fontSize: '1.3rem', fontWeight: 'bold', opacity: 0.9,
           }}
           >
-            Western Astrology
+            {origin}
           </p>
         </div>
       </div>
@@ -59,15 +59,15 @@ function ServicePage(props) {
             <Card>
               <Link to={`${slug}/online`}>
                 <p>Online Consultation</p>
-                <p style={{ fontWeight: 'bold', fontSize: '1.5rem' }}>{`$${Number(price).toFixed(2)}`}</p>
+                <p style={{ fontWeight: 'bold', fontSize: '1.5rem' }}>{`$${Number(onlinePrice).toFixed(2)}`}</p>
               </Link>
             </Card>
           </Cell>
           <Cell>
             <Card>
-              <Link to={`${slug}/online`}>
+              <Link to={`${slug}/in-person`}>
                 <p>In-Person Consultation</p>
-                <p style={{ fontWeight: 'bold', fontSize: '1.5rem' }}>{`$${Number(price).toFixed(2)}`}</p>
+                <p style={{ fontWeight: 'bold', fontSize: '1.5rem' }}>{`$${Number(inPersonPrice).toFixed(2)}`}</p>
               </Link>
             </Card>
           </Cell>
@@ -80,7 +80,8 @@ function ServicePage(props) {
 ServicePage.propTypes = {
   title: PropTypes.string.isRequired,
   origin: PropTypes.string.isRequired,
-  price: PropTypes.string.isRequired,
+  onlinePrice: PropTypes.string.isRequired,
+  inPersonPrice: PropTypes.string.isRequired,
   html: PropTypes.string.isRequired,
   slug: PropTypes.string.isRequired,
 };

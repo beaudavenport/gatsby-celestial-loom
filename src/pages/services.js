@@ -41,7 +41,8 @@ const Services = ({ data }) => {
             path={firstServiceNode.fields.slug}
             title={firstServiceNode.frontmatter.title}
             origin={firstServiceNode.frontmatter.origin}
-            price={firstServiceNode.frontmatter.price}
+            onlinePrice={firstServiceNode.frontmatter.onlinePrice}
+            inPersonPrice={firstServiceNode.frontmatter.inPersonPrice}
             excerpt={firstServiceNode.excerpt}
           />
         </Cell>
@@ -51,7 +52,8 @@ const Services = ({ data }) => {
               path={node.fields.slug}
               title={node.frontmatter.title}
               origin={node.frontmatter.origin}
-              price={node.frontmatter.price}
+              onlinePrice={node.frontmatter.onlinePrice}
+              inPersonPrice={node.frontmatter.inPersonPrice}
               excerpt={node.excerpt}
             />
           </Cell>
@@ -78,7 +80,8 @@ export const query = graphql`
           frontmatter {
             title
             type
-            price
+            onlinePrice
+            inPersonPrice
             origin
           }
           excerpt

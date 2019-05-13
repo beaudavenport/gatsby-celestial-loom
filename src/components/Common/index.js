@@ -17,6 +17,22 @@ Subtitle.propTypes = {
   children: PropTypes.string.isRequired,
 };
 
+const BigSubheader = ({ children }) => (
+  <p className="subheader subheader__big">{children}</p>
+);
+
+BigSubheader.propTypes = {
+  children: PropTypes.string.isRequired,
+};
+
+const Subheader = ({ children }) => (
+  <p className="subheader">{children}</p>
+);
+
+Subheader.propTypes = {
+  children: PropTypes.string.isRequired,
+};
+
 const HeyMom = ({ children }) => (
   <p style={{ fontSize: '1rem', color: 'red' }}>
     <span style={{ fontWeight: 'bold' }}>HEY MOM: </span>
@@ -24,4 +40,10 @@ const HeyMom = ({ children }) => (
   </p>
 );
 
-export { Title, Subtitle, HeyMom };
+export {
+  Title,
+  Subtitle,
+  HeyMom,
+  BigSubheader,
+  Subheader,
+};

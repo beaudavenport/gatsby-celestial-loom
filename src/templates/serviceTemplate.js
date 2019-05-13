@@ -32,7 +32,8 @@ function ServiceTemplate({
     >
       <ServicePage
         title={frontmatter.title}
-        price={frontmatter.price}
+        onlinePrice={frontmatter.onlinePrice}
+        inPersonPrice={frontmatter.inPersonPrice}
         origin={frontmatter.origin}
         html={html}
         slug={fields.slug}
@@ -54,7 +55,8 @@ export const pageQuery = graphql`
       frontmatter {
         title
         origin
-        price
+        onlinePrice
+        inPersonPrice
       }
       fields {
         slug
