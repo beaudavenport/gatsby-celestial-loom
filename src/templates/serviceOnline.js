@@ -1,9 +1,10 @@
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import Layout from '../components/Layout';
 import ServicePageOnline from '../components/ServicePageOnline';
+import ServicesArchive from '../components/ServicesArchive';
 import SidebarContents from '../components/SidebarContents';
 
 function ServiceTemplate({
@@ -15,7 +16,10 @@ function ServiceTemplate({
     <Layout
       title="Service - Online"
       sidebarChildren={(
-        <SidebarContents eventsQuantity={2} postsQuantity={2} />
+        <Fragment>
+          <ServicesArchive />
+          <SidebarContents eventsQuantity={2} postsQuantity={2} />
+        </Fragment>
     )}
     >
       <ServicePageOnline

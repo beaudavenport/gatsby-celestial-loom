@@ -1,4 +1,6 @@
-import { CardText, Cell, Grid } from 'react-md';
+import {
+  Card, CardText, Cell, Grid,
+} from 'react-md';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -26,9 +28,9 @@ function ToolboxPage(props) {
           </Subtitle>
           <Title>{title}</Title>
         </div>
-        <div>
+        <Card style={{ paddingRight: 20, paddingLeft: 20 }}>
           <ZodiacWheel title={title} />
-        </div>
+        </Card>
         <CardText>
           <div dangerouslySetInnerHTML={{ __html: html }} />
         </CardText>

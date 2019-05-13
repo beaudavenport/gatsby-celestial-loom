@@ -1,14 +1,12 @@
-import {
-  CardText, Cell, Grid, Paper,
-} from 'react-md';
+import { Cell, Grid, Paper } from 'react-md';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
 
 import Layout from '../components/Layout';
 import ServiceCard from '../components/ServiceCard';
+import ServicesArchive from '../components/ServicesArchive';
 import SidebarContents from '../components/SidebarContents';
-import SidebarHeader from '../components/SidebarHeader';
 
 const Services = ({ data }) => {
   const nodes = data.allMarkdownRemark.edges.map(edge => edge.node);
@@ -19,12 +17,7 @@ const Services = ({ data }) => {
       title="Services"
       sidebarChildren={(
         <Fragment>
-          <div style={{ marginBottom: 30, marginTop: 20 }}>
-            <SidebarHeader title="Services" />
-            <CardText>
-              <p>Available Online or In-Person, a consultation is the best way to grow your understanding.</p>
-            </CardText>
-          </div>
+          <ServicesArchive />
           <SidebarContents eventsQuantity={1} postsQuantity={1} />
         </Fragment>
   )}
