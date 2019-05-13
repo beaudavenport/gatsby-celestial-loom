@@ -3,9 +3,9 @@ import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
 
-import ArchiveCard from '../components/ArchiveCard';
 import FeaturedCard from '../components/FeaturedCard';
 import Layout from '../components/Layout';
+import PostsArchive from '../components/PostsArchive';
 import SidebarContents from '../components/SidebarContents';
 
 export const query = graphql`
@@ -42,7 +42,7 @@ const Posts = ({ data }) => {
       title="Posts"
       sidebarChildren={(
         <Fragment>
-          <ArchiveCard />
+          <PostsArchive />
           <SidebarContents eventsQuantity={2} postsQuantity={0} />
         </Fragment>
       )}
