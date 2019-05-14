@@ -3,10 +3,10 @@ import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
 
+import EventsArchive from '../components/EventsArchive';
 import FeaturedEventCard from '../components/FeaturedEventCard';
 import Layout from '../components/Layout';
 import SidebarContents from '../components/SidebarContents';
-import SidebarHeader from '../components/SidebarHeader';
 
 const Events = ({ data }) => {
   const nodes = data.allMarkdownRemark.edges.map(edge => edge.node);
@@ -16,12 +16,7 @@ const Events = ({ data }) => {
       title="Events"
       sidebarChildren={(
         <Fragment>
-          <div style={{ marginBottom: 30, marginTop: 20 }}>
-            <SidebarHeader title="Events" />
-            <CardText>
-              <p>Nikki provides playshops, speaking engagements, and more around the St. Louis area.</p>
-            </CardText>
-          </div>
+          <EventsArchive />
           <SidebarContents eventsQuantity={0} postsQuantity={2} />
         </Fragment>
       )}
