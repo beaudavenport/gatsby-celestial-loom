@@ -54,10 +54,10 @@ collections:
     create: true
     fields:
       - { name: 'templateKey', label: 'Template Key', widget: 'hidden', default: 'serviceTemplate'}
-      - { name: 'isFeatured', label: 'Featured Service', widget: 'boolean' }
+      - { name: 'isFeatured', label: 'Featured Service', widget: 'boolean', default: false }
       - { name: 'type', label: 'type', widget: 'hidden', default: 'services'}
       - { name: 'title', label: 'Title' }
-      - { name: 'origin', label: 'Origin', widget: 'select', options: ['Western', 'Vedic', 'Celtic', 'Native American', 'Mayan']}
+      - { name: 'origin', label: 'Origin', widget: 'select', options: ['Western', 'Vedic', 'Celtic', 'Native American', 'Mayan', 'Chinese']}
       - { name: 'onlinePrice', label: 'Online Price (increments of $5.00)', widget: 'number', default: '5', min: 0, valueType: 'float', step: 5.00 }
       - { name: 'inPersonPrice', label: 'In-Person Price (increments of $5.00)', widget: 'number', default: '5', min: 0, valueType: 'float', step: 5.00 }
       - { name: 'body', label: 'Body', widget: 'markdown' }

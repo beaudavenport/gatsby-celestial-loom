@@ -19,14 +19,14 @@ const ServiceCard = ({
           backgroundPosition: 'center',
           backgroundSize: 'cover',
           width: '100%',
-          height: '75px',
+          height: '90px',
           padding: 0,
         }}
         >
           <div style={{
             background: overlayColor,
             overflow: 'hidden',
-            height: '75px',
+            height: '90px',
             zIndex: 2,
             display: 'flex',
             flexDirection: 'column',
