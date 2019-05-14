@@ -22,9 +22,8 @@ function ToolboxPage(props) {
     <Grid>
       <Cell size={12}>
         <div style={{ textAlign: 'center' }}>
-          <HeyMom>Do you want the type here? Or elsewhere on page?</HeyMom>
           <Subtitle>
-            {toolboxType.toUpperCase()}
+            {toolboxType}
           </Subtitle>
           <Title>{title}</Title>
         </div>

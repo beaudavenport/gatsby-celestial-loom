@@ -1,6 +1,6 @@
 ---
 templateKey: toolboxTemplate
-toolboxType: houses
+toolboxType: Houses
 type: toolbox
 title: First House
 icon: '1'

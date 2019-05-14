@@ -1,6 +1,6 @@
 ---
 templateKey: toolboxTemplate
-toolboxType: signs
+toolboxType: Signs
 type: toolbox
 title: Taurus
 ---

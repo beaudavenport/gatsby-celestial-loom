@@ -71,5 +71,5 @@ collections:
       - { name: 'templateKey', label: 'Template Key', widget: 'hidden', default: 'toolboxTemplate'}
       - { name: 'title', label: 'Title' }
       - { name: 'type', label: 'type', widget: 'hidden', default: 'toolbox'}
-      - { name: 'toolboxType', label: 'Type', widget: 'select', options: ['signs', 'planets', 'houses']}
+      - { name: 'toolboxType', label: 'Type', widget: 'select', options: ['Signs', 'Planets', 'Houses']}
       - { name: 'body', label: 'Body', widget: 'markdown' }

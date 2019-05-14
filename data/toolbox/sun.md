@@ -1,6 +1,6 @@
 ---
 templateKey: toolboxTemplate
-toolboxType: signs
+toolboxType: Planets
 type: toolbox
 title: Sun
 ---
