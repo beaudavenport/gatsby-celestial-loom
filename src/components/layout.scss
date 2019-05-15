@@ -70,6 +70,12 @@ html {
   color: white;
 }
 
+.flex-center {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
 .flex-column-start {
   display: flex;
   flex-direction: column;

@@ -5,7 +5,7 @@ import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import { Title } from './Common';
+import { BackLink, Title } from './Common';
 import getOrigin from '../helpers/originService';
 
 function ServicePage(props) {
@@ -20,6 +20,7 @@ function ServicePage(props) {
   const { backgroundUrl, overlayColor } = getOrigin(origin);
   return (
     <div>
+      <BackLink to="/services" title="Back to Services" />
       <div style={{
         background: `url(${backgroundUrl})`,
         backgroundPosition: 'center',

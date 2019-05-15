@@ -1,5 +1,8 @@
+import { FontIcon } from 'react-md';
 import PropTypes from 'prop-types';
 import React from 'react';
+
+import TouchableLink from '../TouchableLink';
 
 const Title = ({ children }) => (
   <h2 className="title">{children}</h2>
@@ -33,6 +36,22 @@ Subheader.propTypes = {
   children: PropTypes.string.isRequired,
 };
 
+const BackLink = ({ to, title }) => (
+  <div className="back-link--container">
+    <TouchableLink to={to}>
+      <div className="flex-center">
+        <FontIcon style={{ color: '#ec6602', fontSize: '2rem', marginRight: 5 }}>arrow_back</FontIcon>
+        <p className="back-title">{title}</p>
+      </div>
+    </TouchableLink>
+  </div>
+);
+
+BackLink.propTypes = {
+  to: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+};
+
 const HeyMom = ({ children }) => (
   <p style={{ fontSize: '1rem', color: 'red' }}>
     <span style={{ fontWeight: 'bold' }}>HEY MOM: </span>
@@ -46,4 +65,5 @@ export {
   HeyMom,
   BigSubheader,
   Subheader,
+  BackLink,
 };
