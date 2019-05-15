@@ -1,9 +1,10 @@
-import { Card, CardText } from 'react-md';
-import { Link } from 'gatsby';
+import { Card, CardText, Divider } from 'react-md';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 import { Title } from '../Common';
+import TextWithChevron from '../TextWithChevron';
+import TouchableLink from '../TouchableLink';
 import getOrigin from '../../helpers/originService';
 
 const ServiceCard = ({
@@ -12,7 +13,7 @@ const ServiceCard = ({
   const { backgroundUrl, overlayColor } = getOrigin(origin);
 
   return (
-    <Link to={path} style={{ textDecoration: 'none' }}>
+    <TouchableLink to={path}>
       <Card style={{ backgroundColor: 'white' }}>
         <div style={{
           background: `url(${backgroundUrl})`,
@@ -44,12 +45,21 @@ const ServiceCard = ({
         </div>
         <CardText>
           <Title>{title}</Title>
-          <p>{excerpt}</p>
-          <strong>{`Online: $${Number(onlinePrice).toFixed(2)}`}</strong>
-          <strong>{`In-Person: $${Number(inPersonPrice).toFixed(2)}`}</strong>
+          <p style={{ paddingTop: 15, paddingBottom: 15 }}>{excerpt}</p>
+          <Divider />
+          <div style={{
+            display: 'flex', justifyContent: 'space-between', padding: '10px 0 0 10px', alignItems: 'center',
+          }}
+          >
+            <div>
+              <p className="event-signup-thumbnail--price-description" style={{ color: 'rgba(0, 0, 0, 0.54)', marginBottom: 2, fontSize: '.9rem' }}>Starting at</p>
+              <p className="event-signup-thumbnail--price" style={{ fontSize: '1.5rem' }}>{`$${Number(onlinePrice).toFixed(2)}`}</p>
+            </div>
+            <TextWithChevron text="Order Now" />
+          </div>
         </CardText>
       </Card>
-    </Link>
+    </TouchableLink>
   );
 };
 

@@ -29,7 +29,7 @@ const Services = ({ data }) => {
             <p>Not sure where to begin? Check out our GETTING STARTED GUIDE</p>
           </Paper>
         </Cell>
-        <Cell size={6}>
+        <Cell size={6} tabletSize={4}>
           <ServiceCard
             path={firstServiceNode.fields.slug}
             title={firstServiceNode.frontmatter.title}
@@ -40,7 +40,7 @@ const Services = ({ data }) => {
           />
         </Cell>
         { otherServiceNodes && otherServiceNodes.map(node => (
-          <Cell size={6}>
+          <Cell size={6} tabletSize={4}>
             <ServiceCard
               path={node.fields.slug}
               title={node.frontmatter.title}
@@ -77,7 +77,7 @@ export const query = graphql`
             inPersonPrice
             origin
           }
-          excerpt
+          excerpt(pruneLength: 250)
           fields {
             slug
           }
