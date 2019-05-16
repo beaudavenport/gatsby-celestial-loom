@@ -20,8 +20,16 @@ Subtitle.propTypes = {
   children: PropTypes.string.isRequired,
 };
 
+const BigSubtitle = ({ children }) => (
+  <h4 className="subtitle" style={{ fontSize: '1.5rem' }}>{children}</h4>
+);
+
+BigSubtitle.propTypes = {
+  children: PropTypes.string.isRequired,
+};
+
 const BigSubheader = ({ children }) => (
-  <p className="subheader subheader__big">{children}</p>
+  <p className="subheader" style={{ fontSize: '1.5rem' }}>{children}</p>
 );
 
 BigSubheader.propTypes = {
@@ -52,6 +60,19 @@ BackLink.propTypes = {
   title: PropTypes.string.isRequired,
 };
 
+const ContentWithIcon = ({ fontIconName, fontIconStyle, children }) => (
+  <div className="content-with-icon">
+    <FontIcon style={{ marginRight: 5, ...fontIconStyle }}>{fontIconName}</FontIcon>
+    {children}
+  </div>
+);
+
+ContentWithIcon.propTypes = {
+  fontIconName: PropTypes.string.isRequired,
+  children: PropTypes.string.isRequired,
+  fontIconStyle: PropTypes.object, // eslint-disable-line
+};
+
 const HeyMom = ({ children }) => (
   <p style={{ fontSize: '1rem', color: 'red' }}>
     <span style={{ fontWeight: 'bold' }}>HEY MOM: </span>
@@ -62,8 +83,10 @@ const HeyMom = ({ children }) => (
 export {
   Title,
   Subtitle,
+  BigSubtitle,
   HeyMom,
   BigSubheader,
   Subheader,
   BackLink,
+  ContentWithIcon,
 };
