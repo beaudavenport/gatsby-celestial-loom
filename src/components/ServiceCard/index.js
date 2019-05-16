@@ -1,6 +1,6 @@
 import { Card, CardText, Divider } from 'react-md';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import { Title } from '../Common';
 import TextWithChevron from '../TextWithChevron';
@@ -8,44 +8,45 @@ import TouchableLink from '../TouchableLink';
 import getOrigin from '../../helpers/originService';
 
 const ServiceCard = ({
-  path, title, origin = 'Western', onlinePrice, inPersonPrice, excerpt,
+  path, title, origin = 'Western', onlinePrice, excerpt, showPrices,
 }) => {
   const { backgroundUrl, overlayColor } = getOrigin(origin);
 
   return (
     <TouchableLink to={path}>
-      <Card style={{ backgroundColor: 'white' }}>
+      <div style={{
+        background: `url(${backgroundUrl})`,
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+        width: '100%',
+        height: '90px',
+        padding: 0,
+      }}
+      >
         <div style={{
-          background: `url(${backgroundUrl})`,
-          backgroundPosition: 'center',
-          backgroundSize: 'cover',
-          width: '100%',
+          background: overlayColor,
+          overflow: 'hidden',
           height: '90px',
-          padding: 0,
+          zIndex: 2,
+          display: 'flex',
+          flexDirection: 'column',
+          padding: 20,
+          justifyContent: 'center',
         }}
         >
-          <div style={{
-            background: overlayColor,
-            overflow: 'hidden',
-            height: '90px',
-            zIndex: 2,
-            display: 'flex',
-            flexDirection: 'column',
-            padding: 20,
-            justifyContent: 'center',
+          <p style={{
+            color: 'white', fontSize: '1.3rem', fontWeight: 'bold', opacity: 0.9,
           }}
           >
-            <p style={{
-              color: 'white', fontSize: '1.3rem', fontWeight: 'bold', opacity: 0.9,
-            }}
-            >
-              {origin}
-            </p>
-          </div>
+            {origin}
+          </p>
         </div>
-        <CardText>
-          <Title>{title}</Title>
-          <p style={{ paddingTop: 15, paddingBottom: 15 }}>{excerpt}</p>
+      </div>
+      <CardText>
+        <Title>{title}</Title>
+        <p style={{ paddingTop: 15, paddingBottom: 15 }}>{excerpt}</p>
+        { showPrices && (
+        <Fragment>
           <Divider />
           <div style={{
             display: 'flex', justifyContent: 'space-between', padding: '10px 0 0 10px', alignItems: 'center',
@@ -57,8 +58,9 @@ const ServiceCard = ({
             </div>
             <TextWithChevron text="Order Now" />
           </div>
-        </CardText>
-      </Card>
+        </Fragment>
+        )}
+      </CardText>
     </TouchableLink>
   );
 };
@@ -68,8 +70,12 @@ ServiceCard.propTypes = {
   title: PropTypes.string.isRequired,
   origin: PropTypes.string.isRequired,
   onlinePrice: PropTypes.string.isRequired,
-  inPersonPrice: PropTypes.string.isRequired,
   excerpt: PropTypes.string.isRequired,
+  showPrices: PropTypes.bool,
+};
+
+ServiceCard.defaultProps = {
+  showPrices: true,
 };
 
 export default ServiceCard;

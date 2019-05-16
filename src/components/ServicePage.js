@@ -95,7 +95,7 @@ function ServicePage(props) {
             </TouchableLink>
           </Cell>
           <Cell size={6} tabletSize={4}>
-            <TouchableLink to={`${slug}/online`}>
+            <TouchableLink to={`${slug}/in-person`}>
               <Card>
                 <div style={{ padding: 15 }}>
                   <BigSubheader>In-Person Consultation</BigSubheader>

@@ -11,10 +11,10 @@ function ServiceTemplate({
   data, // this prop will be injected by the GraphQL query below.
 }) {
   const { markdownRemark } = data; // data.markdownRemark holds our post data
-  const { frontmatter, html } = markdownRemark;
+  const { frontmatter, fields, excerpt } = markdownRemark;
   return (
     <Layout
-      title="Service - In Person"
+      title="Service - In-Person"
       sidebarChildren={(
         <Fragment>
           <ServicesArchive />
@@ -24,9 +24,10 @@ function ServiceTemplate({
     >
       <ServicePageInPerson
         title={frontmatter.title}
-        price={frontmatter.inPersonPrice}
         origin={frontmatter.origin}
-        html={html}
+        price={frontmatter.inPersonPrice}
+        slug={fields.slug}
+        excerpt={excerpt}
       />
     </Layout>
   );
@@ -41,12 +42,12 @@ export default ServiceTemplate;
 export const pageQuery = graphql`
   query($serviceSlug: String!) {
     markdownRemark(fields: { slug: { eq: $serviceSlug } }) {
-      html
       frontmatter {
         title
-        origin
         inPersonPrice
+        origin
       }
+      excerpt(pruneLength: 250)
       fields {
         slug
       }

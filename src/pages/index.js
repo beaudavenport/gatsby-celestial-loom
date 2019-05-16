@@ -1,4 +1,4 @@
-import { Cell, Grid } from 'react-md';
+import { Card, Cell, Grid } from 'react-md';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -112,14 +112,16 @@ Previous Posts
           <BigSubheader>Featured Service</BigSubheader>
         </Cell>
         <Cell size={12}>
-          <ServiceCard
-            path={featuredService.fields.slug}
-            title={featuredService.frontmatter.title}
-            origin={featuredService.frontmatter.origin}
-            onlinePrice={featuredService.frontmatter.onlinePrice}
-            inPersonPrice={featuredService.frontmatter.inPersonPrice}
-            excerpt={featuredService.excerpt}
-          />
+          <Card>
+            <ServiceCard
+              path={featuredService.fields.slug}
+              title={featuredService.frontmatter.title}
+              origin={featuredService.frontmatter.origin}
+              onlinePrice={featuredService.frontmatter.onlinePrice}
+              inPersonPrice={featuredService.frontmatter.inPersonPrice}
+              excerpt={featuredService.excerpt}
+            />
+          </Card>
         </Cell>
       </Grid>
     </Layout>

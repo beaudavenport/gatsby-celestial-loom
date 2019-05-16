@@ -1,4 +1,6 @@
-import { Cell, Grid, Paper } from 'react-md';
+import {
+  Card, Cell, Grid, Paper,
+} from 'react-md';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
@@ -30,25 +32,29 @@ const Services = ({ data }) => {
           </Paper>
         </Cell>
         <Cell size={6} tabletSize={4}>
-          <ServiceCard
-            path={firstServiceNode.fields.slug}
-            title={firstServiceNode.frontmatter.title}
-            origin={firstServiceNode.frontmatter.origin}
-            onlinePrice={firstServiceNode.frontmatter.onlinePrice}
-            inPersonPrice={firstServiceNode.frontmatter.inPersonPrice}
-            excerpt={firstServiceNode.excerpt}
-          />
+          <Card>
+            <ServiceCard
+              path={firstServiceNode.fields.slug}
+              title={firstServiceNode.frontmatter.title}
+              origin={firstServiceNode.frontmatter.origin}
+              onlinePrice={firstServiceNode.frontmatter.onlinePrice}
+              inPersonPrice={firstServiceNode.frontmatter.inPersonPrice}
+              excerpt={firstServiceNode.excerpt}
+            />
+          </Card>
         </Cell>
         { otherServiceNodes && otherServiceNodes.map(node => (
           <Cell size={6} tabletSize={4}>
-            <ServiceCard
-              path={node.fields.slug}
-              title={node.frontmatter.title}
-              origin={node.frontmatter.origin}
-              onlinePrice={node.frontmatter.onlinePrice}
-              inPersonPrice={node.frontmatter.inPersonPrice}
-              excerpt={node.excerpt}
-            />
+            <Card>
+              <ServiceCard
+                path={node.fields.slug}
+                title={node.frontmatter.title}
+                origin={node.frontmatter.origin}
+                onlinePrice={node.frontmatter.onlinePrice}
+                inPersonPrice={node.frontmatter.inPersonPrice}
+                excerpt={node.excerpt}
+              />
+            </Card>
           </Cell>
         ))
             }
