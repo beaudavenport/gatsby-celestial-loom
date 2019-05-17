@@ -70,7 +70,7 @@ const Layout = ({
         navStyle={{ backgroundColor: 'rgb(47, 47, 47)' }}
         toolbarTitle={title}
         toolbarActions={(
-          <div style={{ display: 'flex' }}>
+          <div className="header-icons-container">
             <HeaderCart />
             <HeaderSearch />
           </div>
