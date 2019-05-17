@@ -22,13 +22,7 @@ const Header = () => {
         <Fragment>
           <div className="header-search-container">
             <Button onClick={() => setIsSearching(true)} style={{ display: 'flex', alignItems: 'center' }}>
-              <FontIcon>search</FontIcon>
-              <p style={{
-                color: 'white', fontSize: '1.2rem', fontWeight: 'bold', marginBottom: 0, marginLeft: 10,
-              }}
-              >
-                Search
-              </p>
+              <FontIcon style={{ fontSize: '2rem' }}>search</FontIcon>
             </Button>
           </div>
           {isSearching && (

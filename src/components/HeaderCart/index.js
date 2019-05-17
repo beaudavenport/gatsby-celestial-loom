@@ -1,4 +1,4 @@
-import { Badge, FontIcon } from 'react-md';
+import { Badge, Button, FontIcon } from 'react-md';
 import React, { Fragment, useState, useEffect } from 'react';
 
 
@@ -6,15 +6,17 @@ const Header = () => {
   const [itemCount, setItemCount] = useState(0);
 
   useEffect(() => {
-    console.log('called effect...');
     const initialValue = global.Snipcart ? Snipcart.api.items.count() : 0;
     setItemCount(initialValue);
     const handler = () => {
-      console.log('called handler!', Snipcart.api.items.count());
+      global.Snipcart && Snipcart.subscribe('item.added', handler);
+      global.Snipcart && Snipcart.subscribe('item.removed', handler);
       setItemCount(Snipcart.api.items.count());
     };
     document.addEventListener('snipcart.ready', handler);
     return () => {
+      global.Snipcart && Snipcart.unsubscribe('item.added');
+      global.Snipcart && Snipcart.unsubscribe('item.removed');
       document.removeEventListener('snipcart.ready', handler);
     };
   }, []);
@@ -22,11 +24,11 @@ const Header = () => {
   return (
     <Fragment>
       <div className="header-search-container">
-        <Badge badgeContent={itemCount} primary>
-          <a href="#" className="snipcart-checkout">
-            <FontIcon>shopping_cart</FontIcon>
-          </a>
-        </Badge>
+        <Button onClick={() => global.Snipcart && Snipcart.api.modal.show()} style={{ display: 'flex', alignItems: 'center' }}>
+          <Badge invisibleOnZero badgeContent={itemCount} primary>
+            <FontIcon style={{ fontSize: '2rem' }}>shopping_cart</FontIcon>
+          </Badge>
+        </Button>
       </div>
     </Fragment>
   );
