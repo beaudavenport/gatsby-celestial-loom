@@ -18,7 +18,7 @@ function ServiceTemplate({
       sidebarChildren={(
         <Fragment>
           <ServicesArchive />
-          <SidebarContents eventsQuantity={2} postsQuantity={2} />
+          <SidebarContents eventsQuantity={1} postsQuantity={1} />
         </Fragment>
     )}
     >
