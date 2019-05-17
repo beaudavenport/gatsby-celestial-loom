@@ -24,7 +24,7 @@ const AddToCartButton = ({
     data-item-custom4-name="Year of Birth"
     data-item-custom4-required="true"
     data-item-custom5-name="Time of Birth (if known)"
-    data-item-custom5-required="true"
+    data-item-custom5-required="false"
   >
     Add to Cart
   </Button>

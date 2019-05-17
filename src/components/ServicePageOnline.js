@@ -52,7 +52,7 @@ function ServicePage(props) {
               title={title}
               price={price}
               description="Online Consultation"
-              slug={slug}
+              slug={`${slug}/online`}
             />
           </div>
         </div>
