@@ -11,6 +11,7 @@ import {
   Subtitle,
   Title,
 } from './Common';
+import HeaderCart from './HeaderCart';
 import TextWithChevron from './TextWithChevron';
 import TouchableLink from './TouchableLink';
 import getOrigin from '../helpers/originService';
@@ -28,6 +29,7 @@ function ServicePage(props) {
   return (
     <div>
       <BackLink to="/services" title="Back to Services" />
+      <HeaderCart />
       <div style={{
         background: `url(${backgroundUrl})`,
         backgroundPosition: 'center',

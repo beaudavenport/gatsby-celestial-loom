@@ -52,13 +52,19 @@ function ServicePage(props) {
               data-item-price={price}
               data-item-weight="20"
               data-item-url="/"
-              data-item-description="Event"
+              data-item-description="In-Person Consultation"
               data-item-custom1-name="Name"
               data-item-custom1-required="true"
-              data-item-custom2-name="Date of Birth"
+              data-item-custom2-name="Month of Birth"
               data-item-custom2-required="true"
+              data-item-custom3-name="Day of Birth"
+              data-item-custom3-required="true"
+              data-item-custom4-name="Year of Birth"
+              data-item-custom4-required="true"
+              data-item-custom5-name="Time of Birth (if known)"
+              data-item-custom5-required="true"
             >
-        Purchase
+        Add to Cart
             </Button>
           </div>
         </div>

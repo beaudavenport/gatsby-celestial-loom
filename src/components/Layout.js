@@ -8,6 +8,7 @@ import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import HeaderCart from './HeaderCart';
 import HeaderSearch from './HeaderSearch';
 
 const navItems = [
@@ -68,7 +69,12 @@ const Layout = ({
         temporaryIcon={(<FontIcon iconClassName="material-icons">menu</FontIcon>)}
         navStyle={{ backgroundColor: 'rgb(47, 47, 47)' }}
         toolbarTitle={title}
-        toolbarActions={<HeaderSearch />}
+        toolbarActions={(
+          <div style={{ display: 'flex' }}>
+            <HeaderCart />
+            <HeaderSearch />
+          </div>
+        )}
         drawerHeader={<DrawerTitle />}
         toolbarTitleStyle={{ fontFamily: 'Berkshire Swash', fontStyle: 'italic' }}
         drawerTitleStyle={{ fontFamily: 'Berkshire Swash', fontStyle: 'italic' }}
