@@ -17,8 +17,8 @@ const Header = () => {
     };
     document.addEventListener('snipcart.ready', handler);
     return () => {
-      global.Snipcart && Snipcart.unsubscribe('item.added');
-      global.Snipcart && Snipcart.unsubscribe('item.removed');
+      // global.Snipcart && Snipcart.unsubscribe('item.added');
+      // global.Snipcart && Snipcart.unsubscribe('item.removed');
       document.removeEventListener('snipcart.ready', handler);
     };
   }, []);

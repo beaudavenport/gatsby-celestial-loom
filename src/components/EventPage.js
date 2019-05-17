@@ -52,10 +52,7 @@ function EventPage(props) {
             title={title}
             price={eventPrice}
             slug={slug}
-            description="In-Person Consultation"
-            style={{
-              height: 'auto', fontSize: '1.3rem', fontWeight: 'bold', fontFamily: 'Martel', border: '1px solid',
-            }}
+            description="Event Sign-Up"
           />
         </div>
       </div>
