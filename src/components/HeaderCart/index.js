@@ -8,10 +8,12 @@ const Header = () => {
   useEffect(() => {
     const initialValue = global.Snipcart ? Snipcart.api.items.count() : 0;
     setItemCount(initialValue);
+    global.Snipcart && Snipcart.subscribe('item.added', () => setItemCount(Snipcart.api.items.count()));
+    global.Snipcart && Snipcart.subscribe('item.removed', () => setItemCount(Snipcart.api.items.count()));
     const handler = () => {
-      global.Snipcart && Snipcart.subscribe('item.added', handler);
-      global.Snipcart && Snipcart.subscribe('item.removed', handler);
       setItemCount(Snipcart.api.items.count());
+      global.Snipcart && Snipcart.subscribe('item.added', () => setItemCount(Snipcart.api.items.count()));
+      global.Snipcart && Snipcart.subscribe('item.removed', () => setItemCount(Snipcart.api.items.count()));
     };
     document.addEventListener('snipcart.ready', handler);
     return () => {
