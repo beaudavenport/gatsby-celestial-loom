@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
 
+import { BigSubheader } from '../components/Common';
 import EventsArchive from '../components/EventsArchive';
 import FeaturedEventCard from '../components/FeaturedEventCard';
 import Layout from '../components/Layout';
@@ -24,7 +25,8 @@ const Events = ({ data }) => {
       <Grid>
         <Cell size={12}>
           <CardText>
-            <p>Nikki provides playshops, speaking engagements, and more around the St. Louis area.</p>
+            <BigSubheader>Join us in-person!</BigSubheader>
+            <p style={{ fontWeight: 'bold' }}>Nikki provides playshops, speaking engagements, and more around the St. Louis area.</p>
           </CardText>
         </Cell>
         {nodes.map(node => (
