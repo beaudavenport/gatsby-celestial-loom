@@ -1,8 +1,8 @@
-import { Paper, Button } from 'react-md';
+import { Paper } from 'react-md';
 import React from 'react';
 
+import { ForwardLink } from '../Common';
 import Astroglobe from '../../images/astroglobe.jpg';
-import CelestialLogo from '../../images/celestial-logo.png';
 
 const Jumbotron = () => (
   <Paper
@@ -48,7 +48,7 @@ Astrological Services
             weaves timeless wisdom with modern service.
         </p>
         <div style={{ textAlign: 'right' }}>
-          <Button flat primary swapTheming style={{ fontStyle: 'bold', fontFamily: 'Martel', marginRight: 10 }}>Get My Chart</Button>
+          <ForwardLink to="/getting-started" title="Get Started" />
         </div>
       </div>
     </div>

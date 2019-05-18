@@ -9,7 +9,7 @@ const CenteredCell = ({ title, fontIconName, children }) => (
     <div style={{ padding: 10, width: '100%' }}>
       {fontIconName && (
       <div style={{ display: 'flex', justifyContent: 'center', padding: 10 }}>
-        <FontIcon style={{ textAlign: 'center', fontSize: '5rem' }}>{fontIconName}</FontIcon>
+        <FontIcon style={{ textAlign: 'center', fontSize: '4rem' }}>{fontIconName}</FontIcon>
       </div>
       )}
       {title && <JumboSubheader>{title}</JumboSubheader> }

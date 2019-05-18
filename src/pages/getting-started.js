@@ -8,8 +8,8 @@ import React, { Fragment } from 'react';
 import {
   BigSubheader,
   Caption,
+  ContentWithIcon,
   ForwardLink,
-  HeyMom,
   Title,
 } from '../components/Common';
 import { getSymbolSpan } from '../helpers/symbolHelper';
@@ -32,12 +32,14 @@ const GettingStarted = ({ data }) => {
       title="Getting Started"
       sidebarChildren={(
         <Fragment>
-          <SidebarHeader title="Welcom to... Astrology?" />
+          <SidebarHeader title="Learn More" />
           <div style={{
-            width: '100%', margin: 10, padding: 10, height: 200, border: '2px dashed red',
+            margin: 10, padding: 10,
           }}
           >
-            <HeyMom>What do you want here?</HeyMom>
+            <ContentWithIcon fontIconStyle={{ fontSize: '2.5rem' }} fontIconName="search"><p style={{ fontStyle: 'italic', fontWeight: 'bold' }}>Try a search in the upper-right-hand corner</p></ContentWithIcon>
+            <ContentWithIcon fontIconStyle={{ fontSize: '2.5rem' }} fontIconName="shopping_cart"><p style={{ fontStyle: 'italic', fontWeight: 'bold' }}>See items in your cart, next to search</p></ContentWithIcon>
+            <ContentWithIcon fontIconStyle={{ fontSize: '2.5rem' }} fontIconName="menu"><p style={{ fontStyle: 'italic', fontWeight: 'bold' }}>View all pages using the menu in the upper-left-hand corner</p></ContentWithIcon>
           </div>
           <SidebarContents eventsQuantity={2} postsQuantity={2} />
         </Fragment>
@@ -51,13 +53,13 @@ const GettingStarted = ({ data }) => {
           <BigSubheader>New to Astrology? Here's how to get started:</BigSubheader>
         </Cell>
         <Cell size={12}>
-          <Grid>
-            <CenteredCell fontIconName="person" title="Order an Astrological Consultation">
-              <Caption>Select an online or in-person astrological consultation from a wide array of astrological origins.</Caption>
-              <ForwardLink title="View all Services" to="/services" />
-            </CenteredCell>
-            <Cell size={6} tabletSize={4}>
-              <Card>
+          <Card>
+            <Grid>
+              <CenteredCell fontIconName="person" title="Order an Astrological Consultation">
+                <Caption>Select an online or in-person astrological consultation from a wide array of astrological origins.</Caption>
+                <ForwardLink title="View all Services" to="/services" />
+              </CenteredCell>
+              <Cell size={6} tabletSize={4}>
                 <ServiceCard
                   path={natalChart.fields.slug}
                   title={natalChart.frontmatter.title}
@@ -67,14 +69,14 @@ const GettingStarted = ({ data }) => {
                   excerpt={natalChart.excerpt}
                   showPrices={false}
                 />
-              </Card>
-            </Cell>
-          </Grid>
+              </Cell>
+            </Grid>
+          </Card>
         </Cell>
         <Cell size={12}>
-          <Grid>
-            <CenteredCell>
-              <Card>
+          <Card>
+            <Grid>
+              <CenteredCell>
                 <ThumbnailCard
                   style={{ marginBottom: 10 }}
                   path={firstBlogNode.fields.slug}
@@ -82,22 +84,22 @@ const GettingStarted = ({ data }) => {
                   caption={firstBlogNode.frontmatter.publishDate}
                   image={firstBlogNode.frontmatter.image}
                 />
-              </Card>
-            </CenteredCell>
-            <CenteredCell fontIconName="create" title="Read the Latest Post">
-              <Caption>See what the Stars are up to with Nikki's astrology blog!</Caption>
-              <ForwardLink title="View all posts" to="/posts" />
-            </CenteredCell>
-          </Grid>
+              </CenteredCell>
+              <CenteredCell fontIconName="create" title="Read the Latest Post">
+                <Caption>See what the Stars are up to with Nikki's astrology blog!</Caption>
+                <ForwardLink title="View all posts" to="/posts" />
+              </CenteredCell>
+            </Grid>
+          </Card>
         </Cell>
         <Cell size={12}>
-          <Grid>
-            <CenteredCell fontIconName="event" title="Attend an Event">
-              <Caption>Meet Nikki in-person and get involved in your astro-community! Sign up to attend an event.</Caption>
-              <ForwardLink title="View upcoming events" to="/events" />
-            </CenteredCell>
-            <CenteredCell>
-              <Card>
+          <Card>
+            <Grid>
+              <CenteredCell fontIconName="event" title="Attend an Event">
+                <Caption>Meet Nikki in-person and get involved in your astro-community! Sign up to attend an event.</Caption>
+                <ForwardLink title="View upcoming events" to="/events" />
+              </CenteredCell>
+              <CenteredCell>
                 <ThumbnailEventCard
                   path={firstEventNode.fields.slug}
                   title={firstEventNode.frontmatter.title}
@@ -106,32 +108,34 @@ const GettingStarted = ({ data }) => {
                   eventTime={firstEventNode.frontmatter.eventTime}
                   eventDate={firstEventNode.frontmatter.eventDate}
                 />
-              </Card>
-            </CenteredCell>
-          </Grid>
+              </CenteredCell>
+            </Grid>
+          </Card>
         </Cell>
         <Cell size={12}>
-          <Grid>
-            <CenteredCell>
-              <List>
-                {toolboxNodes.map(item => (
-                  <ListItem
-                    style={{ paddingLeft: 10, paddingRight: 10 }}
-                    primaryText={item.frontmatter.title}
-                    primaryTextStyle={{ fontWeight: 'bold' }}
-                    leftAvatar={<Avatar icon={<FontIcon>{getSymbolSpan(item.frontmatter.title)}</FontIcon>} />}
-                    secondaryText={item.frontmatter.toolboxType}
-                    component={Link}
-                    to={item.fields.slug}
-                  />
-                ))}
-              </List>
-            </CenteredCell>
-            <CenteredCell fontIconName="build" title="Explore your Astrological Toolbox">
-              <Caption>Learn more about the Signs, Planets, and Houses that make up your Astrological Toolbox using our interactive Zodiac Wheel!</Caption>
-              <ForwardLink title="Open your Toolbox" to="/toolbox" />
-            </CenteredCell>
-          </Grid>
+          <Card>
+            <Grid>
+              <CenteredCell>
+                <List>
+                  {toolboxNodes.map(item => (
+                    <ListItem
+                      style={{ paddingLeft: 10, paddingRight: 10 }}
+                      primaryText={item.frontmatter.title}
+                      primaryTextStyle={{ fontWeight: 'bold' }}
+                      leftAvatar={<Avatar icon={<FontIcon>{getSymbolSpan(item.frontmatter.title)}</FontIcon>} />}
+                      secondaryText={item.frontmatter.toolboxType}
+                      component={Link}
+                      to={item.fields.slug}
+                    />
+                  ))}
+                </List>
+              </CenteredCell>
+              <CenteredCell fontIconName="build" title="Explore your Astrological Toolbox">
+                <Caption>Learn more about the Signs, Planets, and Houses that make up your Astrological Toolbox using our interactive Zodiac Wheel!</Caption>
+                <ForwardLink title="Open your Toolbox" to="/toolbox" />
+              </CenteredCell>
+            </Grid>
+          </Card>
         </Cell>
       </Grid>
     </Layout>
