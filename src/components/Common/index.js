@@ -28,14 +28,6 @@ BigSubtitle.propTypes = {
   children: PropTypes.string.isRequired,
 };
 
-const BigSubheader = ({ children }) => (
-  <p className="subheader" style={{ fontSize: '1.5rem' }}>{children}</p>
-);
-
-BigSubheader.propTypes = {
-  children: PropTypes.string.isRequired,
-};
-
 const Subheader = ({ children }) => (
   <p className="subheader">{children}</p>
 );
@@ -43,6 +35,23 @@ const Subheader = ({ children }) => (
 Subheader.propTypes = {
   children: PropTypes.string.isRequired,
 };
+
+const BigSubheader = ({ children }) => (
+  <p className="subheader" style={{ fontSize: '1.5rem', lineHeight: '1.5rem' }}>{children}</p>
+);
+
+BigSubheader.propTypes = {
+  children: PropTypes.string.isRequired,
+};
+
+const JumboSubheader = ({ children }) => (
+  <p className="subheader" style={{ fontSize: '2rem', lineHeight: '2.5rem' }}>{children}</p>
+);
+
+JumboSubheader.propTypes = {
+  children: PropTypes.string.isRequired,
+};
+
 
 const BackLink = ({ to, title }) => (
   <div className="back-link--container">
@@ -85,8 +94,9 @@ export {
   Subtitle,
   BigSubtitle,
   HeyMom,
-  BigSubheader,
   Subheader,
+  BigSubheader,
+  JumboSubheader,
   BackLink,
   ContentWithIcon,
 };
