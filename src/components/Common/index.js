@@ -52,6 +52,13 @@ JumboSubheader.propTypes = {
   children: PropTypes.string.isRequired,
 };
 
+const Caption = ({ children }) => (
+  <p className="caption">{children}</p>
+);
+
+Caption.propTypes = {
+  children: PropTypes.string.isRequired,
+};
 
 const BackLink = ({ to, title }) => (
   <div className="back-link--container">
@@ -65,6 +72,22 @@ const BackLink = ({ to, title }) => (
 );
 
 BackLink.propTypes = {
+  to: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+};
+
+const ForwardLink = ({ to, title }) => (
+  <div className="back-link--container">
+    <TouchableLink to={to}>
+      <div className="flex-center">
+        <p className="back-title">{title}</p>
+        <FontIcon style={{ color: '#ec6602', fontSize: '2rem', marginLeft: 5 }}>arrow_forward</FontIcon>
+      </div>
+    </TouchableLink>
+  </div>
+);
+
+ForwardLink.propTypes = {
   to: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
 };
@@ -98,5 +121,7 @@ export {
   BigSubheader,
   JumboSubheader,
   BackLink,
+  ForwardLink,
   ContentWithIcon,
+  Caption,
 };

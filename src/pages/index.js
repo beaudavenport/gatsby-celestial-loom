@@ -83,7 +83,7 @@ Previous Posts
               path={node.fields.slug}
               title={node.frontmatter.title}
               caption={node.frontmatter.publishDate}
-              thumbnailChildren={<ImageThumbnail imageUrl={node.frontmatter.image} />}
+              image={node.frontmatter.image}
             />
           </Cell>
         ))

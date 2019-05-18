@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
 
-import { JumboSubheader, Subheader } from '../components/Common';
+import { JumboSubheader } from '../components/Common';
 import Layout from '../components/Layout';
 import ServiceCard from '../components/ServiceCard';
 import ServicesArchive from '../components/ServicesArchive';
@@ -36,7 +36,6 @@ Build the foundation of your astrological understanding with a
                     <span className="subheader"> Natal Chart analysis!</span>
                   </p>
                   <p style={{ fontWeight: 'bold' }}>See how the lifelong insights gained from this service can help enrich your life...</p>
-                  <div style={{ padding: 10 }} />
                 </div>
               </Cell>
               <Cell size={6} tabletSize={4}>

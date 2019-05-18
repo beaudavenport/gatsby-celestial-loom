@@ -13,11 +13,11 @@ import HeaderSearch from './HeaderSearch';
 
 const navItems = [
   { icon: 'home', to: '/', title: 'Home' },
+  { icon: 'info', to: '/getting-started', title: 'Getting Started' },
   { icon: 'create', to: '/posts', title: 'Posts' },
   { icon: 'event', to: '/events', title: 'Events' },
   { icon: 'shopping_cart', to: '/services', title: 'Services' },
-  { icon: 'work', to: '/toolbox', title: 'Astro Toolbox' },
-  { icon: 'info', to: '/getting-started', title: 'Astrology 101' },
+  { icon: 'build', to: '/toolbox', title: 'Astro Toolbox' },
 ];
 
 const getNavItem = ({ divider, subheader, ...route }) => {
