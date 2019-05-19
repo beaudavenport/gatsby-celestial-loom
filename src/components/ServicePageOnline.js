@@ -71,8 +71,7 @@ function ServicePage(props) {
           {' '}
               Contact Nikki directly at
           {' '}
-          <span style={{ fontWeight: 'bold' }}>nikiastro@att.net</span>
-          !
+          <a href="mailto: nikiastro@att.net"> nikiastro@att.net!</a>
         </p>
       </Cell>
     </Grid>
