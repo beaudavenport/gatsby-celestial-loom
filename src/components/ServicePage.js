@@ -29,7 +29,6 @@ function ServicePage(props) {
   return (
     <div>
       <BackLink to="/services" title="Back to Services" />
-      <HeaderCart />
       <div style={{
         background: `url(${backgroundUrl})`,
         backgroundPosition: 'center',

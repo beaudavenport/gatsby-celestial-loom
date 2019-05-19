@@ -4,7 +4,7 @@ import {
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import { HeyMom, Subtitle, Title } from './Common';
+import { Subtitle, Title } from './Common';
 import ThumbnailCard from './ThumbnailCard';
 import ThumbnailEventCard from './ThumbnailCard/ThumbnailEventCard';
 import ZodiacWheel from './ZodiacWheel';

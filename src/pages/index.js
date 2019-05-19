@@ -7,7 +7,6 @@ import { BigSubheader } from '../components/Common';
 import AboutNikkiCard from '../components/AboutNikkiCard';
 import FeaturedCard from '../components/FeaturedCard';
 import FeaturedEventCard from '../components/FeaturedEventCard';
-import ImageThumbnail from '../components/ThumbnailCard/imageThumbnail';
 import Jumbotron from '../components/Jumbotron';
 import Layout from '../components/Layout';
 import RelatedItemChipList from '../components/RelatedItemChipList';
@@ -183,7 +182,7 @@ query {
     }
   }
   featuredService: markdownRemark(frontmatter: { type: { eq: "services" } isFeatured: { eq: true} }) {
-    html
+    excerpt(pruneLength: 250)
     frontmatter {
       title
       origin

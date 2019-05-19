@@ -14,7 +14,7 @@ import moment from 'moment';
 
 import { Index } from 'elasticlunr';
 
-import { HeyMom } from '../Common';
+import { BigSubheader, Subtitle } from '../Common';
 
 const avatarMap = new Map();
 avatarMap.set('blog', 'create');
@@ -73,7 +73,9 @@ class SearchModal extends React.PureComponent {
       >
         <div className="search-modal--header">
           <h3 className="search-modal--header--text">Search</h3>
-          <Button style={{ padding: 0 }} onClick={onClose}><FontIcon style={{ fontSize: 30 }}>close</FontIcon></Button>
+          <Button style={{ padding: 0 }} onClick={onClose}>
+            <FontIcon style={{ fontSize: 30 }}>close</FontIcon>
+          </Button>
         </div>
         <div style={{ maxWidth: 800, margin: '0 auto' }}>
           <div className="search-modal--input">
@@ -82,24 +84,34 @@ class SearchModal extends React.PureComponent {
               ref={input => input && input.focus()}
               type="text"
               style={{ color: 'black' }}
-              placeholder="Search"
+              placeholder="Try searching for 'Aries'"
               value={query}
               onChange={this.search}
             />
           </div>
-          <List className="search-modal--results" onClick={onClose}>
-            {results.map(page => (
-              <ListItem
-                style={{ paddingLeft: 10, paddingRight: 10 }}
-                primaryText={page.title}
-                primaryTextStyle={{ fontWeight: 'bold' }}
-                leftAvatar={getAvatar(page.type)}
-                secondaryText={`Posted on: ${moment(page.publishDate).format('MMM DD, YYYY')}`}
-                component={Link}
-                to={`/${page.path}`}
-              />
-            ))}
-          </List>
+          { results.length ? (
+            <div style={{ padding: '10px 30px' }}>
+              <BigSubheader>{`${results.length} results found:`}</BigSubheader>
+              <List className="search-modal--results" onClick={onClose}>
+                {results.map(page => (
+                  <ListItem
+                    style={{ paddingLeft: 10, paddingRight: 10 }}
+                    primaryText={page.title}
+                    primaryTextStyle={{ fontWeight: 'bold' }}
+                    leftAvatar={getAvatar(page.type)}
+                    secondaryText={`Posted on: ${moment(page.publishDate).format('MMM DD, YYYY')}`}
+                    component={Link}
+                    to={`/${page.path}`}
+                  />
+                ))}
+              </List>
+            </div>
+          ) : (
+            <div style={{ textAlign: 'center' }}>
+              <Subtitle>Your results will appear here</Subtitle>
+            </div>
+          )
+          }
         </div>
       </DialogContainer>
     );

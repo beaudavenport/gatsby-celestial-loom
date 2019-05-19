@@ -105,18 +105,10 @@ ContentWithIcon.propTypes = {
   fontIconStyle: PropTypes.object, // eslint-disable-line
 };
 
-const HeyMom = ({ children }) => (
-  <p style={{ fontSize: '1rem', color: 'red' }}>
-    <span style={{ fontWeight: 'bold' }}>HEY MOM: </span>
-    {children}
-  </p>
-);
-
 export {
   Title,
   Subtitle,
   BigSubtitle,
-  HeyMom,
   Subheader,
   BigSubheader,
   JumboSubheader,

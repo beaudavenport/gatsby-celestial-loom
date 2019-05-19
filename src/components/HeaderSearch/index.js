@@ -1,8 +1,6 @@
 import { Button, FontIcon } from 'react-md';
 import { StaticQuery, graphql } from 'gatsby';
-import PropTypes from 'prop-types';
 import React, { Fragment, useState } from 'react';
-import { Index } from 'elasticlunr';
 
 import SearchModal from './SearchModal';
 

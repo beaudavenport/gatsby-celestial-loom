@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
 
 import { JumboSubheader } from '../components/Common';
+import CenteredCell from '../components/CenteredCell';
 import Layout from '../components/Layout';
 import ServiceCard from '../components/ServiceCard';
 import ServicesArchive from '../components/ServicesArchive';
@@ -28,16 +29,16 @@ const Services = ({ data }) => {
         <Cell size={12}>
           <Card>
             <Grid>
-              <Cell size={6} tabletSize={4} style={{ display: 'flex', alignItems: 'center' }}>
-                <div style={{ padding: 10 }}>
-                  <JumboSubheader>Your Astrological Foundation - Online or In-Person!</JumboSubheader>
-                  <p style={{ fontWeight: 'bold' }}>
-Build the foundation of your astrological understanding with a
-                    <span className="subheader"> Natal Chart analysis!</span>
-                  </p>
-                  <p style={{ fontWeight: 'bold' }}>See how the lifelong insights gained from this service can help enrich your life...</p>
-                </div>
-              </Cell>
+              <CenteredCell
+                title="Your Astrological Foundation - Online or In-Person!"
+                fontIconName="person"
+              >
+                <p style={{ fontWeight: 'bold' }}>
+                  Build the foundation of your astrological understanding with a
+                  <span className="subheader"> Natal Chart analysis!</span>
+                </p>
+                <p style={{ fontWeight: 'bold' }}>See how the lifelong insights gained from this service can help enrich your life...</p>
+              </CenteredCell>
               <Cell size={6} tabletSize={4}>
                 <ServiceCard
                   path={natalChart.fields.slug}
