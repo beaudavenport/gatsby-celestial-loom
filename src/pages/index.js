@@ -68,9 +68,9 @@ const IndexPage = ({ data }) => {
       </Grid>
       <Grid style={{ borderBottom: '1px solid rgba(15,70,100,.2)', marginBottom: 20 }}>
         <Cell size={12}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
             <BigSubheader>Previous Posts</BigSubheader>
-            <ForwardLink to="/posts" title="View All Posts" />
+            <ForwardLink to="/posts" title="All Posts" />
           </div>
         </Cell>
         { otherBlogNodes && otherBlogNodes.map(node => (
@@ -88,9 +88,9 @@ const IndexPage = ({ data }) => {
       </Grid>
       <Grid style={{ borderBottom: '1px solid rgba(15,70,100,.2)', marginBottom: 20 }}>
         <Cell size={12}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
             <BigSubheader>Next Event</BigSubheader>
-            <ForwardLink to="/events" title="View All Events" />
+            <ForwardLink to="/events" title="All Events" />
           </div>
         </Cell>
         <Cell size={12}>
@@ -109,9 +109,9 @@ const IndexPage = ({ data }) => {
       </Grid>
       <Grid style={{ borderBottom: '1px solid rgba(15,70,100,.2)', marginBottom: 20 }}>
         <Cell size={12}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
             <BigSubheader>Featured Service</BigSubheader>
-            <ForwardLink to="/services" title="View All Services" />
+            <ForwardLink to="/services" title="All Services" />
           </div>
         </Cell>
         <Cell size={12}>

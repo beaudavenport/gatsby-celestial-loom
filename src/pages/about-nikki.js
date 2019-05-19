@@ -1,4 +1,4 @@
-import { Cell, Grid, Paper } from 'react-md';
+import { Card, Cell, Grid } from 'react-md';
 import React, { Fragment } from 'react';
 
 import { BackLink, BigSubheader } from '../components/Common';
@@ -28,34 +28,38 @@ const AboutNikki = () => (
     )}
   >
     <BackLink to="/" title="Home" />
-    <Paper style={{ backgroundColor: 'white' }}>
-      <Grid>
-        <Cell size={6}>
-          <div style={{ width: '80%', margin: '0 auto' }}>
-            <img src={Nikki} alt="at da club" style={{ maxWidth: '100%' }} />
-          </div>
-        </Cell>
-        <Cell size={6}>
-          <p>
+    <Grid>
+      <Cell size={12}>
+        <Card>
+          <Grid>
+            <Cell size={6}>
+              <div style={{ width: '80%', margin: '0 auto' }}>
+                <img src={Nikki} alt="at da club" style={{ maxWidth: '100%' }} />
+              </div>
+            </Cell>
+            <Cell size={6}>
+              <p>
               Currently practicing and teaching in St. Louis, Missouri, Nikki
              is a board member of the Astrological Association of St. Louis.
               Her Astrological view is from a spiritual perspective.
                She has a multi-cultural approach to the science of astrology,
                 incorporating Western, Hindu, Mayan, Native American, Tibetan,
                 and Chinese astrological cultures and services.
-          </p>
-          <BigSubheader>Stay connected on Facebook and Twitter!</BigSubheader>
-          <div style={{ display: 'flex', justifyContent: 'space-around' }}>
-            <a href="https://www.facebook.com/celestialloom/">
-              <img src={FacebookIcon} alt="Facebook Icon" style={{ width: '50px', height: '50px' }} />
-            </a>
-            <a href="https://twitter.com/nikiastro">
-              <img src={TwitterIcon} alt="Twitter Icon" style={{ width: '50px', height: '50px' }} />
-            </a>
-          </div>
-        </Cell>
-      </Grid>
-    </Paper>
+              </p>
+              <BigSubheader>Stay connected on Facebook and Twitter!</BigSubheader>
+              <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+                <a href="https://www.facebook.com/celestialloom/">
+                  <img src={FacebookIcon} alt="Facebook Icon" style={{ width: '50px', height: '50px' }} />
+                </a>
+                <a href="https://twitter.com/nikiastro">
+                  <img src={TwitterIcon} alt="Twitter Icon" style={{ width: '50px', height: '50px' }} />
+                </a>
+              </div>
+            </Cell>
+          </Grid>
+        </Card>
+      </Cell>
+    </Grid>
   </Layout>
 );
 
