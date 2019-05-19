@@ -3,15 +3,17 @@ import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
 
-import { BackLink } from '../components/Common';
+import { BackLink, BigSubheader } from '../components/Common';
 import FeaturedCard from '../components/FeaturedCard';
 import Layout from '../components/Layout';
 import PostsArchive from '../components/PostsArchive';
+import RelatedItemChipList from '../components/RelatedItemChipList';
 import SidebarContents from '../components/SidebarContents';
 
 export const query = graphql`
    query {
      allMarkdownRemark(
+       limit: 3
        filter: { frontmatter: { type: { eq: "blog"} } },
        sort: { fields: [frontmatter___publishDate], order: DESC }
      ) {
@@ -36,7 +38,7 @@ export const query = graphql`
  `;
 
 const Posts = ({ data }) => {
-  const first3Nodes = data.allMarkdownRemark.edges.slice(0, 3).map(edge => edge.node);
+  const first3Nodes = data.allMarkdownRemark.edges.map(edge => edge.node);
 
   return (
     <Layout
@@ -51,19 +53,23 @@ const Posts = ({ data }) => {
       <BackLink to="/" title="Home" />
       <Grid>
         { first3Nodes.map(node => (
-          <Cell size={12}>
+          <Cell size={12} style={{ marginBottom: 30 }}>
             <FeaturedCard
-              style={{ marginBottom: 30 }}
               path={node.fields.slug}
               title={node.frontmatter.title}
               publishDate={node.frontmatter.publishDate}
               image={node.frontmatter.image}
-              relatedItems={node.frontmatter.relatedItems}
+              relatedItemChips={node.frontmatter.relatedItems && <RelatedItemChipList relatedItems={node.frontmatter.relatedItems} />}
               excerpt={node.excerpt}
             />
           </Cell>
         ))
       }
+        <Cell size={12}>
+          <div style={{ padding: 20 }}>
+            <BigSubheader>Browse older posts by month in the Posts Archive.</BigSubheader>
+          </div>
+        </Cell>
       </Grid>
     </Layout>
   );
