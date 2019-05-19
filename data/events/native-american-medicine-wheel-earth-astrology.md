@@ -3,7 +3,7 @@ templateKey: eventTemplate
 priceDescription: 3-Hour Playshop
 type: events
 path: hjkjjkk
-eventDate: 2019-04-20T05:00:00.000Z
+eventDate: 2019-10-20T05:00:00.000Z
 eventTime: 1-4 PM
 image: /assets/namedicinewheel.jpg
 title: Native American Medicine Wheel
