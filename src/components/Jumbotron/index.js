@@ -48,7 +48,7 @@ Astrological Services
             weaves timeless wisdom with modern service.
         </p>
         <div style={{ textAlign: 'right' }}>
-          <ForwardLink to="/getting-started" title="Get Started" />
+          <ForwardLink to="/getting-started" title="Get Started" alignRight titleStyle={{ fontSize: '1.5rem' }} />
         </div>
       </div>
     </div>

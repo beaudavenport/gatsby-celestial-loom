@@ -5,13 +5,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import {
-  BackLink,
-  BigSubheader,
-  ContentWithIcon,
-  Subtitle,
-  Title,
+  BigSubheader, ContentWithIcon, Subtitle, Title,
 } from './Common';
-import HeaderCart from './HeaderCart';
 import TextWithChevron from './TextWithChevron';
 import TouchableLink from './TouchableLink';
 import getOrigin from '../helpers/originService';
@@ -28,7 +23,6 @@ function ServicePage(props) {
   const { backgroundUrl, overlayColor } = getOrigin(origin);
   return (
     <div>
-      <BackLink to="/services" title="Back to Services" />
       <div style={{
         background: `url(${backgroundUrl})`,
         backgroundPosition: 'center',

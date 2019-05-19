@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
 
-import { JumboSubheader } from '../components/Common';
+import { BackLink } from '../components/Common';
 import CenteredCell from '../components/CenteredCell';
 import Layout from '../components/Layout';
 import ServiceCard from '../components/ServiceCard';
@@ -25,6 +25,7 @@ const Services = ({ data }) => {
   )}
 
     >
+      <BackLink to="/" title="Home" />
       <Grid>
         <Cell size={12}>
           <Card>

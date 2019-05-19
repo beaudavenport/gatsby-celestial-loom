@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
 
+import { BackLink } from '../components/Common';
 import FeaturedCard from '../components/FeaturedCard';
 import Layout from '../components/Layout';
 import PostsArchive from '../components/PostsArchive';
@@ -47,6 +48,7 @@ const Posts = ({ data }) => {
         </Fragment>
       )}
     >
+      <BackLink to="/" title="Home" />
       <Grid>
         { first3Nodes.map(node => (
           <Cell size={12}>

@@ -1,7 +1,7 @@
 import { Card, Cell, Grid } from 'react-md';
 import React, { Fragment } from 'react';
 
-import { Subtitle, Title } from '../components/Common';
+import { BackLink, Subtitle, Title } from '../components/Common';
 import Layout from '../components/Layout';
 import SidebarContents from '../components/SidebarContents';
 import ToolboxArchive from '../components/ToolboxArchive';
@@ -17,6 +17,7 @@ const Toolbox = () => (
       </Fragment>
   )}
   >
+    <BackLink to="/" title="Home" />
     <Grid>
       <Cell size={10}>
         <Title>Your Astrology Toolbox</Title>

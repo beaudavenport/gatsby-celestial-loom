@@ -47,7 +47,7 @@ const FeaturedEventCard = ({
             <p className="event-signup-thumbnail--price">{`$${Number(eventPrice).toFixed(2)}`}</p>
           </div>
           <div>
-            <TextWithChevron text="SIGN UP" />
+            <TextWithChevron text="Sign Up" />
           </div>
         </div>
       </Cell>

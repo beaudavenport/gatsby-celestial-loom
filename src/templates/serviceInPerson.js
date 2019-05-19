@@ -2,6 +2,7 @@ import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
 
+import { BackLink } from '../components/Common';
 import Layout from '../components/Layout';
 import ServicePageInPerson from '../components/ServicePageInPerson';
 import ServicesArchive from '../components/ServicesArchive';
@@ -22,6 +23,7 @@ function ServiceTemplate({
         </Fragment>
     )}
     >
+      <BackLink to={fields.slug} title="Back to Details" />
       <ServicePageInPerson
         title={frontmatter.title}
         origin={frontmatter.origin}

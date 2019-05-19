@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import { BigSubheader } from '../components/Common';
+import { BigSubheader, ForwardLink } from '../components/Common';
 import AboutNikkiCard from '../components/AboutNikkiCard';
 import FeaturedCard from '../components/FeaturedCard';
 import FeaturedEventCard from '../components/FeaturedEventCard';
@@ -68,12 +68,10 @@ const IndexPage = ({ data }) => {
       </Grid>
       <Grid style={{ borderBottom: '1px solid rgba(15,70,100,.2)', marginBottom: 20 }}>
         <Cell size={12}>
-          <p style={{
-            color: 'rgb(247, 105, 0)', fontWeight: 'bold', fontSize: '1.5rem', marginBottom: 10,
-          }}
-          >
-Previous Posts
-          </p>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <BigSubheader>Previous Posts</BigSubheader>
+            <ForwardLink to="/posts" title="View All Posts" />
+          </div>
         </Cell>
         { otherBlogNodes && otherBlogNodes.map(node => (
           <Cell size={6} tabletSize={4} style={{ padding: 10 }}>
@@ -90,7 +88,10 @@ Previous Posts
       </Grid>
       <Grid style={{ borderBottom: '1px solid rgba(15,70,100,.2)', marginBottom: 20 }}>
         <Cell size={12}>
-          <BigSubheader>Upcoming Event</BigSubheader>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <BigSubheader>Next Event</BigSubheader>
+            <ForwardLink to="/events" title="View All Events" />
+          </div>
         </Cell>
         <Cell size={12}>
           <FeaturedEventCard
@@ -108,7 +109,10 @@ Previous Posts
       </Grid>
       <Grid style={{ borderBottom: '1px solid rgba(15,70,100,.2)', marginBottom: 20 }}>
         <Cell size={12}>
-          <BigSubheader>Featured Service</BigSubheader>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <BigSubheader>Featured Service</BigSubheader>
+            <ForwardLink to="/services" title="View All Services" />
+          </div>
         </Cell>
         <Cell size={12}>
           <Card>

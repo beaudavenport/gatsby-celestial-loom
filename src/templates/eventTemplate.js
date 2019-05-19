@@ -2,6 +2,7 @@ import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
 
+import { BackLink } from '../components/Common';
 import EventPage from '../components/EventPage';
 import EventsArchive from '../components/EventsArchive';
 import Layout from '../components/Layout';
@@ -22,6 +23,7 @@ function EventTemplate({
         </Fragment>
     )}
     >
+      <BackLink to="/events" title="All Events" />
       <EventPage
         title={frontmatter.title}
         subtitle={frontmatter.subtitle}

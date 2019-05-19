@@ -20,10 +20,14 @@
   font-size: 1.5rem;
 }
 
-.back-link--container {
+.link--container {
   display: flex;
   justify-content: flex-start;
   padding: 5px;
+}
+
+.link--container__right {
+  justify-content: flex-end;
 }
 
 .back-title {

@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
 
 import {
+  BackLink,
   BigSubheader,
   Caption,
   ContentWithIcon,
@@ -45,6 +46,7 @@ const GettingStarted = ({ data }) => {
         </Fragment>
       )}
     >
+      <BackLink to="/" title="Home" />
       <Grid>
         <Cell size={12}>
           <Title>Welcome to The Celestial Loom!</Title>

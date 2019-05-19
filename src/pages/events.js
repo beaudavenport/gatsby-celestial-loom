@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
 
-import { BigSubheader } from '../components/Common';
+import { BackLink, BigSubheader } from '../components/Common';
 import EventsArchive from '../components/EventsArchive';
 import FeaturedEventCard from '../components/FeaturedEventCard';
 import Layout from '../components/Layout';
@@ -22,6 +22,7 @@ const Events = ({ data }) => {
         </Fragment>
       )}
     >
+      <BackLink to="/" title="Home" />
       <Grid>
         <Cell size={12}>
           <CardText>

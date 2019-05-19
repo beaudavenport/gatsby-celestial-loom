@@ -2,6 +2,7 @@ import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
 
+import { BackLink } from '../components/Common';
 import Layout from '../components/Layout';
 import SidebarContents from '../components/SidebarContents';
 import ToolboxArchive from '../components/ToolboxArchive';
@@ -34,6 +35,7 @@ function ToolboxTemplate({
         </Fragment>
       )}
     >
+      <BackLink to="/toolbox" title="Astro Toolbox" />
       <ToolboxPage
         title={frontmatter.title}
         toolboxType={frontmatter.toolboxType}

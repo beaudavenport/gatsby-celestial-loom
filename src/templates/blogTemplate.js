@@ -2,6 +2,7 @@ import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
 
+import { BackLink } from '../components/Common';
 import BlogEntry from '../components/BlogEntry';
 import Layout from '../components/Layout';
 import PostsArchive from '../components/PostsArchive';
@@ -22,6 +23,7 @@ export default function BlogTemplate({ data }) {
         </Fragment>
       )}
     >
+      <BackLink to="/posts" title="All Posts" />
       <BlogEntry
         title={frontmatter.title}
         image={frontmatter.image}

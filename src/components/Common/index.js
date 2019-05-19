@@ -60,12 +60,14 @@ Caption.propTypes = {
   children: PropTypes.string.isRequired,
 };
 
-const BackLink = ({ to, title }) => (
-  <div className="back-link--container">
+const BackLink = ({
+  to, title, alignRight, titleStyle,
+}) => (
+  <div className={`link--container ${alignRight && 'link--container__right'}`}>
     <TouchableLink to={to}>
       <div className="flex-center">
         <FontIcon style={{ color: '#ec6602', fontSize: '2rem', marginRight: 5 }}>arrow_back</FontIcon>
-        <p className="back-title">{title}</p>
+        <p className="back-title" style={titleStyle}>{title}</p>
       </div>
     </TouchableLink>
   </div>
@@ -74,13 +76,21 @@ const BackLink = ({ to, title }) => (
 BackLink.propTypes = {
   to: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+  alignRight: PropTypes.bool,
+  titleStyle: PropTypes.object //eslint-disable-line
 };
 
-const ForwardLink = ({ to, title }) => (
-  <div className="back-link--container">
+BackLink.defaultProps = {
+  alignRight: false,
+};
+
+const ForwardLink = ({
+  to, title, alignRight, titleStyle,
+}) => (
+  <div className={`link--container ${alignRight && 'link--container__right'}`}>
     <TouchableLink to={to}>
       <div className="flex-center">
-        <p className="back-title">{title}</p>
+        <p className="back-title" style={titleStyle}>{title}</p>
         <FontIcon style={{ color: '#ec6602', fontSize: '2rem', marginLeft: 5 }}>arrow_forward</FontIcon>
       </div>
     </TouchableLink>
@@ -90,6 +100,12 @@ const ForwardLink = ({ to, title }) => (
 ForwardLink.propTypes = {
   to: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+  alignRight: PropTypes.bool,
+  titleStyle: PropTypes.object //eslint-disable-line
+};
+
+ForwardLink.defaultProps = {
+  alignRight: false,
 };
 
 const ContentWithIcon = ({ fontIconName, fontIconStyle, children }) => (

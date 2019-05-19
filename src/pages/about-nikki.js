@@ -1,7 +1,7 @@
 import { Cell, Grid, Paper } from 'react-md';
 import React, { Fragment } from 'react';
 
-import { BigSubheader } from '../components/Common';
+import { BackLink, BigSubheader } from '../components/Common';
 import FacebookIcon from '../images/iconmonstr-facebook-4.svg';
 import Layout from '../components/Layout';
 import Nikki from '../images/nikki.jpg';
@@ -27,6 +27,7 @@ const AboutNikki = () => (
       </Fragment>
     )}
   >
+    <BackLink to="/" title="Home" />
     <Paper style={{ backgroundColor: 'white' }}>
       <Grid>
         <Cell size={6}>
