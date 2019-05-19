@@ -11,13 +11,16 @@ const ArchiveCard = ({ sections }) => (
           primaryTextStyle={{ fontWeight: 'bold' }}
           primaryText={section.primaryText}
           secondaryText={section.secondaryText}
+          secondaryTextStyle={{ fontWeight: 'bold' }}
           nestedItems={section.items.map(item => (
             <div>
               <ListItem
                 leftAvatar={item.avatar}
+                tileStyle={{ paddingLeft: 30 }}
                 primaryTextStyle={{ fontWeight: 'bold' }}
                 primaryText={item.primaryText}
                 secondaryText={item.secondaryText}
+                secondaryTextStyle={{ fontWeight: 'bold' }}
                 component={Link}
                 to={item.slug}
               />

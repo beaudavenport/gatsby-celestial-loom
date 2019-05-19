@@ -5,6 +5,7 @@ import React, { Fragment } from 'react';
 import BlogEntry from '../components/BlogEntry';
 import Layout from '../components/Layout';
 import PostsArchive from '../components/PostsArchive';
+import RelatedItemChipList from '../components/RelatedItemChipList';
 import SidebarContents from '../components/SidebarContents';
 
 export default function BlogTemplate({ data }) {
@@ -26,7 +27,7 @@ export default function BlogTemplate({ data }) {
         image={frontmatter.image}
         html={html}
         publishDate={frontmatter.publishDate}
-        relatedItems={frontmatter.relatedItems}
+        relatedItemChips={frontmatter.relatedItems && <RelatedItemChipList relatedItems={frontmatter.relatedItems} />}
       />
     </Layout>
   );

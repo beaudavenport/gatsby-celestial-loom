@@ -61,7 +61,7 @@ const IndexPage = ({ data }) => {
             image={firstBlogNode.frontmatter.image}
             excerpt={firstBlogNode.excerpt}
             relatedItemChips={
-              <RelatedItemChipList relatedItems={firstBlogNode.frontmatter.relatedItems} />
+              firstBlogNode.frontmatter.relatedItems && <RelatedItemChipList relatedItems={firstBlogNode.frontmatter.relatedItems} />
             }
           />
         </Cell>
