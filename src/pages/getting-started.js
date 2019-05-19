@@ -11,6 +11,7 @@ import {
   Caption,
   ContentWithIcon,
   ForwardLink,
+  Subheader,
   Title,
 } from '../components/Common';
 import { getSymbolSpan } from '../helpers/symbolHelper';
@@ -62,6 +63,7 @@ const GettingStarted = ({ data }) => {
                 <ForwardLink title="View all Services" to="/services" />
               </CenteredCell>
               <Cell size={6} tabletSize={4}>
+                <Subheader>Get your first chart:</Subheader>
                 <ServiceCard
                   path={natalChart.fields.slug}
                   title={natalChart.frontmatter.title}
@@ -78,7 +80,12 @@ const GettingStarted = ({ data }) => {
         <Cell size={12}>
           <Card>
             <Grid>
+              <CenteredCell fontIconName="create" title="Read the Latest Post">
+                <Caption>See what the Stars are up to with Nikki's astrology blog!</Caption>
+                <ForwardLink title="View all posts" to="/posts" />
+              </CenteredCell>
               <CenteredCell>
+                <Subheader>Read the latest post:</Subheader>
                 <ThumbnailCard
                   style={{ marginBottom: 10 }}
                   path={firstBlogNode.fields.slug}
@@ -86,10 +93,6 @@ const GettingStarted = ({ data }) => {
                   caption={firstBlogNode.frontmatter.publishDate}
                   image={firstBlogNode.frontmatter.image}
                 />
-              </CenteredCell>
-              <CenteredCell fontIconName="create" title="Read the Latest Post">
-                <Caption>See what the Stars are up to with Nikki's astrology blog!</Caption>
-                <ForwardLink title="View all posts" to="/posts" />
               </CenteredCell>
             </Grid>
           </Card>
@@ -102,6 +105,7 @@ const GettingStarted = ({ data }) => {
                 <ForwardLink title="View upcoming events" to="/events" />
               </CenteredCell>
               <CenteredCell>
+                <Subheader>Attend our next event:</Subheader>
                 <ThumbnailEventCard
                   path={firstEventNode.fields.slug}
                   title={firstEventNode.frontmatter.title}
@@ -117,7 +121,12 @@ const GettingStarted = ({ data }) => {
         <Cell size={12}>
           <Card>
             <Grid>
+              <CenteredCell fontIconName="build" title="Explore your Astrological Toolbox">
+                <Caption>Learn more about the Signs, Planets, and Houses that make up your Astrological Toolbox using our interactive Zodiac Wheel!</Caption>
+                <ForwardLink title="Open your Toolbox" to="/toolbox" />
+              </CenteredCell>
               <CenteredCell>
+                <Subheader>Learn about Planets, Houses, and Signs:</Subheader>
                 <List>
                   {toolboxNodes.map(item => (
                     <ListItem
@@ -131,10 +140,6 @@ const GettingStarted = ({ data }) => {
                     />
                   ))}
                 </List>
-              </CenteredCell>
-              <CenteredCell fontIconName="build" title="Explore your Astrological Toolbox">
-                <Caption>Learn more about the Signs, Planets, and Houses that make up your Astrological Toolbox using our interactive Zodiac Wheel!</Caption>
-                <ForwardLink title="Open your Toolbox" to="/toolbox" />
               </CenteredCell>
             </Grid>
           </Card>
