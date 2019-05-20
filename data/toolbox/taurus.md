@@ -3,6 +3,7 @@ templateKey: toolboxTemplate
 toolboxType: Signs
 type: toolbox
 title: Taurus
+order: 2
 ---
 _Key Phrase:_ I HAVE
 

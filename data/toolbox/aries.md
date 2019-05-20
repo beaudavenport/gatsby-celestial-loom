@@ -3,6 +3,7 @@ templateKey: toolboxTemplate
 toolboxType: Signs
 type: toolbox
 title: Aries
+order: 1
 ---
 _Key Phrase:_ I AM
 
