@@ -3,8 +3,9 @@ templateKey: toolboxTemplate
 toolboxType: Planets
 type: toolbox
 title: Sun
+order: 1
 ---
-Everything in the Solar System revolves around the Sun.
+_Everything in the Solar System revolves around the Sun._
 
 
 
