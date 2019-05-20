@@ -6,7 +6,7 @@ const useAllToolboxNodes = () => {
     query {
       allMarkdownRemark(
         filter: { frontmatter: { type: { eq: "toolbox"} } },
-        sort: { fields: [frontmatter___publishDate], order: DESC }
+        sort: { fields: [frontmatter___order], order: ASC }
       ) {
         totalCount
         edges {
