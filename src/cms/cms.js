@@ -1,4 +1,4 @@
-import '../components/layout.scss';
+import '../components/main.scss';
 
 import { Cell, Grid } from 'react-md';
 import { Converter } from 'showdown';

@@ -1,4 +1,4 @@
-import './layout.scss';
+import './main.scss';
 
 import {
   Cell, FontIcon, Grid, ListItem, NavigationDrawer,

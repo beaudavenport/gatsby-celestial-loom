@@ -135,10 +135,10 @@ const ZodiacWheel = ({ title }) => (
             <g>
               {shapeSvgPaths.map(({ d, id }) => (
                 <path
-                  className="testhover"
+                  className="zodiac-wheel__element"
                   d={d}
                   stroke={isMatch(title, id) ? '#ec6602' : 'rgba(0, 0, 0, 0.87)'}
-                  fill={isMatch(title, id) ? 'rgba(247, 105, 0, 0.25)' : 'white'}
+                  fill="white"
                   onClick={() => navigate(matchingLink(id, nodes))}
                   strokeWidth={isMatch(title, id) ? 4 : 2}
                 />
@@ -147,8 +147,9 @@ const ZodiacWheel = ({ title }) => (
             {symbolBgSvgPaths.map(path => (
               <circle
                 {...path}
-                className="testhovertext"
-                fill={isMatch(title, path.id) ? 'rgba(247, 105, 0, 0.25)' : 'transparent'}
+                className="zodiac-wheel__symbol"
+                stroke={isMatch(title, path.id) ? '#ec6602' : 'transparent'}
+                fill="transparent"
                 onClick={() => navigate(matchingLink(path.id, nodes))}
               />
             ))}

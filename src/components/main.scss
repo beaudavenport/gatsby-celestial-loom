@@ -25,6 +25,7 @@ $md-drawer-desktop-width: 225px;
 @import './SidebarHeader/styles';
 @import './TouchableLink/styles';
 @import './Common/styles';
+@import './ZodiacWheel/styles';
 
 html {
  background-color: #fff;
@@ -35,28 +36,6 @@ html {
   height: 100%;
   margin-top: 0;
   margin-bottom: 0;
-}
-
-.zodiac-wheel {
-  width: 100%;
-  height: 300px;
-
-  @media only screen and (min-width: 400px) {
-    height: 450px;
-  }
-
-  @media only screen and (min-width: 839px) {
-    height: 600px;
-  }
-}
-
-.testhover:hover {
-  fill: rgba(247, 105, 0, 0.50);
-}
-
-.testhovertext:hover {
-  fill: rgba(247, 111, 0, 0.50);
-  padding: 20px;
 }
 
 .sidebar-contents {
