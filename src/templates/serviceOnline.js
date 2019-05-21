@@ -49,7 +49,7 @@ export const pageQuery = graphql`
         onlinePrice
         origin
       }
-      excerpt(pruneLength: 250)
+      excerpt(format: HTML, pruneLength: 250)
       fields {
         slug
       }

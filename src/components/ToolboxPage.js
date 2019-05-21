@@ -1,10 +1,8 @@
-import {
-  Card, CardText, Cell, Grid,
-} from 'react-md';
+import { Card, Cell, Grid } from 'react-md';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import { Subtitle, Title } from './Common';
+import { Subheader, Subtitle, Title } from './Common';
 import ThumbnailCard from './ThumbnailCard';
 import ThumbnailEventCard from './ThumbnailCard/ThumbnailEventCard';
 import ZodiacWheel from './ZodiacWheel';
@@ -21,23 +19,22 @@ function ToolboxPage(props) {
   return (
     <Grid>
       <Cell size={12}>
-        <div style={{ textAlign: 'center' }}>
+        <div style={{ textAlign: 'center', marginBottom: 20 }}>
           <Subtitle>
             {toolboxType}
           </Subtitle>
           <Title>{title}</Title>
         </div>
+        <div style={{ padding: 20, border: '1px solid rgba(15,70,100,.12)', borderRadius: 5 }} dangerouslySetInnerHTML={{ __html: html }} />
+        <div style={{ padding: 10 }}>
+          <Subheader>{`The location of ${title} in the Zodiac:`}</Subheader>
+        </div>
         <Card style={{ paddingRight: 20, paddingLeft: 20 }}>
           <ZodiacWheel title={title} />
         </Card>
-        <CardText>
-          <div dangerouslySetInnerHTML={{ __html: html }} />
-        </CardText>
-        <p style={{ color: '#ec6602', fontWeight: 'bold' }}>
-          {title}
-          {' '}
-is mentioned in...
-        </p>
+        <div style={{ padding: 10 }}>
+          <Subheader>{`${title} is mentioned in...`}</Subheader>
+        </div>
         <div style={{ padding: 10 }}>
           { eventNodes.length > 0 && eventNodes.map(node => (
             <ThumbnailEventCard

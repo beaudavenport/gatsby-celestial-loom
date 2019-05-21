@@ -25,7 +25,7 @@ const EventsArchive = () => (
                  eventDateShort: eventDate(formatString: "MMM DD")
                  location
                }
-               excerpt(pruneLength: 250)
+               excerpt(format: HTML, pruneLength: 250)
                fields {
                  slug
                }

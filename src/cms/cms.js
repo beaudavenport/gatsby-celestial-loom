@@ -1,12 +1,16 @@
 import '../components/main.scss';
 
-import { Cell, Grid } from 'react-md';
+import {
+  Card, CardText, Cell, Grid,
+} from 'react-md';
 import { Converter } from 'showdown';
 import CMS from 'netlify-cms';
 import React from 'react';
 import moment from 'moment';
 
-import { BigSubheader, Subheader } from '../components/Common';
+import {
+  BigSubheader, Subheader, Subtitle, Title,
+} from '../components/Common';
 import BlogEntry from '../components/BlogEntry';
 import EventPage from '../components/EventPage';
 import FeaturedCard from '../components/FeaturedCard';
@@ -14,7 +18,7 @@ import FeaturedEventCard from '../components/FeaturedEventCard';
 import RelatedItemChip from '../components/RelatedItemChip';
 import ServiceCard from '../components/ServiceCard';
 import ServicePage from '../components/ServicePage';
-import ToolboxPage from '../components/ToolboxPage';
+import ZodiacWheel from '../components/ZodiacWheel';
 
 const converter = new Converter();
 
@@ -58,6 +62,7 @@ function BlogEntryPreview({ entry, getAsset }) {
     image: getAsset(image),
     publishDate: moment(entry.getIn(['data', 'publishDate']).toString()).format('MMMM DD, YYYY'),
     html: converter.makeHtml(entry.getIn(['data', 'body'])),
+    excerpt: converter.makeHtml(entry.getIn(['data', 'body']).substring(0, 250)),
     relatedItemChips: relatedItems.map(relatedItem => (
       <RelatedItemChip
         item={{ frontmatter: { title: relatedItem }, fields: {} }}
@@ -87,6 +92,7 @@ function ServicePreview({ entry }) {
     inPersonPrice: entry.getIn(['data', 'inPersonPrice']),
     isFeatured: entry.getIn(['data', 'isFeatured']),
     html: converter.makeHtml(entry.getIn(['data', 'body'])),
+    excerpt: converter.makeHtml(entry.getIn(['data', 'body']).substring(0, 250)),
   };
 
   return (
@@ -102,7 +108,9 @@ function ServicePreview({ entry }) {
       </Cell>
       <Cell size={12}>
         <Subheader>Service Card Preview: </Subheader>
-        <ServiceCard {...data} />
+        <Card>
+          <ServiceCard {...data} />
+        </Card>
       </Cell>
     </Grid>
   );
@@ -111,18 +119,32 @@ function ServicePreview({ entry }) {
 function ToolboxPreview({ entry }) {
   const data = {
     title: entry.getIn(['data', 'title']),
-    icon: entry.getIn(['data', 'icon']),
+    toolboxType: entry.getIn(['data', 'toolboxType']),
     html: converter.makeHtml(entry.getIn(['data', 'body'])),
   };
 
   return (
-    <ToolboxPage {...data} />
+    <Grid>
+      <Cell size={12}>
+        <div style={{ textAlign: 'center', marginBottom: 20 }}>
+          <Subtitle>
+            {data.toolboxType}
+          </Subtitle>
+          <Title>{data.title}</Title>
+        </div>
+        <div style={{ padding: 20, border: '1px solid rgba(15,70,100,.12)', borderRadius: 5 }} dangerouslySetInnerHTML={{ __html: data.html }} />
+        <div style={{ padding: 10 }}>
+          <Subheader>{`The location of ${data.title} in the Zodiac:`}</Subheader>
+        </div>
+        <Card style={{ padding: 30 }}>
+          <BigSubheader>Zodiac wheel will appear here</BigSubheader>
+        </Card>
+      </Cell>
+    </Grid>
   );
 }
 
 CMS.registerPreviewTemplate('events', EventPagePreview);
 CMS.registerPreviewTemplate('blog', BlogEntryPreview);
 CMS.registerPreviewTemplate('services', ServicePreview);
-CMS.registerPreviewTemplate('signs', ToolboxPreview);
-CMS.registerPreviewTemplate('houses', ToolboxPreview);
-CMS.registerPreviewTemplate('planets', ToolboxPreview);
+CMS.registerPreviewTemplate('toolboxEntries', ToolboxPreview);

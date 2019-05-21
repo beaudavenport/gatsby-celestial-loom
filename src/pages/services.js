@@ -92,7 +92,7 @@ export const query = graphql`
         inPersonPrice
         origin
       }
-      excerpt(pruneLength: 250)
+      excerpt(format: HTML, pruneLength: 250)
       fields {
         slug
       }
@@ -112,7 +112,7 @@ export const query = graphql`
             inPersonPrice
             origin
           }
-          excerpt(pruneLength: 250)
+          excerpt(format: HTML, pruneLength: 250)
           fields {
             slug
           }

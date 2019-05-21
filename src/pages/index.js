@@ -153,7 +153,7 @@ query {
           publishDate(formatString: "MMMM DD, YYYY")
           relatedItems
         }
-        excerpt(pruneLength: 250)
+        excerpt(format: HTML, pruneLength: 250)
         fields {
           slug
         }
@@ -178,7 +178,7 @@ query {
           priceDescription
           location
         }
-        excerpt(pruneLength: 250)
+        excerpt(format: HTML, pruneLength: 250)
         fields {
           slug
         }
@@ -186,7 +186,7 @@ query {
     }
   }
   featuredService: markdownRemark(frontmatter: { type: { eq: "services" } isFeatured: { eq: true} }) {
-    excerpt(pruneLength: 250)
+    excerpt(format: HTML, pruneLength: 250)
     frontmatter {
       title
       origin

@@ -24,7 +24,7 @@ const SidebarContents = ({ eventsQuantity, postsQuantity }) => (
                  publishDate(formatString: "MMMM DD, YYYY")
                  relatedItems
                }
-               excerpt(pruneLength: 250)
+               excerpt(format: HTML, pruneLength: 250)
                fields {
                  slug
                }
@@ -49,7 +49,7 @@ const SidebarContents = ({ eventsQuantity, postsQuantity }) => (
                  priceDescription
                  location
                }
-               excerpt(pruneLength: 250)
+               excerpt(format: HTML, pruneLength: 250)
                fields {
                  slug
                }

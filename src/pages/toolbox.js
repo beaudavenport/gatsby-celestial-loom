@@ -1,7 +1,9 @@
 import { Card, Cell, Grid } from 'react-md';
 import React, { Fragment } from 'react';
 
-import { BackLink, Subtitle, Title } from '../components/Common';
+import {
+  BackLink, Subheader, Subtitle, Title,
+} from '../components/Common';
 import Layout from '../components/Layout';
 import SidebarContents from '../components/SidebarContents';
 import ToolboxArchive from '../components/ToolboxArchive';
@@ -24,6 +26,9 @@ const Toolbox = () => (
         <Subtitle>Explore the interactive zodiac wheel, or select a sign, house or planet</Subtitle>
       </Cell>
       <Cell size={12}>
+        <div style={{ padding: 10 }}>
+          <Subheader>Click on an element to learn more.</Subheader>
+        </div>
         <Card style={{ paddingRight: 20, paddingLeft: 20 }}>
           <ZodiacWheel />
         </Card>

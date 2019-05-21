@@ -44,7 +44,7 @@ const ServiceCard = ({
       </div>
       <CardText>
         <Title>{title}</Title>
-        <p style={{ paddingTop: 15, paddingBottom: 15 }}>{excerpt}</p>
+        <div style={{ paddingTop: 15, paddingBottom: 15 }} dangerouslySetInnerHTML={{ __html: excerpt }} />
         { showPrices && (
         <Fragment>
           <Divider />

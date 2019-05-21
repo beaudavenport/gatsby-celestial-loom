@@ -76,7 +76,7 @@ export const query = graphql`
             priceDescription
             location
           }
-          excerpt(pruneLength: 250)
+          excerpt(format: HTML, pruneLength: 250)
           fields {
             slug
           }

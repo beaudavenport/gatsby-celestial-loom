@@ -27,7 +27,7 @@ export const query = graphql`
              publishDate(formatString: "MMMM DD, YYYY")
              relatedItems
            }
-           excerpt
+           excerpt(format: HTML, pruneLength: 250)
            fields {
              slug
            }

@@ -26,9 +26,7 @@ const FeaturedCard = ({
         </h3>
       </div>
       <CardText style={{ padding: 16 }}>
-        <p style={{ textDecoration: 'none' }}>
-          {excerpt}
-        </p>
+        <div dangerouslySetInnerHTML={{ __html: excerpt }} />
         <TextWithChevron text="Read more" />
       </CardText>
     </TouchableLink>
