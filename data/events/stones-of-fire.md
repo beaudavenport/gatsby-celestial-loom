@@ -1,6 +1,6 @@
 ---
 templateKey: eventTemplate
-priceDescription: Check or Cash at Door
+priceDescription: Cash or Check at Door
 type: events
 eventDate: 2019-06-08T19:28:41.208Z
 eventTime: 1PM - 4 PM
