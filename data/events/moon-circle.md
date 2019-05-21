@@ -7,8 +7,8 @@ eventTime: 7 PM - 9 PM
 image: /assets/gemini-moon-circle.jpg
 title: Moon Circle
 subtitle: Gemini NEW MOON Celebration
-location: DeMun Healing
-mapsLink: 'DeMun Healing, 205 N. Kirkwood Rd., Kirkwood, MO 63122'
+location: Divine Inspirations
+mapsLink: 'Divine Inspirations, 205 N. Kirkwood Rd., Kirkwood, MO 63122'
 eventPrice: 25
 publishDate: 2019-05-21T04:18:40.836Z
 ---
