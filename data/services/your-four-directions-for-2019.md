@@ -1,11 +1,10 @@
 ---
 templateKey: serviceTemplate
-isFeatured: true
+isFeatured: false
 type: services
-title: Your Four Directions for 2019
+title: Native American Medicine Wheel
 origin: Native American
-onlinePrice: 100
-inPersonPrice: 125
-
+onlinePrice: 40
+inPersonPrice: 60
 ---
-It's that time of year again! Looking for guidance in 2019? The **Four Directions** of the Native American Cross are a great way to get started with understanding the subtle energies from mother earth!
+Discover the mythology, healing energies, and totem animal tied to your Native American Medicine Wheel sign.  You'll gain a new perspective on the rich heritage of the Medicine Wheel and how it applies to your daily life.
