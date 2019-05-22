@@ -2,7 +2,10 @@ import { Card, Cell, Grid } from 'react-md';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import { Subheader, Subtitle, Title } from './Common';
+import {
+  JumboSubheader, Subheader, Subtitle, Title,
+} from './Common';
+import { getSymbolSpan } from '../helpers/symbolHelper';
 import ThumbnailCard from './ThumbnailCard';
 import ThumbnailEventCard from './ThumbnailCard/ThumbnailEventCard';
 import ZodiacWheel from './ZodiacWheel';
@@ -24,6 +27,7 @@ function ToolboxPage(props) {
             {toolboxType}
           </Subtitle>
           <Title>{title}</Title>
+          <JumboSubheader>{getSymbolSpan(title)}</JumboSubheader>
         </div>
         <div style={{ padding: 20, border: '1px solid rgba(15,70,100,.12)', borderRadius: 5 }} dangerouslySetInnerHTML={{ __html: html }} />
         <div style={{ padding: 10 }}>

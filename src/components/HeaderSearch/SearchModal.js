@@ -10,11 +10,13 @@ import {
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
+import { findDOMNode } from 'react-dom';
 import moment from 'moment';
 
 import { Index } from 'elasticlunr';
 
 import { BigSubheader, Subtitle } from '../Common';
+import { getSymbolSpan } from '../../helpers/symbolHelper';
 
 const avatarMap = new Map();
 avatarMap.set('blog', 'create');
@@ -81,7 +83,12 @@ class SearchModal extends React.PureComponent {
           <div className="search-modal--input">
             <FontIcon style={{ color: '#ec6602', marginRight: 10 }}>search</FontIcon>
             <TextField
-              ref={input => input && input.focus()}
+              ref={(input) => {
+                if (input) {
+                  findDOMNode(input).scrollIntoView();
+                  input.focus();
+                }
+              }}
               type="text"
               style={{ color: 'black' }}
               placeholder="Try searching for 'Aries'"
@@ -98,7 +105,7 @@ class SearchModal extends React.PureComponent {
                     style={{ paddingLeft: 10, paddingRight: 10 }}
                     primaryText={page.title}
                     primaryTextStyle={{ fontWeight: 'bold' }}
-                    leftAvatar={getAvatar(page.type)}
+                    leftAvatar={page.type === 'toolbox' ? <Avatar>{getSymbolSpan(page.title)}</Avatar> : getAvatar(page.type)}
                     secondaryText={`Posted on: ${moment(page.publishDate).format('MMM DD, YYYY')}`}
                     component={Link}
                     to={`/${page.path}`}
