@@ -1,6 +1,6 @@
 ---
 templateKey: eventTemplate
-priceDescription: Cash or Check at Door
+priceDescription: 3 Hour Playshop
 type: events
 eventDate: 2019-06-08T19:28:41.208Z
 eventTime: 1PM - 4 PM
@@ -8,7 +8,7 @@ image: /assets/stones-of-fire-lotus.jpg
 title: STONES OF FIRE
 subtitle: An Integrated Exploration of Astrology and the Chakras
 location: DeMun Healing
-mapsLink: '734 De Mun Ave., Clayton, MO 63105'
+mapsLink: 'https://goo.gl/maps/Yvyx3SWdSiGpPcU47'
 eventPrice: 35
 publishDate: 2019-05-21T19:28:41.228Z
 ---
@@ -32,6 +32,4 @@ Healing is the bringing of all that is into balance.  We are going to bridge two
 
 •	Chakras and Jyotish – an Eastern View
 
-3-Hour Playshop:  $35.00   
-
-**Email Nikki to pre-register and include your birth date, birth time, & birth location for personal tools to use during playshop - Natal Chart and Chakra Chart.**
+3-Hour Playshop:  $35.00
