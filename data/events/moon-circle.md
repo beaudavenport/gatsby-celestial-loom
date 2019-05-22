@@ -2,7 +2,7 @@
 templateKey: eventTemplate
 priceDescription: Cash or Check at Door
 type: events
-eventDate: 2019-05-31T04:18:40.820Z
+eventDate: '2019-06-01T11:18:40-05:00'
 eventTime: 7 PM - 9 PM
 image: /assets/gemini-moon-circle.jpg
 title: Moon Circle
