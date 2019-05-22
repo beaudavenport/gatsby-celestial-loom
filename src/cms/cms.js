@@ -57,12 +57,14 @@ function BlogEntryPreview({ entry, getAsset }) {
   const relatedItems = relatedItemData
     ? relatedItemData.toJS()
     : [];
+  const rawExcerpt = converter.makeHtml(entry.getIn(['data', 'body'])) || '';
+
   const data = {
     title: entry.getIn(['data', 'title']),
     image: getAsset(image),
     publishDate: moment(entry.getIn(['data', 'publishDate']).toString()).format('MMMM DD, YYYY'),
     html: converter.makeHtml(entry.getIn(['data', 'body'])),
-    excerpt: converter.makeHtml(entry.getIn(['data', 'body']).substring(0, 250)),
+    excerpt: rawExcerpt.substring(0, 250),
     relatedItemChips: relatedItems.map(relatedItem => (
       <RelatedItemChip
         item={{ frontmatter: { title: relatedItem }, fields: {} }}
@@ -85,6 +87,7 @@ function BlogEntryPreview({ entry, getAsset }) {
 }
 
 function ServicePreview({ entry }) {
+  const rawExcerpt = converter.makeHtml(entry.getIn(['data', 'body'])) || '';
   const data = {
     title: entry.getIn(['data', 'title']),
     origin: entry.getIn(['data', 'origin']),
@@ -92,7 +95,7 @@ function ServicePreview({ entry }) {
     inPersonPrice: entry.getIn(['data', 'inPersonPrice']),
     isFeatured: entry.getIn(['data', 'isFeatured']),
     html: converter.makeHtml(entry.getIn(['data', 'body'])),
-    excerpt: converter.makeHtml(entry.getIn(['data', 'body']).substring(0, 250)),
+    excerpt: rawExcerpt.substring(0, 250),
   };
 
   return (
