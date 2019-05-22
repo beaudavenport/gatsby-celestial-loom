@@ -12,7 +12,7 @@ const EventsArchive = () => (
        query {
          allMarkdownRemark(
            filter: { frontmatter: { type: { eq: "events"} } },
-           sort: { fields: [frontmatter___publishDate], order: DESC }
+           sort: { fields: [frontmatter___eventDate], order: ASC }
          ) {
            totalCount
            edges {
