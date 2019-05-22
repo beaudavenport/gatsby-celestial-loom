@@ -9,7 +9,7 @@ title: Moon Circle
 subtitle: Gemini NEW MOON Celebration
 location: Divine Inspirations
 mapsLink: 'https://goo.gl/maps/MCzF4v3UguEXhmeq6'
-eventPrice: 1
+eventPrice: 25
 publishDate: 2019-05-21T04:18:40.836Z
 ---
 Join us for a Goddess GEMINI Moon (12 Gemini) celebration at our sacred MOON CIRCLE.  We will explore the making "connections" lunar unfolding in June, learn about the "Lights Mandala" and apply our personal chart Lunar Planner to our monthly timing.
