@@ -3,7 +3,7 @@ templateKey: blogTemplate
 type: blog
 publishDate: '2019-05-23T02:32:01-05:00'
 title: NORWAC - I AM ON MY WAY
-image: /assets/norwac-on-my-way.jpg
+image: /assets/cancer-norwac.jpg
 relatedItems:
   - Cancer
   - Gemini
