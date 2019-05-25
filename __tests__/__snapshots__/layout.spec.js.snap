@@ -1,0 +1,165 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout should render correctly with no children 1`] = `
+<div>
+  <header
+    className="md-paper md-paper--2 md-toolbar md-background--primary md-toolbar--text-white md-toolbar--fixed"
+    style={
+      Object {
+        "backgroundColor": "rgb(47, 47, 47)",
+      }
+    }
+  >
+    <button
+      className="md-btn md-btn--icon md-pointer--hover md-inline-block md-btn--toolbar md-toolbar--action-left"
+      disabled={false}
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchStart={[Function]}
+      type="button"
+    >
+      <div
+        className="md-ink-container"
+      />
+      <i
+        className="md-icon material-icons md-text--inherit"
+      >
+        menu
+      </i>
+    </button>
+    <div
+      className="md-cell--right md-toolbar--action-right"
+    >
+      <div
+        className="md-btn--toolbar header-icons-container"
+      >
+        <div
+          className="header-search-container"
+        >
+          <button
+            className="md-btn md-pointer--hover md-text md-inline-block"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchStart={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "display": "flex",
+              }
+            }
+            type="button"
+          >
+            <div
+              className="md-ink-container"
+            />
+            <div
+              className="md-badge-container md-inline-block"
+            >
+              <i
+                className="md-icon material-icons"
+                style={
+                  Object {
+                    "fontSize": "2rem",
+                  }
+                }
+              >
+                shopping_cart
+              </i>
+            </div>
+          </button>
+        </div>
+        <div
+          className="header-search-container"
+        >
+          <button
+            className="md-btn md-pointer--hover md-text md-inline-block"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchStart={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "display": "flex",
+              }
+            }
+            type="button"
+          >
+            <div
+              className="md-ink-container"
+            />
+            <i
+              className="md-icon material-icons"
+              style={
+                Object {
+                  "fontSize": "2rem",
+                }
+              }
+            >
+              search
+            </i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main
+    className="md-navigation-drawer-content md-navigation-drawer-content--inactive md-transition--acceleration md-toolbar-relative"
+    id="main-content"
+    tabIndex={-1}
+  >
+    <div
+      className="md-grid md-grid--no-spacing"
+      style={
+        Object {
+          "maxWidth": 1100,
+        }
+      }
+    >
+      <div
+        className="md-cell md-cell--8 main-contents"
+      />
+      <div
+        className="md-cell md-cell--4 md-cell--8-tablet sidebar-contents"
+      />
+    </div>
+    <div
+      style={
+        Object {
+          "backgroundColor": "rgb(47, 47, 47)",
+          "padding": 30,
+        }
+      }
+    >
+      <h6
+        style={
+          Object {
+            "color": "white",
+            "marginBottom": 0,
+            "textAlign": "center",
+          }
+        }
+      >
+        Copyright 2019, The Celestial Loom. Cover photography by Photo by Anastasia Dulgier on Unsplash. Built with Gatsby and Netflify CMS.
+      </h6>
+    </div>
+  </main>
+</div>
+`;
