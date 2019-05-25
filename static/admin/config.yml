@@ -72,4 +72,5 @@ collections:
       - { name: 'title', label: 'Title' }
       - { name: 'type', label: 'type', widget: 'hidden', default: 'toolbox'}
       - { name: 'toolboxType', label: 'Type', widget: 'select', options: ['Signs', 'Planets', 'Houses']}
+      - { name: 'order', label: 'Order in List (Signs, Planets, Houses)', widget: 'number', default: 1 }
       - { name: 'body', label: 'Body', widget: 'markdown' }
