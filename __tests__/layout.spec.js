@@ -4,6 +4,8 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 
 import Layout from '../src/components/Layout';
+import site from '../__fixtures__/site';
+import siteSearchIndex from '../__fixtures__/siteSearchIndex';
 
 beforeEach(() => {
   global.window.matchMedia = jest.fn().mockImplementation(query => ({
@@ -15,14 +17,8 @@ beforeEach(() => {
   }));
 
   StaticQuery.mockImplementation(({ render }) => render({
-    site: {
-      siteMetadata: {
-        title: 'The Celestial Loom',
-      },
-    },
-    siteSearchIndex: {
-      index: null,
-    },
+    ...site,
+    ...siteSearchIndex,
   }));
 });
 

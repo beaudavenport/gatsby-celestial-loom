@@ -1,0 +1,588 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Blog Template should render correctly with posts archive, blog page and SEO component 1`] = `
+<div>
+  <header
+    className="md-paper md-paper--2 md-toolbar md-background--primary md-toolbar--text-white md-toolbar--fixed"
+    style={
+      Object {
+        "backgroundColor": "rgb(47, 47, 47)",
+      }
+    }
+  >
+    <button
+      className="md-btn md-btn--icon md-pointer--hover md-inline-block md-btn--toolbar md-toolbar--action-left"
+      disabled={false}
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchStart={[Function]}
+      type="button"
+    >
+      <div
+        className="md-ink-container"
+      />
+      <i
+        className="md-icon material-icons md-text--inherit"
+      >
+        menu
+      </i>
+    </button>
+    <h2
+      className="md-title md-title--toolbar"
+      style={
+        Object {
+          "fontFamily": "Berkshire Swash",
+          "fontStyle": "italic",
+        }
+      }
+    >
+      Posts
+    </h2>
+    <div
+      className="md-cell--right md-toolbar--action-right"
+    >
+      <div
+        className="md-btn--toolbar header-icons-container"
+      >
+        <div
+          className="header-search-container"
+        >
+          <button
+            className="md-btn md-pointer--hover md-text md-inline-block"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchStart={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "display": "flex",
+              }
+            }
+            type="button"
+          >
+            <div
+              className="md-ink-container"
+            />
+            <div
+              className="md-badge-container md-inline-block"
+            >
+              <i
+                className="md-icon material-icons"
+                style={
+                  Object {
+                    "fontSize": "2rem",
+                  }
+                }
+              >
+                shopping_cart
+              </i>
+            </div>
+          </button>
+        </div>
+        <div
+          className="header-search-container"
+        >
+          <button
+            className="md-btn md-pointer--hover md-text md-inline-block"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchStart={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "display": "flex",
+              }
+            }
+            type="button"
+          >
+            <div
+              className="md-ink-container"
+            />
+            <i
+              className="md-icon material-icons"
+              style={
+                Object {
+                  "fontSize": "2rem",
+                }
+              }
+            >
+              search
+            </i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main
+    className="md-navigation-drawer-content md-navigation-drawer-content--inactive md-transition--acceleration md-toolbar-relative"
+    id="main-content"
+    tabIndex={-1}
+  >
+    <div
+      className="md-grid md-grid--no-spacing"
+      style={
+        Object {
+          "maxWidth": 1100,
+        }
+      }
+    >
+      <div
+        className="md-cell md-cell--8 main-contents"
+      >
+        <div
+          className="link--container false"
+        >
+          <a
+            href="/posts"
+            style={
+              Object {
+                "textDecoration": "none",
+              }
+            }
+          >
+            <div
+              className="touchable-link "
+              style={Object {}}
+            >
+              <div
+                className="md-ink-container"
+              />
+              <div
+                className="flex-center"
+              >
+                <i
+                  className="md-icon material-icons"
+                  style={
+                    Object {
+                      "color": "#ec6602",
+                      "fontSize": "2rem",
+                      "marginRight": 5,
+                    }
+                  }
+                >
+                  arrow_back
+                </i>
+                <p
+                  className="back-title"
+                >
+                  All Posts
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div
+          style={
+            Object {
+              "padding": "20px 10px",
+            }
+          }
+        >
+          <h2
+            style={
+              Object {
+                "fontWeight": "bold",
+                "marginBottom": 5,
+              }
+            }
+          >
+            NORWAC - I AM ON MY WAY
+          </h2>
+          <h3
+            style={
+              Object {
+                "color": "rgba(0, 0, 0, 0.54)",
+                "fontSize": "1.1rem",
+                "marginBottom": 20,
+              }
+            }
+          >
+            May 23, 2019
+          </h3>
+          <div
+            style={
+              Object {
+                "margin": "0 auto",
+                "maxWidth": 400,
+              }
+            }
+          >
+            <img
+              alt="post"
+              src="/assets/cancer-norwac.jpg"
+              style={
+                Object {
+                  "margin": "0 auto",
+                  "objectFit": "cover",
+                  "width": "100%",
+                }
+              }
+            />
+          </div>
+          <div
+            style={
+              Object {
+                "padding": 20,
+              }
+            }
+          >
+            <p
+              style={
+                Object {
+                  "color": "#ec6602",
+                  "fontWeight": "bold",
+                }
+              }
+            >
+              Mentioned in this post:
+            </p>
+            <div
+              style={
+                Object {
+                  "display": "flex",
+                  "flexWrap": 1,
+                  "justifyContent": "flex-start",
+                }
+              }
+            >
+              <button
+                className="md-chip md-chip--avatar"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                style={
+                  Object {
+                    "cursor": "pointer",
+                    "margin": 10,
+                  }
+                }
+                type="button"
+              >
+                <div
+                  className="md-inline-block md-avatar md-avatar--default md-avatar--icon-sized"
+                >
+                  <div
+                    className="md-avatar-content"
+                  >
+                    <span
+                      style={
+                        Object {
+                          "fontFamily": "AstroGadget",
+                        }
+                      }
+                    >
+                      b
+                    </span>
+                  </div>
+                </div>
+                <span
+                  className="md-chip-text"
+                >
+                  Taurus
+                </span>
+              </button>
+              <button
+                className="md-chip md-chip--avatar"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                style={
+                  Object {
+                    "cursor": "pointer",
+                    "margin": 10,
+                  }
+                }
+                type="button"
+              >
+                <div
+                  className="md-inline-block md-avatar md-avatar--default md-avatar--icon-sized"
+                >
+                  <div
+                    className="md-avatar-content"
+                  >
+                    <span
+                      style={
+                        Object {
+                          "fontFamily": "AstroGadget",
+                        }
+                      }
+                    >
+                      1
+                    </span>
+                  </div>
+                </div>
+                <span
+                  className="md-chip-text"
+                >
+                  First House
+                </span>
+              </button>
+            </div>
+          </div>
+          <section
+            className="md-card-text"
+          >
+            <div
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<p>I'm on my way to NORWAC - an astrological convention in Seattle, WA</p>",
+                }
+              }
+            />
+          </section>
+        </div>
+      </div>
+      <div
+        className="md-cell md-cell--4 md-cell--8-tablet sidebar-contents"
+      >
+        <div
+          style={
+            Object {
+              "marginBottom": 30,
+              "marginTop": 20,
+            }
+          }
+        >
+          <div
+            className="sidebar-header"
+          >
+            <h5
+              className="sidebar-header--title"
+            >
+              Post Archives
+            </h5>
+          </div>
+          <div>
+            <ul
+              className="md-list"
+            >
+              <div>
+                <li
+                  className="md-list-item md-list-item--nested-container"
+                  style={Object {}}
+                >
+                  <div
+                    aria-expanded={false}
+                    aria-pressed={false}
+                    className="md-fake-btn md-pointer--hover md-fake-btn--no-outline md-list-tile md-list-tile--two-lines md-text"
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyUp={[Function]}
+                    onMouseLeave={[Function]}
+                    onMouseOver={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchStart={[Function]}
+                    role="button"
+                    tabIndex={0}
+                  >
+                    <div
+                      className="md-ink-container"
+                    />
+                    <div
+                      className="md-tile-content"
+                    >
+                      <div
+                        className="md-tile-text--primary md-text"
+                        style={
+                          Object {
+                            "fontWeight": "bold",
+                          }
+                        }
+                      >
+                        May 2019
+                      </div>
+                      <div
+                        className="md-tile-text--secondary md-text--secondary"
+                        style={
+                          Object {
+                            "fontWeight": "bold",
+                          }
+                        }
+                      >
+                        2 entries
+                      </div>
+                    </div>
+                    <div
+                      className="md-tile-addon md-tile-addon--icon"
+                    >
+                      <i
+                        className="md-icon material-icons md-collapser"
+                      >
+                        keyboard_arrow_down
+                      </i>
+                    </div>
+                  </div>
+                </li>
+              </div>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div
+            className="sidebar-header"
+          >
+            <h5
+              className="sidebar-header--title"
+            >
+              Latest Updates
+            </h5>
+          </div>
+          <div
+            style={
+              Object {
+                "padding": 10,
+              }
+            }
+          >
+            <a
+              href="/events/moon-circle/"
+              style={
+                Object {
+                  "textDecoration": "none",
+                }
+              }
+            >
+              <div
+                className="touchable-link thumbnail-card"
+                style={Object {}}
+              >
+                <div
+                  className="md-ink-container"
+                />
+                <div
+                  className="thumbnail-image"
+                  style={
+                    Object {
+                      "backgroundImage": "url(/assets/gemini-moon-circle.jpg)",
+                    }
+                  }
+                />
+                <div
+                  className="thumbnail-text"
+                >
+                  <p
+                    className="thumbnail-text--subtitle"
+                    style={
+                      Object {
+                        "color": "#ec6602",
+                        "fontSize": "1rem",
+                      }
+                    }
+                  >
+                    Thursday, May 30
+                  </p>
+                  <p
+                    className="thumbnail-text--title"
+                  >
+                    Moon Circle
+                  </p>
+                  <p
+                    className="thumbnail-text--subtitle"
+                  >
+                    Divine Inspirations • 7 PM - 9 PM
+                  </p>
+                  <p
+                    className="thumbnail-text--subtitle"
+                  />
+                </div>
+              </div>
+            </a>
+            <a
+              href="/events/stones-of-fire/"
+              style={
+                Object {
+                  "textDecoration": "none",
+                }
+              }
+            >
+              <div
+                className="touchable-link thumbnail-card"
+                style={Object {}}
+              >
+                <div
+                  className="md-ink-container"
+                />
+                <div
+                  className="thumbnail-image"
+                  style={
+                    Object {
+                      "backgroundImage": "url(/assets/stones-of-fire-lotus.jpg)",
+                    }
+                  }
+                />
+                <div
+                  className="thumbnail-text"
+                >
+                  <p
+                    className="thumbnail-text--subtitle"
+                    style={
+                      Object {
+                        "color": "#ec6602",
+                        "fontSize": "1rem",
+                      }
+                    }
+                  >
+                    Saturday, Jun 08
+                  </p>
+                  <p
+                    className="thumbnail-text--title"
+                  >
+                    STONES OF FIRE
+                  </p>
+                  <p
+                    className="thumbnail-text--subtitle"
+                  >
+                    DeMun Healing • 1PM - 4 PM
+                  </p>
+                  <p
+                    className="thumbnail-text--subtitle"
+                  />
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "backgroundColor": "rgb(47, 47, 47)",
+          "padding": 30,
+        }
+      }
+    >
+      <h6
+        style={
+          Object {
+            "color": "white",
+            "marginBottom": 0,
+            "textAlign": "center",
+          }
+        }
+      >
+        Copyright 2019, The Celestial Loom. Cover photography by Photo by Anastasia Dulgier on Unsplash. Built with Gatsby and Netflify CMS.
+      </h6>
+    </div>
+  </main>
+</div>
+`;
