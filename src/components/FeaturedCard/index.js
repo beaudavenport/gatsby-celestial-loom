@@ -33,7 +33,7 @@ const FeaturedCard = ({
     { relatedItemChips && (
     <div style={{ padding: 10 }}>
       <p style={{ color: '#ec6602', fontWeight: 'bold' }}>Mentioned in this post:</p>
-      <div style={{ display: 'flex', justifyContent: 'flex-start', flexWrap: 1 }}>
+      <div style={{ display: 'flex', justifyContent: 'flex-start', flexWrap: 'wrap' }}>
         {relatedItemChips}
       </div>
     </div>
