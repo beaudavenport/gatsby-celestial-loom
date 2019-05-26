@@ -7,11 +7,14 @@ import BlogEntry from '../components/BlogEntry';
 import Layout from '../components/Layout';
 import PostsArchive from '../components/PostsArchive';
 import RelatedItemChipList from '../components/RelatedItemChipList';
+import SEO from '../components/SEO';
 import SidebarContents from '../components/SidebarContents';
 
 export default function BlogTemplate({ data }) {
   const { markdownRemark } = data; // data.markdownRemark holds our post data
-  const { frontmatter, html } = markdownRemark;
+  const {
+    frontmatter, html, description, fields,
+  } = markdownRemark;
 
   return (
     <Layout
@@ -23,6 +26,13 @@ export default function BlogTemplate({ data }) {
         </Fragment>
       )}
     >
+      <SEO
+        title={frontmatter.title}
+        description={description || ''}
+        image={frontmatter.image}
+        pathname={fields.slug}
+        article
+      />
       <BackLink to="/posts" title="All Posts" />
       <BlogEntry
         title={frontmatter.title}
@@ -48,6 +58,10 @@ export const pageQuery = graphql`
         title
         image
         relatedItems
+      }
+      description: excerpt(pruneLength: 130)
+      fields {
+        slug
       }
     }
   }

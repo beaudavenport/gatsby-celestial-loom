@@ -1,6 +1,11 @@
 module.exports = {
   siteMetadata: {
     title: 'The Celestial Loom',
+    titleTemplate: '%s | The Celestial Loom',
+    description: 'Nikki Davenport, Astrological Consultant, weaves timeless wisdom with modern service.',
+    url: 'celestialloomastrology.com',
+    image: 'assets/2019-cosmic-preview.jpg',
+    twitterUsername: 'nikiastro',
   },
   plugins: [
     'gatsby-plugin-sass',

@@ -258,7 +258,7 @@ exports[`Blog Template should render correctly with posts archive, blog page and
               style={
                 Object {
                   "display": "flex",
-                  "flexWrap": 1,
+                  "flexWrap": "wrap",
                   "justifyContent": "flex-start",
                 }
               }
