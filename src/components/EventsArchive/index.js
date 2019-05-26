@@ -36,6 +36,7 @@ const EventsArchive = () => (
      `}
 
     render={(data) => {
+      console.log('events archive: ', JSON.stringify(data));
       const nodes = data.allMarkdownRemark.edges.map(edge => edge.node);
       const monthAndYears = uniq(nodes.map(node => node.frontmatter.eventMonthAndYear));
       const sections = monthAndYears.map((monthAndYear) => {

@@ -36,6 +36,7 @@ const ServicesArchive = () => (
     `}
 
     render={(data) => {
+      console.log('services archive: ', JSON.stringify(data));
       const nodes = data.allMarkdownRemark.edges.map(edge => edge.node);
       const origins = uniq(nodes.map(node => node.frontmatter.origin));
       const sections = origins.map((origin) => {

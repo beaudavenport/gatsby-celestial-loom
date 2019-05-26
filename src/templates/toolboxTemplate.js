@@ -11,6 +11,7 @@ import ToolboxPage from '../components/ToolboxPage';
 function ToolboxTemplate({
   data, // this prop will be injected by the GraphQL query below.
 }) {
+  console.log('toolbox template: ', JSON.stringify(data));
   const { markdownRemark, blog, events } = data;
   const blogNodes = blog.edges.map(edge => edge.node)
     .filter((node) => {

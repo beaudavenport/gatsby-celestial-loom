@@ -1,0 +1,654 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Event Template should render correctly with events archive, event page 1`] = `
+<div>
+  <header
+    className="md-paper md-paper--2 md-toolbar md-background--primary md-toolbar--text-white md-toolbar--fixed"
+    style={
+      Object {
+        "backgroundColor": "rgb(47, 47, 47)",
+      }
+    }
+  >
+    <button
+      className="md-btn md-btn--icon md-pointer--hover md-inline-block md-btn--toolbar md-toolbar--action-left"
+      disabled={false}
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchStart={[Function]}
+      type="button"
+    >
+      <div
+        className="md-ink-container"
+      />
+      <i
+        className="md-icon material-icons md-text--inherit"
+      >
+        menu
+      </i>
+    </button>
+    <h2
+      className="md-title md-title--toolbar"
+      style={
+        Object {
+          "fontFamily": "Berkshire Swash",
+          "fontStyle": "italic",
+        }
+      }
+    >
+      Events
+    </h2>
+    <div
+      className="md-cell--right md-toolbar--action-right"
+    >
+      <div
+        className="md-btn--toolbar header-icons-container"
+      >
+        <div
+          className="header-search-container"
+        >
+          <button
+            className="md-btn md-pointer--hover md-text md-inline-block"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchStart={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "display": "flex",
+              }
+            }
+            type="button"
+          >
+            <div
+              className="md-ink-container"
+            />
+            <div
+              className="md-badge-container md-inline-block"
+            >
+              <i
+                className="md-icon material-icons"
+                style={
+                  Object {
+                    "fontSize": "2rem",
+                  }
+                }
+              >
+                shopping_cart
+              </i>
+            </div>
+          </button>
+        </div>
+        <div
+          className="header-search-container"
+        >
+          <button
+            className="md-btn md-pointer--hover md-text md-inline-block"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchStart={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "display": "flex",
+              }
+            }
+            type="button"
+          >
+            <div
+              className="md-ink-container"
+            />
+            <i
+              className="md-icon material-icons"
+              style={
+                Object {
+                  "fontSize": "2rem",
+                }
+              }
+            >
+              search
+            </i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main
+    className="md-navigation-drawer-content md-navigation-drawer-content--inactive md-transition--acceleration md-toolbar-relative"
+    id="main-content"
+    tabIndex={-1}
+  >
+    <div
+      className="md-grid md-grid--no-spacing"
+      style={
+        Object {
+          "maxWidth": 1100,
+        }
+      }
+    >
+      <div
+        className="md-cell md-cell--8 main-contents"
+      >
+        <div
+          className="link--container false"
+        >
+          <a
+            href="/events"
+            style={
+              Object {
+                "textDecoration": "none",
+              }
+            }
+          >
+            <div
+              className="touchable-link "
+              style={Object {}}
+            >
+              <div
+                className="md-ink-container"
+              />
+              <div
+                className="flex-center"
+              >
+                <i
+                  className="md-icon material-icons"
+                  style={
+                    Object {
+                      "color": "#ec6602",
+                      "fontSize": "2rem",
+                      "marginRight": 5,
+                    }
+                  }
+                >
+                  arrow_back
+                </i>
+                <p
+                  className="back-title"
+                >
+                  All Events
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div
+          style={
+            Object {
+              "padding": 20,
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "marginBottom": 30,
+                "textAlign": "center",
+              }
+            }
+          >
+            <h2
+              className="title"
+            >
+              Moon Circle
+            </h2>
+            <h4
+              className="subtitle"
+            >
+              Gemini NEW MOON Celebration
+            </h4>
+          </div>
+          <div
+            style={
+              Object {
+                "margin": "0 auto",
+                "maxWidth": 400,
+              }
+            }
+          >
+            <img
+              alt="event-page"
+              src="/assets/gemini-moon-circle.jpg"
+              style={
+                Object {
+                  "margin": "0 auto",
+                  "objectFit": "cover",
+                  "width": "100%",
+                }
+              }
+            />
+          </div>
+          <div
+            style={
+              Object {
+                "margin": "0 auto",
+                "maxWidth": "500px",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "alignItems": "center",
+                  "display": "flex",
+                  "flexDirection": "column",
+                  "padding": 10,
+                }
+              }
+            >
+              <div
+                className="event-detail"
+              >
+                <i
+                  className="md-icon material-icons"
+                  style={
+                    Object {
+                      "marginRight": 5,
+                    }
+                  }
+                >
+                  place
+                </i>
+                <a
+                  href="https://goo.gl/maps/MCzF4v3UguEXhmeq6"
+                >
+                  Divine Inspirations
+                </a>
+              </div>
+              <div
+                className="event-detail"
+              >
+                <i
+                  className="md-icon material-icons"
+                  style={
+                    Object {
+                      "marginRight": 5,
+                    }
+                  }
+                >
+                  event
+                </i>
+                <p
+                  style={
+                    Object {
+                      "fontSize": "1.1rem",
+                    }
+                  }
+                >
+                  May 30, 2019 • 7 PM - 9 PM
+                </p>
+              </div>
+            </div>
+            <div
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<p>Join us for a Goddess GEMINI Moon (12 Gemini) celebration at our sacred MOON CIRCLE.  We will explore the making \\"connections\\" lunar unfolding in June, learn about the \\"Lights Mandala\\" and apply our personal chart Lunar Planner to our monthly timing.</p>",
+                }
+              }
+              style={
+                Object {
+                  "border": "1px solid rgba(15,70,100,.12)",
+                  "borderRadius": 5,
+                  "padding": 20,
+                }
+              }
+            />
+            <div
+              className="event-signup"
+            >
+              <div>
+                <p
+                  className="event-signup--price-description"
+                >
+                  2 Hour Playshop
+                </p>
+                <p
+                  className="event-signup--price"
+                >
+                  $25.00
+                </p>
+              </div>
+              <button
+                className="md-btn md-btn--raised md-btn--text md-pointer--hover md-background--primary md-background--primary-hover md-inline-block snipcart-add-item"
+                data-item-custom1-name="Name*"
+                data-item-custom1-required="true"
+                data-item-custom2-name="Month of Birth*"
+                data-item-custom2-required="true"
+                data-item-custom3-name="Day of Birth*"
+                data-item-custom3-required="true"
+                data-item-custom4-name="Year of Birth*"
+                data-item-custom4-required="true"
+                data-item-custom5-name="Time of Birth, if known"
+                data-item-custom5-required="false"
+                data-item-custom6-name="Birth Location (City, State, Country), if known"
+                data-item-custom6-required="false"
+                data-item-description="Event Sign-Up"
+                data-item-id="/events/moon-circle/"
+                data-item-name="Moon Circle"
+                data-item-price={25}
+                data-item-url="/events/moon-circle/"
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchStart={[Function]}
+                type="button"
+              >
+                <div
+                  className="md-ink-container"
+                />
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="md-cell md-cell--4 md-cell--8-tablet sidebar-contents"
+      >
+        <div
+          style={
+            Object {
+              "marginBottom": 30,
+              "marginTop": 20,
+            }
+          }
+        >
+          <div
+            className="sidebar-header"
+          >
+            <h5
+              className="sidebar-header--title"
+            >
+              Events Calendar
+            </h5>
+          </div>
+          <div>
+            <ul
+              className="md-list"
+            >
+              <div>
+                <li
+                  className="md-list-item md-list-item--nested-container"
+                  style={Object {}}
+                >
+                  <div
+                    aria-expanded={false}
+                    aria-pressed={false}
+                    className="md-fake-btn md-pointer--hover md-fake-btn--no-outline md-list-tile md-list-tile--two-lines md-text"
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyUp={[Function]}
+                    onMouseLeave={[Function]}
+                    onMouseOver={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchStart={[Function]}
+                    role="button"
+                    tabIndex={0}
+                  >
+                    <div
+                      className="md-ink-container"
+                    />
+                    <div
+                      className="md-tile-content"
+                    >
+                      <div
+                        className="md-tile-text--primary md-text"
+                        style={
+                          Object {
+                            "fontWeight": "bold",
+                          }
+                        }
+                      >
+                        May 2019
+                      </div>
+                      <div
+                        className="md-tile-text--secondary md-text--secondary"
+                        style={
+                          Object {
+                            "fontWeight": "bold",
+                          }
+                        }
+                      >
+                        1 events
+                      </div>
+                    </div>
+                    <div
+                      className="md-tile-addon md-tile-addon--icon"
+                    >
+                      <i
+                        className="md-icon material-icons md-collapser"
+                      >
+                        keyboard_arrow_down
+                      </i>
+                    </div>
+                  </div>
+                </li>
+              </div>
+              <div>
+                <li
+                  className="md-list-item md-list-item--nested-container"
+                  style={Object {}}
+                >
+                  <div
+                    aria-expanded={false}
+                    aria-pressed={false}
+                    className="md-fake-btn md-pointer--hover md-fake-btn--no-outline md-list-tile md-list-tile--two-lines md-text"
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyUp={[Function]}
+                    onMouseLeave={[Function]}
+                    onMouseOver={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchStart={[Function]}
+                    role="button"
+                    tabIndex={0}
+                  >
+                    <div
+                      className="md-ink-container"
+                    />
+                    <div
+                      className="md-tile-content"
+                    >
+                      <div
+                        className="md-tile-text--primary md-text"
+                        style={
+                          Object {
+                            "fontWeight": "bold",
+                          }
+                        }
+                      >
+                        June 2019
+                      </div>
+                      <div
+                        className="md-tile-text--secondary md-text--secondary"
+                        style={
+                          Object {
+                            "fontWeight": "bold",
+                          }
+                        }
+                      >
+                        1 events
+                      </div>
+                    </div>
+                    <div
+                      className="md-tile-addon md-tile-addon--icon"
+                    >
+                      <i
+                        className="md-icon material-icons md-collapser"
+                      >
+                        keyboard_arrow_down
+                      </i>
+                    </div>
+                  </div>
+                </li>
+              </div>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div
+            className="sidebar-header"
+          >
+            <h5
+              className="sidebar-header--title"
+            >
+              Latest Updates
+            </h5>
+          </div>
+          <div
+            style={
+              Object {
+                "padding": 10,
+              }
+            }
+          >
+            <a
+              href="/blog/norwac-i-am-on-my-way/"
+              style={
+                Object {
+                  "textDecoration": "none",
+                }
+              }
+            >
+              <div
+                className="touchable-link thumbnail-card"
+                style={Object {}}
+              >
+                <div
+                  className="md-ink-container"
+                />
+                <div
+                  className="thumbnail-image"
+                  style={
+                    Object {
+                      "backgroundImage": "url(/assets/cancer-norwac.jpg)",
+                    }
+                  }
+                />
+                <div
+                  className="thumbnail-text"
+                >
+                  <p
+                    className="thumbnail-text--title"
+                  >
+                    NORWAC - I AM ON MY WAY
+                  </p>
+                  <p
+                    className="thumbnail-text--subtitle"
+                  >
+                    Posted on:
+                     
+                    <span
+                      style={
+                        Object {
+                          "color": "rgba(0, 0, 0, 0.87)",
+                          "fontWeight": "bold",
+                        }
+                      }
+                    >
+                      May 23, 2019
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </a>
+            <a
+              href="/blog/the-pleiades/"
+              style={
+                Object {
+                  "textDecoration": "none",
+                }
+              }
+            >
+              <div
+                className="touchable-link thumbnail-card"
+                style={Object {}}
+              >
+                <div
+                  className="md-ink-container"
+                />
+                <div
+                  className="thumbnail-image"
+                  style={
+                    Object {
+                      "backgroundImage": "url(/assets/pleiades.jpg)",
+                    }
+                  }
+                />
+                <div
+                  className="thumbnail-text"
+                >
+                  <p
+                    className="thumbnail-text--title"
+                  >
+                    The Pleiades
+                  </p>
+                  <p
+                    className="thumbnail-text--subtitle"
+                  >
+                    Posted on:
+                     
+                    <span
+                      style={
+                        Object {
+                          "color": "rgba(0, 0, 0, 0.87)",
+                          "fontWeight": "bold",
+                        }
+                      }
+                    >
+                      May 21, 2019
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "backgroundColor": "rgb(47, 47, 47)",
+          "padding": 30,
+        }
+      }
+    >
+      <h6
+        style={
+          Object {
+            "color": "white",
+            "marginBottom": 0,
+            "textAlign": "center",
+          }
+        }
+      >
+        Copyright 2019, The Celestial Loom. Cover photography by Photo by Anastasia Dulgier on Unsplash. Built with Gatsby and Netflify CMS.
+      </h6>
+    </div>
+  </main>
+</div>
+`;
