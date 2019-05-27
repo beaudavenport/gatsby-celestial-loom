@@ -13,10 +13,16 @@ function ServiceTemplate({
   data, // this prop will be injected by the GraphQL query below.
 }) {
   const { markdownRemark } = data; // data.markdownRemark holds our post data
-  const { frontmatter, html, fields } = markdownRemark;
+  const {
+    frontmatter, html, fields, description,
+  } = markdownRemark;
   return (
     <Layout
       title="Services"
+      seoTitle={frontmatter.title}
+      seoDescription={description || ''}
+      seoImage={frontmatter.image}
+      seoPathname={fields.slug}
       sidebarChildren={(
         <Fragment>
           <ServicesArchive />
@@ -56,6 +62,7 @@ export const pageQuery = graphql`
       fields {
         slug
       }
+      description: excerpt(pruneLength: 130)
     }
   }
 `;

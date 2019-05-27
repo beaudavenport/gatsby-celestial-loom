@@ -24,10 +24,16 @@ function ToolboxTemplate({
       return relatedItems && relatedItems.includes(markdownRemark.frontmatter.title);
     })
     .slice(0, 10);
-  const { frontmatter, html } = markdownRemark;
+  const {
+    frontmatter, html, fields, description,
+  } = markdownRemark;
   return (
     <Layout
       title="Astro Toolbox"
+      seoTitle={frontmatter.title}
+      seoDescription={description || ''}
+      seoImage={frontmatter.image}
+      seoPathname={fields.slug}
       sidebarChildren={(
         <Fragment>
           <ToolboxArchive />
@@ -64,6 +70,7 @@ export const pageQuery = graphql`
       fields {
         slug
       }
+      description: excerpt(pruneLength: 130)
     }
     blog: allMarkdownRemark(
       filter: { frontmatter: { type: { eq: "blog"} } },

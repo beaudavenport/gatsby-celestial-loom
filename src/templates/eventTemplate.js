@@ -12,10 +12,16 @@ function EventTemplate({
   data, // this prop will be injected by the GraphQL query below.
 }) {
   const { markdownRemark } = data; // data.markdownRemark holds our post data
-  const { frontmatter, html, fields } = markdownRemark;
+  const {
+    frontmatter, html, fields, description,
+  } = markdownRemark;
   return (
     <Layout
       title="Events"
+      seoTitle={frontmatter.title}
+      seoDescription={description || ''}
+      seoImage={frontmatter.image}
+      seoPathname={fields.slug}
       sidebarChildren={(
         <Fragment>
           <EventsArchive />
@@ -65,6 +71,7 @@ export const pageQuery = graphql`
       fields {
         slug
       }
+      description: excerpt(pruneLength: 130)
     }
   }
 `;

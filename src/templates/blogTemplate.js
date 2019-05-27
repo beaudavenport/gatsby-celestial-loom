@@ -7,7 +7,6 @@ import BlogEntry from '../components/BlogEntry';
 import Layout from '../components/Layout';
 import PostsArchive from '../components/PostsArchive';
 import RelatedItemChipList from '../components/RelatedItemChipList';
-import SEO from '../components/SEO';
 import SidebarContents from '../components/SidebarContents';
 
 export default function BlogTemplate({ data }) {
@@ -19,6 +18,11 @@ export default function BlogTemplate({ data }) {
   return (
     <Layout
       title="Posts"
+      seoTitle={frontmatter.title}
+      seoDescription={description || ''}
+      seoImage={frontmatter.image}
+      seoPathname={fields.slug}
+      isArticle
       sidebarChildren={(
         <Fragment>
           <PostsArchive />
@@ -26,13 +30,6 @@ export default function BlogTemplate({ data }) {
         </Fragment>
       )}
     >
-      <SEO
-        title={frontmatter.title}
-        description={description || ''}
-        image={frontmatter.image}
-        pathname={fields.slug}
-        article
-      />
       <BackLink to="/posts" title="All Posts" />
       <BlogEntry
         title={frontmatter.title}

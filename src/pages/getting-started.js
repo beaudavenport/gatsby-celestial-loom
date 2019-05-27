@@ -32,6 +32,9 @@ const GettingStarted = ({ data }) => {
   return (
     <Layout
       title="Getting Started"
+      seoTitle="Getting Started"
+      seoDescription="New to Astrology? Here's how to get started:"
+      seoPathname="/getting-started"
       sidebarChildren={(
         <Fragment>
           <SidebarHeader title="Learn More" />
