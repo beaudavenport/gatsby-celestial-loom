@@ -12,7 +12,6 @@ import SidebarContents from '../components/SidebarContents';
 function ServiceTemplate({
   data, // this prop will be injected by the GraphQL query below.
 }) {
-  console.log('service template: ', JSON.stringify(data));
   const { markdownRemark } = data; // data.markdownRemark holds our post data
   const { frontmatter, html, fields } = markdownRemark;
   return (

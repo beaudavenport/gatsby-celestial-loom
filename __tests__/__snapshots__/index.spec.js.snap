@@ -1,0 +1,1262 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IndexPage should render correctly with posts, events, and services 1`] = `
+<div>
+  <header
+    className="md-paper md-paper--2 md-toolbar md-background--primary md-toolbar--text-white md-toolbar--fixed"
+    style={
+      Object {
+        "backgroundColor": "rgb(47, 47, 47)",
+      }
+    }
+  >
+    <button
+      className="md-btn md-btn--icon md-pointer--hover md-inline-block md-btn--toolbar md-toolbar--action-left"
+      disabled={false}
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchStart={[Function]}
+      type="button"
+    >
+      <div
+        className="md-ink-container"
+      />
+      <i
+        className="md-icon material-icons md-text--inherit"
+      >
+        menu
+      </i>
+    </button>
+    <h2
+      className="md-title md-title--toolbar"
+      style={
+        Object {
+          "fontFamily": "Berkshire Swash",
+          "fontStyle": "italic",
+        }
+      }
+    >
+      Home
+    </h2>
+    <div
+      className="md-cell--right md-toolbar--action-right"
+    >
+      <div
+        className="md-btn--toolbar header-icons-container"
+      >
+        <div
+          className="header-search-container"
+        >
+          <button
+            className="md-btn md-pointer--hover md-text md-inline-block"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchStart={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "display": "flex",
+              }
+            }
+            type="button"
+          >
+            <div
+              className="md-ink-container"
+            />
+            <div
+              className="md-badge-container md-inline-block"
+            >
+              <i
+                className="md-icon material-icons"
+                style={
+                  Object {
+                    "fontSize": "2rem",
+                  }
+                }
+              >
+                shopping_cart
+              </i>
+            </div>
+          </button>
+        </div>
+        <div
+          className="header-search-container"
+        >
+          <button
+            className="md-btn md-pointer--hover md-text md-inline-block"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchStart={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "display": "flex",
+              }
+            }
+            type="button"
+          >
+            <div
+              className="md-ink-container"
+            />
+            <i
+              className="md-icon material-icons"
+              style={
+                Object {
+                  "fontSize": "2rem",
+                }
+              }
+            >
+              search
+            </i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main
+    className="md-navigation-drawer-content md-navigation-drawer-content--inactive md-transition--acceleration md-toolbar-relative"
+    id="main-content"
+    tabIndex={-1}
+  >
+    <div
+      className="md-paper md-paper--0"
+      style={
+        Object {
+          "background": "url(File contents (usually images))",
+          "backgroundPosition": "center",
+          "backgroundSize": "cover",
+          "display": "flex",
+          "flexDirection": "column",
+          "justifyContent": "space-between",
+          "marginBottom": 10,
+          "padding": "25px 0",
+          "width": "100%",
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "display": "flex",
+            "flexDirection": "column",
+            "justifyContent": "space-between",
+            "margin": "0 auto",
+            "maxWidth": 1100,
+            "minHeight": 250,
+            "width": "90%",
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "alignItems": "center",
+              "display": "flex",
+              "marginBottom": 30,
+            }
+          }
+        >
+          <div>
+            <h1
+              style={
+                Object {
+                  "color": "white",
+                  "fontFamily": "Berkshire Swash",
+                  "fontSize": "3.5rem",
+                  "fontStyle": "italic",
+                  "lineHeight": "4rem",
+                  "marginBottom": 0,
+                  "marginTop": 0,
+                }
+              }
+            >
+              The Celestial Loom
+            </h1>
+            <p
+              style={
+                Object {
+                  "color": "white",
+                  "fontFamily": "Berkshire Swash",
+                  "fontSize": "2rem",
+                  "fontStyle": "italic",
+                  "lineHeight": "2rem",
+                }
+              }
+            >
+              Astrological Services
+            </p>
+          </div>
+        </div>
+        <div
+          style={
+            Object {
+              "alignSelf": "flex-end",
+              "maxWidth": 500,
+            }
+          }
+        >
+          <p
+            style={
+              Object {
+                "color": "white",
+                "fontFamily": "Martel",
+                "fontSize": "large",
+                "fontStyle": "italic",
+                "textAlign": "right",
+              }
+            }
+          >
+            Nikki Davenport, Astrological Consultant, weaves timeless wisdom with modern service.
+          </p>
+          <div
+            style={
+              Object {
+                "textAlign": "right",
+              }
+            }
+          >
+            <div
+              className="link--container link--container__right"
+            >
+              <a
+                href="/getting-started"
+                style={
+                  Object {
+                    "textDecoration": "none",
+                  }
+                }
+              >
+                <div
+                  className="touchable-link "
+                  style={Object {}}
+                >
+                  <div
+                    className="md-ink-container"
+                  />
+                  <div
+                    className="flex-center"
+                  >
+                    <p
+                      className="back-title"
+                      style={
+                        Object {
+                          "fontSize": "1.5rem",
+                        }
+                      }
+                    >
+                      Get Started
+                    </p>
+                    <i
+                      className="md-icon material-icons"
+                      style={
+                        Object {
+                          "color": "#ec6602",
+                          "fontSize": "2rem",
+                          "marginLeft": 5,
+                        }
+                      }
+                    >
+                      arrow_forward
+                    </i>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="md-grid md-grid--no-spacing"
+      style={
+        Object {
+          "maxWidth": 1100,
+        }
+      }
+    >
+      <div
+        className="md-cell md-cell--8 main-contents"
+      >
+        <div
+          className="md-grid"
+          style={
+            Object {
+              "borderBottom": "1px solid rgba(15,70,100,.2)",
+              "marginBottom": 20,
+            }
+          }
+        >
+          <div
+            className="md-cell md-cell--12"
+          >
+            <p
+              className="subheader"
+              style={
+                Object {
+                  "fontSize": "1.5rem",
+                  "lineHeight": "1.5rem",
+                }
+              }
+            >
+              Featured Post
+            </p>
+          </div>
+          <div
+            className="md-cell md-cell--12"
+          >
+            <div>
+              <a
+                href="/blog/norwac-i-am-on-my-way/"
+                style={
+                  Object {
+                    "textDecoration": "none",
+                  }
+                }
+              >
+                <div
+                  className="touchable-link "
+                  style={
+                    Object {
+                      "marginBottom": 10,
+                    }
+                  }
+                >
+                  <div
+                    className="md-ink-container"
+                  />
+                  <div
+                    style={
+                      Object {
+                        "position": "relative",
+                      }
+                    }
+                  >
+                    <img
+                      alt="Preview of featured post"
+                      src="/assets/cancer-norwac.jpg"
+                      style={
+                        Object {
+                          "height": "250px",
+                          "objectFit": "cover",
+                          "width": "100%",
+                        }
+                      }
+                    />
+                    
+                  </div>
+                  <div
+                    style={
+                      Object {
+                        "padding": 16,
+                      }
+                    }
+                  >
+                    <h2
+                      className="title"
+                    >
+                      NORWAC - I AM ON MY WAY
+                    </h2>
+                    <h3
+                      style={
+                        Object {
+                          "color": "rgba(0, 0, 0, 0.54)",
+                          "fontSize": "1.1rem",
+                          "fontWeight": "bold",
+                          "marginBottom": 0,
+                          "marginLeft": 5,
+                        }
+                      }
+                    >
+                      May 23, 2019
+                    </h3>
+                  </div>
+                  <section
+                    className="md-card-text"
+                    style={
+                      Object {
+                        "padding": 16,
+                      }
+                    }
+                  >
+                    <div
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "<p>I'm on my way to NORWAC - an astrological convention in Seattle, WA.  It has been almost 20 years since I was at a big conference and I am bursting with delight.  The action begins on Friday, May 24 at 1:00 PM and the event chart explodes with…</p>",
+                        }
+                      }
+                    />
+                    <div
+                      className="chevron-text"
+                    >
+                      <p
+                        className="chevron-text--text"
+                      >
+                        Read more
+                      </p>
+                      <i
+                        className="md-icon material-icons chevron-text--chevron"
+                      >
+                        chevron_right
+                      </i>
+                    </div>
+                  </section>
+                </div>
+              </a>
+              <div
+                style={
+                  Object {
+                    "padding": 10,
+                  }
+                }
+              >
+                <p
+                  style={
+                    Object {
+                      "color": "#ec6602",
+                      "fontWeight": "bold",
+                    }
+                  }
+                >
+                  Mentioned in this post:
+                </p>
+                <div
+                  style={
+                    Object {
+                      "display": "flex",
+                      "flexWrap": "wrap",
+                      "justifyContent": "flex-start",
+                    }
+                  }
+                >
+                  <button
+                    className="md-chip md-chip--avatar"
+                    onClick={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    style={
+                      Object {
+                        "cursor": "pointer",
+                        "margin": 10,
+                      }
+                    }
+                    type="button"
+                  >
+                    <div
+                      className="md-inline-block md-avatar md-avatar--default md-avatar--icon-sized"
+                    >
+                      <div
+                        className="md-avatar-content"
+                      >
+                        <span
+                          style={
+                            Object {
+                              "fontFamily": "AstroGadget",
+                            }
+                          }
+                        >
+                          c
+                        </span>
+                      </div>
+                    </div>
+                    <span
+                      className="md-chip-text"
+                    >
+                      Gemini
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="md-grid"
+          style={
+            Object {
+              "borderBottom": "1px solid rgba(15,70,100,.2)",
+              "marginBottom": 20,
+            }
+          }
+        >
+          <div
+            className="md-cell md-cell--12"
+          >
+            <div
+              style={
+                Object {
+                  "alignItems": "baseline",
+                  "display": "flex",
+                  "justifyContent": "space-between",
+                }
+              }
+            >
+              <p
+                className="subheader"
+                style={
+                  Object {
+                    "fontSize": "1.5rem",
+                    "lineHeight": "1.5rem",
+                  }
+                }
+              >
+                Previous Posts
+              </p>
+              <div
+                className="link--container false"
+              >
+                <a
+                  href="/posts"
+                  style={
+                    Object {
+                      "textDecoration": "none",
+                    }
+                  }
+                >
+                  <div
+                    className="touchable-link "
+                    style={Object {}}
+                  >
+                    <div
+                      className="md-ink-container"
+                    />
+                    <div
+                      className="flex-center"
+                    >
+                      <p
+                        className="back-title"
+                      >
+                        All Posts
+                      </p>
+                      <i
+                        className="md-icon material-icons"
+                        style={
+                          Object {
+                            "color": "#ec6602",
+                            "fontSize": "2rem",
+                            "marginLeft": 5,
+                          }
+                        }
+                      >
+                        arrow_forward
+                      </i>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            className="md-cell md-cell--6 md-cell--4-tablet"
+            style={
+              Object {
+                "padding": 10,
+              }
+            }
+          >
+            <a
+              href="/blog/the-pleiades/"
+              style={
+                Object {
+                  "textDecoration": "none",
+                }
+              }
+            >
+              <div
+                className="touchable-link thumbnail-card"
+                style={Object {}}
+              >
+                <div
+                  className="md-ink-container"
+                />
+                <div
+                  className="thumbnail-image"
+                  style={
+                    Object {
+                      "backgroundImage": "url(/assets/pleiades.jpg)",
+                    }
+                  }
+                />
+                <div
+                  className="thumbnail-text"
+                >
+                  <p
+                    className="thumbnail-text--title"
+                  >
+                    The Pleiades
+                  </p>
+                  <p
+                    className="thumbnail-text--subtitle"
+                  >
+                    Posted on:
+                     
+                    <span
+                      style={
+                        Object {
+                          "color": "rgba(0, 0, 0, 0.87)",
+                          "fontWeight": "bold",
+                        }
+                      }
+                    >
+                      May 21, 2019
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div
+          className="md-grid"
+          style={
+            Object {
+              "borderBottom": "1px solid rgba(15,70,100,.2)",
+              "marginBottom": 20,
+            }
+          }
+        >
+          <div
+            className="md-cell md-cell--12"
+          >
+            <div
+              style={
+                Object {
+                  "alignItems": "baseline",
+                  "display": "flex",
+                  "justifyContent": "space-between",
+                }
+              }
+            >
+              <p
+                className="subheader"
+                style={
+                  Object {
+                    "fontSize": "1.5rem",
+                    "lineHeight": "1.5rem",
+                  }
+                }
+              >
+                Next Event
+              </p>
+              <div
+                className="link--container false"
+              >
+                <a
+                  href="/events"
+                  style={
+                    Object {
+                      "textDecoration": "none",
+                    }
+                  }
+                >
+                  <div
+                    className="touchable-link "
+                    style={Object {}}
+                  >
+                    <div
+                      className="md-ink-container"
+                    />
+                    <div
+                      className="flex-center"
+                    >
+                      <p
+                        className="back-title"
+                      >
+                        All Events
+                      </p>
+                      <i
+                        className="md-icon material-icons"
+                        style={
+                          Object {
+                            "color": "#ec6602",
+                            "fontSize": "2rem",
+                            "marginLeft": 5,
+                          }
+                        }
+                      >
+                        arrow_forward
+                      </i>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            className="md-cell md-cell--12"
+          >
+            <a
+              href="/events/moon-circle/"
+              style={
+                Object {
+                  "textDecoration": "none",
+                }
+              }
+            >
+              <div
+                className="touchable-link "
+                style={Object {}}
+              >
+                <div
+                  className="md-ink-container"
+                />
+                <div
+                  className="md-grid md-grid--no-spacing"
+                >
+                  <div
+                    className="md-cell md-cell--6 md-cell--4-tablet"
+                  >
+                    <div
+                      className="image-container"
+                    >
+                      <img
+                        alt="Preview of featured post"
+                        className="image-container--image"
+                        src="/assets/gemini-moon-circle.jpg"
+                      />
+                      <div
+                        style={
+                          Object {
+                            "alignItems": "middle",
+                            "backgroundColor": "rgb(247, 105, 0)",
+                            "display": "flex",
+                            "flexDirection": "column",
+                            "left": 0,
+                            "marginBottom": 10,
+                            "padding": "5px 10px",
+                            "position": "absolute",
+                            "top": 0,
+                          }
+                        }
+                      >
+                        <i
+                          className="md-icon material-icons"
+                          style={
+                            Object {
+                              "color": "white",
+                            }
+                          }
+                        >
+                          event
+                        </i>
+                        <p
+                          style={
+                            Object {
+                              "color": "white",
+                              "fontStyle": "italic",
+                              "fontWeight": "bold",
+                              "lineHeight": "24px",
+                              "marginBottom": 0,
+                              "marginLeft": 3,
+                            }
+                          }
+                        >
+                          May 30
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="md-cell md-cell--6 md-cell--4-tablet"
+                  >
+                    <div
+                      style={
+                        Object {
+                          "padding": 16,
+                        }
+                      }
+                    >
+                      <p
+                        className="subheader"
+                      >
+                        Upcoming Event
+                      </p>
+                      <h2
+                        className="title"
+                      >
+                        Moon Circle
+                      </h2>
+                    </div>
+                    <div
+                      className="event-detail-container"
+                    >
+                      <div
+                        className="event-detail-thumbnail"
+                      >
+                        <i
+                          className="md-icon material-icons"
+                          style={
+                            Object {
+                              "marginRight": 5,
+                            }
+                          }
+                        >
+                          place
+                        </i>
+                        <p
+                          style={
+                            Object {
+                              "fontWeight": "bold",
+                            }
+                          }
+                        >
+                          Divine Inspirations
+                        </p>
+                      </div>
+                      <div
+                        className="event-detail-thumbnail"
+                      >
+                        <i
+                          className="md-icon material-icons"
+                          style={
+                            Object {
+                              "marginRight": 5,
+                            }
+                          }
+                        >
+                          event
+                        </i>
+                        <p
+                          style={
+                            Object {
+                              "fontWeight": "bold",
+                            }
+                          }
+                        >
+                          May 30, 2019 - 7 PM - 9 PM
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      className="event-signup-thumbnail"
+                    >
+                      <div>
+                        <p
+                          className="event-signup-thumbnail--price-description"
+                        >
+                          2 Hour Playshop
+                        </p>
+                        <p
+                          className="event-signup-thumbnail--price"
+                        >
+                          $25.00
+                        </p>
+                      </div>
+                      <div>
+                        <div
+                          className="chevron-text"
+                        >
+                          <p
+                            className="chevron-text--text"
+                          >
+                            Sign Up
+                          </p>
+                          <i
+                            className="md-icon material-icons chevron-text--chevron"
+                          >
+                            chevron_right
+                          </i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div
+          className="md-grid"
+          style={
+            Object {
+              "borderBottom": "1px solid rgba(15,70,100,.2)",
+              "marginBottom": 20,
+            }
+          }
+        >
+          <div
+            className="md-cell md-cell--12"
+          >
+            <div
+              style={
+                Object {
+                  "alignItems": "baseline",
+                  "display": "flex",
+                  "justifyContent": "space-between",
+                }
+              }
+            >
+              <p
+                className="subheader"
+                style={
+                  Object {
+                    "fontSize": "1.5rem",
+                    "lineHeight": "1.5rem",
+                  }
+                }
+              >
+                Featured Service
+              </p>
+              <div
+                className="link--container false"
+              >
+                <a
+                  href="/services"
+                  style={
+                    Object {
+                      "textDecoration": "none",
+                    }
+                  }
+                >
+                  <div
+                    className="touchable-link "
+                    style={Object {}}
+                  >
+                    <div
+                      className="md-ink-container"
+                    />
+                    <div
+                      className="flex-center"
+                    >
+                      <p
+                        className="back-title"
+                      >
+                        All Services
+                      </p>
+                      <i
+                        className="md-icon material-icons"
+                        style={
+                          Object {
+                            "color": "#ec6602",
+                            "fontSize": "2rem",
+                            "marginLeft": 5,
+                          }
+                        }
+                      >
+                        arrow_forward
+                      </i>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            className="md-cell md-cell--12"
+          >
+            <div
+              className="md-paper md-paper--1 md-card md-background--card"
+              onMouseLeave={[Function]}
+              onMouseOver={[Function]}
+              onTouchStart={[Function]}
+            >
+              <a
+                href="/services/natal-chart/"
+                style={
+                  Object {
+                    "textDecoration": "none",
+                  }
+                }
+              >
+                <div
+                  className="touchable-link "
+                  style={Object {}}
+                >
+                  <div
+                    className="md-ink-container"
+                  />
+                  <div
+                    style={
+                      Object {
+                        "background": "url(File contents (usually images))",
+                        "backgroundPosition": "center",
+                        "backgroundSize": "cover",
+                        "height": "90px",
+                        "padding": 0,
+                        "width": "100%",
+                      }
+                    }
+                  >
+                    <div
+                      style={
+                        Object {
+                          "background": "rgba(39,62,84,0.65)",
+                          "display": "flex",
+                          "flexDirection": "column",
+                          "height": "90px",
+                          "justifyContent": "center",
+                          "overflow": "hidden",
+                          "padding": 20,
+                          "zIndex": 2,
+                        }
+                      }
+                    >
+                      <p
+                        style={
+                          Object {
+                            "color": "white",
+                            "fontSize": "1.3rem",
+                            "fontWeight": "bold",
+                            "opacity": 0.9,
+                          }
+                        }
+                      >
+                        Western
+                      </p>
+                    </div>
+                  </div>
+                  <section
+                    className="md-card-text"
+                  >
+                    <h2
+                      className="title"
+                    >
+                      Natal Chart
+                    </h2>
+                    <div
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "<p>This chart is the perfect introduction to understanding your Astrological dynamics. With an in-depth look into the planetary energies at work since your life began, you can make informed decisions about the world around you and the future that you…</p>",
+                        }
+                      }
+                      style={
+                        Object {
+                          "paddingBottom": 15,
+                          "paddingTop": 15,
+                        }
+                      }
+                    />
+                    <hr
+                      className="md-divider"
+                    />
+                    <div
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "display": "flex",
+                          "justifyContent": "space-between",
+                          "padding": "10px 0 0 10px",
+                        }
+                      }
+                    >
+                      <div>
+                        <p
+                          className="event-signup-thumbnail--price-description"
+                          style={
+                            Object {
+                              "color": "rgba(0, 0, 0, 0.54)",
+                              "fontSize": ".9rem",
+                              "marginBottom": 2,
+                            }
+                          }
+                        >
+                          Starting at
+                        </p>
+                        <p
+                          className="event-signup-thumbnail--price"
+                          style={
+                            Object {
+                              "fontSize": "1.5rem",
+                            }
+                          }
+                        >
+                          $140.00
+                        </p>
+                      </div>
+                      <div
+                        className="chevron-text"
+                      >
+                        <p
+                          className="chevron-text--text"
+                        >
+                          Order Now
+                        </p>
+                        <i
+                          className="md-icon material-icons chevron-text--chevron"
+                        >
+                          chevron_right
+                        </i>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="md-cell md-cell--4 md-cell--8-tablet sidebar-contents"
+      >
+        <div
+          className="md-grid md-grid--no-spacing"
+        >
+          <div
+            className="md-cell md-cell--12"
+          >
+            <div
+              className="sidebar-header"
+            >
+              <h5
+                className="sidebar-header--title"
+              >
+                About Nikki
+              </h5>
+            </div>
+          </div>
+          <div
+            className="md-cell md-cell--12 md-cell--4-tablet about-nikki--card"
+          >
+            <div>
+              <div
+                style={
+                  Object {
+                    "margin": "0 auto",
+                    "paddingTop": "20px",
+                    "width": "40%",
+                  }
+                }
+              >
+                <section
+                  className="md-media md-media--1-1"
+                  style={
+                    Object {
+                      "border": "2px solid #ff8013",
+                      "borderRadius": "50%",
+                    }
+                  }
+                >
+                  <img
+                    alt="at da club"
+                    src="File contents (usually images)"
+                  />
+                </section>
+              </div>
+              <section
+                className="md-card-text"
+                style={
+                  Object {
+                    "display": "flex",
+                    "flexDirection": "column",
+                  }
+                }
+              >
+                <p
+                  style={
+                    Object {
+                      "color": "rgb(236, 102, 2)",
+                      "fontSize": "smaller",
+                      "fontWeight": "bold",
+                      "textAlign": "center",
+                    }
+                  }
+                >
+                  Nikki Davenport, astrological consultant, has been a professional astrologer for over 35 years.
+                </p>
+                <a
+                  className="md-btn md-btn--flat md-btn--text md-pointer--hover md-text--theme-primary md-ink--primary md-inline-block"
+                  href="/about-nikki"
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchStart={[Function]}
+                  style={
+                    Object {
+                      "border": "1px solid",
+                      "color": "rgb(236, 102, 2)",
+                      "fontFamily": "Martel",
+                      "fontWeight": "bold",
+                      "height": "auto",
+                      "lineHeight": "14px",
+                      "margin": "0 auto",
+                    }
+                  }
+                  type={null}
+                >
+                  <div
+                    className="md-ink-container"
+                  />
+                  About Nikki
+                </a>
+              </section>
+            </div>
+          </div>
+          <div
+            className="md-cell md-cell--12"
+          >
+            <div
+              className="sidebar-header"
+            >
+              <h5
+                className="sidebar-header--title"
+              >
+                Stay Connected
+              </h5>
+            </div>
+          </div>
+          <div
+            className="md-cell md-cell--12 md-cell--4-tablet"
+          >
+            <div
+              style={
+                Object {
+                  "paddingRight": 1,
+                }
+              }
+            >
+              <a
+                className="twitter-timeline"
+                data-tweet-limit="1"
+                href="https://twitter.com/nikiastro?ref_src=twsrc%5Etfw"
+              >
+                Tweets by nikiastro
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "backgroundColor": "rgb(47, 47, 47)",
+          "padding": 30,
+        }
+      }
+    >
+      <h6
+        style={
+          Object {
+            "color": "white",
+            "marginBottom": 0,
+            "textAlign": "center",
+          }
+        }
+      >
+        Copyright 2019, The Celestial Loom. Cover photography by Photo by Anastasia Dulgier on Unsplash. Built with Gatsby and Netflify CMS.
+      </h6>
+    </div>
+  </main>
+</div>
+`;
