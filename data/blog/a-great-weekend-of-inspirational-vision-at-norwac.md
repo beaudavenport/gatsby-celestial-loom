@@ -3,7 +3,7 @@ templateKey: blogTemplate
 type: blog
 publishDate: '2019-05-26T09:12:54-05:00'
 title: A Great Weekend of Inspirational Vision at NORWAC
-image: /assets/norwac-follow-up.jpg
+image: /assets/2019-cosmic-preview.jpg
 relatedItems:
   - Pluto
   - Capricorn
