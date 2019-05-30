@@ -4,7 +4,7 @@ module.exports = {
     titleTemplate: '%s | The Celestial Loom',
     description: 'Nikki Davenport, Astrological Consultant, weaves timeless wisdom with modern service.',
     url: 'https://celestialloomastrology.com',
-    image: 'assets/2019-cosmic-preview.jpg',
+    image: '/assets/2019-cosmic-preview.jpg',
     twitterUsername: 'nikiastro',
   },
   plugins: [
