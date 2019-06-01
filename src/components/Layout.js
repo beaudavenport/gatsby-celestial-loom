@@ -7,6 +7,7 @@ import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import Footer from './Footer';
 import HeaderCart from './HeaderCart';
 import HeaderSearch from './HeaderSearch';
 import SEOAndScripts from './SEOAndScripts';
@@ -95,9 +96,7 @@ const Layout = ({
         {sidebarChildren}
       </Cell>
     </Grid>
-    <div style={{ backgroundColor: 'rgb(47, 47, 47)', padding: 30 }}>
-      <h6 style={{ textAlign: 'center', color: 'white', marginBottom: 0 }}>Copyright 2019, The Celestial Loom. Cover photography by Photo by Anastasia Dulgier on Unsplash. Built with Gatsby and Netflify CMS.</h6>
-    </div>
+    <Footer />
   </NavigationDrawer>
 );
 

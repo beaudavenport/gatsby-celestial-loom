@@ -1,0 +1,43 @@
+.footer--grid {
+   background-color: rgb(47, 47, 47);
+   padding: 30px;
+}
+
+.footer--title {
+  font-style: italic;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 2rem;
+  line-height: 2rem;
+  color: white;
+  font-family: 'Berkshire Swash';
+}
+
+.footer--text {
+  color: white;
+  margin-bottom: 0;
+  line-height: 1.5rem;
+}
+
+.footer--list {
+  list-style: none;
+  padding: 0;
+}
+
+.footer--line-item {
+  color: white;
+  text-decoration: none;
+  padding: 2px;
+}
+
+.footer--link {
+  display: flex;
+  font-size: 1.1rem;
+  justify-content: flex-start;
+  padding: 5px;
+}
+
+.footer--link__link {
+  color: white;
+  margin-left: 10px;
+}
