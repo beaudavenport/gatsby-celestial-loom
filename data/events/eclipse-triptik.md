@@ -1,6 +1,6 @@
 ---
 templateKey: eventTemplate
-priceDescription: 3 Hour Playshop
+priceDescription: 3 Hour Playshop (Free - $5.00 Donation for Visitors)
 type: events
 eventDate: '2019-06-09T03:04:19-05:00'
 eventTime: '2:00 - 5:00 PM'
