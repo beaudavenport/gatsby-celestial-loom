@@ -293,7 +293,7 @@ exports[`Layout should render correctly with no children 1`] = `
                 className="footer--line-item"
               >
                 <a
-                  href="/posts/"
+                  href="/services/"
                   style={
                     Object {
                       "color": "white",
@@ -307,7 +307,7 @@ exports[`Layout should render correctly with no children 1`] = `
                 className="footer--line-item"
               >
                 <a
-                  href="/posts/"
+                  href="/toolbox/"
                   style={
                     Object {
                       "color": "white",

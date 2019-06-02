@@ -737,7 +737,7 @@ exports[`Event Template should render correctly with events archive, event page 
                 className="footer--line-item"
               >
                 <a
-                  href="/posts/"
+                  href="/services/"
                   style={
                     Object {
                       "color": "white",
@@ -751,7 +751,7 @@ exports[`Event Template should render correctly with events archive, event page 
                 className="footer--line-item"
               >
                 <a
-                  href="/posts/"
+                  href="/toolbox/"
                   style={
                     Object {
                       "color": "white",

@@ -2,6 +2,7 @@ import { Card, Cell, Grid } from 'react-md';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
+import moment from 'moment';
 
 import { BigSubheader, ForwardLink } from '../components/Common';
 import AboutNikkiCard from '../components/AboutNikkiCard';
@@ -16,7 +17,8 @@ import ThumbnailCard from '../components/ThumbnailCard';
 
 const IndexPage = ({ data }) => {
   const [firstBlogNode, ...otherBlogNodes] = data.blog.edges.map(edge => edge.node);
-  const [firstEventNode] = data.events.edges.map(edge => edge.node);
+  const firstEventNode = data.events.edges.map(edge => edge.node)
+    .find(node => moment().isBefore(moment(node.frontmatter.eventDate)));
   const { featuredService } = data;
 
   return (

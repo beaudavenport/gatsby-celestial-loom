@@ -703,7 +703,7 @@ exports[`IndexPage should render correctly with posts, events, and services 1`] 
             className="md-cell md-cell--12"
           >
             <a
-              href="/events/moon-circle/"
+              href="/events/stones-of-fire/"
               style={
                 Object {
                   "textDecoration": "none",
@@ -729,13 +729,13 @@ exports[`IndexPage should render correctly with posts, events, and services 1`] 
                       <img
                         alt="Preview of featured post"
                         className="image-container--image"
-                        src="/assets/gemini-moon-circle.jpg"
+                        src="/assets/stones-of-fire-lotus.jpg"
                       />
                       <div
                         style={
                           Object {
                             "alignItems": "middle",
-                            "backgroundColor": "rgb(136, 136, 136)",
+                            "backgroundColor": "rgb(247, 105, 0)",
                             "display": "flex",
                             "flexDirection": "column",
                             "left": 0,
@@ -768,7 +768,7 @@ exports[`IndexPage should render correctly with posts, events, and services 1`] 
                             }
                           }
                         >
-                          May 30
+                          Jun 08
                         </p>
                       </div>
                     </div>
@@ -783,15 +783,15 @@ exports[`IndexPage should render correctly with posts, events, and services 1`] 
                         }
                       }
                     >
-                      <h4
-                        className="subtitle"
+                      <p
+                        className="subheader"
                       >
-                        Past Event
-                      </h4>
+                        Upcoming Event
+                      </p>
                       <h2
                         className="title"
                       >
-                        Moon Circle
+                        STONES OF FIRE
                       </h2>
                     </div>
                     <div
@@ -817,7 +817,7 @@ exports[`IndexPage should render correctly with posts, events, and services 1`] 
                             }
                           }
                         >
-                          Divine Inspirations
+                          DeMun Healing
                         </p>
                       </div>
                       <div
@@ -840,7 +840,7 @@ exports[`IndexPage should render correctly with posts, events, and services 1`] 
                             }
                           }
                         >
-                          May 30, 2019 - 7 PM - 9 PM
+                          June 08, 2019 - 1PM - 4 PM
                         </p>
                       </div>
                     </div>
@@ -848,13 +848,25 @@ exports[`IndexPage should render correctly with posts, events, and services 1`] 
                       className="event-signup-thumbnail"
                     >
                       <div>
+                        <p
+                          className="event-signup-thumbnail--price-description"
+                        >
+                          3 Hour Playshop
+                        </p>
+                        <p
+                          className="event-signup-thumbnail--price"
+                        >
+                          $35.00
+                        </p>
+                      </div>
+                      <div>
                         <div
                           className="chevron-text"
                         >
                           <p
                             className="chevron-text--text"
                           >
-                            View Details
+                            Sign Up
                           </p>
                           <i
                             className="md-icon material-icons chevron-text--chevron"
@@ -1378,7 +1390,7 @@ exports[`IndexPage should render correctly with posts, events, and services 1`] 
                 className="footer--line-item"
               >
                 <a
-                  href="/posts/"
+                  href="/services/"
                   style={
                     Object {
                       "color": "white",
@@ -1392,7 +1404,7 @@ exports[`IndexPage should render correctly with posts, events, and services 1`] 
                 className="footer--line-item"
               >
                 <a
-                  href="/posts/"
+                  href="/toolbox/"
                   style={
                     Object {
                       "color": "white",

@@ -1029,7 +1029,7 @@ exports[`Events should render correctly with events 1`] = `
                 className="footer--line-item"
               >
                 <a
-                  href="/posts/"
+                  href="/services/"
                   style={
                     Object {
                       "color": "white",
@@ -1043,7 +1043,7 @@ exports[`Events should render correctly with events 1`] = `
                 className="footer--line-item"
               >
                 <a
-                  href="/posts/"
+                  href="/toolbox/"
                   style={
                     Object {
                       "color": "white",

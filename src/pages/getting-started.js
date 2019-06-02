@@ -4,6 +4,7 @@ import {
 import { Link, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
+import moment from 'moment';
 
 import {
   BackLink,
@@ -25,7 +26,8 @@ import ThumbnailEventCard from '../components/ThumbnailCard/ThumbnailEventCard';
 
 const GettingStarted = ({ data }) => {
   const [firstBlogNode] = data.blog.edges.map(edge => edge.node);
-  const [firstEventNode] = data.events.edges.map(edge => edge.node);
+  const firstEventNode = data.events.edges.map(edge => edge.node)
+    .find(node => moment().isBefore(moment(node.frontmatter.eventDate)));
   const toolboxNodes = data.toolboxItems.edges.map(edge => edge.node);
   const { natalChart } = data;
 

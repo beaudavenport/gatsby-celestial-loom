@@ -44,10 +44,10 @@ const Footer = () => (
               <Link to="/events/" style={{ color: 'white' }}>Events</Link>
             </li>
             <li className="footer--line-item">
-              <Link to="/posts/" style={{ color: 'white' }}>Services</Link>
+              <Link to="/services/" style={{ color: 'white' }}>Services</Link>
             </li>
             <li className="footer--line-item">
-              <Link to="/posts/" style={{ color: 'white' }}>Astro Toolbox</Link>
+              <Link to="/toolbox/" style={{ color: 'white' }}>Astro Toolbox</Link>
             </li>
           </ul>
         </Cell>
