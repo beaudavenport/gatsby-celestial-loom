@@ -322,12 +322,7 @@ exports[`Event Template should render correctly with events archive, event page 
         className="md-cell md-cell--4 md-cell--8-tablet sidebar-contents"
       >
         <div
-          style={
-            Object {
-              "marginBottom": 30,
-              "marginTop": 20,
-            }
-          }
+          className="archive--container"
         >
           <div
             className="sidebar-header"

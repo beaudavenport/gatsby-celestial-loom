@@ -321,6 +321,11 @@ exports[`IndexPage should render correctly with posts, events, and services 1`] 
           </div>
           <div
             className="md-cell md-cell--12"
+            style={
+              Object {
+                "marginBottom": 10,
+              }
+            }
           >
             <div>
               <a
@@ -333,32 +338,18 @@ exports[`IndexPage should render correctly with posts, events, and services 1`] 
               >
                 <div
                   className="touchable-link "
-                  style={
-                    Object {
-                      "marginBottom": 10,
-                    }
-                  }
+                  style={Object {}}
                 >
                   <div
                     className="md-ink-container"
                   />
                   <div
-                    style={
-                      Object {
-                        "position": "relative",
-                      }
-                    }
+                    className="featured-card--container"
                   >
                     <img
                       alt="Preview of featured post"
+                      className="featured-card--image"
                       src="/assets/cancer-norwac.jpg"
-                      style={
-                        Object {
-                          "height": "250px",
-                          "objectFit": "cover",
-                          "width": "100%",
-                        }
-                      }
                     />
                     
                   </div>
@@ -375,15 +366,7 @@ exports[`IndexPage should render correctly with posts, events, and services 1`] 
                       NORWAC - I AM ON MY WAY
                     </h2>
                     <h3
-                      style={
-                        Object {
-                          "color": "rgba(0, 0, 0, 0.54)",
-                          "fontSize": "1.1rem",
-                          "fontWeight": "bold",
-                          "marginBottom": 0,
-                          "marginLeft": 5,
-                        }
-                      }
+                      className="featured-card--publish-date"
                     >
                       May 23, 2019
                     </h3>
@@ -421,30 +404,15 @@ exports[`IndexPage should render correctly with posts, events, and services 1`] 
                 </div>
               </a>
               <div
-                style={
-                  Object {
-                    "padding": 10,
-                  }
-                }
+                className="padded-section"
               >
                 <p
-                  style={
-                    Object {
-                      "color": "#ec6602",
-                      "fontWeight": "bold",
-                    }
-                  }
+                  className="subheader"
                 >
                   Mentioned in this post:
                 </p>
                 <div
-                  style={
-                    Object {
-                      "display": "flex",
-                      "flexWrap": "wrap",
-                      "justifyContent": "flex-start",
-                    }
-                  }
+                  className="related-items--container"
                 >
                   <button
                     className="md-chip md-chip--avatar"
@@ -1126,22 +1094,10 @@ exports[`IndexPage should render correctly with posts, events, and services 1`] 
           >
             <div>
               <div
-                style={
-                  Object {
-                    "margin": "0 auto",
-                    "paddingTop": "20px",
-                    "width": "40%",
-                  }
-                }
+                className="about-nikki--container"
               >
                 <section
-                  className="md-media md-media--1-1"
-                  style={
-                    Object {
-                      "border": "2px solid #ff8013",
-                      "borderRadius": "50%",
-                    }
-                  }
+                  className="md-media md-media--1-1 about-nikki--avatar"
                 >
                   <img
                     alt="at da club"
@@ -1150,28 +1106,15 @@ exports[`IndexPage should render correctly with posts, events, and services 1`] 
                 </section>
               </div>
               <section
-                className="md-card-text"
-                style={
-                  Object {
-                    "display": "flex",
-                    "flexDirection": "column",
-                  }
-                }
+                className="md-card-text flex-column"
               >
                 <p
-                  style={
-                    Object {
-                      "color": "rgb(236, 102, 2)",
-                      "fontSize": "smaller",
-                      "fontWeight": "bold",
-                      "textAlign": "center",
-                    }
-                  }
+                  className="about-nikki--text"
                 >
                   Nikki Davenport, astrological consultant, has been a professional astrologer for over 35 years.
                 </p>
                 <a
-                  className="md-btn md-btn--flat md-btn--text md-pointer--hover md-text--theme-primary md-ink--primary md-inline-block"
+                  className="md-btn md-btn--flat md-btn--text md-pointer--hover md-text--theme-primary md-ink--primary md-inline-block about-nikki--button"
                   href="/about-nikki"
                   onKeyDown={[Function]}
                   onKeyUp={[Function]}
@@ -1181,17 +1124,6 @@ exports[`IndexPage should render correctly with posts, events, and services 1`] 
                   onMouseUp={[Function]}
                   onTouchEnd={[Function]}
                   onTouchStart={[Function]}
-                  style={
-                    Object {
-                      "border": "1px solid",
-                      "color": "rgb(236, 102, 2)",
-                      "fontFamily": "Martel",
-                      "fontWeight": "bold",
-                      "height": "auto",
-                      "lineHeight": "14px",
-                      "margin": "0 auto",
-                    }
-                  }
                   type={null}
                 >
                   <div

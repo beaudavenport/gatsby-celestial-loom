@@ -50,7 +50,7 @@ const PostsArchive = () => (
       });
 
       return (
-        <div style={{ marginBottom: 30, marginTop: 20 }}>
+        <div className="archive--container">
           <SidebarHeader title="Post Archives" />
           <div>
             <ArchiveCard sections={sections} />

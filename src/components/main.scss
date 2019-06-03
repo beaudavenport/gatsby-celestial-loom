@@ -21,15 +21,56 @@ $md-drawer-desktop-width: 225px;
 @import './ThumbnailCard/styles';
 @import './TextWithChevron/styles';
 @import './FeaturedEventCard/styles';
+@import './FeaturedCard/styles';
 @import './AboutNikkiCard/styles';
 @import './SidebarHeader/styles';
 @import './TouchableLink/styles';
 @import './Common/styles';
 @import './ZodiacWheel/styles';
 @import './Footer/styles';
+@import './RelatedItemChipList/styles';
+
 
 html {
  background-color: #fff;
+}
+
+/* flex utility classes */
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+.flex-column-start {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.flex-column-end {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+/* shared classes */
+
+.padded-section {
+  padding: 10px;
+}
+
+.archive--container {
+  margin-bottom: 30px;
+  margin-top: 20px;
 }
 
 .header-icons-container {
@@ -57,25 +98,6 @@ html {
   color: white;
 }
 
-.flex-center {
-  display: flex;
-  align-items: center;
-  padding: 5px;
-}
-
-.flex-column-start {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  height: 100%;
-}
-
-.flex-column-end {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  height: 100%;
-}
 
 .dialog-container-style {
   min-width: 300px;

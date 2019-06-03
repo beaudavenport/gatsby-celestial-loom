@@ -1,6 +1,4 @@
-import {
-  Button, Card, CardText, Media,
-} from 'react-md';
+import { Button, CardText, Media } from 'react-md';
 import { Link } from 'gatsby';
 import React from 'react';
 
@@ -8,25 +6,20 @@ import Nikki from '../../images/nikki.jpg';
 
 const AboutNikkiCard = () => (
   <div>
-    <div style={{ width: '40%', margin: '0 auto', paddingTop: '20px' }}>
-      <Media aspectRatio="1-1" style={{ borderRadius: '50%', border: '2px solid #ff8013' }}>
+    <div className="about-nikki--container">
+      <Media aspectRatio="1-1" className="about-nikki--avatar">
         <img src={Nikki} alt="at da club" />
       </Media>
     </div>
-    <CardText style={{ display: 'flex', flexDirection: 'column' }}>
-      <p style={{
-        fontSize: 'smaller', color: 'rgb(236, 102, 2)', fontWeight: 'bold', textAlign: 'center',
-      }}
-      >
+    <CardText className="flex-column">
+      <p className="about-nikki--text">
       Nikki Davenport, astrological consultant, has been a professional
       astrologer for over 35 years.
       </p>
       <Button
         flat
         primary
-        style={{
-          height: 'auto', color: 'rgb(236, 102, 2)', fontWeight: 'bold', lineHeight: '14px', fontFamily: 'Martel', border: '1px solid', margin: '0 auto',
-        }}
+        className="about-nikki--button"
         to="/about-nikki"
         type={null}
         component={Link}

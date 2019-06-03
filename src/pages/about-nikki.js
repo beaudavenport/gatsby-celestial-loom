@@ -14,7 +14,7 @@ const AboutNikki = () => (
     title="About Nikki"
     sidebarChildren={(
       <Fragment>
-        <div style={{ marginBottom: 30, marginTop: 20 }}>
+        <div className="archive--container">
           <SidebarHeader title="The Astrologer is In!" />
           <div style={{ padding: '20px 10px' }}>
             <p style={{ fontWeight: 'bold' }}>

@@ -53,7 +53,7 @@ const EventsArchive = () => (
       });
 
       return (
-        <div style={{ marginBottom: 30, marginTop: 20 }}>
+        <div className="archive--container">
           <SidebarHeader title="Events Calendar" />
           <div>
             <ArchiveCard sections={sections} />

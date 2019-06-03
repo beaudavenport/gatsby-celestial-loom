@@ -6,10 +6,14 @@ import useAllToolboxNodes from '../../hooks/useAllToolboxNodes';
 
 const RelatedItemChipList = ({ relatedItems }) => {
   const nodes = useAllToolboxNodes();
-  return relatedItems.map((relatedItem) => {
-    const matchingNode = nodes.find(node => node.frontmatter.title === relatedItem);
-    return <RelatedItemChip item={matchingNode} />;
-  });
+  return (
+    <div className="related-items--container">
+      {relatedItems.map((relatedItem) => {
+        const matchingNode = nodes.find(node => node.frontmatter.title === relatedItem);
+        return <RelatedItemChip item={matchingNode} />;
+      })}
+    </div>
+  );
 };
 
 RelatedItemChipList.propTypes = {

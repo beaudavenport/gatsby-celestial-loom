@@ -217,22 +217,12 @@ exports[`Posts should render correctly with most recent posts 1`] = `
                     className="md-ink-container"
                   />
                   <div
-                    style={
-                      Object {
-                        "position": "relative",
-                      }
-                    }
+                    className="featured-card--container"
                   >
                     <img
                       alt="Preview of featured post"
+                      className="featured-card--image"
                       src="/assets/cancer-norwac.jpg"
-                      style={
-                        Object {
-                          "height": "250px",
-                          "objectFit": "cover",
-                          "width": "100%",
-                        }
-                      }
                     />
                     
                   </div>
@@ -249,15 +239,7 @@ exports[`Posts should render correctly with most recent posts 1`] = `
                       NORWAC - I AM ON MY WAY
                     </h2>
                     <h3
-                      style={
-                        Object {
-                          "color": "rgba(0, 0, 0, 0.54)",
-                          "fontSize": "1.1rem",
-                          "fontWeight": "bold",
-                          "marginBottom": 0,
-                          "marginLeft": 5,
-                        }
-                      }
+                      className="featured-card--publish-date"
                     >
                       May 23, 2019
                     </h3>
@@ -295,30 +277,15 @@ exports[`Posts should render correctly with most recent posts 1`] = `
                 </div>
               </a>
               <div
-                style={
-                  Object {
-                    "padding": 10,
-                  }
-                }
+                className="padded-section"
               >
                 <p
-                  style={
-                    Object {
-                      "color": "#ec6602",
-                      "fontWeight": "bold",
-                    }
-                  }
+                  className="subheader"
                 >
                   Mentioned in this post:
                 </p>
                 <div
-                  style={
-                    Object {
-                      "display": "flex",
-                      "flexWrap": "wrap",
-                      "justifyContent": "flex-start",
-                    }
-                  }
+                  className="related-items--container"
                 >
                   <button
                     className="md-chip md-chip--avatar"
@@ -385,22 +352,12 @@ exports[`Posts should render correctly with most recent posts 1`] = `
                     className="md-ink-container"
                   />
                   <div
-                    style={
-                      Object {
-                        "position": "relative",
-                      }
-                    }
+                    className="featured-card--container"
                   >
                     <img
                       alt="Preview of featured post"
+                      className="featured-card--image"
                       src="/assets/pleiades.jpg"
-                      style={
-                        Object {
-                          "height": "250px",
-                          "objectFit": "cover",
-                          "width": "100%",
-                        }
-                      }
                     />
                     
                   </div>
@@ -417,15 +374,7 @@ exports[`Posts should render correctly with most recent posts 1`] = `
                       The Pleiades
                     </h2>
                     <h3
-                      style={
-                        Object {
-                          "color": "rgba(0, 0, 0, 0.54)",
-                          "fontSize": "1.1rem",
-                          "fontWeight": "bold",
-                          "marginBottom": 0,
-                          "marginLeft": 5,
-                        }
-                      }
+                      className="featured-card--publish-date"
                     >
                       May 21, 2019
                     </h3>
@@ -471,30 +420,15 @@ exports[`Posts should render correctly with most recent posts 1`] = `
                 </div>
               </a>
               <div
-                style={
-                  Object {
-                    "padding": 10,
-                  }
-                }
+                className="padded-section"
               >
                 <p
-                  style={
-                    Object {
-                      "color": "#ec6602",
-                      "fontWeight": "bold",
-                    }
-                  }
+                  className="subheader"
                 >
                   Mentioned in this post:
                 </p>
                 <div
-                  style={
-                    Object {
-                      "display": "flex",
-                      "flexWrap": "wrap",
-                      "justifyContent": "flex-start",
-                    }
-                  }
+                  className="related-items--container"
                 >
                   <button
                     className="md-chip md-chip--avatar"
@@ -601,12 +535,7 @@ exports[`Posts should render correctly with most recent posts 1`] = `
         className="md-cell md-cell--4 md-cell--8-tablet sidebar-contents"
       >
         <div
-          style={
-            Object {
-              "marginBottom": 30,
-              "marginTop": 20,
-            }
-          }
+          className="archive--container"
         >
           <div
             className="sidebar-header"

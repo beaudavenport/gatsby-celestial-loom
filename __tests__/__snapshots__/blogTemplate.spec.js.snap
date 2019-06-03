@@ -263,78 +263,82 @@ exports[`Blog Template should render correctly with posts archive, blog page and
                 }
               }
             >
-              <button
-                className="md-chip md-chip--avatar"
-                onClick={[Function]}
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                style={
-                  Object {
-                    "cursor": "pointer",
-                    "margin": 10,
-                  }
-                }
-                type="button"
+              <div
+                className="related-items--container"
               >
-                <div
-                  className="md-inline-block md-avatar md-avatar--default md-avatar--icon-sized"
+                <button
+                  className="md-chip md-chip--avatar"
+                  onClick={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  style={
+                    Object {
+                      "cursor": "pointer",
+                      "margin": 10,
+                    }
+                  }
+                  type="button"
                 >
                   <div
-                    className="md-avatar-content"
+                    className="md-inline-block md-avatar md-avatar--default md-avatar--icon-sized"
                   >
-                    <span
-                      style={
-                        Object {
-                          "fontFamily": "AstroGadget",
-                        }
-                      }
+                    <div
+                      className="md-avatar-content"
                     >
-                      b
-                    </span>
+                      <span
+                        style={
+                          Object {
+                            "fontFamily": "AstroGadget",
+                          }
+                        }
+                      >
+                        b
+                      </span>
+                    </div>
                   </div>
-                </div>
-                <span
-                  className="md-chip-text"
-                >
-                  Taurus
-                </span>
-              </button>
-              <button
-                className="md-chip md-chip--avatar"
-                onClick={[Function]}
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                style={
-                  Object {
-                    "cursor": "pointer",
-                    "margin": 10,
+                  <span
+                    className="md-chip-text"
+                  >
+                    Taurus
+                  </span>
+                </button>
+                <button
+                  className="md-chip md-chip--avatar"
+                  onClick={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  style={
+                    Object {
+                      "cursor": "pointer",
+                      "margin": 10,
+                    }
                   }
-                }
-                type="button"
-              >
-                <div
-                  className="md-inline-block md-avatar md-avatar--default md-avatar--icon-sized"
+                  type="button"
                 >
                   <div
-                    className="md-avatar-content"
+                    className="md-inline-block md-avatar md-avatar--default md-avatar--icon-sized"
                   >
-                    <span
-                      style={
-                        Object {
-                          "fontFamily": "AstroGadget",
-                        }
-                      }
+                    <div
+                      className="md-avatar-content"
                     >
-                      1
-                    </span>
+                      <span
+                        style={
+                          Object {
+                            "fontFamily": "AstroGadget",
+                          }
+                        }
+                      >
+                        1
+                      </span>
+                    </div>
                   </div>
-                </div>
-                <span
-                  className="md-chip-text"
-                >
-                  First House
-                </span>
-              </button>
+                  <span
+                    className="md-chip-text"
+                  >
+                    First House
+                  </span>
+                </button>
+              </div>
             </div>
           </div>
           <section
@@ -354,12 +358,7 @@ exports[`Blog Template should render correctly with posts archive, blog page and
         className="md-cell md-cell--4 md-cell--8-tablet sidebar-contents"
       >
         <div
-          style={
-            Object {
-              "marginBottom": 30,
-              "marginTop": 20,
-            }
-          }
+          className="archive--container"
         >
           <div
             className="sidebar-header"

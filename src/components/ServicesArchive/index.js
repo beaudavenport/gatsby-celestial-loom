@@ -53,7 +53,7 @@ const ServicesArchive = () => (
       });
 
       return (
-        <div style={{ marginBottom: 30, marginTop: 20 }}>
+        <div className="archive--container">
           <SidebarHeader title="Services by Origin" />
           <div>
             <ArchiveCard sections={sections} />

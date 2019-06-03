@@ -23,7 +23,7 @@ const ToolboxArchive = () => {
   });
 
   return (
-    <div style={{ marginBottom: 30, marginTop: 20 }}>
+    <div className="archive--container">
       <SidebarHeader title="Elements of the Zodiac" />
       <div>
         <ArchiveCard sections={sections} />

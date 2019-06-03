@@ -994,12 +994,7 @@ exports[`Services should render correctly with services 1`] = `
         className="md-cell md-cell--4 md-cell--8-tablet sidebar-contents"
       >
         <div
-          style={
-            Object {
-              "marginBottom": 30,
-              "marginTop": 20,
-            }
-          }
+          className="archive--container"
         >
           <div
             className="sidebar-header"

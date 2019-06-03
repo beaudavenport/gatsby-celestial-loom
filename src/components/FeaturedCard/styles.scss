@@ -1,0 +1,17 @@
+.featured-card--image {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.featured-card--container {
+   position: relative;
+}
+
+.featured-card--publish-date {
+  color: rgba(0, 0, 0, 0.54);
+  font-weight: bold;
+  margin-bottom: 0;
+  margin-left: 5;
+  font-size: 1.1rem;
+}

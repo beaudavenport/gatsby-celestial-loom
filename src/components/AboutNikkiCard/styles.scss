@@ -7,3 +7,31 @@
     padding-right: 10px;
   }
 }
+
+.about-nikki--container {
+  width: 40%;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.about-nikki--avatar {
+  border-radius: 50%;
+  border: 2px solid #ff8013
+}
+
+.about-nikki--text {
+  font-size: 1rem;
+  color: rgb(236, 102, 2);
+  font-weight: bold;
+  text-align: center;
+}
+
+.about-nikki--button {
+  height: auto;
+  color: rgb(236, 102, 2);
+  font-weight: bold;
+  line-height: 14px;
+  font-family: 'Martel';
+  border: 1px solid;
+  margin: 0 auto;
+}

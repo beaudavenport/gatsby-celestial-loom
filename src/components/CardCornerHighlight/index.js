@@ -28,6 +28,7 @@ const CardCornerHighlight = ({ iconName, title, isExpired }) => (
 CardCornerHighlight.propTypes = {
   iconName: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+  isExpired: PropTypes.bool.isRequired,
 };
 
 export default CardCornerHighlight;

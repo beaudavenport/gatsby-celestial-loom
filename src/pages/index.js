@@ -54,16 +54,17 @@ const IndexPage = ({ data }) => {
         <Cell size={12}>
           <BigSubheader>Featured Post</BigSubheader>
         </Cell>
-        <Cell size={12}>
+        <Cell size={12} style={{ marginBottom: 10 }}>
           <FeaturedCard
-            style={{ marginBottom: 10 }}
             path={firstBlogNode.fields.slug}
             title={firstBlogNode.frontmatter.title}
             publishDate={firstBlogNode.frontmatter.publishDate}
             image={firstBlogNode.frontmatter.image}
             excerpt={firstBlogNode.excerpt}
             relatedItemChips={
-              firstBlogNode.frontmatter.relatedItems && <RelatedItemChipList relatedItems={firstBlogNode.frontmatter.relatedItems} />
+              firstBlogNode.frontmatter.relatedItems && (
+              <RelatedItemChipList relatedItems={firstBlogNode.frontmatter.relatedItems} />
+              )
             }
           />
         </Cell>
