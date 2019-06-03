@@ -204,15 +204,10 @@ exports[`Event Template should render correctly with events archive, event page 
               }
             }
           >
-            <h4
-              className="subtitle"
-            >
-              Past Event
-            </h4>
             <h2
               className="title"
             >
-              Moon Circle
+              Moon Circle of the Future
             </h2>
             <h4
               className="subtitle"
@@ -297,14 +292,14 @@ exports[`Event Template should render correctly with events archive, event page 
                     }
                   }
                 >
-                  May 30, 2019 • 7 PM - 9 PM
+                  May 30, 2119 • 7 PM - 9 PM
                 </p>
               </div>
             </div>
             <div
               dangerouslySetInnerHTML={
                 Object {
-                  "__html": "<p>Join us for a Goddess GEMINI Moon (12 Gemini) celebration at our sacred MOON CIRCLE.  We will explore the making \\"connections\\" lunar unfolding in June, learn about the \\"Lights Mandala\\" and apply our personal chart Lunar Planner to our monthly timing.</p>",
+                  "__html": "<p>Join us A HUNDRED YEARS FROM NOW for a Goddess GEMINI Moon (12 Gemini) celebration at our sacred MOON CIRCLE.  We will explore the making \\"connections\\" lunar unfolding in June, learn about the \\"Lights Mandala\\" and apply our personal chart Lunar Planner to our monthly timing.</p>",
                 }
               }
               style={
@@ -315,6 +310,72 @@ exports[`Event Template should render correctly with events archive, event page 
                 }
               }
             />
+            <div
+              className="event-signup"
+            >
+              <div
+                style={
+                  Object {
+                    "flex": 1,
+                  }
+                }
+              >
+                <p
+                  className="event-signup--price-description"
+                >
+                  2 Hour Playshop
+                </p>
+                <p
+                  className="event-signup--price"
+                >
+                  $25.00
+                </p>
+              </div>
+              <div
+                style={
+                  Object {
+                    "display": "flex",
+                    "flex": 1,
+                    "justifyContent": "flex-end",
+                  }
+                }
+              >
+                <button
+                  className="md-btn md-btn--raised md-btn--text md-pointer--hover md-background--primary md-background--primary-hover md-inline-block snipcart-add-item"
+                  data-item-custom1-name="Name*"
+                  data-item-custom1-required="true"
+                  data-item-custom2-name="Month of Birth*"
+                  data-item-custom2-required="true"
+                  data-item-custom3-name="Day of Birth*"
+                  data-item-custom3-required="true"
+                  data-item-custom4-name="Year of Birth*"
+                  data-item-custom4-required="true"
+                  data-item-custom5-name="Time of Birth, if known"
+                  data-item-custom5-required="false"
+                  data-item-custom6-name="Birth Location (City, State, Country), if known"
+                  data-item-custom6-required="false"
+                  data-item-description="Event Sign-Up"
+                  data-item-id="/events/moon-circle/"
+                  data-item-name="Moon Circle of the Future"
+                  data-item-price={25}
+                  data-item-url="/events/moon-circle/"
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchStart={[Function]}
+                  type="button"
+                >
+                  <div
+                    className="md-ink-container"
+                  />
+                  Add to Cart
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>

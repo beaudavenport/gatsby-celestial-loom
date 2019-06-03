@@ -23,7 +23,7 @@ export default {
         frontmatter: {
           title: 'STONES OF FIRE',
           image: '/assets/stones-of-fire-lotus.jpg',
-          eventDate: 'Jun 08, 2019',
+          eventDate: 'Jun 08, 2119',
           eventTime: '1PM - 4 PM',
           eventDateShort: 'Jun 08',
           eventPrice: 35,

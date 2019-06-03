@@ -36,7 +36,7 @@ export default {
       node: {
         id: 'b3ffaeb7-2067-54b0-a015-df104b6e1e34',
         frontmatter: {
-          title: 'STONES OF FIRE', image: '/assets/stones-of-fire-lotus.jpg', eventDate: 'Jun 08, 2019', eventTime: '1PM - 4 PM', eventDateShort: 'Jun 08', eventPrice: 35, priceDescription: '3 Hour Playshop', location: 'DeMun Healing',
+          title: 'STONES OF FIRE', image: '/assets/stones-of-fire-lotus.jpg', eventDate: 'Jun 08, 2119', eventTime: '1PM - 4 PM', eventDateShort: 'Jun 08', eventPrice: 35, priceDescription: '3 Hour Playshop', location: 'DeMun Healing',
         },
         excerpt: '<p>A Healing Playshop</p>\n<p>Saturday, June 8, 2019, 1-4 PM</p>\n<p>DeMun Healing, 734 De Mun Ave., Clayton, MO 63105</p>\n<p>Every action, thought and emotion is empowered by a corresponding unending flow of energy – the Spinal Column is the <em>Trunk of Life</em> in the <em>Tree of Man</em>.  The chakras are the <strong>Stones of Fire</strong>…</p>',
         fields: { slug: '/events/stones-of-fire/' },

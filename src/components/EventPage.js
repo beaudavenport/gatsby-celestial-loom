@@ -49,16 +49,18 @@ function EventPage(props) {
         <div style={{ padding: 20, border: '1px solid rgba(15,70,100,.12)', borderRadius: 5 }} dangerouslySetInnerHTML={{ __html: html }} />
         { !isExpired && (
           <div className="event-signup">
-            <div>
+            <div style={{ flex: 1 }}>
               <p className="event-signup--price-description">{priceDescription}</p>
               <p className="event-signup--price">{`$${Number(eventPrice).toFixed(2)}`}</p>
             </div>
-            <AddToCartButton
-              title={title}
-              price={eventPrice}
-              slug={slug}
-              description="Event Sign-Up"
-            />
+            <div style={{ flex: 1, display: 'flex', justifyContent: 'flex-end' }}>
+              <AddToCartButton
+                title={title}
+                price={eventPrice}
+                slug={slug}
+                description="Event Sign-Up"
+              />
+            </div>
           </div>
         )}
       </div>
