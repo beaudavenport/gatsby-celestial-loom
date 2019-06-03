@@ -1320,12 +1320,7 @@ exports[`Services should render correctly with services 1`] = `
         className="md-cell md-cell--6 md-cell--8-tablet"
       >
         <div
-          style={
-            Object {
-              "alignItems": "center",
-              "display": "flex",
-            }
-          }
+          className="flex-center"
         >
           <div
             style={

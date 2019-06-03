@@ -29,6 +29,7 @@ $md-drawer-desktop-width: 225px;
 @import './ZodiacWheel/styles';
 @import './Footer/styles';
 @import './RelatedItemChipList/styles';
+@import './Jumbotron/styles';
 
 
 html {
@@ -63,6 +64,11 @@ html {
 }
 
 /* shared classes */
+
+.info-text {
+  font-weight: bold;
+  margin-bottom: 2px;
+}
 
 .padded-section {
   padding: 10px;

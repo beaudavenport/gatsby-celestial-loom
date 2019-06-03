@@ -8,7 +8,7 @@ import CelestialLogo from '../../images/celestial-logo-no-bg.png';
 const Footer = () => (
   <Grid className="footer--grid">
     <Cell size={6} tabletSize={8}>
-      <div style={{ display: 'flex', alignItems: 'center' }}>
+      <div className="flex-center">
         <div style={{ marginRight: 10 }}>
           <img src={CelestialLogo} alt="Celestial Loom Logo" style={{ width: 50 }} />
         </div>

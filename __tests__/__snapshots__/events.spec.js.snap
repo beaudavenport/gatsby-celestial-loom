@@ -259,7 +259,7 @@ exports[`Events should render correctly with events 1`] = `
                   className="md-ink-container"
                 />
                 <div
-                  className="md-grid md-grid--no-spacing"
+                  className="md-grid"
                 >
                   <div
                     className="md-cell md-cell--6 md-cell--4-tablet"
@@ -339,7 +339,7 @@ exports[`Events should render correctly with events 1`] = `
                       className="event-detail-container"
                     >
                       <div
-                        className="event-detail-thumbnail"
+                        className="content-with-icon"
                       >
                         <i
                           className="md-icon material-icons"
@@ -352,17 +352,13 @@ exports[`Events should render correctly with events 1`] = `
                           place
                         </i>
                         <p
-                          style={
-                            Object {
-                              "fontWeight": "bold",
-                            }
-                          }
+                          className="info-text"
                         >
                           DeMun Healing
                         </p>
                       </div>
                       <div
-                        className="event-detail-thumbnail"
+                        className="content-with-icon"
                       >
                         <i
                           className="md-icon material-icons"
@@ -375,11 +371,7 @@ exports[`Events should render correctly with events 1`] = `
                           event
                         </i>
                         <p
-                          style={
-                            Object {
-                              "fontWeight": "bold",
-                            }
-                          }
+                          className="info-text"
                         >
                           Jun 08, 2119 - 1PM - 4 PM
                         </p>
@@ -457,7 +449,7 @@ exports[`Events should render correctly with events 1`] = `
                   className="md-ink-container"
                 />
                 <div
-                  className="md-grid md-grid--no-spacing"
+                  className="md-grid"
                 >
                   <div
                     className="md-cell md-cell--6 md-cell--4-tablet"
@@ -537,7 +529,7 @@ exports[`Events should render correctly with events 1`] = `
                       className="event-detail-container"
                     >
                       <div
-                        className="event-detail-thumbnail"
+                        className="content-with-icon"
                       >
                         <i
                           className="md-icon material-icons"
@@ -550,17 +542,13 @@ exports[`Events should render correctly with events 1`] = `
                           place
                         </i>
                         <p
-                          style={
-                            Object {
-                              "fontWeight": "bold",
-                            }
-                          }
+                          className="info-text"
                         >
                           Divine Inspirations
                         </p>
                       </div>
                       <div
-                        className="event-detail-thumbnail"
+                        className="content-with-icon"
                       >
                         <i
                           className="md-icon material-icons"
@@ -573,11 +561,7 @@ exports[`Events should render correctly with events 1`] = `
                           event
                         </i>
                         <p
-                          style={
-                            Object {
-                              "fontWeight": "bold",
-                            }
-                          }
+                          className="info-text"
                         >
                           May 30, 2019 - 7 PM - 9 PM
                         </p>
@@ -878,12 +862,7 @@ exports[`Events should render correctly with events 1`] = `
         className="md-cell md-cell--6 md-cell--8-tablet"
       >
         <div
-          style={
-            Object {
-              "alignItems": "center",
-              "display": "flex",
-            }
-          }
+          className="flex-center"
         >
           <div
             style={

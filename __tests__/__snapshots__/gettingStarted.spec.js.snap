@@ -1436,12 +1436,7 @@ exports[`Getting Started Page should render correctly with samples of services, 
         className="md-cell md-cell--6 md-cell--8-tablet"
       >
         <div
-          style={
-            Object {
-              "alignItems": "center",
-              "display": "flex",
-            }
-          }
+          className="flex-center"
         >
           <div
             style={

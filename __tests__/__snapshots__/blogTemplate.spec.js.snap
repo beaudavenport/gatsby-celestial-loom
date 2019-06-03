@@ -516,12 +516,7 @@ exports[`Blog Template should render correctly with posts archive, blog page and
         className="md-cell md-cell--6 md-cell--8-tablet"
       >
         <div
-          style={
-            Object {
-              "alignItems": "center",
-              "display": "flex",
-            }
-          }
+          className="flex-center"
         >
           <div
             style={

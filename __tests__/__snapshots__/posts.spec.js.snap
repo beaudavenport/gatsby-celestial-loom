@@ -211,7 +211,11 @@ exports[`Posts should render correctly with most recent posts 1`] = `
               >
                 <div
                   className="touchable-link "
-                  style={Object {}}
+                  style={
+                    Object {
+                      "padding": 10,
+                    }
+                  }
                 >
                   <div
                     className="md-ink-container"
@@ -346,7 +350,11 @@ exports[`Posts should render correctly with most recent posts 1`] = `
               >
                 <div
                   className="touchable-link "
-                  style={Object {}}
+                  style={
+                    Object {
+                      "padding": 10,
+                    }
+                  }
                 >
                   <div
                     className="md-ink-container"
@@ -693,12 +701,7 @@ exports[`Posts should render correctly with most recent posts 1`] = `
         className="md-cell md-cell--6 md-cell--8-tablet"
       >
         <div
-          style={
-            Object {
-              "alignItems": "center",
-              "display": "flex",
-            }
-          }
+          className="flex-center"
         >
           <div
             style={

@@ -137,33 +137,15 @@ exports[`IndexPage should render correctly with posts, events, and services 1`] 
     tabIndex={-1}
   >
     <div
-      className="md-paper md-paper--0"
+      className="md-paper md-paper--0 jumbotron--bg"
       style={
         Object {
-          "background": "url(File contents (usually images))",
-          "backgroundPosition": "center",
-          "backgroundSize": "cover",
-          "display": "flex",
-          "flexDirection": "column",
-          "justifyContent": "space-between",
-          "marginBottom": 10,
-          "padding": "25px 0",
-          "width": "100%",
+          "backgroundImage": "url(File contents (usually images))",
         }
       }
     >
       <div
-        style={
-          Object {
-            "display": "flex",
-            "flexDirection": "column",
-            "justifyContent": "space-between",
-            "margin": "0 auto",
-            "maxWidth": 1100,
-            "minHeight": 250,
-            "width": "90%",
-          }
-        }
+        className="jumbotron--container"
       >
         <div
           style={
@@ -176,53 +158,22 @@ exports[`IndexPage should render correctly with posts, events, and services 1`] 
         >
           <div>
             <h1
-              style={
-                Object {
-                  "color": "white",
-                  "fontFamily": "Berkshire Swash",
-                  "fontSize": "3.5rem",
-                  "fontStyle": "italic",
-                  "lineHeight": "4rem",
-                  "marginBottom": 0,
-                  "marginTop": 0,
-                }
-              }
+              className="jumbotron--title"
             >
               The Celestial Loom
             </h1>
             <p
-              style={
-                Object {
-                  "color": "white",
-                  "fontFamily": "Berkshire Swash",
-                  "fontSize": "2rem",
-                  "fontStyle": "italic",
-                  "lineHeight": "2rem",
-                }
-              }
+              className="jumbotron--subtitle"
             >
               Astrological Services
             </p>
           </div>
         </div>
         <div
-          style={
-            Object {
-              "alignSelf": "flex-end",
-              "maxWidth": 500,
-            }
-          }
+          className="jumbotron--subtext--container"
         >
           <p
-            style={
-              Object {
-                "color": "white",
-                "fontFamily": "Martel",
-                "fontSize": "large",
-                "fontStyle": "italic",
-                "textAlign": "right",
-              }
-            }
+            className="jumbotron--subtext"
           >
             Nikki Davenport, Astrological Consultant, weaves timeless wisdom with modern service.
           </p>
@@ -338,7 +289,11 @@ exports[`IndexPage should render correctly with posts, events, and services 1`] 
               >
                 <div
                   className="touchable-link "
-                  style={Object {}}
+                  style={
+                    Object {
+                      "padding": 10,
+                    }
+                  }
                 >
                   <div
                     className="md-ink-container"
@@ -686,7 +641,7 @@ exports[`IndexPage should render correctly with posts, events, and services 1`] 
                   className="md-ink-container"
                 />
                 <div
-                  className="md-grid md-grid--no-spacing"
+                  className="md-grid"
                 >
                   <div
                     className="md-cell md-cell--6 md-cell--4-tablet"
@@ -766,7 +721,7 @@ exports[`IndexPage should render correctly with posts, events, and services 1`] 
                       className="event-detail-container"
                     >
                       <div
-                        className="event-detail-thumbnail"
+                        className="content-with-icon"
                       >
                         <i
                           className="md-icon material-icons"
@@ -779,17 +734,13 @@ exports[`IndexPage should render correctly with posts, events, and services 1`] 
                           place
                         </i>
                         <p
-                          style={
-                            Object {
-                              "fontWeight": "bold",
-                            }
-                          }
+                          className="info-text"
                         >
                           DeMun Healing
                         </p>
                       </div>
                       <div
-                        className="event-detail-thumbnail"
+                        className="content-with-icon"
                       >
                         <i
                           className="md-icon material-icons"
@@ -802,11 +753,7 @@ exports[`IndexPage should render correctly with posts, events, and services 1`] 
                           event
                         </i>
                         <p
-                          style={
-                            Object {
-                              "fontWeight": "bold",
-                            }
-                          }
+                          className="info-text"
                         >
                           June 08, 2019 - 1PM - 4 PM
                         </p>
@@ -1176,12 +1123,7 @@ exports[`IndexPage should render correctly with posts, events, and services 1`] 
         className="md-cell md-cell--6 md-cell--8-tablet"
       >
         <div
-          style={
-            Object {
-              "alignItems": "center",
-              "display": "flex",
-            }
-          }
+          className="flex-center"
         >
           <div
             style={

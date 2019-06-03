@@ -18,7 +18,7 @@ const FeaturedCard = ({
   relatedItemChips,
 }) => (
   <div>
-    <TouchableLink to={path}>
+    <TouchableLink to={path} style={{ padding: 10 }}>
       <div className="featured-card--container">
         <img className="featured-card--image" src={image} alt="Preview of featured post" />
         {cornerIconName && <CardCornerHighlight iconName={cornerIconName} title={cornerTitle} />}

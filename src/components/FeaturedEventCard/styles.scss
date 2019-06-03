@@ -9,19 +9,14 @@
 }
 
 .event-detail-container {
-  padding-left: 30px;
+  padding: 0 10 10 10;
+  margin-left: 20px;
 }
 
 .event-detail {
   display: flex;
   justify-content: flex-start;
   padding: 5px;
-  font-size: 1.1rem;
-}
-
-.event-detail-thumbnail {
-  display: flex;
-  justify-content: flex-start;
   font-size: 1.1rem;
 }
 

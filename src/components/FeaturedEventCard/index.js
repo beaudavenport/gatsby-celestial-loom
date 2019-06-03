@@ -1,9 +1,11 @@
-import { Cell, FontIcon, Grid } from 'react-md';
+import { Cell, Grid } from 'react-md';
 import PropTypes from 'prop-types';
 import React from 'react';
 import moment from 'moment';
 
-import { Subheader, Subtitle, Title } from '../Common';
+import {
+  ContentWithIcon, Subheader, Subtitle, Title,
+} from '../Common';
 import CardCornerHighlight from '../CardCornerHighlight';
 import TextWithChevron from '../TextWithChevron';
 import TouchableLink from '../TouchableLink';
@@ -23,7 +25,7 @@ const FeaturedEventCard = ({
   const isExpired = moment().isAfter(moment(eventDate));
   return (
     <TouchableLink to={path} style={style}>
-      <Grid noSpacing>
+      <Grid>
         <Cell size={6} tabletSize={4}>
           <div className="image-container">
             <img className="image-container--image" src={image} alt="Preview of featured post" />
@@ -36,14 +38,8 @@ const FeaturedEventCard = ({
             <Title>{title}</Title>
           </div>
           <div className="event-detail-container">
-            <div className="event-detail-thumbnail">
-              <FontIcon style={{ marginRight: 5 }}>place</FontIcon>
-              <p style={{ fontWeight: 'bold' }}>{location}</p>
-            </div>
-            <div className="event-detail-thumbnail">
-              <FontIcon style={{ marginRight: 5 }}>event</FontIcon>
-              <p style={{ fontWeight: 'bold' }}>{`${eventDate} - ${eventTime}`}</p>
-            </div>
+            <ContentWithIcon fontIconName="place"><p className="info-text">{location}</p></ContentWithIcon>
+            <ContentWithIcon fontIconName="event"><p className="info-text">{`${eventDate} - ${eventTime}`}</p></ContentWithIcon>
           </div>
           <div className="event-signup-thumbnail">
             {!isExpired && (
