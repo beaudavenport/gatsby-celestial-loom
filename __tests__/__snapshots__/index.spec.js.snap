@@ -898,40 +898,23 @@ exports[`IndexPage should render correctly with posts, events, and services 1`] 
                     className="md-ink-container"
                   />
                   <div
+                    className="origin--header--bg"
                     style={
                       Object {
-                        "background": "url(File contents (usually images))",
-                        "backgroundPosition": "center",
-                        "backgroundSize": "cover",
-                        "height": "90px",
-                        "padding": 0,
-                        "width": "100%",
+                        "backgroundImage": "url(File contents (usually images))",
                       }
                     }
                   >
                     <div
+                      className="origin--header--overlay"
                       style={
                         Object {
                           "background": "rgba(39,62,84,0.65)",
-                          "display": "flex",
-                          "flexDirection": "column",
-                          "height": "90px",
-                          "justifyContent": "center",
-                          "overflow": "hidden",
-                          "padding": 20,
-                          "zIndex": 2,
                         }
                       }
                     >
                       <p
-                        style={
-                          Object {
-                            "color": "white",
-                            "fontSize": "1.3rem",
-                            "fontWeight": "bold",
-                            "opacity": 0.9,
-                          }
-                        }
+                        className="origin--header--title"
                       >
                         Western
                       </p>
@@ -946,15 +929,10 @@ exports[`IndexPage should render correctly with posts, events, and services 1`] 
                       Natal Chart
                     </h2>
                     <div
+                      className="service--excerpt"
                       dangerouslySetInnerHTML={
                         Object {
                           "__html": "<p>This chart is the perfect introduction to understanding your Astrological dynamics. With an in-depth look into the planetary energies at work since your life began, you can make informed decisions about the world around you and the future that you…</p>",
-                        }
-                      }
-                      style={
-                        Object {
-                          "paddingBottom": 15,
-                          "paddingTop": 15,
                         }
                       }
                     />
@@ -962,35 +940,16 @@ exports[`IndexPage should render correctly with posts, events, and services 1`] 
                       className="md-divider"
                     />
                     <div
-                      style={
-                        Object {
-                          "alignItems": "center",
-                          "display": "flex",
-                          "justifyContent": "space-between",
-                          "padding": "10px 0 0 10px",
-                        }
-                      }
+                      className="service--prices--container"
                     >
                       <div>
                         <p
-                          className="event-signup-thumbnail--price-description"
-                          style={
-                            Object {
-                              "color": "rgba(0, 0, 0, 0.54)",
-                              "fontSize": ".9rem",
-                              "marginBottom": 2,
-                            }
-                          }
+                          className="service--price--description"
                         >
                           Starting at
                         </p>
                         <p
-                          className="event-signup-thumbnail--price"
-                          style={
-                            Object {
-                              "fontSize": "1.5rem",
-                            }
-                          }
+                          className="service--price--price"
                         >
                           $140.00
                         </p>

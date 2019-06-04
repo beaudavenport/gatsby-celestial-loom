@@ -1,0 +1,50 @@
+.origin--header--bg {
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 90px;
+  padding: 0;
+}
+
+.origin--header--overlay {
+  overflow: hidden;
+  height: 90px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  justify-content: center;
+}
+
+.origin--header--title {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bold;
+  opacity: 0.9;
+}
+
+.service--excerpt {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.service--price--description {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: rgba(0, 0, 0, 0.54);
+  margin-bottom: 2;
+  font-size: .9rem;
+}
+
+.service--price--price {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: $md-primary-color;
+}
+
+.service--prices--container {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0 0 10px;
+  align-items: center;
+}

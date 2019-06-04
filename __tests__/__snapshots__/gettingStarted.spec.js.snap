@@ -350,40 +350,23 @@ exports[`Getting Started Page should render correctly with samples of services, 
                         className="md-ink-container"
                       />
                       <div
+                        className="origin--header--bg"
                         style={
                           Object {
-                            "background": "url(File contents (usually images))",
-                            "backgroundPosition": "center",
-                            "backgroundSize": "cover",
-                            "height": "90px",
-                            "padding": 0,
-                            "width": "100%",
+                            "backgroundImage": "url(File contents (usually images))",
                           }
                         }
                       >
                         <div
+                          className="origin--header--overlay"
                           style={
                             Object {
                               "background": "rgba(39,62,84,0.65)",
-                              "display": "flex",
-                              "flexDirection": "column",
-                              "height": "90px",
-                              "justifyContent": "center",
-                              "overflow": "hidden",
-                              "padding": 20,
-                              "zIndex": 2,
                             }
                           }
                         >
                           <p
-                            style={
-                              Object {
-                                "color": "white",
-                                "fontSize": "1.3rem",
-                                "fontWeight": "bold",
-                                "opacity": 0.9,
-                              }
-                            }
+                            className="origin--header--title"
                           >
                             Western
                           </p>
@@ -398,15 +381,10 @@ exports[`Getting Started Page should render correctly with samples of services, 
                           Natal Chart
                         </h2>
                         <div
+                          className="service--excerpt"
                           dangerouslySetInnerHTML={
                             Object {
                               "__html": "<p>This chart is the perfect introduction to understanding your Astrological dynamics. With an in-depth look into the planetary energies at work since your life began, you can make informed decisions about the world around you and the future that you…</p>",
-                            }
-                          }
-                          style={
-                            Object {
-                              "paddingBottom": 15,
-                              "paddingTop": 15,
                             }
                           }
                         />
