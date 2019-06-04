@@ -2,9 +2,9 @@ import { Cell, Divider, Grid } from 'react-md';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import { BigSubheader, ContentWithIcon, Title } from './Common';
-import AddToCartButton from './AddToCartButton';
-import ServiceCard from './ServiceCard';
+import { BigSubheader, ContentWithIcon, Title } from '../Common';
+import AddToCartButton from '../AddToCartButton';
+import ServiceCard from '../ServiceCard';
 
 function ServicePage(props) {
   const {
@@ -27,11 +27,17 @@ function ServicePage(props) {
       </Cell>
       <Cell size={6} tabletSize={4} style={{ display: 'flex', alignItems: 'center' }}>
         <div style={{ width: '100%' }}>
-          <BigSubheader>In-Person Consultation</BigSubheader>
+          <BigSubheader>Online Consultation</BigSubheader>
           <div style={{ padding: 10 }}>
-            <ContentWithIcon fontIconName="face"><p style={{ fontStyle: 'italic', fontSize: '14px', fontWeight: 'bold' }}>90-minute in-person discussion</p></ContentWithIcon>
+            <ContentWithIcon fontIconName="volume_up"><p style={{ fontStyle: 'italic', fontSize: '14px', fontWeight: 'bold' }}>60-Minute Audio MP3</p></ContentWithIcon>
             <ContentWithIcon fontIconName="picture_as_pdf"><p style={{ fontStyle: 'italic', fontSize: '14px', fontWeight: 'bold' }}>Full-color PDF</p></ContentWithIcon>
-            <ContentWithIcon fontIconName="volume_up"><p style={{ fontStyle: 'italic', fontSize: '14px', fontWeight: 'bold' }}>Free live session recording</p></ContentWithIcon>
+            <ContentWithIcon fontIconName="cloud_download">
+              <p style={{ fontStyle: 'italic', fontSize: '14px', fontWeight: 'bold' }}>
+              Easy email delivery via
+                {' '}
+                <a href="https://www.dropbox.com/">Dropbox</a>
+              </p>
+            </ContentWithIcon>
           </div>
           <Divider />
           <div style={{
@@ -39,26 +45,26 @@ function ServicePage(props) {
           }}
           >
             <div>
-              <p className="event-signup-thumbnail--price-description" style={{ color: 'rgba(0, 0, 0, 0.54)', marginBottom: 2, fontSize: '.9rem' }}>In-Person Total</p>
+              <p className="event-signup-thumbnail--price-description" style={{ color: 'rgba(0, 0, 0, 0.54)', marginBottom: 2, fontSize: '.9rem' }}>Online Total</p>
               <p className="event-signup-thumbnail--price" style={{ fontSize: '2rem' }}>{`$${Number(price).toFixed(2)}`}</p>
             </div>
             <AddToCartButton
               title={title}
               price={price}
-              description="In-Person Consultation"
-              slug={`${slug}/in-person`}
+              description="Online Consultation"
+              slug={`${slug}/online`}
             />
           </div>
         </div>
       </Cell>
       <Cell size={12} style={{ marginTop: 20 }}>
         <ContentWithIcon fontIconName="search" fontIconStyle={{ fontSize: '2rem' }}>
-          <Title>About In-Person Services</Title>
+          <Title>About Online Services</Title>
         </ContentWithIcon>
         <ul>
-          <li>After placing your order, you'll receive a confirmation email from Nikki to arrange a local meeting. In-person services last approximately 90 minutes</li>
-          <li>All materials will be assembled in a full-color packet.</li>
-          <li>Please allow 1-2 weeks preperation time when coordinating the best time to meet.</li>
+          <li>All materials will be securely delivered with Dropbox to your preferred email, where they will be available for download directly from the cloud. No email attachments and no sign up necessary!</li>
+          <li>Please allow 1-2 weeks for preparation and delivery time.</li>
+          <li>Secure checkout with Paypal</li>
         </ul>
         <p>
           <span style={{ fontWeight: 'bold' }}>Questions about this service or online ordering?</span>

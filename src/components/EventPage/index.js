@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import moment from 'moment';
 
-import { Subtitle, Title } from './Common';
-import AddToCartButton from './AddToCartButton';
+import { Subtitle, Title } from '../Common';
+import AddToCartButton from '../AddToCartButton';
 
 function EventPage(props) {
   const {

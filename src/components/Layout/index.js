@@ -1,4 +1,4 @@
-import './main.scss';
+import '../main.scss';
 
 import {
   Cell, FontIcon, Grid, ListItem, NavigationDrawer,
@@ -7,10 +7,10 @@ import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import Footer from './Footer';
-import HeaderCart from './HeaderCart';
-import HeaderSearch from './HeaderSearch';
-import SEOAndScripts from './SEOAndScripts';
+import Footer from '../Footer';
+import HeaderCart from '../HeaderCart';
+import HeaderSearch from '../HeaderSearch';
+import SEOAndScripts from '../SEOAndScripts';
 
 const navItems = [
   { icon: 'home', to: '/', title: 'Home' },

@@ -6,10 +6,10 @@ import React from 'react';
 
 import {
   BigSubheader, ContentWithIcon, Subtitle, Title,
-} from './Common';
-import TextWithChevron from './TextWithChevron';
-import TouchableLink from './TouchableLink';
-import getOrigin from '../helpers/originService';
+} from '../Common';
+import TextWithChevron from '../TextWithChevron';
+import TouchableLink from '../TouchableLink';
+import getOrigin from '../../helpers/originService';
 
 function ServicePage(props) {
   const {

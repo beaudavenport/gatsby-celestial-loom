@@ -4,11 +4,11 @@ import React from 'react';
 
 import {
   JumboSubheader, Subheader, Subtitle, Title,
-} from './Common';
-import { getSymbolSpan } from '../helpers/symbolHelper';
-import ThumbnailCard from './ThumbnailCard';
-import ThumbnailEventCard from './ThumbnailCard/ThumbnailEventCard';
-import ZodiacWheel from './ZodiacWheel';
+} from '../Common';
+import { getSymbolSpan } from '../../helpers/symbolHelper';
+import ThumbnailCard from '../ThumbnailCard';
+import ThumbnailEventCard from '../ThumbnailCard/ThumbnailEventCard';
+import ZodiacWheel from '../ZodiacWheel';
 
 
 function ToolboxPage(props) {

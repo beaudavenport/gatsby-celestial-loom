@@ -1,7 +1,7 @@
 import '../components/main.scss';
 
 import {
-  Card, CardText, Cell, Grid,
+  Card, Cell, Grid,
 } from 'react-md';
 import { Converter } from 'showdown';
 import CMS from 'netlify-cms';
@@ -18,7 +18,6 @@ import FeaturedEventCard from '../components/FeaturedEventCard';
 import RelatedItemChip from '../components/RelatedItemChip';
 import ServiceCard from '../components/ServiceCard';
 import ServicePage from '../components/ServicePage';
-import ZodiacWheel from '../components/ZodiacWheel';
 
 const converter = new Converter();
 

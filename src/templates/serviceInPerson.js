@@ -4,7 +4,7 @@ import React, { Fragment } from 'react';
 
 import { BackLink } from '../components/Common';
 import Layout from '../components/Layout';
-import ServicePageInPerson from '../components/ServicePageInPerson';
+import ServicePageInPerson from '../components/ServicePage/ServicePageInPerson';
 import ServicesArchive from '../components/ServicesArchive';
 import SidebarContents from '../components/SidebarContents';
 
