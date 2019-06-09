@@ -29,9 +29,9 @@ function ServicePage(props) {
         <div style={{ width: '100%' }}>
           <BigSubheader>In-Person Consultation</BigSubheader>
           <div style={{ padding: 10 }}>
-            <ContentWithIcon fontIconName="face"><p style={{ fontStyle: 'italic', fontSize: '14px', fontWeight: 'bold' }}>90-minute in-person discussion</p></ContentWithIcon>
-            <ContentWithIcon fontIconName="picture_as_pdf"><p style={{ fontStyle: 'italic', fontSize: '14px', fontWeight: 'bold' }}>Full-color PDF</p></ContentWithIcon>
-            <ContentWithIcon fontIconName="volume_up"><p style={{ fontStyle: 'italic', fontSize: '14px', fontWeight: 'bold' }}>Free live session recording</p></ContentWithIcon>
+            <ContentWithIcon fontIconName="face"><p className="service-info">90-minute in-person discussion</p></ContentWithIcon>
+            <ContentWithIcon fontIconName="picture_as_pdf"><p className="service-info">Full-color PDF</p></ContentWithIcon>
+            <ContentWithIcon fontIconName="volume_up"><p className="service-info">Free live session recording</p></ContentWithIcon>
           </div>
           <Divider />
           <div style={{
@@ -39,8 +39,8 @@ function ServicePage(props) {
           }}
           >
             <div>
-              <p className="event-signup-thumbnail--price-description" style={{ color: 'rgba(0, 0, 0, 0.54)', marginBottom: 2, fontSize: '.9rem' }}>In-Person Total</p>
-              <p className="event-signup-thumbnail--price" style={{ fontSize: '2rem' }}>{`$${Number(price).toFixed(2)}`}</p>
+              <p className="service-price--description">In-Person Total</p>
+              <p className="service-price--price">{`$${Number(price).toFixed(2)}`}</p>
             </div>
             <AddToCartButton
               title={title}

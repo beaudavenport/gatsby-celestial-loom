@@ -31,6 +31,7 @@ $md-drawer-desktop-width: 225px;
 @import './RelatedItemChipList/styles';
 @import './Jumbotron/styles';
 @import './ServiceCard/styles';
+@import './ServicePage/styles';
 
 
 html {
@@ -65,6 +66,12 @@ html {
 }
 
 /* shared classes */
+
+.bordered-content {
+  padding: 20px;
+  border: 1px solid rgba(15,70,100,.12);
+  border-radius: 5px;
+}
 
 .info-text {
   font-weight: bold;

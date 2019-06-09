@@ -89,27 +89,29 @@ const IndexPage = ({ data }) => {
         ))
           }
       </Grid>
-      <Grid style={{ borderBottom: '1px solid rgba(15,70,100,.2)', marginBottom: 20 }}>
-        <Cell size={12}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
-            <BigSubheader>Next Event</BigSubheader>
-            <ForwardLink to="/events" title="All Events" />
-          </div>
-        </Cell>
-        <Cell size={12}>
-          <FeaturedEventCard
-            path={firstEventNode.fields.slug}
-            title={firstEventNode.frontmatter.title}
-            eventDate={firstEventNode.frontmatter.eventDate}
-            eventTime={firstEventNode.frontmatter.eventTime}
-            eventDateShort={firstEventNode.frontmatter.eventDateShort}
-            image={firstEventNode.frontmatter.image}
-            eventPrice={firstEventNode.frontmatter.eventPrice}
-            priceDescription={firstEventNode.frontmatter.priceDescription}
-            location={firstEventNode.frontmatter.location}
-          />
-        </Cell>
-      </Grid>
+      { firstEventNode && (
+        <Grid style={{ borderBottom: '1px solid rgba(15,70,100,.2)', marginBottom: 20 }}>
+          <Cell size={12}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
+              <BigSubheader>Next Event</BigSubheader>
+              <ForwardLink to="/events" title="All Events" />
+            </div>
+          </Cell>
+          <Cell size={12}>
+            <FeaturedEventCard
+              path={firstEventNode.fields.slug}
+              title={firstEventNode.frontmatter.title}
+              eventDate={firstEventNode.frontmatter.eventDate}
+              eventTime={firstEventNode.frontmatter.eventTime}
+              eventDateShort={firstEventNode.frontmatter.eventDateShort}
+              image={firstEventNode.frontmatter.image}
+              eventPrice={firstEventNode.frontmatter.eventPrice}
+              priceDescription={firstEventNode.frontmatter.priceDescription}
+              location={firstEventNode.frontmatter.location}
+            />
+          </Cell>
+        </Grid>
+      )}
       <Grid style={{ borderBottom: '1px solid rgba(15,70,100,.2)', marginBottom: 20 }}>
         <Cell size={12}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>

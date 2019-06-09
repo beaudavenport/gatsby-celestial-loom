@@ -1,0 +1,17 @@
+.service-info {
+  font-style: italic;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.service-price--description {
+  color: rgba(0, 0, 0, 0.54);
+  margin-bottom: 2px;
+  font-size: .9rem;
+}
+
+.service-price--price {
+  font-weight: bold;
+  font-size: 2rem;
+  color: $md-primary-color;
+}

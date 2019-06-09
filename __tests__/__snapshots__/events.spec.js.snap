@@ -244,6 +244,185 @@ exports[`Events should render correctly with events 1`] = `
             }
           >
             <a
+              href="/events/moon-circle/"
+              style={
+                Object {
+                  "textDecoration": "none",
+                }
+              }
+            >
+              <div
+                className="touchable-link "
+                style={Object {}}
+              >
+                <div
+                  className="md-ink-container"
+                />
+                <div
+                  className="md-grid"
+                >
+                  <div
+                    className="md-cell md-cell--6 md-cell--4-tablet"
+                  >
+                    <div
+                      className="image-container"
+                    >
+                      <img
+                        alt="Preview of featured post"
+                        className="image-container--image"
+                        src="/assets/gemini-moon-circle.jpg"
+                      />
+                      <div
+                        style={
+                          Object {
+                            "alignItems": "middle",
+                            "backgroundColor": "rgb(247, 105, 0)",
+                            "display": "flex",
+                            "flexDirection": "column",
+                            "left": 0,
+                            "marginBottom": 10,
+                            "padding": "5px 10px",
+                            "position": "absolute",
+                            "top": 0,
+                          }
+                        }
+                      >
+                        <i
+                          className="md-icon material-icons"
+                          style={
+                            Object {
+                              "color": "white",
+                            }
+                          }
+                        >
+                          event
+                        </i>
+                        <p
+                          style={
+                            Object {
+                              "color": "white",
+                              "fontStyle": "italic",
+                              "fontWeight": "bold",
+                              "lineHeight": "24px",
+                              "marginBottom": 0,
+                              "marginLeft": 3,
+                            }
+                          }
+                        >
+                          May 30
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="md-cell md-cell--6 md-cell--4-tablet"
+                  >
+                    <div
+                      style={
+                        Object {
+                          "padding": 16,
+                        }
+                      }
+                    >
+                      <p
+                        className="subheader"
+                      >
+                        Upcoming Event
+                      </p>
+                      <h2
+                        className="title"
+                      >
+                        Moon Circle OF THE FUTURE
+                      </h2>
+                    </div>
+                    <div
+                      className="event-detail-container"
+                    >
+                      <div
+                        className="content-with-icon"
+                      >
+                        <i
+                          className="md-icon material-icons"
+                          style={
+                            Object {
+                              "marginRight": 5,
+                            }
+                          }
+                        >
+                          place
+                        </i>
+                        <p
+                          className="info-text"
+                        >
+                          Divine Inspirations
+                        </p>
+                      </div>
+                      <div
+                        className="content-with-icon"
+                      >
+                        <i
+                          className="md-icon material-icons"
+                          style={
+                            Object {
+                              "marginRight": 5,
+                            }
+                          }
+                        >
+                          event
+                        </i>
+                        <p
+                          className="info-text"
+                        >
+                          May 30, 2119 - 7 PM - 9 PM
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      className="event-signup-thumbnail"
+                    >
+                      <div>
+                        <p
+                          className="event-signup-thumbnail--price-description"
+                        >
+                          2 Hour Playshop
+                        </p>
+                        <p
+                          className="event-signup-thumbnail--price"
+                        >
+                          $25.00
+                        </p>
+                      </div>
+                      <div>
+                        <div
+                          className="chevron-text"
+                        >
+                          <p
+                            className="chevron-text--text"
+                          >
+                            Sign Up
+                          </p>
+                          <i
+                            className="md-icon material-icons chevron-text--chevron"
+                          >
+                            chevron_right
+                          </i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div
+            className="md-cell md-cell--12"
+            style={
+              Object {
+                "padding": "20px 0px",
+              }
+            }
+          >
+            <a
               href="/events/stones-of-fire/"
               style={
                 Object {
@@ -332,7 +511,7 @@ exports[`Events should render correctly with events 1`] = `
                       <h2
                         className="title"
                       >
-                        STONES OF FIRE
+                        STONES OF FIRE OF THE FUTURE
                       </h2>
                     </div>
                     <div
@@ -425,173 +604,6 @@ exports[`Events should render correctly with events 1`] = `
           >
             Past Events
           </p>
-          <div
-            className="md-cell md-cell--12"
-            style={
-              Object {
-                "padding": "20px 0px",
-              }
-            }
-          >
-            <a
-              href="/events/moon-circle/"
-              style={
-                Object {
-                  "textDecoration": "none",
-                }
-              }
-            >
-              <div
-                className="touchable-link "
-                style={Object {}}
-              >
-                <div
-                  className="md-ink-container"
-                />
-                <div
-                  className="md-grid"
-                >
-                  <div
-                    className="md-cell md-cell--6 md-cell--4-tablet"
-                  >
-                    <div
-                      className="image-container"
-                    >
-                      <img
-                        alt="Preview of featured post"
-                        className="image-container--image"
-                        src="/assets/gemini-moon-circle.jpg"
-                      />
-                      <div
-                        style={
-                          Object {
-                            "alignItems": "middle",
-                            "backgroundColor": "rgb(136, 136, 136)",
-                            "display": "flex",
-                            "flexDirection": "column",
-                            "left": 0,
-                            "marginBottom": 10,
-                            "padding": "5px 10px",
-                            "position": "absolute",
-                            "top": 0,
-                          }
-                        }
-                      >
-                        <i
-                          className="md-icon material-icons"
-                          style={
-                            Object {
-                              "color": "white",
-                            }
-                          }
-                        >
-                          event
-                        </i>
-                        <p
-                          style={
-                            Object {
-                              "color": "white",
-                              "fontStyle": "italic",
-                              "fontWeight": "bold",
-                              "lineHeight": "24px",
-                              "marginBottom": 0,
-                              "marginLeft": 3,
-                            }
-                          }
-                        >
-                          May 30
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className="md-cell md-cell--6 md-cell--4-tablet"
-                  >
-                    <div
-                      style={
-                        Object {
-                          "padding": 16,
-                        }
-                      }
-                    >
-                      <h4
-                        className="subtitle"
-                      >
-                        Past Event
-                      </h4>
-                      <h2
-                        className="title"
-                      >
-                        Moon Circle
-                      </h2>
-                    </div>
-                    <div
-                      className="event-detail-container"
-                    >
-                      <div
-                        className="content-with-icon"
-                      >
-                        <i
-                          className="md-icon material-icons"
-                          style={
-                            Object {
-                              "marginRight": 5,
-                            }
-                          }
-                        >
-                          place
-                        </i>
-                        <p
-                          className="info-text"
-                        >
-                          Divine Inspirations
-                        </p>
-                      </div>
-                      <div
-                        className="content-with-icon"
-                      >
-                        <i
-                          className="md-icon material-icons"
-                          style={
-                            Object {
-                              "marginRight": 5,
-                            }
-                          }
-                        >
-                          event
-                        </i>
-                        <p
-                          className="info-text"
-                        >
-                          May 30, 2019 - 7 PM - 9 PM
-                        </p>
-                      </div>
-                    </div>
-                    <div
-                      className="event-signup-thumbnail"
-                    >
-                      <div>
-                        <div
-                          className="chevron-text"
-                        >
-                          <p
-                            className="chevron-text--text"
-                          >
-                            View Details
-                          </p>
-                          <i
-                            className="md-icon material-icons chevron-text--chevron"
-                          >
-                            chevron_right
-                          </i>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
         </div>
       </div>
       <div

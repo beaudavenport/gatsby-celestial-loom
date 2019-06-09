@@ -29,7 +29,7 @@ function ToolboxPage(props) {
           <Title>{title}</Title>
           <JumboSubheader>{getSymbolSpan(title)}</JumboSubheader>
         </div>
-        <div style={{ padding: 20, border: '1px solid rgba(15,70,100,.12)', borderRadius: 5 }} dangerouslySetInnerHTML={{ __html: html }} />
+        <div className="bordered-content" dangerouslySetInnerHTML={{ __html: html }} />
         <div style={{ padding: 10 }}>
           <Subheader>{`The location of ${title} in the Zodiac:`}</Subheader>
         </div>

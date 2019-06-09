@@ -5,9 +5,9 @@ export default {
       node: {
         id: 'f0ecfd4d-1054-5fa2-90eb-5e9bff25e985',
         frontmatter: {
-          title: 'Moon Circle',
+          title: 'Moon Circle OF THE FUTURE',
           image: '/assets/gemini-moon-circle.jpg',
-          eventDate: 'May 30, 2019',
+          eventDate: 'May 30, 2119',
           eventTime: '7 PM - 9 PM',
           eventDateShort: 'May 30',
           eventPrice: 25,
@@ -21,7 +21,7 @@ export default {
       node: {
         id: 'b3ffaeb7-2067-54b0-a015-df104b6e1e34',
         frontmatter: {
-          title: 'STONES OF FIRE',
+          title: 'STONES OF FIRE OF THE FUTURE',
           image: '/assets/stones-of-fire-lotus.jpg',
           eventDate: 'Jun 08, 2119',
           eventTime: '1PM - 4 PM',

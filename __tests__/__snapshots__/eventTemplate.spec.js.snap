@@ -297,16 +297,10 @@ exports[`Event Template should render correctly with events archive, event page 
               </div>
             </div>
             <div
+              className="bordered-content"
               dangerouslySetInnerHTML={
                 Object {
                   "__html": "<p>Join us A HUNDRED YEARS FROM NOW for a Goddess GEMINI Moon (12 Gemini) celebration at our sacred MOON CIRCLE.  We will explore the making \\"connections\\" lunar unfolding in June, learn about the \\"Lights Mandala\\" and apply our personal chart Lunar Planner to our monthly timing.</p>",
-                }
-              }
-              style={
-                Object {
-                  "border": "1px solid rgba(15,70,100,.12)",
-                  "borderRadius": 5,
-                  "padding": 20,
                 }
               }
             />

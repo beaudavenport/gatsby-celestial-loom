@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Getting Started Page should render correctly with samples of services, posts, events 1`] = `
+exports[`Getting Started Expired Page should render correctly with samples of services, posts, and expired events 1`] = `
 <div>
   <header
     className="md-paper md-paper--2 md-toolbar md-background--primary md-toolbar--text-white md-toolbar--fixed"
@@ -556,7 +556,7 @@ exports[`Getting Started Page should render correctly with samples of services, 
                           <p
                             className="thumbnail-text--title"
                           >
-                            NORWAC - I AM ON MY WAY TO THE FUTURE
+                            NORWAC - I AM ON MY WAY
                           </p>
                           <p
                             className="thumbnail-text--subtitle"
@@ -571,7 +571,7 @@ exports[`Getting Started Page should render correctly with samples of services, 
                                 }
                               }
                             >
-                              May 23, 2119
+                              May 23, 2019
                             </span>
                           </p>
                         </div>
@@ -690,83 +690,6 @@ exports[`Getting Started Page should render correctly with samples of services, 
                         </div>
                       </a>
                     </div>
-                  </div>
-                </div>
-                <div
-                  className="md-cell md-cell--6 md-cell--4-tablet"
-                  style={
-                    Object {
-                      "alignItems": "center",
-                      "display": "flex",
-                    }
-                  }
-                >
-                  <div
-                    style={
-                      Object {
-                        "padding": 10,
-                        "width": "100%",
-                      }
-                    }
-                  >
-                    <p
-                      className="subheader"
-                    >
-                      Attend our next event:
-                    </p>
-                    <a
-                      href="/events/moon-circle/"
-                      style={
-                        Object {
-                          "textDecoration": "none",
-                        }
-                      }
-                    >
-                      <div
-                        className="touchable-link thumbnail-card"
-                        style={Object {}}
-                      >
-                        <div
-                          className="md-ink-container"
-                        />
-                        <div
-                          className="thumbnail-image"
-                          style={
-                            Object {
-                              "backgroundImage": "url(/assets/gemini-moon-circle.jpg)",
-                            }
-                          }
-                        />
-                        <div
-                          className="thumbnail-text"
-                        >
-                          <p
-                            className="thumbnail-text--subtitle"
-                            style={
-                              Object {
-                                "color": "#ec6602",
-                                "fontSize": "1rem",
-                              }
-                            }
-                          >
-                            May 30, 2119
-                          </p>
-                          <p
-                            className="thumbnail-text--title"
-                          >
-                            Moon Circle OF THE FUTURE
-                          </p>
-                          <p
-                            className="thumbnail-text--subtitle"
-                          >
-                            Divine Inspirations • 7 PM - 9 PM
-                          </p>
-                          <p
-                            className="thumbnail-text--subtitle"
-                          />
-                        </div>
-                      </div>
-                    </a>
                   </div>
                 </div>
               </div>

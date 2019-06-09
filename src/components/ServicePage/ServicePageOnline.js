@@ -29,10 +29,10 @@ function ServicePage(props) {
         <div style={{ width: '100%' }}>
           <BigSubheader>Online Consultation</BigSubheader>
           <div style={{ padding: 10 }}>
-            <ContentWithIcon fontIconName="volume_up"><p style={{ fontStyle: 'italic', fontSize: '14px', fontWeight: 'bold' }}>60-Minute Audio MP3</p></ContentWithIcon>
-            <ContentWithIcon fontIconName="picture_as_pdf"><p style={{ fontStyle: 'italic', fontSize: '14px', fontWeight: 'bold' }}>Full-color PDF</p></ContentWithIcon>
+            <ContentWithIcon fontIconName="volume_up"><p className="service-info">60-Minute Audio MP3</p></ContentWithIcon>
+            <ContentWithIcon fontIconName="picture_as_pdf"><p className="service-info">Full-color PDF</p></ContentWithIcon>
             <ContentWithIcon fontIconName="cloud_download">
-              <p style={{ fontStyle: 'italic', fontSize: '14px', fontWeight: 'bold' }}>
+              <p className="service-info">
               Easy email delivery via
                 {' '}
                 <a href="https://www.dropbox.com/">Dropbox</a>
@@ -45,8 +45,8 @@ function ServicePage(props) {
           }}
           >
             <div>
-              <p className="event-signup-thumbnail--price-description" style={{ color: 'rgba(0, 0, 0, 0.54)', marginBottom: 2, fontSize: '.9rem' }}>Online Total</p>
-              <p className="event-signup-thumbnail--price" style={{ fontSize: '2rem' }}>{`$${Number(price).toFixed(2)}`}</p>
+              <p className="service-price--description">Online Total</p>
+              <p className="service-price--price">{`$${Number(price).toFixed(2)}`}</p>
             </div>
             <AddToCartButton
               title={title}

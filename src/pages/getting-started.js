@@ -109,17 +109,20 @@ const GettingStarted = ({ data }) => {
                 <Caption>Meet Nikki in-person and get involved in your astro-community! Sign up to attend an event.</Caption>
                 <ForwardLink title="View upcoming events" to="/events" />
               </CenteredCell>
-              <CenteredCell>
-                <Subheader>Attend our next event:</Subheader>
-                <ThumbnailEventCard
-                  path={firstEventNode.fields.slug}
-                  title={firstEventNode.frontmatter.title}
-                  image={firstEventNode.frontmatter.image}
-                  location={firstEventNode.frontmatter.location}
-                  eventTime={firstEventNode.frontmatter.eventTime}
-                  eventDate={firstEventNode.frontmatter.eventDate}
-                />
-              </CenteredCell>
+              {firstEventNode && (
+                <CenteredCell>
+                  <Subheader>Attend our next event:</Subheader>
+                  <ThumbnailEventCard
+                    path={firstEventNode.fields.slug}
+                    title={firstEventNode.frontmatter.title}
+                    image={firstEventNode.frontmatter.image}
+                    location={firstEventNode.frontmatter.location}
+                    eventTime={firstEventNode.frontmatter.eventTime}
+                    eventDate={firstEventNode.frontmatter.eventDate}
+                  />
+                </CenteredCell>
+              )
+            }
             </Grid>
           </Card>
         </Cell>

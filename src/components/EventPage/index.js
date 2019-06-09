@@ -46,7 +46,7 @@ function EventPage(props) {
             <p style={{ fontSize: '1.1rem' }}>{`${eventDate} • ${eventTime}`}</p>
           </div>
         </div>
-        <div style={{ padding: 20, border: '1px solid rgba(15,70,100,.12)', borderRadius: 5 }} dangerouslySetInnerHTML={{ __html: html }} />
+        <div className="bordered-content" dangerouslySetInnerHTML={{ __html: html }} />
         { !isExpired && (
           <div className="event-signup">
             <div style={{ flex: 1 }}>

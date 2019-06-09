@@ -3,26 +3,19 @@ import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
 
 import { Title } from '../Common';
+import OriginHeader from '../OriginHeader';
 import TextWithChevron from '../TextWithChevron';
 import TouchableLink from '../TouchableLink';
-import getOrigin from '../../helpers/originService';
 
 const ServiceCard = ({
   path, title, origin = 'Western', onlinePrice, excerpt, showPrices,
-}) => {
-  const { backgroundUrl, overlayColor } = getOrigin(origin);
-
-  return (
-    <TouchableLink to={path}>
-      <div className="origin--header--bg" style={{ backgroundImage: `url(${backgroundUrl})` }}>
-        <div className="origin--header--overlay" style={{ background: overlayColor }}>
-          <p className="origin--header--title">{origin}</p>
-        </div>
-      </div>
-      <CardText>
-        <Title>{title}</Title>
-        <div className="service--excerpt" dangerouslySetInnerHTML={{ __html: excerpt }} />
-        { showPrices && (
+}) => (
+  <TouchableLink to={path}>
+    <OriginHeader origin={origin} />
+    <CardText>
+      <Title>{title}</Title>
+      <div className="service--excerpt" dangerouslySetInnerHTML={{ __html: excerpt }} />
+      { showPrices && (
         <Fragment>
           <Divider />
           <div className="service--prices--container">
@@ -33,11 +26,10 @@ const ServiceCard = ({
             <TextWithChevron text="Order Now" />
           </div>
         </Fragment>
-        )}
-      </CardText>
-    </TouchableLink>
-  );
-};
+      )}
+    </CardText>
+  </TouchableLink>
+);
 
 ServiceCard.propTypes = {
   path: PropTypes.string.isRequired,

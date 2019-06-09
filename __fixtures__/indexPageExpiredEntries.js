@@ -5,10 +5,10 @@ export default {
       node: {
         id: '0bb54b5f-3e2a-5fb5-b1d8-884478cddc40',
         frontmatter: {
-          title: 'NORWAC - I AM ON MY WAY TO THE FUTURE',
+          title: 'NORWAC - I AM ON MY WAY',
           image: '/assets/cancer-norwac.jpg',
-          publishDate: 'May 23, 2119',
-          relatedItems: ['Cancer', 'Gemini'],
+          publishDate: 'May 23, 2019',
+          relatedItems: ['Gemini'],
         },
         excerpt: "<p>I'm on my way to NORWAC - an astrological convention in Seattle, WA.  It has been almost 20 years since I was at a big conference and I am bursting with delight.  The action begins on Friday, May 24 at 1:00 PM and the event chart explodes with…</p>",
         fields: { slug: '/blog/norwac-i-am-on-my-way/' },
@@ -17,9 +17,9 @@ export default {
       node: {
         id: '361c122c-1e55-5ee3-9a9f-935f6c6b2e2f',
         frontmatter: {
-          title: 'The Pleiades OF THE FUTURE',
+          title: 'The Pleiades',
           image: '/assets/pleiades.jpg',
-          publishDate: 'May 21, 2119',
+          publishDate: 'May 21, 2019',
           relatedItems: ['Taurus', 'Gemini'],
         },
         excerpt: '<p>The seven sisters gather</p>\n<p>At the shoulder of the Bull.</p>\n<p>They take a space no bigger</p>\n<p>Then the moon when it is full.</p>\n<p>They rise like shining warriors</p>\n<p>Out of the curling dust.</p>\n<p>They are the mother of all children,</p>\n<p>The goddess of all lust,</p>\n<p>The teacher of our…</p>',
@@ -33,9 +33,9 @@ export default {
       node: {
         id: 'f0ecfd4d-1054-5fa2-90eb-5e9bff25e985',
         frontmatter: {
-          title: 'Moon Circle OF THE FUTURE',
+          title: 'Moon Circle',
           image: '/assets/gemini-moon-circle.jpg',
-          eventDate: 'May 30, 2119',
+          eventDate: 'May 30, 2019',
           eventTime: '7 PM - 9 PM',
           eventDateShort: 'May 30',
           eventPrice: 25,
@@ -49,9 +49,9 @@ export default {
       node: {
         id: 'b3ffaeb7-2067-54b0-a015-df104b6e1e34',
         frontmatter: {
-          title: 'STONES OF FIRE OF THE FUTURE',
+          title: 'STONES OF FIRE',
           image: '/assets/stones-of-fire-lotus.jpg',
-          eventDate: 'June 08, 2119',
+          eventDate: 'June 08, 2019',
           eventTime: '1PM - 4 PM',
           eventDateShort: 'Jun 08',
           eventPrice: 35,
@@ -63,43 +63,14 @@ export default {
       },
     }],
   },
-  natalChart: {
-    id: '1a0bbe84-ce51-5251-8cc5-b91d976be40d',
+  featuredService: {
+    excerpt: '<p>This chart is the perfect introduction to understanding your Astrological dynamics. With an in-depth look into the planetary energies at work since your life began, you can make informed decisions about the world around you and the future that you…</p>',
     frontmatter: {
       title: 'Natal Chart',
-      type: 'services',
+      origin: 'Western',
       onlinePrice: 140,
       inPersonPrice: 175,
-      origin: 'Western',
     },
-    excerpt: '<p>This chart is the perfect introduction to understanding your Astrological dynamics. With an in-depth look into the planetary energies at work since your life began, you can make informed decisions about the world around you and the future that you…</p>',
     fields: { slug: '/services/natal-chart/' },
-  },
-  toolboxItems: {
-    edges: [{
-      node: {
-        frontmatter: {
-          title: 'Aries',
-          toolboxType: 'Signs',
-        },
-        fields: { slug: '/toolbox/aries/' },
-      },
-    }, {
-      node: {
-        frontmatter: {
-          title: 'First House',
-          toolboxType: 'Houses',
-        },
-        fields: { slug: '/toolbox/first-house/' },
-      },
-    }, {
-      node: {
-        frontmatter: {
-          title: 'Sun',
-          toolboxType: 'Planets',
-        },
-        fields: { slug: '/toolbox/sun/' },
-      },
-    }],
   },
 };

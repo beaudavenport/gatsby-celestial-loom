@@ -191,40 +191,23 @@ exports[`Service Template should render correctly with services archive, service
         </div>
         <div>
           <div
+            className="origin--header--bg"
             style={
               Object {
-                "background": "url(File contents (usually images))",
-                "backgroundPosition": "center",
-                "backgroundSize": "cover",
-                "height": "90px",
-                "padding": 0,
-                "width": "100%",
+                "backgroundImage": "url(File contents (usually images))",
               }
             }
           >
             <div
+              className="origin--header--overlay"
               style={
                 Object {
                   "background": "rgba(39,62,84,0.65)",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "height": "90px",
-                  "justifyContent": "center",
-                  "overflow": "hidden",
-                  "padding": 20,
-                  "zIndex": 2,
                 }
               }
             >
               <p
-                style={
-                  Object {
-                    "color": "white",
-                    "fontSize": "1.3rem",
-                    "fontWeight": "bold",
-                    "opacity": 0.9,
-                  }
-                }
+                className="origin--header--title"
               >
                 Western
               </p>
@@ -321,13 +304,7 @@ exports[`Service Template should render correctly with services archive, service
                             volume_up
                           </i>
                           <p
-                            style={
-                              Object {
-                                "fontSize": "14px",
-                                "fontStyle": "italic",
-                                "fontWeight": "bold",
-                              }
-                            }
+                            className="service-info"
                           >
                             60-Minute Audio MP3
                           </p>
@@ -346,13 +323,7 @@ exports[`Service Template should render correctly with services archive, service
                             picture_as_pdf
                           </i>
                           <p
-                            style={
-                              Object {
-                                "fontSize": "14px",
-                                "fontStyle": "italic",
-                                "fontWeight": "bold",
-                              }
-                            }
+                            className="service-info"
                           >
                             Full-color PDF
                           </p>
@@ -371,13 +342,7 @@ exports[`Service Template should render correctly with services archive, service
                             cloud_download
                           </i>
                           <p
-                            style={
-                              Object {
-                                "fontSize": "14px",
-                                "fontStyle": "italic",
-                                "fontWeight": "bold",
-                              }
-                            }
+                            className="service-info"
                           >
                             Easy email delivery via
                              
@@ -404,24 +369,12 @@ exports[`Service Template should render correctly with services archive, service
                       >
                         <div>
                           <p
-                            className="event-signup-thumbnail--price-description"
-                            style={
-                              Object {
-                                "color": "rgba(0, 0, 0, 0.54)",
-                                "fontSize": ".9rem",
-                                "marginBottom": 2,
-                              }
-                            }
+                            className="service-price--description"
                           >
                             Online Total
                           </p>
                           <p
-                            className="event-signup-thumbnail--price"
-                            style={
-                              Object {
-                                "fontSize": "2rem",
-                              }
-                            }
+                            className="service-price--price"
                           >
                             $140.00
                           </p>
@@ -509,13 +462,7 @@ exports[`Service Template should render correctly with services archive, service
                             face
                           </i>
                           <p
-                            style={
-                              Object {
-                                "fontSize": "14px",
-                                "fontStyle": "italic",
-                                "fontWeight": "bold",
-                              }
-                            }
+                            className="service-info"
                           >
                             90-minute in-person discussion
                           </p>
@@ -534,13 +481,7 @@ exports[`Service Template should render correctly with services archive, service
                             picture_as_pdf
                           </i>
                           <p
-                            style={
-                              Object {
-                                "fontSize": "14px",
-                                "fontStyle": "italic",
-                                "fontWeight": "bold",
-                              }
-                            }
+                            className="service-info"
                           >
                             Full-color PDF
                           </p>
@@ -559,13 +500,7 @@ exports[`Service Template should render correctly with services archive, service
                             volume_up
                           </i>
                           <p
-                            style={
-                              Object {
-                                "fontSize": "14px",
-                                "fontStyle": "italic",
-                                "fontWeight": "bold",
-                              }
-                            }
+                            className="service-info"
                           >
                             Free live session recording
                           </p>
@@ -586,24 +521,12 @@ exports[`Service Template should render correctly with services archive, service
                       >
                         <div>
                           <p
-                            className="event-signup-thumbnail--price-description"
-                            style={
-                              Object {
-                                "color": "rgba(0, 0, 0, 0.54)",
-                                "fontSize": ".9rem",
-                                "marginBottom": 2,
-                              }
-                            }
+                            className="service-price--description"
                           >
                             In-Person Total
                           </p>
                           <p
-                            className="event-signup-thumbnail--price"
-                            style={
-                              Object {
-                                "fontSize": "2rem",
-                              }
-                            }
+                            className="service-price--price"
                           >
                             $175.00
                           </p>
