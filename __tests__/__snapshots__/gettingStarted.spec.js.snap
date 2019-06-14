@@ -1244,11 +1244,7 @@ exports[`Getting Started Page should render correctly with samples of services, 
             </h5>
           </div>
           <div
-            style={
-              Object {
-                "padding": 10,
-              }
-            }
+            className="content-container"
           >
             <a
               href="/events/stones-of-fire/"
@@ -1440,11 +1436,7 @@ exports[`Getting Started Page should render correctly with samples of services, 
           </h3>
         </div>
         <div
-          style={
-            Object {
-              "padding": 10,
-            }
-          }
+          className="content-container"
         >
           <p
             className="footer--text"

@@ -77,7 +77,7 @@ const IndexPage = ({ data }) => {
           </div>
         </Cell>
         { otherBlogNodes && otherBlogNodes.map(node => (
-          <Cell size={6} tabletSize={4} style={{ padding: 10 }}>
+          <Cell size={6} tabletSize={4} className="content-container">
             <ThumbnailCard
               style={{ marginBottom: 10 }}
               path={node.fields.slug}

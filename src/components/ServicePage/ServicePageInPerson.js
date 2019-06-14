@@ -28,7 +28,7 @@ function ServicePage(props) {
       <Cell size={6} tabletSize={4} style={{ display: 'flex', alignItems: 'center' }}>
         <div style={{ width: '100%' }}>
           <BigSubheader>In-Person Consultation</BigSubheader>
-          <div style={{ padding: 10 }}>
+          <div className="content-container">
             <ContentWithIcon fontIconName="face"><p className="service-info">90-minute in-person discussion</p></ContentWithIcon>
             <ContentWithIcon fontIconName="picture_as_pdf"><p className="service-info">Full-color PDF</p></ContentWithIcon>
             <ContentWithIcon fontIconName="volume_up"><p className="service-info">Free live session recording</p></ContentWithIcon>

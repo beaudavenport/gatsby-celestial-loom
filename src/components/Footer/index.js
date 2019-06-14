@@ -14,7 +14,7 @@ const Footer = () => (
         </div>
         <h3 className="footer--title">The Celestial Loom</h3>
       </div>
-      <div style={{ padding: 10 }}>
+      <div className="content-container">
         <p className="footer--text">
 &copy;
           {` Copyright ${new Date().getFullYear()}, Nikki Davenport.`}

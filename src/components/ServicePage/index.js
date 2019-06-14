@@ -34,7 +34,7 @@ const ServicePage = ({
               <div style={{ padding: 15 }}>
                 <BigSubheader>Online Consultation</BigSubheader>
               </div>
-              <div style={{ padding: 10 }}>
+              <div className="content-container">
                 <ContentWithIcon fontIconName="volume_up"><p className="service-info">60-Minute Audio MP3</p></ContentWithIcon>
                 <ContentWithIcon fontIconName="picture_as_pdf"><p className="service-info">Full-color PDF</p></ContentWithIcon>
                 <ContentWithIcon fontIconName="cloud_download">
@@ -65,7 +65,7 @@ const ServicePage = ({
               <div style={{ padding: 15 }}>
                 <BigSubheader>In-Person Consultation</BigSubheader>
               </div>
-              <div style={{ padding: 10 }}>
+              <div className="content-container">
                 <ContentWithIcon fontIconName="face"><p className="service-info">90-minute in-person discussion</p></ContentWithIcon>
                 <ContentWithIcon fontIconName="picture_as_pdf"><p className="service-info">Full-color PDF</p></ContentWithIcon>
                 <ContentWithIcon fontIconName="volume_up"><p className="service-info">Free live session recording</p></ContentWithIcon>

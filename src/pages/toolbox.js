@@ -26,7 +26,7 @@ const Toolbox = () => (
         <Subtitle>Explore the interactive zodiac wheel, or select a sign, house or planet</Subtitle>
       </Cell>
       <Cell size={12}>
-        <div style={{ padding: 10 }}>
+        <div className="content-container">
           <Subheader>Click on an element to learn more.</Subheader>
         </div>
         <Card style={{ paddingRight: 20, paddingLeft: 20 }}>

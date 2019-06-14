@@ -446,11 +446,7 @@ exports[`Blog Template should render correctly with posts archive, blog page and
             </h5>
           </div>
           <div
-            style={
-              Object {
-                "padding": 10,
-              }
-            }
+            className="content-container"
           >
             <a
               href="/events/stones-of-fire/"
@@ -542,11 +538,7 @@ exports[`Blog Template should render correctly with posts archive, blog page and
           </h3>
         </div>
         <div
-          style={
-            Object {
-              "padding": 10,
-            }
-          }
+          className="content-container"
         >
           <p
             className="footer--text"

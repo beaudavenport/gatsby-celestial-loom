@@ -757,11 +757,7 @@ exports[`Events should render correctly with events 1`] = `
             </h5>
           </div>
           <div
-            style={
-              Object {
-                "padding": 10,
-              }
-            }
+            className="content-container"
           >
             <a
               href="/blog/norwac-i-am-on-my-way/"
@@ -900,11 +896,7 @@ exports[`Events should render correctly with events 1`] = `
           </h3>
         </div>
         <div
-          style={
-            Object {
-              "padding": 10,
-            }
-          }
+          className="content-container"
         >
           <p
             className="footer--text"

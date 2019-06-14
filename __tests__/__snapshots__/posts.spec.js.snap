@@ -210,12 +210,8 @@ exports[`Posts should render correctly with most recent posts 1`] = `
                 }
               >
                 <div
-                  className="touchable-link "
-                  style={
-                    Object {
-                      "padding": 10,
-                    }
-                  }
+                  className="touchable-link content-container"
+                  style={Object {}}
                 >
                   <div
                     className="md-ink-container"
@@ -349,12 +345,8 @@ exports[`Posts should render correctly with most recent posts 1`] = `
                 }
               >
                 <div
-                  className="touchable-link "
-                  style={
-                    Object {
-                      "padding": 10,
-                    }
-                  }
+                  className="touchable-link content-container"
+                  style={Object {}}
                 >
                   <div
                     className="md-ink-container"
@@ -631,11 +623,7 @@ exports[`Posts should render correctly with most recent posts 1`] = `
             </h5>
           </div>
           <div
-            style={
-              Object {
-                "padding": 10,
-              }
-            }
+            className="content-container"
           >
             <a
               href="/events/stones-of-fire/"
@@ -727,11 +715,7 @@ exports[`Posts should render correctly with most recent posts 1`] = `
           </h3>
         </div>
         <div
-          style={
-            Object {
-              "padding": 10,
-            }
-          }
+          className="content-container"
         >
           <p
             className="footer--text"

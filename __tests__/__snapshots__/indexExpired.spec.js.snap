@@ -288,12 +288,8 @@ exports[`Index Expired Page should render correctly with posts, expired events, 
                 }
               >
                 <div
-                  className="touchable-link "
-                  style={
-                    Object {
-                      "padding": 10,
-                    }
-                  }
+                  className="touchable-link content-container"
+                  style={Object {}}
                 >
                   <div
                     className="md-ink-container"
@@ -487,12 +483,7 @@ exports[`Index Expired Page should render correctly with posts, expired events, 
             </div>
           </div>
           <div
-            className="md-cell md-cell--6 md-cell--4-tablet"
-            style={
-              Object {
-                "padding": 10,
-              }
-            }
+            className="md-cell md-cell--6 md-cell--4-tablet content-container"
           >
             <a
               href="/blog/the-pleiades/"
@@ -857,11 +848,7 @@ exports[`Index Expired Page should render correctly with posts, expired events, 
           </h3>
         </div>
         <div
-          style={
-            Object {
-              "padding": 10,
-            }
-          }
+          className="content-container"
         >
           <p
             className="footer--text"

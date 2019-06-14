@@ -995,11 +995,7 @@ exports[`Services should render correctly with services 1`] = `
             </h5>
           </div>
           <div
-            style={
-              Object {
-                "padding": 10,
-              }
-            }
+            className="content-container"
           >
             <a
               href="/events/stones-of-fire/"
@@ -1141,11 +1137,7 @@ exports[`Services should render correctly with services 1`] = `
           </h3>
         </div>
         <div
-          style={
-            Object {
-              "padding": 10,
-            }
-          }
+          className="content-container"
         >
           <p
             className="footer--text"

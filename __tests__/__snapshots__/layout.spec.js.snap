@@ -173,11 +173,7 @@ exports[`Layout should render correctly with no children 1`] = `
           </h3>
         </div>
         <div
-          style={
-            Object {
-              "padding": 10,
-            }
-          }
+          className="content-container"
         >
           <p
             className="footer--text"

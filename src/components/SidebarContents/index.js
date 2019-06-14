@@ -67,7 +67,7 @@ const SidebarContents = ({ eventsQuantity, postsQuantity }) => (
       return (
         <div>
           <SidebarHeader title="Latest Updates" />
-          <div style={{ padding: 10 }}>
+          <div className="content-container">
             { eventNodes.length > 0 && eventNodes.map(node => (
               <ThumbnailEventCard
                 path={node.fields.slug}

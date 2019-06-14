@@ -284,11 +284,7 @@ exports[`Service Template should render correctly with services archive, service
                         </p>
                       </div>
                       <div
-                        style={
-                          Object {
-                            "padding": 10,
-                          }
-                        }
+                        className="content-container"
                       >
                         <div
                           className="content-with-icon"
@@ -442,11 +438,7 @@ exports[`Service Template should render correctly with services archive, service
                         </p>
                       </div>
                       <div
-                        style={
-                          Object {
-                            "padding": 10,
-                          }
-                        }
+                        className="content-container"
                       >
                         <div
                           className="content-with-icon"
@@ -764,11 +756,7 @@ exports[`Service Template should render correctly with services archive, service
             </h5>
           </div>
           <div
-            style={
-              Object {
-                "padding": 10,
-              }
-            }
+            className="content-container"
           >
             <a
               href="/events/stones-of-fire/"
@@ -960,11 +948,7 @@ exports[`Service Template should render correctly with services archive, service
           </h3>
         </div>
         <div
-          style={
-            Object {
-              "padding": 10,
-            }
-          }
+          className="content-container"
         >
           <p
             className="footer--text"

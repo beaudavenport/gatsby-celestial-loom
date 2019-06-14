@@ -30,16 +30,16 @@ function ToolboxPage(props) {
           <JumboSubheader>{getSymbolSpan(title)}</JumboSubheader>
         </div>
         <div className="bordered-content" dangerouslySetInnerHTML={{ __html: html }} />
-        <div style={{ padding: 10 }}>
+        <div className="content-container">
           <Subheader>{`The location of ${title} in the Zodiac:`}</Subheader>
         </div>
         <Card style={{ paddingRight: 20, paddingLeft: 20 }}>
           <ZodiacWheel title={title} />
         </Card>
-        <div style={{ padding: 10 }}>
+        <div className="content-container">
           <Subheader>{`${title} is mentioned in...`}</Subheader>
         </div>
-        <div style={{ padding: 10 }}>
+        <div className="content-container">
           { eventNodes.length > 0 && eventNodes.map(node => (
             <ThumbnailEventCard
               path={node.fields.slug}

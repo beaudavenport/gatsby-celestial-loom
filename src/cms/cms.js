@@ -135,7 +135,7 @@ function ToolboxPreview({ entry }) {
           <Title>{data.title}</Title>
         </div>
         <div className="bordered-content" dangerouslySetInnerHTML={{ __html: data.html }} />
-        <div style={{ padding: 10 }}>
+        <div className="content-container">
           <Subheader>{`The location of ${data.title} in the Zodiac:`}</Subheader>
         </div>
         <Card style={{ padding: 30 }}>
