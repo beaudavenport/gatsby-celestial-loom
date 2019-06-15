@@ -189,169 +189,134 @@ exports[`Blog Template should render correctly with posts archive, blog page and
             </div>
           </a>
         </div>
-        <div
-          style={
-            Object {
-              "padding": "20px 10px",
-            }
-          }
-        >
-          <h2
-            style={
-              Object {
-                "fontWeight": "bold",
-                "marginBottom": 5,
-              }
-            }
-          >
-            NORWAC - I AM ON MY WAY
-          </h2>
-          <h3
-            style={
-              Object {
-                "color": "rgba(0, 0, 0, 0.54)",
-                "fontSize": "1.1rem",
-                "marginBottom": 20,
-              }
-            }
-          >
-            May 23, 2019
-          </h3>
+        <div>
           <div
-            style={
-              Object {
-                "margin": "0 auto",
-                "maxWidth": 400,
-              }
-            }
+            className="content-container"
           >
-            <img
-              alt="post"
-              src="/assets/cancer-norwac.jpg"
-              style={
-                Object {
-                  "margin": "0 auto",
-                  "objectFit": "cover",
-                  "width": "100%",
-                }
-              }
-            />
+            <h2
+              className="title"
+            >
+              NORWAC - I AM ON MY WAY
+            </h2>
+            <h4
+              className="subtitle"
+            >
+              May 23, 2019
+            </h4>
           </div>
           <div
-            style={
-              Object {
-                "padding": 20,
-              }
-            }
+            className="content-container"
+          >
+            <div
+              className="page-image--container"
+            >
+              <img
+                alt="Blog"
+                className="page-image--image"
+                src="/assets/cancer-norwac.jpg"
+              />
+            </div>
+          </div>
+          <div
+            className="content-container"
           >
             <p
-              style={
-                Object {
-                  "color": "#ec6602",
-                  "fontWeight": "bold",
-                }
-              }
+              className="subheader"
             >
               Mentioned in this post:
             </p>
             <div
-              style={
-                Object {
-                  "display": "flex",
-                  "flexWrap": "wrap",
-                  "justifyContent": "flex-start",
-                }
-              }
+              className="related-items--container"
             >
-              <div
-                className="related-items--container"
+              <button
+                className="md-chip md-chip--avatar"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                style={
+                  Object {
+                    "cursor": "pointer",
+                    "margin": 10,
+                  }
+                }
+                type="button"
               >
-                <button
-                  className="md-chip md-chip--avatar"
-                  onClick={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  style={
-                    Object {
-                      "cursor": "pointer",
-                      "margin": 10,
-                    }
-                  }
-                  type="button"
+                <div
+                  className="md-inline-block md-avatar md-avatar--default md-avatar--icon-sized"
                 >
                   <div
-                    className="md-inline-block md-avatar md-avatar--default md-avatar--icon-sized"
+                    className="md-avatar-content"
                   >
-                    <div
-                      className="md-avatar-content"
-                    >
-                      <span
-                        style={
-                          Object {
-                            "fontFamily": "AstroGadget",
-                          }
+                    <span
+                      style={
+                        Object {
+                          "fontFamily": "AstroGadget",
                         }
-                      >
-                        b
-                      </span>
-                    </div>
+                      }
+                    >
+                      b
+                    </span>
                   </div>
-                  <span
-                    className="md-chip-text"
-                  >
-                    Taurus
-                  </span>
-                </button>
-                <button
-                  className="md-chip md-chip--avatar"
-                  onClick={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  style={
-                    Object {
-                      "cursor": "pointer",
-                      "margin": 10,
-                    }
+                </div>
+                <span
+                  className="md-chip-text"
+                >
+                  Taurus
+                </span>
+              </button>
+              <button
+                className="md-chip md-chip--avatar"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                style={
+                  Object {
+                    "cursor": "pointer",
+                    "margin": 10,
                   }
-                  type="button"
+                }
+                type="button"
+              >
+                <div
+                  className="md-inline-block md-avatar md-avatar--default md-avatar--icon-sized"
                 >
                   <div
-                    className="md-inline-block md-avatar md-avatar--default md-avatar--icon-sized"
+                    className="md-avatar-content"
                   >
-                    <div
-                      className="md-avatar-content"
-                    >
-                      <span
-                        style={
-                          Object {
-                            "fontFamily": "AstroGadget",
-                          }
+                    <span
+                      style={
+                        Object {
+                          "fontFamily": "AstroGadget",
                         }
-                      >
-                        1
-                      </span>
-                    </div>
+                      }
+                    >
+                      1
+                    </span>
                   </div>
-                  <span
-                    className="md-chip-text"
-                  >
-                    First House
-                  </span>
-                </button>
-              </div>
+                </div>
+                <span
+                  className="md-chip-text"
+                >
+                  First House
+                </span>
+              </button>
             </div>
           </div>
-          <section
-            className="md-card-text"
+          <div
+            className="content-container"
           >
-            <div
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": "<p>I'm on my way to NORWAC - an astrological convention in Seattle, WA</p>",
+            <section
+              className="md-card-text"
+            >
+              <div
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "<p>I'm on my way to NORWAC - an astrological convention in Seattle, WA</p>",
+                  }
                 }
-              }
-            />
-          </section>
+              />
+            </section>
+          </div>
         </div>
       </div>
       <div

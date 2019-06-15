@@ -2,29 +2,33 @@ import { CardText } from 'react-md';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import {
+  PageImage, Subheader, Subtitle, Title,
+} from '../Common';
+
 function BlogEntry({
   title, image, publishDate, html, relatedItemChips,
 }) {
   return (
-    <div style={{ padding: '20px 10px' }}>
-      <h2 style={{ fontWeight: 'bold', marginBottom: 5 }}>{title}</h2>
-      <h3 style={{ color: 'rgba(0, 0, 0, 0.54)', marginBottom: 20, fontSize: '1.1rem' }}>
-        {publishDate}
-      </h3>
-      <div style={{ margin: '0 auto', maxWidth: 400 }}>
-        <img style={{ width: '100%', objectFit: 'cover', margin: '0 auto' }} src={image} alt="post" />
+    <div>
+      <div className="content-container">
+        <Title>{title}</Title>
+        <Subtitle>{publishDate}</Subtitle>
+      </div>
+      <div className="content-container">
+        <PageImage image={image} alt="Blog" />
       </div>
       {relatedItemChips && (
-        <div style={{ padding: 20 }}>
-          <p style={{ color: '#ec6602', fontWeight: 'bold' }}>Mentioned in this post:</p>
-          <div style={{ display: 'flex', justifyContent: 'flex-start', flexWrap: 'wrap' }}>
+        <div className="content-container">
+          <Subheader>Mentioned in this post:</Subheader>
             {relatedItemChips}
-          </div>
         </div>
       )}
-      <CardText>
-        <div dangerouslySetInnerHTML={{ __html: html }} />
-      </CardText>
+      <div className="content-container">
+        <CardText>
+          <div dangerouslySetInnerHTML={{ __html: html }} />
+        </CardText>
+      </div>
     </div>
   );
 }

@@ -50,7 +50,7 @@ const IndexPage = ({ data }) => {
         </Grid>
       )}
     >
-      <Grid style={{ marginBottom: 20, borderBottom: '1px solid rgba(15,70,100,.2)' }}>
+      <Grid className="separated--grid">
         <Cell size={12}>
           <BigSubheader>Featured Post</BigSubheader>
         </Cell>
@@ -69,9 +69,9 @@ const IndexPage = ({ data }) => {
           />
         </Cell>
       </Grid>
-      <Grid style={{ borderBottom: '1px solid rgba(15,70,100,.2)', marginBottom: 20 }}>
+      <Grid className="separated--grid">
         <Cell size={12}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
+          <div className="homepage--header">
             <BigSubheader>Previous Posts</BigSubheader>
             <ForwardLink to="/posts" title="All Posts" />
           </div>
@@ -90,9 +90,9 @@ const IndexPage = ({ data }) => {
           }
       </Grid>
       { firstEventNode && (
-        <Grid style={{ borderBottom: '1px solid rgba(15,70,100,.2)', marginBottom: 20 }}>
+        <Grid className="separated--grid">
           <Cell size={12}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
+            <div className="homepage--header">
               <BigSubheader>Next Event</BigSubheader>
               <ForwardLink to="/events" title="All Events" />
             </div>
@@ -112,9 +112,9 @@ const IndexPage = ({ data }) => {
           </Cell>
         </Grid>
       )}
-      <Grid style={{ borderBottom: '1px solid rgba(15,70,100,.2)', marginBottom: 20 }}>
+      <Grid className="separated--grid">
         <Cell size={12}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
+          <div className="homepage--header">
             <BigSubheader>Featured Service</BigSubheader>
             <ForwardLink to="/services" title="All Services" />
           </div>

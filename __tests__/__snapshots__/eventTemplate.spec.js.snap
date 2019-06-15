@@ -190,19 +190,10 @@ exports[`Event Template should render correctly with events archive, event page 
           </a>
         </div>
         <div
-          style={
-            Object {
-              "padding": 20,
-            }
-          }
+          className="content-container"
         >
           <div
-            style={
-              Object {
-                "marginBottom": 30,
-                "textAlign": "center",
-              }
-            }
+            className="event-title--container"
           >
             <h2
               className="title"
@@ -216,42 +207,19 @@ exports[`Event Template should render correctly with events archive, event page 
             </h4>
           </div>
           <div
-            style={
-              Object {
-                "margin": "0 auto",
-                "maxWidth": 400,
-              }
-            }
+            className="page-image--container"
           >
             <img
-              alt="event-page"
+              alt="event"
+              className="page-image--image"
               src="/assets/gemini-moon-circle.jpg"
-              style={
-                Object {
-                  "margin": "0 auto",
-                  "objectFit": "cover",
-                  "width": "100%",
-                }
-              }
             />
           </div>
           <div
-            style={
-              Object {
-                "margin": "0 auto",
-                "maxWidth": "500px",
-              }
-            }
+            className="event-page--detail-container"
           >
             <div
-              style={
-                Object {
-                  "alignItems": "center",
-                  "display": "flex",
-                  "flexDirection": "column",
-                  "padding": 10,
-                }
-              }
+              className="flex-column flex-center"
             >
               <div
                 className="event-detail"
@@ -326,13 +294,7 @@ exports[`Event Template should render correctly with events archive, event page 
                 </p>
               </div>
               <div
-                style={
-                  Object {
-                    "display": "flex",
-                    "flex": 1,
-                    "justifyContent": "flex-end",
-                  }
-                }
+                className="event-page--button"
               >
                 <button
                   className="md-btn md-btn--raised md-btn--text md-pointer--hover md-background--primary md-background--primary-hover md-inline-block snipcart-add-item"

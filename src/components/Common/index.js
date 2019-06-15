@@ -108,6 +108,17 @@ ForwardLink.defaultProps = {
   alignRight: false,
 };
 
+const PageImage = ({ image, alt }) => (
+  <div className="page-image--container">
+    <img className="page-image--image" src={image} alt={alt} />
+  </div>
+);
+
+PageImage.propTypes = {
+  image: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
+};
+
 const ContentWithIcon = ({ fontIconName, fontIconStyle, children }) => (
   <div className="content-with-icon">
     <FontIcon style={{ marginRight: 5, ...fontIconStyle }}>{fontIconName}</FontIcon>
@@ -138,6 +149,7 @@ export {
   JumboSubheader,
   BackLink,
   ForwardLink,
+  PageImage,
   ContentWithIcon,
   Caption,
   FacebookIcon,

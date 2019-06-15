@@ -247,13 +247,7 @@ exports[`IndexPage should render correctly with posts, events, and services 1`] 
         className="md-cell md-cell--8 main-contents"
       >
         <div
-          className="md-grid"
-          style={
-            Object {
-              "borderBottom": "1px solid rgba(15,70,100,.2)",
-              "marginBottom": 20,
-            }
-          }
+          className="md-grid separated--grid"
         >
           <div
             className="md-cell md-cell--12"
@@ -407,25 +401,13 @@ exports[`IndexPage should render correctly with posts, events, and services 1`] 
           </div>
         </div>
         <div
-          className="md-grid"
-          style={
-            Object {
-              "borderBottom": "1px solid rgba(15,70,100,.2)",
-              "marginBottom": 20,
-            }
-          }
+          className="md-grid separated--grid"
         >
           <div
             className="md-cell md-cell--12"
           >
             <div
-              style={
-                Object {
-                  "alignItems": "baseline",
-                  "display": "flex",
-                  "justifyContent": "space-between",
-                }
-              }
+              className="homepage--header"
             >
               <p
                 className="subheader"
@@ -538,25 +520,13 @@ exports[`IndexPage should render correctly with posts, events, and services 1`] 
           </div>
         </div>
         <div
-          className="md-grid"
-          style={
-            Object {
-              "borderBottom": "1px solid rgba(15,70,100,.2)",
-              "marginBottom": 20,
-            }
-          }
+          className="md-grid separated--grid"
         >
           <div
             className="md-cell md-cell--12"
           >
             <div
-              style={
-                Object {
-                  "alignItems": "baseline",
-                  "display": "flex",
-                  "justifyContent": "space-between",
-                }
-              }
+              className="homepage--header"
             >
               <p
                 className="subheader"
@@ -789,25 +759,13 @@ exports[`IndexPage should render correctly with posts, events, and services 1`] 
           </div>
         </div>
         <div
-          className="md-grid"
-          style={
-            Object {
-              "borderBottom": "1px solid rgba(15,70,100,.2)",
-              "marginBottom": 20,
-            }
-          }
+          className="md-grid separated--grid"
         >
           <div
             className="md-cell md-cell--12"
           >
             <div
-              style={
-                Object {
-                  "alignItems": "baseline",
-                  "display": "flex",
-                  "justifyContent": "space-between",
-                }
-              }
+              className="homepage--header"
             >
               <p
                 className="subheader"

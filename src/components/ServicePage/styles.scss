@@ -15,3 +15,10 @@
   font-size: 1.6rem !important;
   color: $md-primary-color;
 }
+
+.service-option--container {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  align-items: center;
+}

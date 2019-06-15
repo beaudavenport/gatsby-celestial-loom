@@ -10,6 +10,16 @@
   margin-bottom: 0;
 }
 
+.page-image--container {
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+.page-image--image {
+  width: 100%;
+  object-fit: cover;
+}
+
 .subheader {
   color: rgb(247, 105, 0);
   font-weight: bold;

@@ -354,14 +354,7 @@ exports[`Service Template should render correctly with services archive, service
                         className="md-divider"
                       />
                       <div
-                        style={
-                          Object {
-                            "alignItems": "center",
-                            "display": "flex",
-                            "justifyContent": "space-between",
-                            "padding": 15,
-                          }
-                        }
+                        className="service-option--container"
                       >
                         <div>
                           <p
@@ -502,14 +495,7 @@ exports[`Service Template should render correctly with services archive, service
                         className="md-divider"
                       />
                       <div
-                        style={
-                          Object {
-                            "alignItems": "center",
-                            "display": "flex",
-                            "justifyContent": "space-between",
-                            "padding": 15,
-                          }
-                        }
+                        className="service-option--container"
                       >
                         <div>
                           <p

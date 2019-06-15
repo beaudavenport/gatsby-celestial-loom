@@ -46,10 +46,7 @@ const ServicePage = ({
                 </ContentWithIcon>
               </div>
               <Divider />
-              <div style={{
-                display: 'flex', justifyContent: 'space-between', padding: 15, alignItems: 'center',
-              }}
-              >
+              <div className="service-option--container">
                 <div>
                   <p className="service-price--description">Online Total</p>
                   <p className="service-price--price">{`$${Number(onlinePrice).toFixed(2)}`}</p>
@@ -71,10 +68,7 @@ const ServicePage = ({
                 <ContentWithIcon fontIconName="volume_up"><p className="service-info">Free live session recording</p></ContentWithIcon>
               </div>
               <Divider />
-              <div style={{
-                display: 'flex', justifyContent: 'space-between', padding: 15, alignItems: 'center',
-              }}
-              >
+              <div className="service-option--container">
                 <div>
                   <p className="service-price--description">In-Person Total</p>
                   <p className="service-price--price">{`$${Number(inPersonPrice).toFixed(2)}`}</p>
