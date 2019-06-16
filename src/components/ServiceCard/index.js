@@ -35,13 +35,14 @@ ServiceCard.propTypes = {
   path: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   origin: PropTypes.string.isRequired,
-  onlinePrice: PropTypes.string.isRequired,
+  onlinePrice: PropTypes.number,
   excerpt: PropTypes.string.isRequired,
   showPrices: PropTypes.bool,
 };
 
 ServiceCard.defaultProps = {
   showPrices: true,
+  onlinePrice: 0,
 };
 
 export default ServiceCard;

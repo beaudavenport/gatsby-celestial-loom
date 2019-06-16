@@ -128,7 +128,7 @@ const ContentWithIcon = ({ fontIconName, fontIconStyle, children }) => (
 
 ContentWithIcon.propTypes = {
   fontIconName: PropTypes.string.isRequired,
-  children: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
   fontIconStyle: PropTypes.object, // eslint-disable-line
 };
 

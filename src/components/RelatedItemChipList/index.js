@@ -10,7 +10,7 @@ const RelatedItemChipList = ({ relatedItems }) => {
     <div className="related-items--container">
       {relatedItems.map((relatedItem) => {
         const matchingNode = nodes.find(node => node.frontmatter.title === relatedItem);
-        return <RelatedItemChip item={matchingNode} />;
+        return <RelatedItemChip key={relatedItem} item={matchingNode} />;
       })}
     </div>
   );

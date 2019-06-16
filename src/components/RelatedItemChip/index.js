@@ -15,7 +15,7 @@ const RelatedItemChip = ({ item, style }) => (
 );
 
 RelatedItemChip.propTypes = {
-  item: PropTypes.string.isRequired,  // eslint-disable-line
+  item: PropTypes.object.isRequired,  // eslint-disable-line
   style: PropTypes.object, // eslint-disable-line
 };
 

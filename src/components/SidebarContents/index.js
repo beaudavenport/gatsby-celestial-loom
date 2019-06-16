@@ -62,7 +62,7 @@ const SidebarContents = ({ eventsQuantity, postsQuantity }) => (
     render={(data) => {
       const blogNodes = data.blog.edges.map(edge => edge.node).slice(0, postsQuantity);
       const eventNodes = data.events.edges.map(edge => edge.node)
-        .filter(node => moment().isBefore(moment(node.frontmatter.eventDate)))
+        .filter(node => moment().isBefore(moment(node.frontmatter.eventDate, 'MMMM DD, YYYY')))
         .slice(0, eventsQuantity);
       return (
         <div>
@@ -70,6 +70,7 @@ const SidebarContents = ({ eventsQuantity, postsQuantity }) => (
           <div className="content-container">
             { eventNodes.length > 0 && eventNodes.map(node => (
               <ThumbnailEventCard
+                key={node.frontmatter.title}
                 path={node.fields.slug}
                 title={node.frontmatter.title}
                 image={node.frontmatter.image}
@@ -82,6 +83,7 @@ const SidebarContents = ({ eventsQuantity, postsQuantity }) => (
             { blogNodes.length > 0 && blogNodes.map(node => (
               <ThumbnailCard
                 small
+                key={node.frontmatter.title}
                 path={node.fields.slug}
                 title={node.frontmatter.title}
                 caption={node.frontmatter.publishDate}

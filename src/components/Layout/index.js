@@ -28,6 +28,7 @@ const getNavItem = ({ divider, subheader, ...route }) => {
 
   return (
     <ListItem
+      key={route.title}
       primaryText={route.title}
       primaryTextStyle={{ color: 'white' }}
       leftIcon={<FontIcon style={{ color: 'white' }}>{route.icon}</FontIcon>}

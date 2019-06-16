@@ -86,8 +86,8 @@ const ServicePage = ({
 ServicePage.propTypes = {
   title: PropTypes.string.isRequired,
   origin: PropTypes.string.isRequired,
-  onlinePrice: PropTypes.string.isRequired,
-  inPersonPrice: PropTypes.string.isRequired,
+  onlinePrice: PropTypes.number.isRequired,
+  inPersonPrice: PropTypes.number.isRequired,
   html: PropTypes.string.isRequired,
   slug: PropTypes.string.isRequired,
 };

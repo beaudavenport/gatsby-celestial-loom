@@ -6,15 +6,17 @@ import React from 'react';
 const ArchiveCard = ({ sections }) => (
   <List>
     {sections.map(section => (
-      <div>
+      <div key={section.primaryText}>
         <ListItem
+          key={section.primaryText}
           primaryTextStyle={{ fontWeight: 'bold' }}
           primaryText={section.primaryText}
           secondaryText={section.secondaryText}
           secondaryTextStyle={{ fontWeight: 'bold' }}
           nestedItems={section.items.map(item => (
-            <div>
+            <div key={item.primaryText}>
               <ListItem
+                key={item.primaryText}
                 leftAvatar={item.avatar}
                 tileStyle={{ paddingLeft: 30 }}
                 primaryTextStyle={{ fontWeight: 'bold' }}

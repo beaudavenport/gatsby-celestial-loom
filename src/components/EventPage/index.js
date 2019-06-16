@@ -20,7 +20,7 @@ function EventPage(props) {
     eventTime,
     priceDescription,
   } = props;
-  const isExpired = moment().isAfter(moment(eventDate));
+  const isExpired = moment().isAfter(moment(eventDate, 'MMMM DD, YYYY'));
 
   return (
     <div className="content-container">
@@ -69,7 +69,7 @@ EventPage.propTypes = {
   image: PropTypes.string.isRequired,
   eventDate: PropTypes.string.isRequired,
   eventTime: PropTypes.string.isRequired,
-  eventPrice: PropTypes.string.isRequired,
+  eventPrice: PropTypes.number.isRequired,
   html: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   mapsLink: PropTypes.string.isRequired,

@@ -25,12 +25,17 @@ const Header = () => {
 
   return (
     <Fragment>
-      <div className="header-search-container">
-        <Button onClick={() => global.Snipcart && Snipcart.api.modal.show()} style={{ display: 'flex', alignItems: 'center' }}>
-          <Badge invisibleOnZero badgeContent={itemCount} primary>
-            <FontIcon style={{ fontSize: '2rem' }}>shopping_cart</FontIcon>
-          </Badge>
-        </Button>
+      <div className="flex-center">
+        <Button
+          icon
+          onClick={() => global.Snipcart && Snipcart.api.modal.show()}
+          style={{ padding: 0 }}
+          iconEl={(
+            <Badge invisibleOnZero badgeContent={itemCount} primary badgeId="cart-quantity">
+              <FontIcon style={{ fontSize: '2rem' }}>shopping_cart</FontIcon>
+            </Badge>
+        )}
+        />
       </div>
     </Fragment>
   );

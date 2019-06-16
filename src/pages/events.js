@@ -15,7 +15,7 @@ const Events = ({ data }) => {
   const nodes = data.allMarkdownRemark.edges.map(edge => edge.node);
   const [pastEvents, upcomingEvents] = partition(
     nodes,
-    node => moment().isAfter(moment(node.frontmatter.eventDate)),
+    node => moment().isAfter(moment(node.frontmatter.eventDate, 'MMMM DD, YYYY')),
   );
 
   return (
@@ -38,7 +38,7 @@ const Events = ({ data }) => {
         </Cell>
         <BigSubheader>Upcoming Events</BigSubheader>
         {upcomingEvents.map(node => (
-          <Cell size={12} style={{ padding: '20px 0px' }}>
+          <Cell key={node.frontmatter.title} size={12} style={{ padding: '20px 0px' }}>
             <FeaturedEventCard
               path={node.fields.slug}
               title={node.frontmatter.title}
@@ -54,7 +54,7 @@ const Events = ({ data }) => {
         ))}
         <BigSubheader>Past Events</BigSubheader>
         {pastEvents.map(node => (
-          <Cell size={12} style={{ padding: '20px 0px' }}>
+          <Cell key={node.frontmatter.title} size={12} style={{ padding: '20px 0px' }}>
             <FeaturedEventCard
               path={node.fields.slug}
               title={node.frontmatter.title}

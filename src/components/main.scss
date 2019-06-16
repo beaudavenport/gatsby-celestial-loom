@@ -50,6 +50,11 @@ html {
 .flex-center {
   display: flex;
   align-items: center;
+}
+
+.flex-center--spaced {
+  display: flex;
+  align-items: center;
   padding: 5px;
 }
 
@@ -138,9 +143,8 @@ html {
 }
 
 .header-search-container {
-  display: flex;
   height: 100%;
-  justify-content: flex-end;
+
 }
 
 .search {

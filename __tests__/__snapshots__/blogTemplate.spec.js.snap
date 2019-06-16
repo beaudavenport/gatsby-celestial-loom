@@ -51,10 +51,10 @@ exports[`Blog Template should render correctly with posts archive, blog page and
         className="md-btn--toolbar header-icons-container"
       >
         <div
-          className="header-search-container"
+          className="flex-center"
         >
           <button
-            className="md-btn md-pointer--hover md-text md-inline-block"
+            className="md-btn md-btn--icon md-pointer--hover md-inline-block"
             onClick={[Function]}
             onKeyDown={[Function]}
             onKeyUp={[Function]}
@@ -66,8 +66,7 @@ exports[`Blog Template should render correctly with posts archive, blog page and
             onTouchStart={[Function]}
             style={
               Object {
-                "alignItems": "center",
-                "display": "flex",
+                "padding": 0,
               }
             }
             type="button"
@@ -77,8 +76,10 @@ exports[`Blog Template should render correctly with posts archive, blog page and
             />
             <div
               className="md-badge-container md-inline-block"
+              inherit={true}
             >
               <i
+                aria-describedby="cart-quantity"
                 className="md-icon material-icons"
                 style={
                   Object {
@@ -92,10 +93,10 @@ exports[`Blog Template should render correctly with posts archive, blog page and
           </button>
         </div>
         <div
-          className="header-search-container"
+          className="flex-center"
         >
           <button
-            className="md-btn md-pointer--hover md-text md-inline-block"
+            className="md-btn md-btn--icon md-pointer--hover md-inline-block"
             onClick={[Function]}
             onKeyDown={[Function]}
             onKeyUp={[Function]}
@@ -107,8 +108,7 @@ exports[`Blog Template should render correctly with posts archive, blog page and
             onTouchStart={[Function]}
             style={
               Object {
-                "alignItems": "center",
-                "display": "flex",
+                "padding": 0,
               }
             }
             type="button"
@@ -117,7 +117,7 @@ exports[`Blog Template should render correctly with posts archive, blog page and
               className="md-ink-container"
             />
             <i
-              className="md-icon material-icons"
+              className="md-icon material-icons md-text--inherit"
               style={
                 Object {
                   "fontSize": "2rem",

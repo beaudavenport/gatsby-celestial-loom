@@ -18,7 +18,7 @@ import ThumbnailCard from '../components/ThumbnailCard';
 const IndexPage = ({ data }) => {
   const [firstBlogNode, ...otherBlogNodes] = data.blog.edges.map(edge => edge.node);
   const firstEventNode = data.events.edges.map(edge => edge.node)
-    .find(node => moment().isBefore(moment(node.frontmatter.eventDate)));
+    .find(node => moment().isBefore(moment(node.frontmatter.eventDate, 'MMMM DD, YYYY')));
   const { featuredService } = data;
 
   return (
@@ -77,7 +77,7 @@ const IndexPage = ({ data }) => {
           </div>
         </Cell>
         { otherBlogNodes && otherBlogNodes.map(node => (
-          <Cell size={6} tabletSize={4} className="content-container">
+          <Cell key={node.frontmatter.title} size={6} tabletSize={4} className="content-container">
             <ThumbnailCard
               style={{ marginBottom: 10 }}
               path={node.fields.slug}

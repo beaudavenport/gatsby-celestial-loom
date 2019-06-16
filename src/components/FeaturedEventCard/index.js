@@ -22,7 +22,7 @@ const FeaturedEventCard = ({
   location,
   priceDescription,
 }) => {
-  const isExpired = moment().isAfter(moment(eventDate));
+  const isExpired = moment().isAfter(moment(eventDate, "MMMM DD, YYYY"));
   return (
     <TouchableLink to={path} style={style}>
       <Grid>
@@ -64,7 +64,7 @@ FeaturedEventCard.propTypes = {
   eventDate: PropTypes.string.isRequired,
   eventTime: PropTypes.string.isRequired,
   eventDateShort: PropTypes.string.isRequired,
-  eventPrice: PropTypes.string.isRequired,
+  eventPrice: PropTypes.number.isRequired,
   priceDescription: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,

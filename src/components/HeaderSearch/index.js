@@ -18,10 +18,15 @@ const Header = () => {
     `}
       render={data => (
         <Fragment>
-          <div className="header-search-container">
-            <Button onClick={() => setIsSearching(true)} style={{ display: 'flex', alignItems: 'center' }}>
-              <FontIcon style={{ fontSize: '2rem' }}>search</FontIcon>
-            </Button>
+          <div className="flex-center">
+            <Button
+              icon
+              onClick={() => setIsSearching(true)}
+              style={{ padding: 0 }}
+              iconEl={(
+                <FontIcon style={{ fontSize: '2rem' }}>search</FontIcon>
+            )}
+            />
           </div>
           {isSearching && (
           <SearchModal

@@ -82,7 +82,7 @@ ServicePage.propTypes = {
   slug: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   origin: PropTypes.string.isRequired,
-  price: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
   excerpt: PropTypes.string.isRequired,
 };
 

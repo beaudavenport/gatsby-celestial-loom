@@ -27,7 +27,7 @@ import ThumbnailEventCard from '../components/ThumbnailCard/ThumbnailEventCard';
 const GettingStarted = ({ data }) => {
   const [firstBlogNode] = data.blog.edges.map(edge => edge.node);
   const firstEventNode = data.events.edges.map(edge => edge.node)
-    .find(node => moment().isBefore(moment(node.frontmatter.eventDate)));
+    .find(node => moment().isBefore(moment(node.frontmatter.eventDate, 'MMMM DD, YYYY')));
   const toolboxNodes = data.toolboxItems.edges.map(edge => edge.node);
   const { natalChart } = data;
 
