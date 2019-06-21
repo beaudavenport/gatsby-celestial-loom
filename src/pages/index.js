@@ -145,6 +145,7 @@ export default IndexPage;
 export const query = graphql`
 query {
   blog: allMarkdownRemark(
+    limit: 3
     filter: { frontmatter: { type: { eq: "blog"} } },
     sort: { fields: [frontmatter___publishDate], order: DESC }
   ) {

@@ -12,13 +12,13 @@ module.exports = {
       activeStyle,
       getProps,
       innerRef,
-      ref,
       replace,
       to,
       ...rest
     }) => React.createElement('a', {
       ...rest,
       href: to,
+      ref: React.createRef(),
     }),
   ),
   StaticQuery: jest.fn(),

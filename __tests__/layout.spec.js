@@ -25,7 +25,11 @@ beforeEach(() => {
 describe('Layout', () => {
   it('should render correctly with no children', () => {
     const tree = renderer
-      .create(<Layout />)
+      .create(
+        <Layout title="Home" sidebarChildren={(<div />)}>
+          <div />
+        </Layout>,
+      )
       .toJSON();
     expect(tree).toMatchSnapshot();
   });

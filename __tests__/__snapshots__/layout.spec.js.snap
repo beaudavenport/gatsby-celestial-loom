@@ -33,6 +33,17 @@ exports[`Layout should render correctly with no children 1`] = `
         menu
       </i>
     </button>
+    <h2
+      className="md-title md-title--toolbar"
+      style={
+        Object {
+          "fontFamily": "Berkshire Swash",
+          "fontStyle": "italic",
+        }
+      }
+    >
+      Home
+    </h2>
     <div
       className="md-cell--right md-toolbar--action-right"
     >
@@ -135,10 +146,14 @@ exports[`Layout should render correctly with no children 1`] = `
     >
       <div
         className="md-cell md-cell--8 main-contents"
-      />
+      >
+        <div />
+      </div>
       <div
         className="md-cell md-cell--4 md-cell--8-tablet sidebar-contents"
-      />
+      >
+        <div />
+      </div>
     </div>
     <div
       className="md-grid footer--grid"
