@@ -5,7 +5,7 @@ publishDate: '2019-06-21T06:43:14-05:00'
 title: >-
   May I Have This Dance? Neptune Retrograde Takes Us for a Spin Through the Rest
   of 2019
-image: /assets/card-neptune-.jpg
+image: /assets/trident-neptune.jpg
 relatedItems:
   - Neptune
   - Pisces
