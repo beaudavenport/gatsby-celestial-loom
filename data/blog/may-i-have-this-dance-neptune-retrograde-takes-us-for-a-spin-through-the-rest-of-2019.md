@@ -12,7 +12,7 @@ relatedItems:
 ---
 _"The planet Neptune represents the longing to become One with everything in a state of total trust and love."_                                                                   Jan Spiller
 
-Neptune, the “Divine Discontent” within us, activates a feeling of loss, a need for mysterious inner searching, seeking the ideal, and stripping away the illusion that surrounds to find deep truth and meaning.  Neptune rules dreams, imagination, creativity, intuition, extraterrestrial dimensions, the arts, Atlantean Myths, and exploring what is beneath the surface.  When we connect with Neptune, we are looking for a sense of ourselves, experience a high level of awareness, self-analysis, and explore lots of hidden deceptions.   We are able to see situations differently, tap into our past life memories and knowings, and discover a previous unknown depth of fantasy.
+Neptune, the “Divine Discontent” within us, activates a feeling of loss, a need for mysterious inner searching, seeking the ideal, and stripping away the illusion that surrounds to find deep truth and meaning.  Neptune rules dreams, imagination, creativity, intuition, extraterrestrial dimensions, the arts, Atlantean Myths, and exploring what is beneath the surface.  When we connect with Neptune, we are looking for a sense of ourselves, experience a high level of awareness, self-analysis, and explore hidden deceptions.   We are able to see situations differently, tap into our past life memories and knowings, and discover a previous unknown depth of fantasy.
 
 The planet Neptune is the higher octave of the planet Venus. Venus opens us to our human love and values.  Neptune takes us to God’s love and our true value as soul travelers.
 
@@ -22,15 +22,15 @@ Neptune is the “Planet of the Year” as he makes six major 2019 aspects.
 
 Three times Neptune is square Jupiter (immense expanding possibilities of Neptune traits):
 
-*  January 13
-*  June 16
-*  September 21
+* January 13
+* June 16
+* September 21
 
 Three times Neptune is sextile Saturn (extreme potential for productive Neptune learning):
 
-*  January 31
-*  June 18
-*  November 8
+* January 31
+* June 18
+* November 8
 
 Neptune rules the sign of Pisces and is currently traveling through his own sign.  He stopped on his journey and turned to retrograde motion on the magical day of the Summer Solstice, June 21, 2019.  He will turn back to direct motion on November 27, 2019.  He cautions us to respect the vision and build the dreams!
 
