@@ -45,7 +45,7 @@ const Events = ({ data }) => {
               eventDate={node.frontmatter.eventDate}
               eventTime={node.frontmatter.eventTime}
               eventDateShort={node.frontmatter.eventDateShort}
-              image={node.frontmatter.image}
+              fluidImage={node.frontmatter.image.childImageSharp.fluid}
               eventPrice={node.frontmatter.eventPrice}
               priceDescription={node.frontmatter.priceDescription}
               location={node.frontmatter.location}
@@ -61,7 +61,7 @@ const Events = ({ data }) => {
               eventDate={node.frontmatter.eventDate}
               eventTime={node.frontmatter.eventTime}
               eventDateShort={node.frontmatter.eventDateShort}
-              image={node.frontmatter.image}
+              fluidImage={node.frontmatter.image.childImageSharp.fluid}
               eventPrice={node.frontmatter.eventPrice}
               priceDescription={node.frontmatter.priceDescription}
               location={node.frontmatter.location}
@@ -91,7 +91,13 @@ export const query = graphql`
           id
           frontmatter {
             title
-            image
+            image {
+              childImageSharp {
+                fluid(quality: 100, maxWidth: 500) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
             eventDate(formatString: "MMM DD, YYYY")
             eventTime
             eventDateShort: eventDate(formatString: "MMM DD")

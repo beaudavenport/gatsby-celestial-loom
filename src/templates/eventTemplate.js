@@ -33,7 +33,7 @@ function EventTemplate({
       <EventPage
         title={frontmatter.title}
         subtitle={frontmatter.subtitle}
-        image={frontmatter.image}
+        fluidImage={frontmatter.image.childImageSharp.fluid}
         priceDescription={frontmatter.priceDescription}
         eventDate={frontmatter.eventDate}
         eventTime={frontmatter.eventTime}
@@ -62,7 +62,13 @@ export const pageQuery = graphql`
         eventTime
         title
         subtitle
-        image
+        image {
+          childImageSharp {
+            fluid(quality: 100, maxWidth: 500) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         location
         mapsLink
         eventPrice

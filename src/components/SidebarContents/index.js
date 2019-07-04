@@ -21,7 +21,13 @@ const SidebarContents = ({ eventsQuantity, postsQuantity }) => (
                id
                frontmatter {
                  title
-                 image
+                 image {
+                   childImageSharp {
+                     fluid(quality: 70, maxWidth: 200) {
+                       ...GatsbyImageSharpFluid
+                     }
+                   }
+                 }
                  publishDate(formatString: "MMMM DD, YYYY")
                  relatedItems
                }
@@ -42,7 +48,13 @@ const SidebarContents = ({ eventsQuantity, postsQuantity }) => (
                id
                frontmatter {
                  title
-                 image
+                 image {
+                   childImageSharp {
+                     fluid(quality: 70, maxWidth: 200) {
+                       ...GatsbyImageSharpFluid
+                     }
+                   }
+                 }
                  eventDate(formatString: "MMMM DD, YYYY")
                  eventTime
                  eventDateShort: eventDate(formatString: "MMM DD")
@@ -73,7 +85,7 @@ const SidebarContents = ({ eventsQuantity, postsQuantity }) => (
                 key={node.frontmatter.title}
                 path={node.fields.slug}
                 title={node.frontmatter.title}
-                image={node.frontmatter.image}
+                fluidImage={node.frontmatter.image.childImageSharp.fluid}
                 location={node.frontmatter.location}
                 eventTime={node.frontmatter.eventTime}
                 eventDate={node.frontmatter.eventDate}
@@ -87,7 +99,7 @@ const SidebarContents = ({ eventsQuantity, postsQuantity }) => (
                 path={node.fields.slug}
                 title={node.frontmatter.title}
                 caption={node.frontmatter.publishDate}
-                image={node.frontmatter.image}
+                fluidImage={node.frontmatter.image.childImageSharp.fluid}
               />
             ))
            }

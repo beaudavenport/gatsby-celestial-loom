@@ -1,8 +1,9 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+import Img from 'gatsby-image';
 
-const ImageThumbnail = ({ imageUrl }) => (
-  <div className="thumbnail-image" style={{ backgroundImage: `url(${imageUrl})` }} />
+const ImageThumbnail = ({ fluidImage }) => (
+  <Img fluid={fluidImage} className="thumbnail-image" alt="Thumbnail for thing" />
 );
 
 ImageThumbnail.propTypes = {

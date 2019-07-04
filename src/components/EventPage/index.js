@@ -10,7 +10,7 @@ function EventPage(props) {
   const {
     title,
     subtitle,
-    image,
+    fluidImage,
     eventDate,
     eventPrice,
     html,
@@ -29,7 +29,7 @@ function EventPage(props) {
         <Title>{title}</Title>
         <Subtitle>{subtitle}</Subtitle>
       </div>
-      <PageImage image={image} alt="event" />
+      <PageImage fluidImage={fluidImage} alt="event" />
       <div className="event-page--detail-container">
         <div className="flex-column flex-center">
           <div className="event-detail">
@@ -66,7 +66,7 @@ function EventPage(props) {
 EventPage.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
+  fluidImage: PropTypes.object.isRequired, // eslint-disable-line
   eventDate: PropTypes.string.isRequired,
   eventTime: PropTypes.string.isRequired,
   eventPrice: PropTypes.number.isRequired,

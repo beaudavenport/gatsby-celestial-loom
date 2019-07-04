@@ -82,7 +82,13 @@ export const pageQuery = graphql`
           id
           frontmatter {
             title
-            image
+            image {
+              childImageSharp {
+                fluid(quality: 70, maxWidth: 200) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
             publishDate(formatString: "MMMM DD, YYYY")
             relatedItems
           }
@@ -103,7 +109,13 @@ export const pageQuery = graphql`
           id
           frontmatter {
             title
-            image
+            image {
+              childImageSharp {
+                fluid(quality: 70, maxWidth: 200) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
             eventDate(formatString: "dddd, MMM DD")
             eventTime
             eventDateShort: eventDate(formatString: "MMM DD")

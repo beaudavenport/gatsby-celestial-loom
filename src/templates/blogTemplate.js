@@ -33,7 +33,7 @@ export default function BlogTemplate({ data }) {
       <BackLink to="/posts" title="All Posts" />
       <BlogEntry
         title={frontmatter.title}
-        image={frontmatter.image}
+        fluidImage={frontmatter.image.childImageSharp.fluid}
         html={html}
         publishDate={frontmatter.publishDate}
         relatedItemChips={frontmatter.relatedItems && <RelatedItemChipList relatedItems={frontmatter.relatedItems} />}
@@ -53,7 +53,13 @@ export const pageQuery = graphql`
       frontmatter {
         publishDate(formatString: "MMMM DD, YYYY")
         title
-        image
+        image {
+          childImageSharp {
+            fluid(quality: 100, maxWidth: 500) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         relatedItems
       }
       description: excerpt(pruneLength: 130)

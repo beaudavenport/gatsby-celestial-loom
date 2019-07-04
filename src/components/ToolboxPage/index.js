@@ -44,7 +44,7 @@ function ToolboxPage(props) {
             <ThumbnailEventCard
               path={node.fields.slug}
               title={node.frontmatter.title}
-              image={node.frontmatter.image}
+              fluidImage={node.frontmatter.image.childImageSharp.fluid}
               location={node.frontmatter.location}
               eventTime={node.frontmatter.eventTime}
               eventDate={node.frontmatter.eventDate}
@@ -57,7 +57,7 @@ function ToolboxPage(props) {
               path={node.fields.slug}
               title={node.frontmatter.title}
               caption={node.frontmatter.publishDate}
-              image={node.frontmatter.image}
+              fluidImage={node.frontmatter.image.childImageSharp.fluid}
             />
           ))
          }

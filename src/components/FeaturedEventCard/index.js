@@ -1,5 +1,6 @@
 import { Cell, Grid } from 'react-md';
 import PropTypes from 'prop-types';
+import Img from 'gatsby-image';
 import React from 'react';
 import moment from 'moment';
 
@@ -12,7 +13,7 @@ import TouchableLink from '../TouchableLink';
 
 const FeaturedEventCard = ({
   path,
-  image,
+  fluidImage,
   title,
   style,
   eventDate,
@@ -22,13 +23,13 @@ const FeaturedEventCard = ({
   location,
   priceDescription,
 }) => {
-  const isExpired = moment().isAfter(moment(eventDate, "MMMM DD, YYYY"));
+  const isExpired = moment().isAfter(moment(eventDate, 'MMMM DD, YYYY'));
   return (
     <TouchableLink to={path} style={style}>
       <Grid>
         <Cell size={6} tabletSize={4}>
           <div className="image-container">
-            <img className="image-container--image" src={image} alt="Preview of featured post" />
+            <Img fluid={fluidImage} className="image-container--image" alt="Preview of featured event" />
             <CardCornerHighlight iconName="event" title={eventDateShort} isExpired={isExpired} />
           </div>
         </Cell>
@@ -67,7 +68,7 @@ FeaturedEventCard.propTypes = {
   eventPrice: PropTypes.number.isRequired,
   priceDescription: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
+  fluidImage: PropTypes.object.isRequired, // eslint-disable-line
   style: PropTypes.object, // eslint-disable-line
 };
 

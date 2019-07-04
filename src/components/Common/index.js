@@ -1,6 +1,7 @@
 import { FontIcon } from 'react-md';
 import PropTypes from 'prop-types';
 import React from 'react';
+import Img from 'gatsby-image';
 
 import TouchableLink from '../TouchableLink';
 
@@ -108,14 +109,14 @@ ForwardLink.defaultProps = {
   alignRight: false,
 };
 
-const PageImage = ({ image, alt }) => (
+const PageImage = ({ fluidImage, alt }) => (
   <div className="page-image--container">
-    <img className="page-image--image" src={image} alt={alt} />
+    <Img fluid={fluidImage} className="page-image--image" alt={alt} />
   </div>
 );
 
 PageImage.propTypes = {
-  image: PropTypes.string.isRequired,
+  fluidImage: PropTypes.object.isRequired, // eslint-disable-line
   alt: PropTypes.string.isRequired,
 };
 

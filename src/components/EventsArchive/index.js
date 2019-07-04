@@ -20,7 +20,13 @@ const EventsArchive = () => (
                id
                frontmatter {
                  title
-                 image
+                 image {
+                   childImageSharp {
+                     fluid(quality: 100, maxWidth: 500) {
+                       ...GatsbyImageSharpFluid
+                     }
+                   }
+                 }
                  eventMonthAndYear: eventDate(formatString: "MMMM YYYY")
                  eventDateShort: eventDate(formatString: "MMM DD")
                  location

@@ -96,7 +96,7 @@ const GettingStarted = ({ data }) => {
                   path={firstBlogNode.fields.slug}
                   title={firstBlogNode.frontmatter.title}
                   caption={firstBlogNode.frontmatter.publishDate}
-                  image={firstBlogNode.frontmatter.image}
+                  fluidImage={firstBlogNode.frontmatter.image.childImageSharp.fluid}
                 />
               </CenteredCell>
             </Grid>
@@ -115,7 +115,7 @@ const GettingStarted = ({ data }) => {
                   <ThumbnailEventCard
                     path={firstEventNode.fields.slug}
                     title={firstEventNode.frontmatter.title}
-                    image={firstEventNode.frontmatter.image}
+                    fluidImage={firstEventNode.frontmatter.image.childImageSharp.fluid}
                     location={firstEventNode.frontmatter.location}
                     eventTime={firstEventNode.frontmatter.eventTime}
                     eventDate={firstEventNode.frontmatter.eventDate}
@@ -175,7 +175,13 @@ query {
         id
         frontmatter {
           title
-          image
+          image {
+            childImageSharp {
+              fluid(quality: 100, maxWidth: 500) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
           publishDate(formatString: "MMMM DD, YYYY")
           relatedItems
         }
@@ -196,7 +202,13 @@ query {
         id
         frontmatter {
           title
-          image
+          image {
+            childImageSharp {
+              fluid(quality: 100, maxWidth: 500) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
           eventDate(formatString: "MMMM DD, YYYY")
           eventTime
           eventDateShort: eventDate(formatString: "MMM DD")

@@ -23,7 +23,13 @@ export const query = graphql`
            id
            frontmatter {
              title
-             image
+             image {
+               childImageSharp {
+                 fluid(quality: 100, maxWidth: 500) {
+                   ...GatsbyImageSharpFluid
+                 }
+               }
+             }
              publishDate(formatString: "MMMM DD, YYYY")
              relatedItems
            }
@@ -59,6 +65,7 @@ const Posts = ({ data }) => {
               title={node.frontmatter.title}
               publishDate={node.frontmatter.publishDate}
               image={node.frontmatter.image}
+              fluidImage={node.frontmatter.image.childImageSharp.fluid}
               relatedItemChips={node.frontmatter.relatedItems && <RelatedItemChipList relatedItems={node.frontmatter.relatedItems} />}
               excerpt={node.excerpt}
             />

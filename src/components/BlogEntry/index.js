@@ -7,7 +7,7 @@ import {
 } from '../Common';
 
 function BlogEntry({
-  title, image, publishDate, html, relatedItemChips,
+  title, fluidImage, publishDate, html, relatedItemChips,
 }) {
   return (
     <div>
@@ -16,7 +16,7 @@ function BlogEntry({
         <Subtitle>{publishDate}</Subtitle>
       </div>
       <div className="content-container">
-        <PageImage image={image} alt="Blog" />
+        <PageImage fluidImage={fluidImage} alt="Blog" />
       </div>
       {relatedItemChips && (
         <div className="content-container">
@@ -35,7 +35,7 @@ function BlogEntry({
 
 BlogEntry.propTypes = {
   title: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
+  fluidImage: PropTypes.object.isRequired, // eslint-disable-line
   publishDate: PropTypes.string.isRequired,
   html: PropTypes.string.isRequired,
   relatedItemChips: PropTypes.node,

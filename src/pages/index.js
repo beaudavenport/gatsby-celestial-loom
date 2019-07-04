@@ -60,6 +60,7 @@ const IndexPage = ({ data }) => {
             title={firstBlogNode.frontmatter.title}
             publishDate={firstBlogNode.frontmatter.publishDate}
             image={firstBlogNode.frontmatter.image}
+            fluidImage={firstBlogNode.frontmatter.image.childImageSharp.fluid}
             excerpt={firstBlogNode.excerpt}
             relatedItemChips={
               firstBlogNode.frontmatter.relatedItems && (
@@ -83,7 +84,7 @@ const IndexPage = ({ data }) => {
               path={node.fields.slug}
               title={node.frontmatter.title}
               caption={node.frontmatter.publishDate}
-              image={node.frontmatter.image}
+              fluidImage={node.frontmatter.thumbnail.childImageSharp.fluid}
             />
           </Cell>
         ))
@@ -104,7 +105,7 @@ const IndexPage = ({ data }) => {
               eventDate={firstEventNode.frontmatter.eventDate}
               eventTime={firstEventNode.frontmatter.eventTime}
               eventDateShort={firstEventNode.frontmatter.eventDateShort}
-              image={firstEventNode.frontmatter.image}
+              fluidImage={firstEventNode.frontmatter.image.childImageSharp.fluid}
               eventPrice={firstEventNode.frontmatter.eventPrice}
               priceDescription={firstEventNode.frontmatter.priceDescription}
               location={firstEventNode.frontmatter.location}
@@ -155,7 +156,20 @@ query {
         id
         frontmatter {
           title
-          image
+          thumbnail: image {
+            childImageSharp {
+              fluid(quality: 70, maxWidth: 200) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          image {
+            childImageSharp {
+              fluid(quality: 100, maxWidth: 500) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
           publishDate(formatString: "MMMM DD, YYYY")
           relatedItems
         }
@@ -176,7 +190,13 @@ query {
         id
         frontmatter {
           title
-          image
+          image {
+            childImageSharp {
+              fluid(quality: 100, maxWidth: 500) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
           eventDate(formatString: "MMMM DD, YYYY")
           eventTime
           eventDateShort: eventDate(formatString: "MMM DD")

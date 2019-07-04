@@ -1,4 +1,5 @@
 import { CardText } from 'react-md';
+import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -9,7 +10,7 @@ import TouchableLink from '../TouchableLink';
 
 const FeaturedCard = ({
   path,
-  image,
+  fluidImage,
   title,
   excerpt,
   publishDate,
@@ -20,7 +21,7 @@ const FeaturedCard = ({
   <div>
     <TouchableLink to={path} className="content-container">
       <div className="featured-card--container">
-        <img className="featured-card--image" src={image} alt="Preview of featured post" />
+        <Img fluid={fluidImage} className="featured-card--image" alt="Preview of featured post" />
         {cornerIconName && <CardCornerHighlight iconName={cornerIconName} title={cornerTitle} />}
       </div>
       <div style={{ padding: 16 }}>
@@ -47,7 +48,7 @@ const FeaturedCard = ({
 FeaturedCard.propTypes = {
   path: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
+  fluidImage: PropTypes.object.isRequired, // eslint-disable-line
   excerpt: PropTypes.string.isRequired,
   publishDate: PropTypes.string.isRequired,
   cornerIconName: PropTypes.string,
