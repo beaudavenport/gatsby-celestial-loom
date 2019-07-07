@@ -1,6 +1,5 @@
 .origin--header--bg {
-  background-position: center;
-  background-size: cover;
+  position: relative;
   width: 100%;
   height: 90px;
   padding: 0;
@@ -8,6 +7,8 @@
 
 .origin--header--overlay {
   overflow: hidden;
+  position: absolute;
+  width: 100%;
   height: 90px;
   z-index: 2;
   display: flex;

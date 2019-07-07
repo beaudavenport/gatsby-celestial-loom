@@ -26,7 +26,11 @@ function EventPagePreview({ entry, getAsset }) {
   const data = {
     title: entry.getIn(['data', 'title']),
     subtitle: entry.getIn(['data', 'subtitle']),
-    image: getAsset(image),
+    fluidImage: {
+      src: getAsset(image),
+      aspectRatio: 1.2875536480686696,
+      sizes: '500px',
+    },
     eventDate: moment(entry.getIn(['data', 'eventDate']).toString()).format('MMMM DD, YYYY'),
     eventTime: entry.getIn(['data', 'eventTime']),
     priceDescription: entry.getIn(['data', 'priceDescription']),
