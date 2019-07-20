@@ -3,7 +3,7 @@ templateKey: blogTemplate
 type: blog
 publishDate: '2019-07-19T08:50:45-05:00'
 title: 'Ceres, the Great Mother'
-image: /assets/art-ceres.jpg
+image: /assets/roman-ceres.jpg
 relatedItems:
   - Sagittarius
 ---
