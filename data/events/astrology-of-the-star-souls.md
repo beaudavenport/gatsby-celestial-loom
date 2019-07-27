@@ -2,7 +2,7 @@
 templateKey: eventTemplate
 priceDescription: 3 Hour Playshop
 type: events
-eventDate: '2019-07-27T12:35:08-05:00'
+eventDate: '2019-08-17T12:00:00-05:00'
 eventTime: '1:00 - 4:00 PM'
 image: /assets/star-souls-image.jpg
 title: Astrology of the Star Souls
