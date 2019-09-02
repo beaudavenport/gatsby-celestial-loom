@@ -3,7 +3,7 @@ templateKey: blogTemplate
 type: blog
 publishDate: '2019-09-02T09:18:44-05:00'
 title: OM SRI GANESH - A Birthday Celebration
-image: /assets/om-sri-ganesh.jpg
+image: /assets/ganesh-2.jpg
 relatedItems:
   - Jupiter
   - Virgo
