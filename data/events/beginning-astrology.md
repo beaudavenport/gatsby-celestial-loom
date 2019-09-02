@@ -1,6 +1,6 @@
 ---
 templateKey: eventTemplate
-priceDescription: '6-Week Course '
+priceDescription: 6-Week Course - $25 per Class
 type: events
 eventDate: '2019-09-12T12:00:00-05:00'
 eventTime: 7-9 PM
@@ -24,7 +24,7 @@ Beginning Astrology - Join us for a new adventure!  In this course we will be in
 
 * 9-12-2019:  Introduction to Astrology & Signs of the Zodiac	
 * 9-19-2019:  Planets, Asteroids, & Planetary Rulers
-* 9-26-2019:  Houses, Aspects, & Beginning Delineation
+* 9-26-2019:  Houses, Aspects, & Beginning Delineation
 * 10-3-2019:  Moon Phases, Eclipses, & Moon’s Nodes
 * 10-10-2019:  Specific Analysis of the Basic Life Purpose	
 * 10-17-2019:  Timing by Transits, Progressions, Solar Returns
