@@ -9,7 +9,7 @@ relatedItems:
 ---
 Welcome to 2020!
 
-_**“Nothing exists nor happens in the visible sky that is not sensed in some hidden moment by the faculties of Earth and Nature.”**_            Johannes Kepler   
+**_“Nothing exists nor happens in the visible sky that is not sensed in some hidden moment by the faculties of Earth and Nature.”_**            Johannes Kepler   
 
 We are entering a new year, a new decade, and a new transforming world!  The sky is ablaze with change and our Earth is aligned with new beginnings.  We start the year in a massive line-up of **Capricorn** planets.  Capricorn symbolizes the principle of cosmic order.  It is the archetype of the manifested spiritual force. 
 
@@ -27,7 +27,7 @@ We also ride into the new year during the **Mayan Shadow Days**: A 20-day collec
 
 A quick view of “Eclipse Season” in the first two weeks of January, 2020 awakening powerful planetary energy dates:
 
-1-7-20: **Mercury conjunct Jupiter** (7 Capricorn)– we are illumined.
+1-2-20: **Mercury conjunct Jupiter** (7 Capricorn)– we are illumined.
 
 1-10-20: **Mercury conjunct Sun** (19 Capricorn) - we are enlightened with new understanding.
 
