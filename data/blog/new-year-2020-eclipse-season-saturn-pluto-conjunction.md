@@ -9,11 +9,9 @@ relatedItems:
 ---
 Welcome to 2020!
 
-**_“Nothing exists nor happens in the visible sky that is not sensed in some hidden moment by the faculties of Earth and Nature.”_**            Johannes Kepler   
+_**“Nothing exists nor happens in the visible sky that is not sensed in some hidden moment by the faculties of Earth and Nature.”**_            Johannes Kepler   
 
 We are entering a new year, a new decade, and a new transforming world!  The sky is ablaze with change and our Earth is aligned with new beginnings.  We start the year in a massive line-up of **Capricorn** planets.  Capricorn symbolizes the principle of cosmic order.  It is the archetype of the manifested spiritual force. 
-
-
 
 The planets – Mercury, Jupiter, Moon’s South Node, Ceres, Saturn, Pluto – all in Capricorn at ECLIPSE  (Lunar Eclipse on January 10, 2020 @ 20 Cancer, 20 Capricorn) bring the needs of the moment and carry within themselves both the fulfillment of our needs, and the essential spiritual meaning made specifically for us! 
 
@@ -25,8 +23,6 @@ The planets – Mercury, Jupiter, Moon’s South Node, Ceres, Saturn, Pluto – 
 
 **Pluto** Is the Subterranean Destroyer and affirms _“I am a power for positive change.”_ 
 
-
-
 We also ride into the new year during the **Mayan Shadow Days**: A 20-day collective shadow period which begins on “Being” day and ends on “Enlightening” day in the Pleiadian-Earth Calendar. The Shadow Days start on December 26, 2019 and go through January 14, 2020. This is a particularly potent time for awakening humans in the evolutionary process.  We will be illumined by the truth.  We can respond by changing our perspectives and opening our hearts!
 
 A quick view of “Eclipse Season” in the first two weeks of January, 2020 awakening powerful planetary energy dates:
@@ -37,17 +33,13 @@ A quick view of “Eclipse Season” in the first two weeks of January, 2020 awa
 
 1-10-20: **Sun opposes Moon at LUNAR ECLIPSE**  (20 Capricorn/20 Cancer) - everything is changing.
 
-1-11-20: **Mercury conjunct Ceres** (22 Capricorn) ****– we find unconditional love surrounding us.
+1-11-20: **Mercury conjunct Ceres** (22 Capricorn) – we find unconditional love surrounding us.
 
 1-12-20: **SATURN conjunct PLUTO** (22 Capricorn) – we walk through a new gateway.
 
 1-13-20: **Saturn conjunct Ceres** (22 Capricorn) – we learn how to help each other be safe.  
 
 1-13-20: **Sun conjunct Pluto, Saturn, Ceres** (22 Capricorn)
-
-
-
-
 
 AND JUST FOR FUN:
 
@@ -64,8 +56,6 @@ Other Cosmic Bodies joining in the Capricorn Eclipse Dance include:
 •TNO Arawn @ 20 Capricorn – king of the otherworld, altered states of consciousness, master of magic and trickery, keeps many secrets, eases suffering in this life, aid to the less fortunate, humanitarian 
 
 •Asteroid Chariklo @ 23 Capricorn – feminine complement to Chiron, nature goddess, connects with our soul urges, forgiveness, sacred marriage between body and soul, soul retrieval and recovery
-
-
 
 Have a Happy New Year and a joyful first two weeks of 2020!
 
