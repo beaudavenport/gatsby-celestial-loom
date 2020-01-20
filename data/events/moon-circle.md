@@ -4,7 +4,7 @@ priceDescription: 2-Hour Playshop
 type: events
 eventDate: '2020-01-23T08:47:47-06:00'
 eventTime: 7 - 9 PM
-image: /assets/aquarius-moon-circle-2-.jpg
+image: /assets/aquarius-moon-circle-3-.jpg
 title: Moon Circle
 subtitle: Aquarius NEW MOON Celebration
 location: DeMun Healing
