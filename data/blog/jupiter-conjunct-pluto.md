@@ -2,8 +2,8 @@
 templateKey: blogTemplate
 type: blog
 publishDate: '2020-04-03T10:56:00-05:00'
-title: Jupiter Conjunct Pluto
-image: /assets/jupiter-conjunct-pluto.jpg
+title: JUPITER CONJUNCT PLUTO
+image: /assets/jupiter-conjunct-pluto.bmp
 relatedItems:
   - Capricorn
   - Jupiter
