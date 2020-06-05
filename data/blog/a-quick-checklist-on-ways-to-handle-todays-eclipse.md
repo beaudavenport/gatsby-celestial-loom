@@ -34,3 +34,5 @@ A Quick Checklist on Ways to Handle Today's Eclipse
 * What is real?
 * What am I letting go?  What am I finishing?  What has come full circle in my life?
 * We have reached a tipping point!
+
+Love, Nikki
