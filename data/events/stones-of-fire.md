@@ -12,10 +12,6 @@ mapsLink: 'https://goo.gl/maps/JGr7JJLWqumREKSL9'
 eventPrice: 25
 publishDate: '2020-06-29T06:11:04-05:00'
 ---
-An Astrological Online Healing Playshop 
-
-Saturday, July 11, 2020, 5 – 6:30 PM CDT
-
 **An Astrological Online Healing Playshop**
 
 **Saturday, July 11, 2020, 5-6:30 PM CDT**
