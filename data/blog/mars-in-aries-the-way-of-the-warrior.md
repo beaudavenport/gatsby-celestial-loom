@@ -7,13 +7,11 @@ image: /assets/mars-in-aries-way-of-the-warrior.jpg
 relatedItems:
   - Aries
 ---
-**Mars, God of War**, Energy of Force, the Idealist, the planet of “Will Power” moved into his own sign of ARIES on June 27, 2020.  Mars represents raw power that instigates and keeps things moving, unreasoning fury, the elegance of a ballroom dancer, the spirit of enterprise, the joy of work and struggle.  Mars will stay in Aries from June 27, 2020 to January 6, 2021.  He retrogrades approximately every two years but rarely in the sign of Aries.  It last happened in 1988.  Over a period of 16 years, Mars makes seven loops caused by apparent retrograde motion as he moves around the Sun. In the second half of 2020 it is possible that people will become much more assertive in response to abuses of power.  Mars brings a forceful energy.
+**Mars, God of War,** Energy of Force, the Idealist, the planet of “Will Power” moved into his own sign of ARIES on June 27, 2020.  Mars represents raw power that instigates and keeps things moving, unreasoning fury, the elegance of a ballroom dancer, the spirit of enterprise, the joy of work and struggle.  Mars will stay in Aries from June 27, 2020 to January 6, 2021.  He retrogrades approximately every two years but rarely in the sign of Aries.  It last happened in 1988.  Over a period of 16 years, Mars makes seven loops caused by apparent retrograde motion as he moves around the Sun. In the second half of 2020 it is possible that people will become much more assertive in response to abuses of power.  Mars brings a forceful energy.
 
 Mars has a combination of strength, brute force, and a sense of style.  Mars delights in the chase, works best when he is embroiled in passion, and helps us to address challenges or avoid them. Mars links us to our physical energy, struggle, courage, initiative, strength, aggression.  He is the archetypal warrior and he carries animus, the motivation to do something, anything, all things.
 
 Mars identifies our level of passion, our personal power, and triggers our temper.  Under his tutelage, we might prefer to go it alone.  In our charts Mars invites us to examine our role as warrior or diplomat, how we display courage and confidence, and draws us to fields of sport, dance, and adventure.
-
-
 
 During MARS in Aries energies, we can ask ourselves:
 
@@ -27,19 +25,11 @@ During MARS in Aries energies, we can ask ourselves:
 
 Mars has an extremely spiritual side. Mars is a rapidly acting rather violent planet, but he is also in charge of logic and aligns with cosmic order.  He brings strong self-discipline, courage, a way to defeat our demons, and can help us conquer our desires which can lead to liberation.  Mars is our gateway between the inner worlds (Venus, Mercury, the Moon) and higher knowledge (Jupiter and Saturn).
 
-
-
-_**“Mars is there, waiting to be reached.”**_
+**_“Mars is there, waiting to be reached.”_**
 
  – Buzz Aldrin, American pilot, and astronaut
 
-
-
-
-
 **A MARS Calendar** of major movements for Mars as he travels through his own sign of Aries for the next six months.
-
-
 
 6-27-2020:  Mars enters Aries (0 Aries) - A new adventure begins.
 
@@ -60,7 +50,5 @@ _**“Mars is there, waiting to be reached.”**_
 11-13-2020: Mars stations Direct (15 Aries) – We make a new start.
 
 12-23-2020: Mars squares Pluto/conjunct ERIS (23 Aries) – A sense of our new world appears!
-
-
 
 Love,  Nikki
