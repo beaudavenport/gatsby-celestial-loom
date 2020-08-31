@@ -5,7 +5,7 @@ type: events
 eventDate: '2020-09-05T02:01:16-05:00'
 eventTime: '4 - 5:30 PM CDT'
 image: /assets/fun-games-and-magic-image.jpg
-title: 'Fun, Games, and Magic for the Serious Astrologer, Class #3 of 4'
+title: '                   Fun, Games, and Magic for the Serious Astrologer, Class #3 of 4:  Star Techniques and Divine Feminine                                                                                                          '
 subtitle: A Four-Session ONLINE Playful Romp Through the Celestial Arts
 location: Nikki's ZOOM Room and Your Home
 mapsLink: 'https://goo.gl/maps/NFUjojVYdKp3Ez47A'
