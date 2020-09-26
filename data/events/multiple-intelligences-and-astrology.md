@@ -4,7 +4,7 @@ priceDescription: 90 Minute Playshop
 type: events
 eventDate: '2020-10-16T08:48:43-05:00'
 eventTime: '4 - 5:30 PM CDT'
-image: /assets/screenshot-12-small.png
+image: /assets/multiple-intelligence-nature.jpg
 title: Multiple Intelligences and Astrology
 subtitle: Online ZOOM Event
 location: Nikki's ZOOM Room and Your Home
