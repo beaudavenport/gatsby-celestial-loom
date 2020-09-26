@@ -20,4 +20,4 @@ Nikki Davenport, Teacher, developed the astrological connection to the Multiple 
 
 90 Minute Playshop:  $25.00  (Payment through website: celestialloomastrology.com)  
 
-Sign up by sending me a note by Thursday, October 21, 2020 at nikiastro@att.net with your name and email.  I will send the ZOOM link to your email the day prior to the event.
+Sign up by sending me a note by Thursday, October 15, 2020 at nikiastro@att.net with your name and email.  I will send the ZOOM link to your email the day prior to the event.
