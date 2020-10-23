@@ -3,7 +3,7 @@ templateKey: eventTemplate
 priceDescription: 90 Minute Playshop
 type: events
 eventDate: '2020-11-14T12:00:00-06:00'
-eventTime: '4:00-5:30 PM CDT'
+eventTime: '4:00-5:30 PM CST'
 image: /assets/time-lords-and-profections.jpg
 title: Time Lords and Annual Profections
 subtitle: A Peek into the Magic of Hellenistic Astrology
@@ -14,9 +14,9 @@ publishDate: '2020-10-23T11:37:13-05:00'
 ---
 **An ONLINE Astrological Playshop**
 
-**Saturday, November 14, 2020   4-5:30 PM CDT**
+**Saturday, November 14, 2020   4-5:30 PM CST**
 
-Join us on **ZOOM** for an online playshop introducing a practical, Hellenistic Astrology Time-Lord technique which will show us how to determine which planets in our natal charts are activated during a given time period.  Our Time-Lord planets, as they advance through our charts, are more relevant and ready to _**“deliver their natal promise.”**_  We will explore how to find our Annual and Monthly Profections (advancing and awakened Time-Lords) for the current time and year ahead.
+Join us on **ZOOM** for an online playshop introducing a practical, Hellenistic Astrology Time-Lord technique which will show us how to determine which planets in our natal charts are activated during a given time period.  Our Time-Lord planets, as they advance through our charts, are more relevant and ready to **_“deliver their natal promise.”_**  We will explore how to find our Annual and Monthly Profections (advancing and awakened Time-Lords) for the current time and year ahead.
 
 The basic method of calculation for Time-Lords and Profections is simple and all levels of astrology seekers from beginning to advanced are welcome to share in this ancient, valuable tool that helps us align with our Cosmic-Earthly timing and informs our upcoming choices and best movements forward!
 
