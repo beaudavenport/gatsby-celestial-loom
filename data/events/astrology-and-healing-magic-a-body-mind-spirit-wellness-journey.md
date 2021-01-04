@@ -4,7 +4,7 @@ priceDescription: Set of Three - 90 Minute Classes ($35 per session)
 type: events
 eventDate: '2021-01-16T03:18:49-06:00'
 eventTime: '4:00 PM CST'
-image: /assets/astrology-and-healing-magic.jpg
+image: /assets/venus-ceremony.jpg
 title: >-
   ASTROLOGY AND HEALING MAGIC, A Body, Mind, Spirit Wellness
   Journey                                                                   
