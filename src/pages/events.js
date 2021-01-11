@@ -3,19 +3,19 @@ import { graphql } from 'gatsby';
 import { partition } from 'lodash';
 import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
-import moment from 'moment';
 
 import { BackLink, BigSubheader, JumboSubheader } from '../components/Common';
 import EventsArchive from '../components/EventsArchive';
 import FeaturedEventCard from '../components/FeaturedEventCard';
 import Layout from '../components/Layout';
 import SidebarContents from '../components/SidebarContents';
+import { isPastEvent } from './../helpers/dateHelper';
 
 const Events = ({ data }) => {
   const nodes = data.allMarkdownRemark.edges.map(edge => edge.node);
   const [pastEvents, upcomingEvents] = partition(
     nodes,
-    node => moment().isAfter(moment(node.frontmatter.eventDate, 'MMMM DD, YYYY')),
+    node => isPastEvent(node.frontmatter.eventDate),
   );
 
   return (
@@ -36,7 +36,7 @@ const Events = ({ data }) => {
             <p style={{ fontWeight: 'bold' }}>Nikki provides playshops, speaking engagements, and more around the St. Louis area.</p>
           </div>
         </Cell>
-        <BigSubheader>Upcoming Events</BigSubheader>
+        {Boolean(upcomingEvents.length) && <BigSubheader>Upcoming Events</BigSubheader>}
         {upcomingEvents.map(node => (
           <Cell key={node.frontmatter.title} size={12} style={{ padding: '20px 0px' }}>
             <FeaturedEventCard

@@ -1,10 +1,10 @@
 import { FontIcon } from 'react-md';
 import PropTypes from 'prop-types';
 import React from 'react';
-import moment from 'moment';
 
 import { PageImage, Subtitle, Title } from '../Common';
 import AddToCartButton from '../AddToCartButton';
+import { isPastEvent } from './../../helpers/dateHelper';
 
 function EventPage(props) {
   const {
@@ -20,7 +20,7 @@ function EventPage(props) {
     eventTime,
     priceDescription,
   } = props;
-  const isExpired = moment().isAfter(moment(eventDate, 'MMMM DD, YYYY'));
+  const isExpired = isPastEvent(eventDate);
 
   return (
     <div className="content-container">

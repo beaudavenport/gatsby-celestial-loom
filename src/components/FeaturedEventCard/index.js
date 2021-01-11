@@ -1,7 +1,6 @@
 import { Cell, Grid } from 'react-md';
 import PropTypes from 'prop-types';
 import React from 'react';
-import moment from 'moment';
 
 import {
   ContentWithIcon, Subheader, Subtitle, Title,
@@ -9,6 +8,7 @@ import {
 import CardCornerHighlight from '../CardCornerHighlight';
 import TextWithChevron from '../TextWithChevron';
 import TouchableLink from '../TouchableLink';
+import { isPastEvent } from './../../helpers/dateHelper';
 
 const FeaturedEventCard = ({
   path,
@@ -22,7 +22,7 @@ const FeaturedEventCard = ({
   location,
   priceDescription,
 }) => {
-  const isExpired = moment().isAfter(moment(eventDate, "MMMM DD, YYYY"));
+  const isExpired = isPastEvent(eventDate);
   return (
     <TouchableLink to={path} style={style}>
       <Grid>
