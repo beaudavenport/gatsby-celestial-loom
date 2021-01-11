@@ -1,3 +1,5 @@
+const sass = require('sass');
+
 module.exports = {
   siteMetadata: {
     title: 'The Celestial Loom',
@@ -8,7 +10,12 @@ module.exports = {
     twitterUsername: 'nikiastro',
   },
   plugins: [
-    'gatsby-plugin-sass',
+    {
+      resolve: 'gatsby-plugin-sass',
+      options: {
+        implementation: sass,
+      },
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -27,7 +34,7 @@ module.exports = {
          * `src/cms` directory.
          */
         modulePath: `${__dirname}/src/cms/cms.js`,
-        htmlTitle: 'Some weird Manager',
+        htmlTitle: 'Celestial Loom Admin Page',
       },
     },
     'gatsby-plugin-react-helmet',

@@ -4,7 +4,7 @@ import {
   Card, Cell, Grid,
 } from 'react-md';
 import { Converter } from 'showdown';
-import CMS from 'netlify-cms';
+import CMS from 'netlify-cms-app';
 import React from 'react';
 import moment from 'moment';
 
@@ -150,3 +150,5 @@ CMS.registerPreviewTemplate('events', EventPagePreview);
 CMS.registerPreviewTemplate('blog', BlogEntryPreview);
 CMS.registerPreviewTemplate('services', ServicePreview);
 CMS.registerPreviewTemplate('toolboxEntries', ToolboxPreview);
+
+CMS.registerPreviewStyle('../components/main.scss')
