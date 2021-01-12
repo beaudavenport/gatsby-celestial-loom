@@ -26,17 +26,6 @@ module.exports = {
     'gatsby-plugin-twitter',
     'gatsby-plugin-postcss',
     'gatsby-transformer-remark',
-    {
-      resolve: 'gatsby-plugin-netlify-cms',
-      options: {
-        /**
-         * One convention is to place your Netlify CMS customization code in a
-         * `src/cms` directory.
-         */
-        modulePath: `${__dirname}/src/cms/cms.js`,
-        htmlTitle: 'Celestial Loom Admin Page',
-      },
-    },
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-source-filesystem',
@@ -71,6 +60,17 @@ module.exports = {
             path: node => node.fields.slug,
           },
         },
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-netlify-cms',
+      options: {
+        /**
+         * One convention is to place your Netlify CMS customization code in a
+         * `src/cms` directory.
+         */
+        modulePath: `${__dirname}/src/cms/cms.js`,
+        htmlTitle: 'Celestial Loom Admin Page',
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
