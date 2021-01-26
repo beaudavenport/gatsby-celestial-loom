@@ -1,22 +1,18 @@
 ---
 templateKey: eventTemplate
-priceDescription: '90 Minutes -  Session #2 of 3 Sessions (Each Session $35)'
+priceDescription: '90 Minutes Session #3 of 3 Sessions'
 type: events
-eventDate: '2021-01-23T12:32:29-06:00'
-eventTime: '4:00 - 5:30 PM CST'
+eventDate: '2021-01-30T11:31:39-06:00'
+eventTime: '4:00 - 5:00 PM CST'
 image: /assets/venus-ceremony.jpg
 title: 'Astrology and Healing Magic, A Body, Mind, Spirit Wellness Journey'
-subtitle: 'Session #2 of 3 Sessions'
+subtitle: 'ONLINE Playshop Session #3 of 3 Sessions'
 location: Nikki's ZOOM Room and Your Home
-mapsLink: 'https://goo.gl/maps/683zYvHod7WX8R2s6'
+mapsLink: 'https://goo.gl/maps/vmRCBWERk8JJnJRZ9'
 eventPrice: 35
-publishDate: '2021-01-17T12:32:29-06:00'
+publishDate: '2021-01-26T11:31:39-06:00'
 ---
-**Astrology and Healing Magic, A Body, Mind, Spirit Wellness Journey**
-
-**Session #2 of 3 Sessions  - Saturday 1-23-2021**
-
-**A Three-Session Set of Online Astrology and Healing Classes**
+ **A Three-Session Set of Online Astrology and Healing Classes**
 
 **Saturdays, 1-16, 1-23, 1-30, 2021   4-5:30 PM CST** 
 
