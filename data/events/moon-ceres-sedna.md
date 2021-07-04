@@ -4,7 +4,7 @@ priceDescription: 90 Minute July Meeting
 type: events
 eventDate: '2021-07-18T10:21:43-05:00'
 eventTime: '2:00 - 3:30 PM CDT'
-image: /assets/moon-ceres-sedna.jpg
+image: /assets/moon-mother.jpg
 title: Moon-Ceres-Sedna
 subtitle: An Octave Journey of Soul to Spirit
 location: Nikki's ZOOM Room and Your Home
