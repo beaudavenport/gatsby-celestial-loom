@@ -1,20 +1,20 @@
 ---
 templateKey: eventTemplate
-priceDescription: 90 Minute Playshop
+priceDescription: 90 Minute ONLINE Playshop
 type: events
-eventDate: '2021-08-28T07:56:40-05:00'
-eventTime: '4:00-5:30 PM CDT'
+eventDate: '2021-09-11T12:00:00-05:00'
+eventTime: '4:00 - 5:30 PM CDT'
 image: /assets/elements.jpg
 title: The Sacred Elements in Astrology
 subtitle: 'A Magic Hands-On Journey through Water, Earth, Air, Fire'
 location: Nikki's ZOOM Room and Your Home
 mapsLink: 'https://goo.gl/maps/Q3tJMFhjytYtBT9Z7'
 eventPrice: 25
-publishDate: '2021-08-14T07:56:40-05:00'
+publishDate: '2021-09-04T02:02:58-05:00'
 ---
 **An Astrological Online Playshop** 
 
-**Saturday, August 28, 2021, 4:00 – 5:30 PM CDT**
+**Saturday, September 11, 2021, 4 – 5:30 PM CDT**
 
 _“The four elements are the pillars that uphold the manifest world and anchor spirit to matter.”_                                                                                                            Ivo Dominguez, Jr.
 
