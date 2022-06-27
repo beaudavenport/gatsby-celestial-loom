@@ -2,11 +2,11 @@
 templateKey: eventTemplate
 priceDescription: 90 Minute Playshop
 type: events
-eventDate: '2022-06-18T01:21:03-05:00'
+eventDate: '2022-07-16T12:00:00-05:00'
 eventTime: '4:00-5:30 PM CDT/CST'
 image: /assets/intermediate-astrologers.jpg
 title: Intermediate Astrologer's Playshop Series
-subtitle: 'Minor Aspects, Diving Deeply into Ourselves'
+subtitle: Composite Charts - We Meet in the Middle
 location: Nikki's ZOOM Room and Your Home
 mapsLink: 'https://goo.gl/maps/Q3tJMFhjytYtBT9Z7'
 eventPrice: 25
