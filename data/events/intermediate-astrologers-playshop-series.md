@@ -2,15 +2,15 @@
 templateKey: eventTemplate
 priceDescription: 90 Minute Playshop
 type: events
-eventDate: '2022-07-16T12:00:00-05:00'
-eventTime: '4:00-5:30 PM CDT/CST'
+eventDate: '2022-08-20T12:00:00-05:00'
+eventTime: '4:00-5:30 PM CDT'
 image: /assets/intermediate-astrologers.jpg
 title: Intermediate Astrologer's Playshop Series
-subtitle: Composite Charts - We Meet in the Middle
+subtitle: Planets Beyond Pluto - A View Through Universal Windows
 location: Nikki's ZOOM Room and Your Home
 mapsLink: 'https://goo.gl/maps/Q3tJMFhjytYtBT9Z7'
 eventPrice: 25
-publishDate: '2022-05-31T01:21:03-05:00'
+publishDate: '2022-08-11T12:00:00-05:00'
 ---
 **Intermediate Astrologer’s Playshop Series - A Set of 6 Sessions with Exploration into the Intriguing Untapped Depths of Astrological Chart Study**
 
