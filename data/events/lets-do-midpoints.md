@@ -1,25 +1,29 @@
 ---
 templateKey: eventTemplate
-priceDescription: 90 Minute Playshop
+priceDescription: 60 Minute Playshop
 type: events
-eventDate: '2022-04-30T12:00:27-05:00'
-eventTime: '4:00 PM - 5:30 PM CDT'
-image: /assets/let-s-do-midpoints.jpg
-title: Let's Do MIDPOINTS!
-subtitle: An Exploration of Undiscovered Healing Insights Within Our Charts
+eventDate: '2022-11-05T12:00:27-05:00'
+eventTime: '4:00 PM - 5:00 PM CDT'
+image: /assets/mars-retrograde-2022.jpg
+title: MARS
+subtitle: A Seven-Month Mars Journey through Direct-Retrograde and Out of Bounds
 location: Nikki's ZOOM Room and Your Home
 mapsLink: 'https://goo.gl/maps/Q3tJMFhjytYtBT9Z7'
-eventPrice: 25
-publishDate: '2022-04-19T12:00:27-05:00'
+eventPrice: 0
+publishDate: '2022-11-01T12:00:00-05:00'
 ---
-**_“In nature we never see anything isolated, but everything in connection with something else which is before it, beside it, under it and over it.”_** _Goethe_
+**An Astrological Online Playshop**
 
+**Saturday, November 5, 2022 – ZOOM Meeting 4-5 PM CDT**
 
+Mars represents decisive action, our will-power, Kundalini forces in our Spinal Highway (Chakras).  He moves into inquisitive Gemini opening the door to a desire energy to share, learn, and verbally spar. Curiosity is at an all-time high, communication is at a fast pace and has powerful effectiveness.  Mis-information can unspool at a terrific speed!
 
-Michael Munkasey, a midpoint expert, tells us that midpoints in astrology represent a synthesis of two symbolisms and the introduction of a third symbolism at the midpoint position helps us to know more. 
+_“Mars retrograde makes Mercury retrograde look like a baby!”_
 
-Midpoint pictures capture a deeper level of understanding and share a magical healing opportunity in the study of our charts. Join us to discover the subtle yet dramatic power of midpoints. They are accessible and profound!
+Wherever Mars goes, he brings activity, vitality.  With Mars in Gemini, it is a time to dip ourselves into new waters and experience things we do not normally gravitate towards.  Our curiosity is at a high peak. Join us to learn how to keep a watch on MARS and its influence on our charts!
 
-**90 Minute Playshop:**  $25.00 (Payment through website – celestialloomastrology.com)
+**This Playshop is FREE of CHARGE.** 
 
-Contact Nikki, nikiastro@att.net for PRE-REGISTRATION and include your birth info: birth date, birth time, birth location, for your free Natal Chart and Natal Midpoint List to use as we work on our personal insights.  Chart and List will be sent to you through your email. You will receive LINK to the ZOOM page the day prior to the playshop.
+Contact Nikki, nikiastro@att.net for PRE-REGISTRATION. Let me know in my email by Friday, or sign up on my website. 
+
+You will receive the LINK in your email on Saturday morning to ZOOM meeting at 4 PM CDT.
