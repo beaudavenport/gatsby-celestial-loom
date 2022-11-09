@@ -2,15 +2,15 @@
 templateKey: eventTemplate
 priceDescription: 90 Minute Playshop
 type: events
-eventDate: '2022-10-15T12:00:00-05:00'
+eventDate: '2022-11-19T12:00:00-06:00'
 eventTime: '4:00-5:30 PM CDT'
 image: /assets/intermediate-astrologers.jpg
 title: Intermediate Astrologer's Playshop Series
-subtitle: 'Planetary Nodes, Opening New Action Pathways'
+subtitle: 360 Degrees of Magic Symbols
 location: Nikki's ZOOM Room and Your Home
 mapsLink: 'https://goo.gl/maps/Q3tJMFhjytYtBT9Z7'
 eventPrice: 25
-publishDate: '2022-10-07T12:00:00-05:00'
+publishDate: '2022-11-08T12:00:00-06:00'
 ---
 **Intermediate Astrologer’s Playshop Series - A Set of 6 Sessions with Exploration into the Intriguing Untapped Depths of Astrological Chart Study**
 
