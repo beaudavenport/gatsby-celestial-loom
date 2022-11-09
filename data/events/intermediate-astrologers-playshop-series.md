@@ -3,7 +3,7 @@ templateKey: eventTemplate
 priceDescription: 90 Minute Playshop
 type: events
 eventDate: '2022-11-19T12:00:00-06:00'
-eventTime: '4:00-5:30 PM CDT'
+eventTime: '4:00-5:30 PM CST'
 image: /assets/intermediate-astrologers.jpg
 title: Intermediate Astrologer's Playshop Series
 subtitle: 360 Degrees of Magic Symbols
