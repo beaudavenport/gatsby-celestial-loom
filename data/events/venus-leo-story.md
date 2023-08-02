@@ -22,10 +22,7 @@ Venus, after the Moon, is our closest Celestial Goddess.  She is tied to our sel
 
 Agenda (August 12, 2023):                                                
 
-* 
-
-Venus Star Point
-
+* Venus Star Point
 * Venus Synodic Cycle, 2023-2025                                
 * Venus 13 Phases                                                            
 * Venus Feminine Archetype                                                                      
