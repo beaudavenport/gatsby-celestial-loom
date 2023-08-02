@@ -7,7 +7,7 @@ eventTime: '4:00-5:30 PM CDT'
 image: /assets/venus-leo-story.jpg
 title: 'Venus Leo Story '
 subtitle: 2 Playshops Exploring Venus Leo Cycle 2023
-location: You Home and My ZOOM Page
+location: Your Home and My ZOOM Page
 mapsLink: 'https://goo.gl/maps/Q3tJMFhjytYtBT9Z7'
 eventPrice: 35
 publishDate: '2023-08-02T03:52:29-05:00'
