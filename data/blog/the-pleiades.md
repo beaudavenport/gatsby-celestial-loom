@@ -1,7 +1,7 @@
 ---
 templateKey: blogTemplate
 type: blog
-publishDate: 2019-05-21T03:38:14.791Z
+publishDate: '2023-11-26T12:00:00-06:00'
 title: The Pleiades
 image: /assets/pleiades.jpg
 relatedItems:
@@ -68,7 +68,7 @@ In our western astrology view, the Pleiades open the idea of interdependent oppo
 
 The group of sisters currently stand in our tropical zodiac at 29 Taurus and 0 Gemini.
 
-The Sun reaches his yearly connection with the Pleiades on May 20, & 21, 2019. Sol will help the sisters open the portal to teach us about ourselves! They are bringing us messages as they reach down to touch our hearts and spirits in the physical and spiritual realms.
+Sol will help the sisters open the portal to teach us about ourselves! They are bringing us messages as they reach down to touch our hearts and spirits in the physical and spiritual realms.
 
 \* ELECTRA at 29 Taurus 25 asks us “Where are we putting our energy?”
 
