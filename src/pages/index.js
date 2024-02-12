@@ -156,7 +156,7 @@ query {
         frontmatter {
           title
           image
-          publishDate(formatString: "MMMM DD, YYYY")
+          publishDate
           relatedItems
         }
         excerpt(format: HTML, pruneLength: 250)
@@ -177,9 +177,9 @@ query {
         frontmatter {
           title
           image
-          eventDate(formatString: "MMMM DD, YYYY")
+          eventDate
           eventTime
-          eventDateShort: eventDate(formatString: "MMM DD")
+          eventDateShort: eventDate
           eventPrice
           priceDescription
           location

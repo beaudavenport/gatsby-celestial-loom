@@ -1,8 +1,11 @@
 import '../main.scss';
 
 import {
-  Cell, FontIcon, Grid, ListItem, NavigationDrawer,
+  Cell, FontIcon, ListItem,
 } from 'react-md';
+import { Grid, GridCell } from "@react-md/utils"
+import { Configuration, ConfigurationProps } from "@react-md/layout";
+
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -58,29 +61,7 @@ const Layout = ({
   seoPathname,
   isArticle,
 }) => (
-  <NavigationDrawer
-    desktopDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY}
-    tabletDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY}
-    mobileDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY}
-    position="left"
-    drawerStyle={{ backgroundColor: 'rgb(47, 47, 47)' }}
-    defaultVisible={false}
-    temporaryIcon={(<FontIcon iconClassName="material-icons">menu</FontIcon>)}
-    navStyle={{ backgroundColor: 'rgb(47, 47, 47)' }}
-    toolbarTitle={title}
-    toolbarActions={(
-      <div className="header-icons-container">
-        <HeaderCart />
-        <HeaderSearch />
-      </div>
-        )}
-    drawerHeader={<DrawerTitle />}
-    toolbarTitleStyle={{ fontFamily: 'Berkshire Swash', fontStyle: 'italic' }}
-    drawerTitleStyle={{ fontFamily: 'Berkshire Swash', fontStyle: 'italic' }}
-    toolbarSingleColor
-    toolbarStyle={{ backgroundColor: 'rgb(47, 47, 47)' }}
-    navItems={navItems.map(getNavItem)}
-  >
+  <Configuration>
     <SEOAndScripts
       title={seoTitle}
       description={seoDescription || ''}
@@ -88,17 +69,24 @@ const Layout = ({
       pathname={seoPathname}
       article={isArticle}
     />
-    {jumbotron}
+    <div>hello world</div>
+    <div>{seoTitle}</div>
     <Grid style={{ maxWidth: 1100 }} noSpacing>
-      <Cell className="main-contents" size={8}>
+      <GridCell className="main-contents" size={8}>
         {children}
-      </Cell>
-      <Cell size={4} tabletSize={8} className="sidebar-contents">
-        {sidebarChildren}
-      </Cell>
+      </GridCell>
     </Grid>
-    <Footer />
-  </NavigationDrawer>
+    {/* 
+    <Grid style={{ maxWidth: 1100 }} noSpacing>
+      <GridCell className="main-contents" size={8}>
+        {children}
+      </GridCell>
+      <GridCell size={4} tabletSize={8} className="sidebar-contents">
+        {sidebarChildren}
+      </GridCell>
+    </Grid>
+    <Footer /> */}
+  </Configuration>
 );
 
 Layout.propTypes = {

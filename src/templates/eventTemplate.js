@@ -58,7 +58,7 @@ export const pageQuery = graphql`
     markdownRemark(fields: { slug: { eq: $path } }) {
       html
       frontmatter {
-        eventDate(formatString: "MMMM DD, YYYY")
+        eventDate
         eventTime
         title
         subtitle

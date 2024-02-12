@@ -92,9 +92,9 @@ export const query = graphql`
           frontmatter {
             title
             image
-            eventDate(formatString: "MMM DD, YYYY")
+            eventDate
             eventTime
-            eventDateShort: eventDate(formatString: "MMM DD")
+            eventDateShort: eventDate
             eventPrice
             priceDescription
             location

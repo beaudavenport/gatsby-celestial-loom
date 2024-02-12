@@ -1,6 +1,7 @@
 import { CardText } from 'react-md';
 import PropTypes from 'prop-types';
 import React from 'react';
+import moment from 'moment';
 
 import { Subheader, Title } from '../Common';
 import CardCornerHighlight from '../CardCornerHighlight';
@@ -26,7 +27,7 @@ const FeaturedCard = ({
       <div style={{ padding: 16 }}>
         <Title>{title}</Title>
         <h3 className="featured-card--publish-date">
-          {publishDate}
+          {moment(publishDate).format("DD")}
         </h3>
       </div>
       <CardText style={{ padding: 16 }}>
@@ -49,7 +50,6 @@ FeaturedCard.propTypes = {
   title: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   excerpt: PropTypes.string.isRequired,
-  publishDate: PropTypes.string.isRequired,
   cornerIconName: PropTypes.string,
   cornerTitle: PropTypes.string,
   relatedItemChips: PropTypes.node,

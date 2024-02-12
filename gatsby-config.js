@@ -20,10 +20,10 @@ module.exports = {
     'gatsby-plugin-postcss',
     'gatsby-transformer-remark',
     {
-      resolve: 'gatsby-plugin-netlify-cms',
+      resolve: 'gatsby-plugin-decap-cms',
       options: {
         /**
-         * One convention is to place your Netlify CMS customization code in a
+         * One convention is to place your Decap CMS customization code in a
          * `src/cms` directory.
          */
         modulePath: `${__dirname}/src/cms/cms.js`,
@@ -60,7 +60,7 @@ module.exports = {
           MarkdownRemark: {
             title: node => node.frontmatter.title,
             type: node => node.frontmatter.type,
-            publishDate: node => node.frontmatter.publishDate,
+            publishDate: 'node => node.frontmatter.publishDate,'
             path: node => node.fields.slug,
           },
         },
