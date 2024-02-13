@@ -1,56 +1,29 @@
 import '../main.scss';
-
-import {
-  Cell, FontIcon, ListItem,
-} from 'react-md';
 import { Grid, GridCell } from "@react-md/utils"
-import { Configuration, ConfigurationProps } from "@react-md/layout";
-
-import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
+import { HomeSVGIcon, InfoSVGIcon, CreateSVGIcon, EventSVGIcon, ShoppingCartSVGIcon, BuildSVGIcon } from "@react-md/material-icons";
+import {
+  DEFAULT_PHONE_LAYOUT,
+  Layout,
+  useLayoutNavigation,
+  Configuration
+} from "@react-md/layout";
+import { Link } from 'gatsby';
 
 import Footer from '../Footer';
-import HeaderCart from '../HeaderCart';
-import HeaderSearch from '../HeaderSearch';
 import SEOAndScripts from '../SEOAndScripts';
 
-const navItems = [
-  { icon: 'home', to: '/', title: 'Home' },
-  { icon: 'info', to: '/getting-started', title: 'Getting Started' },
-  { icon: 'create', to: '/posts', title: 'Posts' },
-  { icon: 'event', to: '/events', title: 'Events' },
-  { icon: 'shopping_cart', to: '/services', title: 'Services' },
-  { icon: 'build', to: '/toolbox', title: 'Astro Toolbox' },
-];
+const navItems = {
+  "/": { itemId: "/", children: "Home", to: '/', parentId: null, leftAddon: <HomeSVGIcon /> },
+  "/info": { itemId: "/getting-started", children: "Getting Started", to: '/getting-started', parentId: null, leftAddon: <InfoSVGIcon /> },
+  "/posts": { itemId: "/posts", children: "Posts", to: '/posts', parentId: null, leftAddon: <CreateSVGIcon /> },
+  "/events": { itemId: "/events", children: "Events", to: '/events', parentId: null, leftAddon: <EventSVGIcon /> },
+  "/services": { itemId: "/services", children: "Services", to: '/services', parentId: null, leftAddon: <ShoppingCartSVGIcon /> },
+  "/toolbox": { itemId: "/toolbox", children: "Astro Toolbox", to: '/toolbox', parentId: null, leftAddon: <BuildSVGIcon /> }
+}
 
-const getNavItem = ({ divider, subheader, ...route }) => {
-  if (divider || subheader) {
-    return { divider, subheader, ...route };
-  }
-
-  return (
-    <ListItem
-      key={route.title}
-      primaryText={route.title}
-      primaryTextStyle={{ color: 'white' }}
-      leftIcon={<FontIcon style={{ color: 'white' }}>{route.icon}</FontIcon>}
-      component={Link}
-      to={route.to}
-    />
-  );
-};
-
-const DrawerTitle = () => (
-  <div style={{
-    height: 64, paddingTop: '10px', display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: 'rgb(247, 105, 0)',
-  }}
-  >
-    <h1 className="md-headline" style={{ fontFamily: 'Berkshire Swash', fontStyle: 'italic', color: 'white' }}>The Celestial Loom</h1>
-  </div>
-);
-
-const Layout = ({
+const SiteLayout = ({
   jumbotron,
   children,
   sidebarChildren,
@@ -60,36 +33,43 @@ const Layout = ({
   seoImage,
   seoPathname,
   isArticle,
-}) => (
-  <Configuration>
-    <SEOAndScripts
-      title={seoTitle}
-      description={seoDescription || ''}
-      image={seoImage}
-      pathname={seoPathname}
-      article={isArticle}
-    />
-    <div>hello world</div>
-    <div>{seoTitle}</div>
-    <Grid style={{ maxWidth: 1100 }} noSpacing>
-      <GridCell className="main-contents" size={8}>
-        {children}
-      </GridCell>
-    </Grid>
-    {/* 
-    <Grid style={{ maxWidth: 1100 }} noSpacing>
-      <GridCell className="main-contents" size={8}>
-        {children}
-      </GridCell>
-      <GridCell size={4} tabletSize={8} className="sidebar-contents">
-        {sidebarChildren}
-      </GridCell>
-    </Grid>
-    <Footer /> */}
-  </Configuration>
-);
+}) => {
 
-Layout.propTypes = {
+  return (
+    <Configuration>
+      <Layout
+        id="configurable-layout"
+        title={title}
+        navHeaderTitle="The Celesial Loom"
+        phoneLayout={DEFAULT_PHONE_LAYOUT}
+        tabletLayout={"temporary"}
+        landscapeTabletLayout={"temporary"}
+        desktopLayout={"temporary"}
+        treeProps={useLayoutNavigation(navItems, window.location.pathname, Link)}
+      >
+        <SEOAndScripts
+          title={seoTitle}
+          description={seoDescription || ''}
+          image={seoImage}
+          pathname={seoPathname}
+          article={isArticle}
+        />
+        {jumbotron}
+        <Grid style={{ maxWidth: 1100 }}>
+          <GridCell className="main-contents" colSpan={8}>
+            {children}
+          </GridCell>
+          <GridCell colSpan={4} className="sidebar-contents">
+            {sidebarChildren}
+          </GridCell>
+        </Grid>
+        <Footer />
+      </Layout>
+    </Configuration>
+  )
+};
+
+SiteLayout.propTypes = {
   jumbotron: PropTypes.node,
   children: PropTypes.node.isRequired,
   sidebarChildren: PropTypes.node.isRequired,
@@ -101,7 +81,7 @@ Layout.propTypes = {
   isArticle: PropTypes.bool,
 };
 
-Layout.defaultProps = {
+SiteLayout.defaultProps = {
   jumbotron: null,
   seoTitle: null,
   seoDescription: null,
@@ -110,4 +90,4 @@ Layout.defaultProps = {
   isArticle: false,
 };
 
-export default Layout;
+export default SiteLayout;

@@ -27,7 +27,7 @@ module.exports = {
          * `src/cms` directory.
          */
         modulePath: `${__dirname}/src/cms/cms.js`,
-        htmlTitle: 'Some weird Manager',
+        htmlTitle: 'Celestial Loom Admin',
       },
     },
     'gatsby-plugin-react-helmet',
@@ -60,7 +60,7 @@ module.exports = {
           MarkdownRemark: {
             title: node => node.frontmatter.title,
             type: node => node.frontmatter.type,
-            publishDate: 'node => node.frontmatter.publishDate,'
+            publishDate: node => node.frontmatter.publishDate,
             path: node => node.fields.slug,
           },
         },

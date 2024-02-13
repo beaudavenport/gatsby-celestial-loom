@@ -1,17 +1,17 @@
+@use "react-md" as *;
+
+@include react-md-utils;
+
 @import url('https://fonts.googleapis.com/css?family=Berkshire+Swash');
 @import url('https://fonts.googleapis.com/css?family=Martel:400,800');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
-@import '~react-md/src/scss/react-md';
-@import '~normalize.css';
-// @import 'theme.scss';
+
 
 $md-primary-color: #ec6602;
 $md-font-family: 'Martel';
 $md-drawer-mobile-max-width: 225px;
 $md-drawer-desktop-width: 225px;
-
-@include react-md-everything;
 
 @font-face {
   font-family: 'AstroGadget';
