@@ -1,6 +1,8 @@
-import {
-  Card, CardText, Cell, Divider, Grid,
-} from 'react-md';
+import { CardContent } from "@react-md/card";
+import { Grid, GridCell } from "@react-md/utils"
+import { Card } from "@react-md/card";
+import { Divider } from "@react-md/divider";
+
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -21,14 +23,14 @@ const ServicePage = ({
 }) => (
   <div>
     <OriginHeader origin={origin} />
-    <CardText>
+    <CardContent>
       <Title>{title}</Title>
       <div dangerouslySetInnerHTML={{ __html: html }} />
       <Grid>
-        <Cell size={12}>
+        <GridCell colSpan={12}>
           <Subtitle>Choose an Option:</Subtitle>
-        </Cell>
-        <Cell size={6} tabletSize={4}>
+        </GridCell>
+        <GridCell colSpan={6} tabletSize={4}>
           <TouchableLink to={`${slug}/online`}>
             <Card>
               <div style={{ padding: 15 }}>
@@ -55,8 +57,8 @@ const ServicePage = ({
               </div>
             </Card>
           </TouchableLink>
-        </Cell>
-        <Cell size={6} tabletSize={4}>
+        </GridCell>
+        <GridCell colSpan={6} tabletSize={4}>
           <TouchableLink to={`${slug}/in-person`}>
             <Card>
               <div style={{ padding: 15 }}>
@@ -77,9 +79,9 @@ const ServicePage = ({
               </div>
             </Card>
           </TouchableLink>
-        </Cell>
+        </GridCell>
       </Grid>
-    </CardText>
+    </CardContent>
   </div>
 );
 

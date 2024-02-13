@@ -1,4 +1,10 @@
-@use "react-md" as *;
+@use 'react-md' as * with (
+  $rmd-theme-light: true,
+  $rmd-theme-primary: #2f2f2f,
+  $rmd-theme-secondary: #ec6602,
+  $rmd-typography-font-family: 'Martel'
+  // other variable overrides
+);
 
 @include react-md-utils;
 
@@ -9,7 +15,6 @@
 
 
 $md-primary-color: #ec6602;
-$md-font-family: 'Martel';
 $md-drawer-mobile-max-width: 225px;
 $md-drawer-desktop-width: 225px;
 
@@ -40,6 +45,24 @@ html {
  background-color: #fff;
 }
 
+.rmd-layout-nav {
+  background-color: #2f2f2f;
+}
+
+.rmd-layout-nav-header {
+  background-color: #ec6602;
+  color: white;
+
+  .rmd-app-bar__title {
+    font-family: 'Berkshire Swash';
+    font-style: italic;
+  }
+}
+
+.rmd-app-bar__title {
+  font-family: 'Berkshire Swash';
+  font-style: italic;
+}
 /* flex utility classes */
 
 .flex-column {

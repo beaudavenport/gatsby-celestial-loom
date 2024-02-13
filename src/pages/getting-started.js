@@ -1,6 +1,8 @@
-import {
-  Avatar, Card, Cell, FontIcon, Grid, List, ListItem,
-} from 'react-md';
+import { Avatar } from "@react-md/avatar";
+import { Grid, GridCell } from "@react-md/utils"
+import { List, ListItem } from "@react-md/list";
+import { FontIcon } from '@react-md/icon';
+import { Card } from "@react-md/card"
 import { Link, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
@@ -54,20 +56,20 @@ const GettingStarted = ({ data }) => {
     >
       <BackLink to="/" title="Home" />
       <Grid>
-        <Cell size={12}>
+        <GridCell colSpan={12}>
           <Title>Welcome to The Celestial Loom!</Title>
-        </Cell>
-        <Cell size={12}>
+        </GridCell>
+        <GridCell colSpan={12}>
           <BigSubheader>New to Astrology? Here's how to get started:</BigSubheader>
-        </Cell>
-        <Cell size={12}>
+        </GridCell>
+        <GridCell colSpan={12}>
           <Card>
             <Grid>
               <CenteredCell fontIconName="person" title="Order an Astrological Consultation">
                 <Caption>Select an online or in-person astrological consultation from a wide array of astrological origins.</Caption>
                 <ForwardLink title="View all Services" to="/services" />
               </CenteredCell>
-              <Cell size={6} tabletSize={4}>
+              <GridCell size={6} tabletSize={4}>
                 <Subheader>Get your first chart:</Subheader>
                 <ServiceCard
                   path={natalChart.fields.slug}
@@ -78,11 +80,11 @@ const GettingStarted = ({ data }) => {
                   excerpt={natalChart.excerpt}
                   showPrices={false}
                 />
-              </Cell>
+              </GridCell>
             </Grid>
           </Card>
-        </Cell>
-        <Cell size={12}>
+        </GridCell>
+        <GridCell colSpan={12}>
           <Card>
             <Grid>
               <CenteredCell fontIconName="create" title="Read the Latest Post">
@@ -101,8 +103,8 @@ const GettingStarted = ({ data }) => {
               </CenteredCell>
             </Grid>
           </Card>
-        </Cell>
-        <Cell size={12}>
+        </GridCell>
+        <GridCell colSpan={12}>
           <Card>
             <Grid>
               <CenteredCell fontIconName="event" title="Attend an Event">
@@ -125,8 +127,8 @@ const GettingStarted = ({ data }) => {
             }
             </Grid>
           </Card>
-        </Cell>
-        <Cell size={12}>
+        </GridCell>
+        <GridCell colSpan={12}>
           <Card>
             <Grid>
               <CenteredCell fontIconName="build" title="Explore your Astrological Toolbox">
@@ -151,7 +153,7 @@ const GettingStarted = ({ data }) => {
               </CenteredCell>
             </Grid>
           </Card>
-        </Cell>
+        </GridCell>
       </Grid>
     </Layout>
   );

@@ -1,4 +1,5 @@
-import { Card, Cell, Grid } from 'react-md';
+import { Grid, GridCell } from "@react-md/utils"
+import { Card } from '@react-md/card'
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -27,16 +28,16 @@ const IndexPage = ({ data }) => {
       jumbotron={<Jumbotron />}
       sidebarChildren={(
         <Grid noSpacing>
-          <Cell size={12}>
+          <GridCell colSpan={12}>
             <SidebarHeader title="About Nikki" />
-          </Cell>
-          <Cell size={12} tabletSize={4} className="about-nikki--card">
+          </GridCell>
+          <GridCell colSpan={12} tabletSize={4} className="about-nikki--card">
             <AboutNikkiCard />
-          </Cell>
-          <Cell size={12}>
+          </GridCell>
+          <GridCell colSpan={12}>
             <SidebarHeader title="Stay Connected" />
-          </Cell>
-          <Cell size={12} tabletSize={4}>
+          </GridCell>
+          <GridCell colSpan={12} tabletSize={4}>
             <div style={{ paddingRight: 1 }}>
               <a
                 className="twitter-timeline"
@@ -46,15 +47,15 @@ const IndexPage = ({ data }) => {
                   Tweets by nikiastro
               </a>
             </div>
-          </Cell>
+          </GridCell>
         </Grid>
       )}
     >
       <Grid className="separated--grid">
-        <Cell size={12}>
+        <GridCell colSpan={12}>
           <BigSubheader>Featured Post</BigSubheader>
-        </Cell>
-        <Cell size={12} style={{ marginBottom: 10 }}>
+        </GridCell>
+        <GridCell colSpan={12} style={{ marginBottom: 10 }}>
           <FeaturedCard
             path={firstBlogNode.fields.slug}
             title={firstBlogNode.frontmatter.title}
@@ -67,17 +68,17 @@ const IndexPage = ({ data }) => {
               )
             }
           />
-        </Cell>
+        </GridCell>
       </Grid>
       <Grid className="separated--grid">
-        <Cell size={12}>
+        <GridCell colSpan={12}>
           <div className="homepage--header">
             <BigSubheader>Previous Posts</BigSubheader>
             <ForwardLink to="/posts" title="All Posts" />
           </div>
-        </Cell>
+        </GridCell>
         { otherBlogNodes && otherBlogNodes.map(node => (
-          <Cell key={node.frontmatter.title} size={6} tabletSize={4} className="content-container">
+          <GridCell key={node.frontmatter.title} size={6} tabletSize={4} className="content-container">
             <ThumbnailCard
               style={{ marginBottom: 10 }}
               path={node.fields.slug}
@@ -85,19 +86,19 @@ const IndexPage = ({ data }) => {
               caption={node.frontmatter.publishDate}
               image={node.frontmatter.image}
             />
-          </Cell>
+          </GridCell>
         ))
           }
       </Grid>
       { firstEventNode && (
         <Grid className="separated--grid">
-          <Cell size={12}>
+          <GridCell colSpan={12}>
             <div className="homepage--header">
               <BigSubheader>Next Event</BigSubheader>
               <ForwardLink to="/events" title="All Events" />
             </div>
-          </Cell>
-          <Cell size={12}>
+          </GridCell>
+          <GridCell colSpan={12}>
             <FeaturedEventCard
               path={firstEventNode.fields.slug}
               title={firstEventNode.frontmatter.title}
@@ -109,17 +110,17 @@ const IndexPage = ({ data }) => {
               priceDescription={firstEventNode.frontmatter.priceDescription}
               location={firstEventNode.frontmatter.location}
             />
-          </Cell>
+          </GridCell>
         </Grid>
       )}
       <Grid className="separated--grid">
-        <Cell size={12}>
+        <GridCell colSpan={12}>
           <div className="homepage--header">
             <BigSubheader>Featured Service</BigSubheader>
             <ForwardLink to="/services" title="All Services" />
           </div>
-        </Cell>
-        <Cell size={12}>
+        </GridCell>
+        <GridCell colSpan={12}>
           <Card>
             <ServiceCard
               path={featuredService.fields.slug}
@@ -130,7 +131,7 @@ const IndexPage = ({ data }) => {
               excerpt={featuredService.excerpt}
             />
           </Card>
-        </Cell>
+        </GridCell>
       </Grid>
     </Layout>
   );

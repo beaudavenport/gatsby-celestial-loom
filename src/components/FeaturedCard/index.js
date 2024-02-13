@@ -1,4 +1,4 @@
-import { CardText } from 'react-md';
+import { CardContent } from "@react-md/card";
 import PropTypes from 'prop-types';
 import React from 'react';
 import moment from 'moment';
@@ -30,10 +30,10 @@ const FeaturedCard = ({
           {moment(publishDate).format("DD")}
         </h3>
       </div>
-      <CardText style={{ padding: 16 }}>
+      <CardContent style={{ padding: 16 }}>
         <div dangerouslySetInnerHTML={{ __html: excerpt }} />
         <TextWithChevron text="Read more" />
-      </CardText>
+      </CardContent>
     </TouchableLink>
     { relatedItemChips && (
     <div className="padded-section">

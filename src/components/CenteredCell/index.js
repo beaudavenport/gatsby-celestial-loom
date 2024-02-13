@@ -1,11 +1,13 @@
-import { Cell, FontIcon } from 'react-md';
+import { FontIcon } from '@react-md/icon';
+import { GridCell } from "@react-md/utils"
+
 import PropTypes from 'prop-types';
 import React from 'react';
 
 import { JumboSubheader } from '../Common';
 
 const CenteredCell = ({ title, fontIconName, children }) => (
-  <Cell size={6} tabletSize={4} style={{ display: 'flex', alignItems: 'center' }}>
+  <GridCell size={6} tabletSize={4} style={{ display: 'flex', alignItems: 'center' }}>
     <div style={{ padding: 10, width: '100%' }}>
       {fontIconName && (
       <div style={{ display: 'flex', justifyContent: 'center', padding: 10 }}>
@@ -15,7 +17,7 @@ const CenteredCell = ({ title, fontIconName, children }) => (
       {title && <JumboSubheader>{title}</JumboSubheader> }
       { children }
     </div>
-  </Cell>
+  </GridCell>
 );
 
 CenteredCell.propTypes = {

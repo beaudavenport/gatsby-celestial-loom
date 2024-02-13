@@ -15,12 +15,12 @@ import Footer from '../Footer';
 import SEOAndScripts from '../SEOAndScripts';
 
 const navItems = {
-  "/": { itemId: "/", children: "Home", to: '/', parentId: null, leftAddon: <HomeSVGIcon /> },
-  "/info": { itemId: "/getting-started", children: "Getting Started", to: '/getting-started', parentId: null, leftAddon: <InfoSVGIcon /> },
-  "/posts": { itemId: "/posts", children: "Posts", to: '/posts', parentId: null, leftAddon: <CreateSVGIcon /> },
-  "/events": { itemId: "/events", children: "Events", to: '/events', parentId: null, leftAddon: <EventSVGIcon /> },
-  "/services": { itemId: "/services", children: "Services", to: '/services', parentId: null, leftAddon: <ShoppingCartSVGIcon /> },
-  "/toolbox": { itemId: "/toolbox", children: "Astro Toolbox", to: '/toolbox', parentId: null, leftAddon: <BuildSVGIcon /> }
+  "/": { itemId: "/", children: "Home", to: '/', parentId: null, leftAddon: <HomeSVGIcon fill="white" stroke="white" /> },
+  "/info": { itemId: "/getting-started", children: "Getting Started", to: '/getting-started', parentId: null, leftAddon: <InfoSVGIcon fill="white" stroke="white" /> },
+  "/posts": { itemId: "/posts", children: "Posts", to: '/posts', parentId: null, leftAddon: <CreateSVGIcon fill="white" stroke="white" /> },
+  "/events": { itemId: "/events", children: "Events", to: '/events', parentId: null, leftAddon: <EventSVGIcon fill="white" stroke="white" /> },
+  "/services": { itemId: "/services", children: "Services", to: '/services', parentId: null, leftAddon: <ShoppingCartSVGIcon fill="white" stroke="white" /> },
+  "/toolbox": { itemId: "/toolbox", children: "Astro Toolbox", to: '/toolbox', parentId: null, leftAddon: <BuildSVGIcon fill="white" stroke="white" /> }
 }
 
 const SiteLayout = ({
@@ -40,12 +40,15 @@ const SiteLayout = ({
       <Layout
         id="configurable-layout"
         title={title}
-        navHeaderTitle="The Celesial Loom"
+        navHeaderTitle="The Celestial Loom"
         phoneLayout={DEFAULT_PHONE_LAYOUT}
         tabletLayout={"temporary"}
         landscapeTabletLayout={"temporary"}
         desktopLayout={"temporary"}
-        treeProps={useLayoutNavigation(navItems, window.location.pathname, Link)}
+        treeProps={{
+          ...useLayoutNavigation(navItems, window.location.pathname, Link),
+          style: { backgroundColor: "#2f2f2f", color: "white"}
+        }}
       >
         <SEOAndScripts
           title={seoTitle}
@@ -55,7 +58,7 @@ const SiteLayout = ({
           article={isArticle}
         />
         {jumbotron}
-        <Grid style={{ maxWidth: 1100 }}>
+        <Grid style={{ maxWidth: 1100, margin: "0 auto" }}>
           <GridCell className="main-contents" colSpan={8}>
             {children}
           </GridCell>

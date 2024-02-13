@@ -1,4 +1,5 @@
-import { Card, Cell, Grid } from 'react-md';
+import { Grid, GridCell } from "@react-md/utils"
+import { Card } from "@react-md/card";
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
@@ -27,7 +28,7 @@ const Services = ({ data }) => {
     >
       <BackLink to="/" title="Home" />
       <Grid>
-        <Cell size={12}>
+        <GridCell colSpan={12}>
           <Card>
             <Grid>
               <CenteredCell
@@ -40,7 +41,7 @@ const Services = ({ data }) => {
                 </p>
                 <p style={{ fontWeight: 'bold' }}>See how the lifelong insights gained from this service can help enrich your life...</p>
               </CenteredCell>
-              <Cell size={6} tabletSize={4}>
+              <GridCell colSpan={6}>
                 <ServiceCard
                   path={natalChart.fields.slug}
                   title={natalChart.frontmatter.title}
@@ -49,14 +50,14 @@ const Services = ({ data }) => {
                   inPersonPrice={natalChart.frontmatter.inPersonPrice}
                   excerpt={natalChart.excerpt}
                 />
-              </Cell>
+              </GridCell>
             </Grid>
           </Card>
-        </Cell>
+        </GridCell>
       </Grid>
       <Grid>
         { otherServiceNodes && otherServiceNodes.map(node => (
-          <Cell size={6} tabletSize={4}>
+          <GridCell colSpan={6}>
             <Card>
               <ServiceCard
                 path={node.fields.slug}
@@ -67,7 +68,7 @@ const Services = ({ data }) => {
                 excerpt={node.excerpt}
               />
             </Card>
-          </Cell>
+          </GridCell>
         ))
             }
       </Grid>

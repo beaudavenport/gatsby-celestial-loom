@@ -1,4 +1,5 @@
-import { Button, FontIcon } from 'react-md';
+import { FontIcon } from '@react-md/icon';
+import { Button } from '@react-md/button';
 import { StaticQuery, graphql } from 'gatsby';
 import React, { Fragment, useState } from 'react';
 
