@@ -1,4 +1,5 @@
-import { Cell, Divider, Grid } from 'react-md';
+import { GridCell, Grid } from '@react-md/utils';
+import { Divider } from '@react-md/divider';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -16,7 +17,7 @@ function ServicePage(props) {
   } = props;
   return (
     <Grid>
-      <Cell size={6} tabletSize={4} style={{ paddingRight: 10 }}>
+      <GridCell colSpan={6} style={{ paddingRight: 10 }}>
         <ServiceCard
           path={slug}
           title={title}
@@ -24,8 +25,8 @@ function ServicePage(props) {
           excerpt={excerpt}
           showPrices={false}
         />
-      </Cell>
-      <Cell size={6} tabletSize={4} style={{ display: 'flex', alignItems: 'center' }}>
+      </GridCell>
+      <GridCell colSpan={6} style={{ display: 'flex', alignItems: 'center' }}>
         <div style={{ width: '100%' }}>
           <BigSubheader>In-Person Consultation</BigSubheader>
           <div className="content-container">
@@ -50,8 +51,8 @@ function ServicePage(props) {
             />
           </div>
         </div>
-      </Cell>
-      <Cell size={12} style={{ marginTop: 20 }}>
+      </GridCell>
+      <GridCell colSpan={12} style={{ marginTop: 20 }}>
         <ContentWithIcon fontIconName="search" fontIconStyle={{ fontSize: '2rem' }}>
           <Title>About In-Person Services</Title>
         </ContentWithIcon>
@@ -67,7 +68,7 @@ function ServicePage(props) {
           {' '}
           <a href="mailto: nikiastro@att.net"> nikiastro@att.net!</a>
         </p>
-      </Cell>
+      </GridCell>
     </Grid>
   );
 }

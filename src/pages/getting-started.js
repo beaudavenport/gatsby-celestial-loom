@@ -69,7 +69,7 @@ const GettingStarted = ({ data }) => {
                 <Caption>Select an online or in-person astrological consultation from a wide array of astrological origins.</Caption>
                 <ForwardLink title="View all Services" to="/services" />
               </CenteredCell>
-              <GridCell size={6} tabletSize={4}>
+              <GridCell colSpan={6} tabletSize={4}>
                 <Subheader>Get your first chart:</Subheader>
                 <ServiceCard
                   path={natalChart.fields.slug}
@@ -178,7 +178,7 @@ query {
         frontmatter {
           title
           image
-          publishDate
+          publishDate(formatString: "MMMM DD, YYYY")
           relatedItems
         }
         excerpt(format: HTML, pruneLength: 250)

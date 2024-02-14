@@ -38,15 +38,7 @@ const IndexPage = ({ data }) => {
             <SidebarHeader title="Stay Connected" />
           </GridCell>
           <GridCell colSpan={12} tabletSize={4}>
-            <div style={{ paddingRight: 1 }}>
-              <a
-                className="twitter-timeline"
-                href="https://twitter.com/nikiastro?ref_src=twsrc%5Etfw"
-                data-tweet-limit="1"
-              >
-                  Tweets by nikiastro
-              </a>
-            </div>
+          <div class="fb-page" data-href="https://www.facebook.com/celestialloom" data-tabs="timeline,events" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
           </GridCell>
         </Grid>
       )}
@@ -78,7 +70,7 @@ const IndexPage = ({ data }) => {
           </div>
         </GridCell>
         { otherBlogNodes && otherBlogNodes.map(node => (
-          <GridCell key={node.frontmatter.title} size={6} tabletSize={4} className="content-container">
+          <GridCell key={node.frontmatter.title} colSpan={6} tabletSize={4} className="content-container">
             <ThumbnailCard
               style={{ marginBottom: 10 }}
               path={node.fields.slug}
@@ -157,7 +149,7 @@ query {
         frontmatter {
           title
           image
-          publishDate
+          publishDate(formatString: "MMMM DD, YYYY")
           relatedItems
         }
         excerpt(format: HTML, pruneLength: 250)

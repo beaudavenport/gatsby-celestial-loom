@@ -22,8 +22,8 @@ const EventsArchive = () => (
                frontmatter {
                  title
                  image
-                 eventMonthAndYear: eventDate
-                 eventDateShort: eventDate
+                 eventMonthAndYear: eventDate(formatString: "MMMM YYYY")
+                 eventDateShort: eventDate(formatString: "MMMM DD, YYYY")
                  location
                }
                excerpt(format: HTML, pruneLength: 250)

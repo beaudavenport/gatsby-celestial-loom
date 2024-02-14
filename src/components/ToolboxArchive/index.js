@@ -1,4 +1,4 @@
-import { Avatar } from 'react-md';
+import { Avatar } from '@react-md/avatar';
 import { uniq } from 'lodash';
 import React from 'react';
 

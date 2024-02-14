@@ -1,4 +1,5 @@
-import { Card, Cell, Grid } from 'react-md';
+import { GridCell, Grid } from '@react-md/utils';
+import { Card } from '@react-md/card';
 import React, { Fragment } from 'react';
 
 import { BackLink, BigSubheader } from '../components/Common';
@@ -29,15 +30,15 @@ const AboutNikki = () => (
   >
     <BackLink to="/" title="Home" />
     <Grid>
-      <Cell size={12}>
+      <GridCell colSpan={12}>
         <Card>
           <Grid>
-            <Cell size={6}>
+            <GridCell colSpan={6}>
               <div style={{ width: '80%', margin: '0 auto' }}>
                 <img src={Nikki} alt="at da club" style={{ maxWidth: '100%' }} />
               </div>
-            </Cell>
-            <Cell size={6}>
+            </GridCell>
+            <GridCell colSpan={6}>
               <p>
               Currently practicing and teaching in St. Louis, Missouri, Nikki
              is a board member of the Astrological Association of St. Louis.
@@ -55,10 +56,10 @@ const AboutNikki = () => (
                   <img src={TwitterIcon} alt="Twitter Icon" style={{ width: '50px', height: '50px' }} />
                 </a>
               </div>
-            </Cell>
+            </GridCell>
           </Grid>
         </Card>
-      </Cell>
+      </GridCell>
     </Grid>
   </Layout>
 );

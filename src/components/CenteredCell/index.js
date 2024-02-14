@@ -7,7 +7,7 @@ import React from 'react';
 import { JumboSubheader } from '../Common';
 
 const CenteredCell = ({ title, fontIconName, children }) => (
-  <GridCell size={6} tabletSize={4} style={{ display: 'flex', alignItems: 'center' }}>
+  <GridCell colSpan={6} tabletSize={4} style={{ display: 'flex', alignItems: 'center' }}>
     <div style={{ padding: 10, width: '100%' }}>
       {fontIconName && (
       <div style={{ display: 'flex', justifyContent: 'center', padding: 10 }}>

@@ -21,8 +21,8 @@ const PostsArchive = () => (
                id
                frontmatter {
                  title
-                 publishMonthAndYear: publishDate
-                 publishDate
+                 publishMonthAndYear: publishDate(formatString: "MMMM YYYY")
+                 publishDate(formatString: "MMMM DD, YYYY")
                }
                fields {
                  slug

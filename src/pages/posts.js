@@ -24,7 +24,7 @@ export const query = graphql`
            frontmatter {
              title
              image
-             publishDate
+             publishDate(formatString: "MMMM DD, YYYY")
              relatedItems
            }
            excerpt(format: HTML, pruneLength: 250)

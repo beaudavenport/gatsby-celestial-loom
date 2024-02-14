@@ -51,7 +51,7 @@ export const pageQuery = graphql`
     markdownRemark(fields: { slug: { eq: $path } }) {
       html
       frontmatter {
-        publishDate
+        publishDate(formatString: "MMMM DD, YYYY")
         title
         image
         relatedItems

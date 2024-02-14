@@ -63,6 +63,14 @@ html {
   font-family: 'Berkshire Swash';
   font-style: italic;
 }
+
+
+.archive_card__link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
 /* flex utility classes */
 
 .flex-column {

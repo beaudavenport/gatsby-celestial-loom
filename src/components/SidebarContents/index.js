@@ -22,7 +22,7 @@ const SidebarContents = ({ eventsQuantity, postsQuantity }) => (
                frontmatter {
                  title
                  image
-                 publishDate
+                 publishDate(formatString: "MMMM DD, YYYY")
                  relatedItems
                }
                excerpt(format: HTML, pruneLength: 250)

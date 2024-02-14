@@ -1,5 +1,5 @@
 import { Link } from 'gatsby';
-import { ListItem } from 'react-md';
+import { ListItem } from "@react-md/list";
 import PropTypes from 'prop-types';
 import React from 'react';
 

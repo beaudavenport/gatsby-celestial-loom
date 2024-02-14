@@ -12,6 +12,8 @@ import {
 import { Link } from 'gatsby';
 
 import Footer from '../Footer';
+import HeaderCart from '../HeaderCart';
+import HeaderSearch from '../HeaderSearch';
 import SEOAndScripts from '../SEOAndScripts';
 
 const navItems = {
@@ -48,6 +50,13 @@ const SiteLayout = ({
         treeProps={{
           ...useLayoutNavigation(navItems, window.location.pathname, Link),
           style: { backgroundColor: "#2f2f2f", color: "white"}
+        }}
+        appBarProps={{
+          children: 
+            <div className="header-icons-container">
+            <HeaderCart />
+            <HeaderSearch />
+          </div>
         }}
       >
         <SEOAndScripts
