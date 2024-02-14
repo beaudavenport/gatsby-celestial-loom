@@ -43,7 +43,7 @@ const SidebarContents = ({ eventsQuantity, postsQuantity }) => (
                frontmatter {
                  title
                  image
-                 eventDate
+                 eventDate(formatString: "MMMM DD, YYYY")
                  eventTime
                  eventDateShort: eventDate
                  eventPrice

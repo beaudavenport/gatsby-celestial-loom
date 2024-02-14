@@ -94,7 +94,7 @@ export const query = graphql`
             image
             eventDate
             eventTime
-            eventDateShort: eventDate
+            eventDateShort: eventDate(formatString: "MMMM DD, YYYY")
             eventPrice
             priceDescription
             location
