@@ -1,4 +1,5 @@
-import { Avatar, FontIcon } from 'react-md';
+import { FontIcon } from '@react-md/icon';
+import { Avatar } from '@react-md/avatar';
 import { StaticQuery, graphql } from 'gatsby';
 import { uniq } from 'lodash';
 import React from 'react';

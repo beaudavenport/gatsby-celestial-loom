@@ -1,4 +1,6 @@
-import { CardText, Divider } from 'react-md';
+import { CardContent } from "@react-md/card";
+import { Divider } from "@react-md/divider";
+
 import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
 
@@ -12,7 +14,7 @@ const ServiceCard = ({
 }) => (
   <TouchableLink to={path}>
     <OriginHeader origin={origin} />
-    <CardText>
+    <CardContent>
       <Title>{title}</Title>
       <div className="service--excerpt" dangerouslySetInnerHTML={{ __html: excerpt }} />
       { showPrices && (
@@ -27,7 +29,7 @@ const ServiceCard = ({
           </div>
         </Fragment>
       )}
-    </CardText>
+    </CardContent>
   </TouchableLink>
 );
 

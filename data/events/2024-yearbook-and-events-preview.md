@@ -11,7 +11,7 @@ location: Nikki's Zoom and Your Home
 mapsLink: >-
   https://www.google.com/maps/d/viewer?mid=1aC2QFlW2U-_uYE9uGA12keeMk6k&hl=en_US&ll=39.03761999999999%2C-94.590933&z=17#:~:text=%3Ciframe%20src%3D%22https%3A//www.google.com/maps/d/embed%3Fmid%3D1aC2QFlW2U%2D_uYE9uGA12keeMk6k%26hl%3Den_US%26ehbc%3D2E312F%22%20width%3D%22640%22%20height%3D%22480%22%3E%3C/iframe%3E
 eventPrice: 25
-publishDate: Invalid date
+publishDate: "2020-05-18T03:32:06-05:00"
 ---
 **Online Astrological Playshop ZOOM**
 

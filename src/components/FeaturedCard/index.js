@@ -1,6 +1,7 @@
-import { CardText } from 'react-md';
+import { CardContent } from "@react-md/card";
 import PropTypes from 'prop-types';
 import React from 'react';
+import moment from 'moment';
 
 import { Subheader, Title } from '../Common';
 import CardCornerHighlight from '../CardCornerHighlight';
@@ -29,10 +30,10 @@ const FeaturedCard = ({
           {publishDate}
         </h3>
       </div>
-      <CardText style={{ padding: 16 }}>
+      <CardContent style={{ padding: 16 }}>
         <div dangerouslySetInnerHTML={{ __html: excerpt }} />
         <TextWithChevron text="Read more" />
-      </CardText>
+      </CardContent>
     </TouchableLink>
     { relatedItemChips && (
     <div className="padded-section">
@@ -49,7 +50,6 @@ FeaturedCard.propTypes = {
   title: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   excerpt: PropTypes.string.isRequired,
-  publishDate: PropTypes.string.isRequired,
   cornerIconName: PropTypes.string,
   cornerTitle: PropTypes.string,
   relatedItemChips: PropTypes.node,

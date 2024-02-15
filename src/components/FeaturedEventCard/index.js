@@ -1,4 +1,4 @@
-import { Cell, Grid } from 'react-md';
+import { Grid, GridCell } from "@react-md/utils"
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -26,13 +26,13 @@ const FeaturedEventCard = ({
   return (
     <TouchableLink to={path} style={style}>
       <Grid>
-        <Cell size={6} tabletSize={4}>
+        <GridCell colSpan={6}>
           <div className="image-container">
             <img className="image-container--image" src={image} alt="Preview of featured post" />
             <CardCornerHighlight iconName="event" title={eventDateShort} isExpired={isExpired} />
           </div>
-        </Cell>
-        <Cell size={6} tabletSize={4}>
+        </GridCell>
+        <GridCell colSpan={6}>
           <div style={{ padding: 16 }}>
             {isExpired ? <Subtitle>Past Event</Subtitle> : <Subheader>Upcoming Event</Subheader>}
             <Title>{title}</Title>
@@ -52,7 +52,7 @@ const FeaturedEventCard = ({
               <TextWithChevron text={isExpired ? 'View Details' : 'Sign Up'} />
             </div>
           </div>
-        </Cell>
+        </GridCell>
       </Grid>
     </TouchableLink>
   );

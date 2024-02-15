@@ -1,12 +1,9 @@
-import {
-  Avatar,
-  Button,
-  DialogContainer,
-  FontIcon,
-  List,
-  ListItem,
-  TextField,
-} from 'react-md';
+import { TextField } from "@react-md/form";
+import { List, ListItem } from "@react-md/list";
+import { Dialog } from "@react-md/dialog";
+import { Avatar } from "@react-md/avatar";
+import { FontIcon } from "@react-md/icon";
+import { Button } from "@react-md/button";
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -64,7 +61,7 @@ class SearchModal extends React.PureComponent {
     const { query, results } = this.state;
     const { visible, onClose } = this.props;
     return (
-      <DialogContainer
+      <Dialog
         id="search-dialog"
         visible={visible}
         dialogClassName="dialog-container-style"
@@ -120,7 +117,7 @@ class SearchModal extends React.PureComponent {
           )
           }
         </div>
-      </DialogContainer>
+      </Dialog>
     );
   }
 }

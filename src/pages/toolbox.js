@@ -1,4 +1,5 @@
-import { Card, Cell, Grid } from 'react-md';
+import { Grid, GridCell } from "@react-md/utils"
+import { Card } from "@react-md/card"
 import React, { Fragment } from 'react';
 
 import {
@@ -21,18 +22,18 @@ const Toolbox = () => (
   >
     <BackLink to="/" title="Home" />
     <Grid>
-      <Cell size={10}>
+      <GridCell colSpan={10}>
         <Title>Your Astrology Toolbox</Title>
         <Subtitle>Explore the interactive zodiac wheel, or select a sign, house or planet</Subtitle>
-      </Cell>
-      <Cell size={12}>
+      </GridCell>
+      <GridCell colSpan={12}>
         <div className="content-container">
           <Subheader>Click on an element to learn more.</Subheader>
         </div>
         <Card style={{ paddingRight: 20, paddingLeft: 20 }}>
           <ZodiacWheel />
         </Card>
-      </Cell>
+      </GridCell>
     </Grid>
   </Layout>
 );

@@ -1,4 +1,4 @@
-import { FontIcon } from 'react-md';
+import { FontIcon } from '@react-md/icon';
 import PropTypes from 'prop-types';
 import React from 'react';
 

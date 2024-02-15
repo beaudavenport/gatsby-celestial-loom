@@ -1,4 +1,7 @@
-import { Badge, Button, FontIcon } from 'react-md';
+import { FontIcon } from '@react-md/icon';
+import { Button } from '@react-md/button';
+import { Badge } from '@react-md/badge';
+
 import React, { Fragment, useState, useEffect } from 'react';
 
 
