@@ -172,7 +172,7 @@ query {
           image
           eventDate(formatString: "MMMM DD, YYYY")
           eventTime
-          eventDateShort: eventDate
+          eventDateShort: eventDate(formatString: "MMM DD")
           eventPrice
           priceDescription
           location

@@ -27,7 +27,7 @@ const FeaturedCard = ({
       <div style={{ padding: 16 }}>
         <Title>{title}</Title>
         <h3 className="featured-card--publish-date">
-          {moment(publishDate).format("DD")}
+          {publishDate}
         </h3>
       </div>
       <CardContent style={{ padding: 16 }}>

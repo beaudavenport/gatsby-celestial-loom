@@ -12,7 +12,9 @@ import {
   BigSubheader, Subheader, Subtitle, Title,
 } from '../components/Common';
 import BlogEntry from '../components/BlogEntry';
+import EventPage from '../components/EventPage';
 import FeaturedCard from '../components/FeaturedCard';
+import FeaturedEventCard from '../components/FeaturedEventCard';
 import RelatedItemChip from '../components/RelatedItemChip';
 import ServiceCard from '../components/ServiceCard';
 import ServicePage from '../components/ServicePage';
@@ -29,7 +31,7 @@ function EventPagePreview({ entry, getAsset }) {
     title: entry.getIn(['data', 'title']),
     subtitle: entry.getIn(['data', 'subtitle']),
     image: getAsset(image),
-    eventDate: moment(entry.getIn(['data', 'eventDate']).toString()).format('MMMM DD, YYYY'),
+    eventDate: moment(entry.getIn(['data', 'eventDate'])?.toString()).format('MMMM DD, YYYY'),
     eventTime: entry.getIn(['data', 'eventTime']),
     priceDescription: entry.getIn(['data', 'priceDescription']),
     eventPrice: entry.getIn(['data', 'eventPrice']),
@@ -43,11 +45,11 @@ function EventPagePreview({ entry, getAsset }) {
       <Grid>
         <GridCell colSpan={12}>
           <Subheader>Event Page Preview: </Subheader>
-          <BlogEntry {...data} />
+          <EventPage {...data} />
         </GridCell>
         <GridCell colSpan={12}>
           <Subheader>Event Thumbnail Preview: </Subheader>
-          <FeaturedCard {...data} />
+          <FeaturedEventCard {...data} />
         </GridCell>
       </Grid>
     </Configuration>
@@ -65,7 +67,7 @@ function BlogEntryPreview({ entry, getAsset }) {
   const data = {
     title: entry.getIn(['data', 'title']),
     image: getAsset(image),
-    publishDate: moment(entry.getIn(['data', 'publishDate']).toString()).format('MMMM DD, YYYY'),
+    publishDate: moment(entry.getIn(['data', 'publishDate'])?.toString()).format('MMMM DD, YYYY'),
     html: converter.makeHtml(entry.getIn(['data', 'body'])),
     excerpt: rawExcerpt.substring(0, 250),
     relatedItemChips: relatedItems.map(relatedItem => (

@@ -47,7 +47,7 @@ function ServicePage(props) {
               title={title}
               price={price}
               description="In-Person Consultation"
-              slug={`${slug}/in-person`}
+              slug={`${slug}in-person`}
             />
           </div>
         </div>

@@ -31,7 +31,7 @@ const ServicePage = ({
           <Subtitle>Choose an Option:</Subtitle>
         </GridCell>
         <GridCell colSpan={6} tabletSize={4}>
-          <TouchableLink to={`${slug}/online`}>
+          <TouchableLink to={`${slug}online`}>
             <Card>
               <div style={{ padding: 15 }}>
                 <BigSubheader>Online Consultation</BigSubheader>
@@ -59,7 +59,7 @@ const ServicePage = ({
           </TouchableLink>
         </GridCell>
         <GridCell colSpan={6} tabletSize={4}>
-          <TouchableLink to={`${slug}/in-person`}>
+          <TouchableLink to={`${slug}in-person`}>
             <Card>
               <div style={{ padding: 15 }}>
                 <BigSubheader>In-Person Consultation</BigSubheader>

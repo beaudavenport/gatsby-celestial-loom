@@ -1,5 +1,4 @@
 import { CardContent } from "@react-md/card";
-import { Button } from "@react-md/button";
 import { MediaContainer } from "@react-md/media";
 
 import { Link } from 'gatsby';
@@ -19,16 +18,9 @@ const AboutNikkiCard = () => (
       Nikki Davenport, astrological consultant, has been a professional
       astrologer for over 35 years.
       </p>
-      <Button
-        flat
-        primary
-        className="about-nikki--button"
-        to="/about-nikki"
-        type={null}
-        component={Link}
-      >
-      About Nikki
-      </Button>
+      <Link to={"/about-nikki"} style={{ textDecoration: 'none' }}>
+        <p className="about-nikki--button">About Nikki</p>
+      </Link>
     </CardContent>
   </div>
 );
