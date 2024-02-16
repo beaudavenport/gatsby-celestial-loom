@@ -11,6 +11,7 @@
    background-position: center;
    height: 100px;
    background-size: cover;
+   align-self: center;
 }
 
 .thumbnail-day {
@@ -38,9 +39,9 @@
 
 .thumbnail-text--title {
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   color: rgb(47, 47, 47);
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .thumbnail-text--subtitle {

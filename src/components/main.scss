@@ -71,6 +71,13 @@ html {
   align-items: center;
   justify-content: space-between;
 }
+
+.link--container {
+  p {
+    margin-top: 0;
+  };
+}
+
 /* flex utility classes */
 
 .flex-column {
@@ -105,7 +112,8 @@ html {
 
 /* shared classes */
 .content-container {
-  padding: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 

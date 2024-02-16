@@ -83,7 +83,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             image
-            publishDate
+            publishDate(formatString: "MMMM DD, YYYY")
             relatedItems
           }
           excerpt(format: HTML, pruneLength: 250)
@@ -104,9 +104,9 @@ export const pageQuery = graphql`
           frontmatter {
             title
             image
-            eventDate(formatString: "MMMM DD, YYYY")
+            eventDate(formatString: "dddd, MMM DD")
             eventTime
-            eventDateShort: eventDate(formatString: "MMMM YYYY")
+            eventDateShort: eventDate(formatString: "MMM DD")
             eventPrice
             priceDescription
             location

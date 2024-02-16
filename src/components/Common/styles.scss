@@ -7,7 +7,9 @@
 .subtitle {
   color: rgba(0, 0, 0, 0.54);
   font-weight: bold;
-  margin-bottom: 0;
+  margin: 0;
+  font-size: .8rem;
+  text-transform: uppercase;
 }
 
 .page-image--container {
@@ -50,7 +52,8 @@
   display: flex;
   justify-content: flex-start;
   padding: 5px;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  align-items: center;
 }
 
 .caption {
