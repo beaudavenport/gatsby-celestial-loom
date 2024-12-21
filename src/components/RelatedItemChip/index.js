@@ -3,6 +3,7 @@ import { Chip } from "@react-md/chip";
 import { navigate } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
+import { FontIcon } from '@react-md/icon';
 
 import { getSymbolSpan } from '../../helpers/symbolHelper';
 
@@ -10,7 +11,7 @@ const RelatedItemChip = ({ item, style }) => (
   <Chip
     style={{ ...style, margin: 10, cursor: 'pointer' }}
     onClick={() => item.fields.slug && navigate(item.fields.slug)}
-    leftIcon={<Avatar iconSized>{getSymbolSpan(item.frontmatter.title)}</Avatar>}
+    leftIcon={<Avatar><FontIcon>{getSymbolSpan(item.frontmatter.title)}</FontIcon></Avatar>}
   >
     {item.frontmatter.title}
   </Chip>

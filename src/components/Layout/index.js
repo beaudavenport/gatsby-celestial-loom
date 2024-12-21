@@ -2,7 +2,6 @@ import '../main.scss';
 import { Grid, GridCell } from "@react-md/utils"
 import PropTypes from 'prop-types';
 import React from 'react';
-import { HomeSVGIcon, InfoSVGIcon, CreateSVGIcon, EventSVGIcon, ShoppingCartSVGIcon, BuildSVGIcon } from "@react-md/material-icons";
 import {
   DEFAULT_PHONE_LAYOUT,
   Layout,
@@ -10,6 +9,7 @@ import {
   Configuration
 } from "@react-md/layout";
 import { Link } from 'gatsby';
+import { FontIcon } from '@react-md/icon';
 
 import Footer from '../Footer';
 import HeaderCart from '../HeaderCart';
@@ -17,12 +17,12 @@ import HeaderSearch from '../HeaderSearch';
 import SEOAndScripts from '../SEOAndScripts';
 
 const navItems = {
-  "/": { itemId: "/", children: "Home", to: '/', parentId: null, leftAddon: <HomeSVGIcon fill="white" stroke="white" /> },
-  "/info": { itemId: "/getting-started", children: "Getting Started", to: '/getting-started', parentId: null, leftAddon: <InfoSVGIcon fill="white" stroke="white" /> },
-  "/posts": { itemId: "/posts", children: "Posts", to: '/posts', parentId: null, leftAddon: <CreateSVGIcon fill="white" stroke="white" /> },
-  "/events": { itemId: "/events", children: "Events", to: '/events', parentId: null, leftAddon: <EventSVGIcon fill="white" stroke="white" /> },
-  "/services": { itemId: "/services", children: "Services", to: '/services', parentId: null, leftAddon: <ShoppingCartSVGIcon fill="white" stroke="white" /> },
-  "/toolbox": { itemId: "/toolbox", children: "Astro Toolbox", to: '/toolbox', parentId: null, leftAddon: <BuildSVGIcon fill="white" stroke="white" /> }
+  "/": { itemId: "/", children: "Home", to: '/', parentId: null, leftAddon: <FontIcon className='nav-icon'>home</FontIcon> },
+  "/info": { itemId: "/getting-started", children: "Getting Started", to: '/getting-started', parentId: null, leftAddon: <FontIcon className='nav-icon'>info</FontIcon> },
+  "/posts": { itemId: "/posts", children: "Posts", to: '/posts', parentId: null, leftAddon: <FontIcon className='nav-icon'>create</FontIcon> },
+  "/events": { itemId: "/events", children: "Events", to: '/events', parentId: null, leftAddon: <FontIcon className='nav-icon'>event</FontIcon> },
+  "/services": { itemId: "/services", children: "Services", to: '/services', parentId: null, leftAddon: <FontIcon className='nav-icon'>shopping_cart</FontIcon> },
+  "/toolbox": { itemId: "/toolbox", children: "Astro Toolbox", to: '/toolbox', parentId: null, leftAddon: <FontIcon className='nav-icon'>build</FontIcon> }
 }
 
 const SiteLayout = ({

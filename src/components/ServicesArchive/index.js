@@ -57,7 +57,7 @@ const ServicesArchive = () => (
         <div className="archive--container">
           <SidebarHeader title="Services by Origin" />
           <div>
-            <ArchiveCard sections={sections} />
+            <ArchiveCard sections={sections} hideViewOlder={true} />
           </div>
         </div>
       );

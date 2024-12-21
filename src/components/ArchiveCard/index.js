@@ -6,12 +6,14 @@ import {
   usePanels,
 } from "@react-md/expansion-panel";
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useState } from 'react';
+import { Button } from '@react-md/button';
 
-const ArchiveCard = ({ sections }) => {
+const ArchiveCard = ({ sections, hideViewOlder = false }) => {
   const multiple = false
   const preventAllClosed = false;
   const defaultExpandedIndex = 0;
+  const [isViewOlderVisible, setIsViewOlderVisible] = useState(false);
   const [panels, onKeyDown] = usePanels({
     count: sections.length,
     idPrefix: "configuring-panels",
@@ -22,9 +24,11 @@ const ArchiveCard = ({ sections }) => {
     defaultExpandedIndex,
   });
 
+  const visibleSections = isViewOlderVisible || hideViewOlder ? sections : sections.slice(0,8);
+
   return (
     <ExpansionList onKeyDown={onKeyDown}>  
-      {sections.map((section, index) => (
+      {visibleSections.map((section, index) => (
         <ExpansionPanel {...panels[index]} header={section.primaryText}>
           <div key={section.primaryText}>
             <List>
@@ -48,6 +52,20 @@ const ArchiveCard = ({ sections }) => {
           </div>
         </ExpansionPanel>
       ))}
+      {!isViewOlderVisible && (
+        <div 
+          className='view-older-button-container'
+        >
+          <Button 
+            id="view-older-button" 
+            theme="clear" 
+            themeType="contained" 
+            onClick={() => setIsViewOlderVisible(true)}
+          >
+              <em>View older</em>
+          </Button>
+        </div>
+      )}
     </ExpansionList>
   )
 };
