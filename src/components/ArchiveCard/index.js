@@ -35,10 +35,10 @@ const ArchiveCard = ({ sections }) => {
                   leftAddon={item.avatar}
                   leftAddonType={"avatar"}
                   tileStyle={{ paddingLeft: 30 }}
-                  primaryTextStyle={{ fontWeight: 'bold' }}
+                  textClassName={"title"}
                   primaryText={item.primaryText}
                   secondaryText={item.secondaryText}
-                  secondaryTextStyle={{ fontWeight: 'bold' }}
+                  secondaryTextClassName={"subtitle"}
                   component={Link}
                   to={item.slug}
                 />

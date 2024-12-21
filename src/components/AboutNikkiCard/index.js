@@ -8,7 +8,7 @@ import { ForwardLink } from '../Common';
 const AboutNikkiCard = () => (
   <div>
     <div className="about-nikki--container">
-      <MediaContainer aspectRatio="1-1" className="about-nikki--avatar">
+      <MediaContainer height={1} width={1} className="about-nikki--avatar">
         <img src={Nikki} alt="nikki-profile-picture" />
       </MediaContainer>
     </div>

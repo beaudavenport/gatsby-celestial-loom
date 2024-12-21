@@ -5,6 +5,10 @@ import React from 'react';
 import TouchableLink from '../TouchableLink';
 
 const Title = ({ children }) => (
+  <h1 className="title">{children}</h1>
+);
+
+const TitleH2 = ({ children }) => (
   <h2 className="title">{children}</h2>
 );
 
@@ -142,6 +146,7 @@ const TwitterIcon = props => (
 
 export {
   Title,
+  TitleH2,
   Subtitle,
   BigSubtitle,
   Subheader,

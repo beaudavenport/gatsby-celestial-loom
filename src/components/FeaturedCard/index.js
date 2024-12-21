@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import moment from 'moment';
 
-import { Subheader, Title } from '../Common';
+import { Subheader, TitleH2 } from '../Common';
 import CardCornerHighlight from '../CardCornerHighlight';
 import TextWithChevron from '../TextWithChevron';
 import TouchableLink from '../TouchableLink';
@@ -25,7 +25,7 @@ const FeaturedCard = ({
         {cornerIconName && <CardCornerHighlight iconName={cornerIconName} title={cornerTitle} />}
       </div>
       <div style={{ padding: 16 }}>
-        <Title>{title}</Title>
+        <TitleH2>{title}</TitleH2>
         <h3 className="featured-card--publish-date">
           {publishDate}
         </h3>

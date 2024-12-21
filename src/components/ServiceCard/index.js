@@ -4,7 +4,7 @@ import { Divider } from "@react-md/divider";
 import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
 
-import { Title } from '../Common';
+import { TitleH2 } from '../Common';
 import OriginHeader from '../OriginHeader';
 import TextWithChevron from '../TextWithChevron';
 import TouchableLink from '../TouchableLink';
@@ -15,7 +15,7 @@ const ServiceCard = ({
   <TouchableLink to={path}>
     <OriginHeader origin={origin} />
     <CardContent>
-      <Title>{title}</Title>
+      <TitleH2>{title}</TitleH2>
       <div className="service--excerpt" dangerouslySetInnerHTML={{ __html: excerpt }} />
       { showPrices && (
         <Fragment>

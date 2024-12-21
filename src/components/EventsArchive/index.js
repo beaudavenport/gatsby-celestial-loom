@@ -48,7 +48,7 @@ const EventsArchive = () => (
             primaryText: node.frontmatter.title,
             secondaryText: `${node.frontmatter.eventDateShort} - ${node.frontmatter.location}`,
             slug: node.fields.slug,
-            avatar: (<Avatar icon={<FontIcon>event</FontIcon>} />),
+            avatar: (<Avatar><FontIcon>event</FontIcon></Avatar>),
           })),
         };
       });
