@@ -78,6 +78,19 @@ html {
   };
 }
 
+.badge {
+  background-color: #ec6602;
+}
+
+.tertiary-button {
+  color: whitesmoke;
+  padding: 0;
+}
+
+.tertiary-button__icon {
+  font-size: 2rem;
+}
+
 /* flex utility classes */
 
 .flex-column {
@@ -196,6 +209,11 @@ html {
   transition: width 500ms;
 }
 
+.search-input-container {
+  display: flex;
+  align-items: center;
+}
+
 .search-input {
   width: 100%;
   display: flex;
@@ -218,7 +236,7 @@ html {
 .search-modal--input {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 30px;
   ::placeholder {
     color: rgba(0, 0, 0, 0.87);

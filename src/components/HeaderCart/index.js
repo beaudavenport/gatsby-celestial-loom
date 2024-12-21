@@ -32,13 +32,13 @@ const Header = () => {
         <Button
           icon
           onClick={() => global.Snipcart && Snipcart.api.modal.show()}
-          style={{ padding: 0 }}
-          iconEl={(
-            <Badge invisibleOnZero badgeContent={itemCount} primary badgeId="cart-quantity">
-              <FontIcon style={{ fontSize: '2rem' }}>shopping_cart</FontIcon>
-            </Badge>
-        )}
-        />
+          className='tertiary-button'
+        >
+          <Badge invisibleOnZero primary badgeId="cart-quantity" className="badge">
+            {itemCount}
+          </Badge>
+          <FontIcon className='tertiary-button__icon'>shopping_cart</FontIcon>
+        </Button>
       </div>
     </Fragment>
   );

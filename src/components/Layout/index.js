@@ -54,9 +54,9 @@ const SiteLayout = ({
         appBarProps={{
           children: 
             <div className="header-icons-container">
-            <HeaderCart />
-            <HeaderSearch />
-          </div>
+              <HeaderCart />
+              <HeaderSearch />
+            </div>
         }}
       >
         <SEOAndScripts

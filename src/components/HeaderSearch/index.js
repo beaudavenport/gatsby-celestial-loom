@@ -23,18 +23,17 @@ const Header = () => {
             <Button
               icon
               onClick={() => setIsSearching(true)}
-              style={{ padding: 0 }}
-              iconEl={(
-                <FontIcon style={{ fontSize: '2rem' }}>search</FontIcon>
-            )}
-            />
+              className='tertiary-button'
+            >
+              <FontIcon className='tertiary-button__icon'>search</FontIcon>
+            </Button>
           </div>
           {isSearching && (
-          <SearchModal
-            visible={isSearching}
-            searchIndex={data.siteSearchIndex.index}
-            onClose={() => setIsSearching(false)}
-          />
+            <SearchModal
+              visible={isSearching}
+              searchIndex={data.siteSearchIndex.index}
+              onClose={() => setIsSearching(false)}
+            />
           )}
         </Fragment>
       )}
