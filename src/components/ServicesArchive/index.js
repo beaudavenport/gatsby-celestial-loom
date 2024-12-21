@@ -48,7 +48,7 @@ const ServicesArchive = () => (
             primaryText: node.frontmatter.title,
             secondaryText: `Online: $${Number(node.frontmatter.onlinePrice).toFixed(2)} | In-person: $${Number(node.frontmatter.inPersonPrice).toFixed(2)} `,
             slug: node.fields.slug,
-            avatar: (<Avatar icon={<FontIcon>shopping_cart</FontIcon>} />),
+            avatar: (<Avatar><FontIcon>shopping_cart</FontIcon></Avatar>),
           })),
         };
       });

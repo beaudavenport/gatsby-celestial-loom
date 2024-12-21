@@ -1,6 +1,6 @@
 import { Avatar } from "@react-md/avatar";
 import { Grid, GridCell } from "@react-md/utils"
-import { List, ListItem } from "@react-md/list";
+import { List, ListItemLink } from "@react-md/list";
 import { FontIcon } from '@react-md/icon';
 import { Card } from "@react-md/card"
 import { Link, graphql } from 'gatsby';
@@ -139,11 +139,12 @@ const GettingStarted = ({ data }) => {
                 <Subheader>Learn about Planets, Houses, and Signs:</Subheader>
                 <List>
                   {toolboxNodes.map(item => (
-                    <ListItem
+                    <ListItemLink
                       style={{ paddingLeft: 10, paddingRight: 10 }}
                       primaryText={item.frontmatter.title}
                       primaryTextStyle={{ fontWeight: 'bold' }}
-                      leftAvatar={<Avatar icon={<FontIcon>{getSymbolSpan(item.frontmatter.title)}</FontIcon>} />}
+                      leftAddon={<Avatar><FontIcon>{getSymbolSpan(item.frontmatter.title)}</FontIcon></Avatar>}
+                      leftAddonType="avatar"
                       secondaryText={item.frontmatter.toolboxType}
                       component={Link}
                       to={item.fields.slug}

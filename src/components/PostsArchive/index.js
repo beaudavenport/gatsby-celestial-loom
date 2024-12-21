@@ -45,7 +45,7 @@ const PostsArchive = () => (
             primaryText: node.frontmatter.title,
             secondaryText: node.frontmatter.publishDate,
             slug: node.fields.slug,
-            avatar: (<Avatar icon={<FontIcon>create</FontIcon>} />),
+            avatar: (<Avatar><FontIcon>create</FontIcon></Avatar>),
           })),
         };
       });

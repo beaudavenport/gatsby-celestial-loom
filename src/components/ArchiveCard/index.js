@@ -1,5 +1,5 @@
 import { Link } from 'gatsby';
-import { List, ListItem } from "@react-md/list";
+import { List, ListItemLink } from "@react-md/list";
 import {
   ExpansionList,
   ExpansionPanel,
@@ -30,14 +30,18 @@ const ArchiveCard = ({ sections }) => {
             <List>
             {section.items.map(item => (
               <div key={item.primaryText}>
-                  <ListItem
-                    key={item.primaryText}
-                  >
-                    <Link to={item.slug} className="archive_card__link">
-                      {item.avatar}
-                      <p>{item.primaryText}</p>
-                    </Link>
-                  </ListItem>
+                <ListItemLink
+                  key={item.primaryText}
+                  leftAddon={item.avatar}
+                  leftAddonType={"avatar"}
+                  tileStyle={{ paddingLeft: 30 }}
+                  primaryTextStyle={{ fontWeight: 'bold' }}
+                  primaryText={item.primaryText}
+                  secondaryText={item.secondaryText}
+                  secondaryTextStyle={{ fontWeight: 'bold' }}
+                  component={Link}
+                  to={item.slug}
+                />
               </div>
             ))}
             </List>

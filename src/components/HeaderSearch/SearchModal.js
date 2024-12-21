@@ -22,7 +22,7 @@ avatarMap.set('events', 'event');
 avatarMap.set('services', 'shopping_cart');
 
 const getAvatar = type => (
-  <Avatar icon={<FontIcon>{avatarMap.get(type) || 'work'}</FontIcon>} />
+  <Avatar><FontIcon>{avatarMap.get(type) || 'work'}</FontIcon></Avatar>
 );
 
 class SearchModal extends React.PureComponent {
@@ -46,8 +46,6 @@ class SearchModal extends React.PureComponent {
     .search(query, { expand: true })
     .map(({ ref }) => this.index.documentStore.getDoc(ref));
     
-    console.log('hey we got', results);
-
     this.setState({
       query,
       results,
@@ -110,7 +108,8 @@ class SearchModal extends React.PureComponent {
                     style={{ paddingLeft: 10, paddingRight: 10 }}
                     primaryText={page.title}
                     primaryTextStyle={{ fontWeight: 'bold' }}
-                    leftAvatar={page.type === 'toolbox' ? <Avatar>{getSymbolSpan(page.title)}</Avatar> : getAvatar(page.type)}
+                    leftAddon={page.type === 'toolbox' ? <Avatar>{getSymbolSpan(page.title)}</Avatar> : getAvatar(page.type)}
+                    leftAddonType="avatar"
                     secondaryText={`Posted on: ${moment(page.publishDate).format('MMM DD, YYYY')}`}
                     component={Link}
                     to={page.path}
