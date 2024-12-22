@@ -13,11 +13,13 @@ const AboutNikkiCard = () => (
       </MediaContainer>
     </div>
     <CardContent className="flex-column">
-      <p className="about-nikki--text">
-      Nikki Davenport, astrological consultant, has been a professional
-      astrologer for over 35 years.
+      <p className="subheader">
+        Nikki Davenport, astrological consultant, has been a professional
+        astrologer for over 35 years.
       </p>
-      <ForwardLink to="/about-nikki" title="About Nikki" />
+      <div className="about-nikki--link-container">
+        <ForwardLink to="/about-nikki" title="Learn more" />
+      </div>
     </CardContent>
   </div>
 );

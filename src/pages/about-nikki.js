@@ -31,6 +31,7 @@ const AboutNikki = () => (
     <BackLink to="/" title="Home" />
     <Grid>
       <GridCell colSpan={12}>
+        <h1 className='header'>Meet Nikki, your guide to the Zodiac!</h1>
         <Card>
           <Grid>
             <GridCell colSpan={6}>
@@ -48,7 +49,7 @@ const AboutNikki = () => (
                 and Chinese astrological cultures and services.
               </p>
               <BigSubheader>Stay connected on Facebook and Twitter!</BigSubheader>
-              <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-around', marginTop: '10px' }}>
                 <a href="https://www.facebook.com/celestialloom/">
                   <img src={FacebookIcon} alt="Facebook Icon" style={{ width: '50px', height: '50px' }} />
                 </a>

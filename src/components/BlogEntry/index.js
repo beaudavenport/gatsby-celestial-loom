@@ -13,8 +13,8 @@ function BlogEntry({
   return (
     <div>
       <div className="content-container">
-        <Title>{title}</Title>
-        <Subtitle>{moment(publishDate).format('MMMM Do, YYYY')}</Subtitle>
+        <h1 className='big-title'>{title}</h1>
+        <h3 className='featured-card--publish-date'>{moment(publishDate).format('MMMM Do, YYYY')}</h3>
       </div>
       <div className="content-container">
         <PageImage image={image} alt="Blog" />

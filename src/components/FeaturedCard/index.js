@@ -25,7 +25,7 @@ const FeaturedCard = ({
         {cornerIconName && <CardCornerHighlight iconName={cornerIconName} title={cornerTitle} />}
       </div>
       <div style={{ padding: 16 }}>
-        <TitleH2>{title}</TitleH2>
+        <h2 className="big-title">{title}</h2>
         <h3 className="featured-card--publish-date">
           {publishDate}
         </h3>
