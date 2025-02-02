@@ -29,7 +29,7 @@ const ArchiveCard = ({ sections, hideViewOlder = false }) => {
   return (
     <ExpansionList onKeyDown={onKeyDown}>  
       {visibleSections.map((section, index) => (
-        <ExpansionPanel {...panels[index]} header={section.primaryText}>
+        <ExpansionPanel {...panels[index]} header={<p className='subtitle-big'>{section.primaryText}</p>}>
           <div key={section.primaryText}>
             <List>
             {section.items.map(item => (
@@ -62,7 +62,7 @@ const ArchiveCard = ({ sections, hideViewOlder = false }) => {
             themeType="contained" 
             onClick={() => setIsViewOlderVisible(true)}
           >
-              <em>View older</em>
+              <p className='subtitle'>View older</p>
           </Button>
         </div>
       )}

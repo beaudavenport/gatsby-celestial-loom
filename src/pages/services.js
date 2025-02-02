@@ -32,14 +32,12 @@ const Services = ({ data }) => {
           <Card>
             <Grid>
               <CenteredCell
-                title="Your Astrological Foundation - Online or In-Person!"
-                fontIconName="person"
+                title="New to Astrology? Start here!"
               >
                 <p style={{ fontWeight: 'bold' }}>
-                  Build the foundation of your astrological understanding with a
-                  <span className="subheader"> Natal Chart analysis!</span>
+                  Build the foundation of your astrological understanding with a <span className="big-body-highlight">Natal Chart</span> consultation!
                 </p>
-                <p style={{ fontWeight: 'bold' }}>See how the lifelong insights gained from this service can help enrich your life...</p>
+                <p style={{ fontStyle: 'italic' }}>See how the lifelong insights gained from this service can help enrich your life...</p>
               </CenteredCell>
               <GridCell colSpan={6}>
                 <ServiceCard

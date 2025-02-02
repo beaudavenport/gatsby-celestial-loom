@@ -2,7 +2,7 @@ import { Grid, GridCell } from "@react-md/utils"
 import { Card } from '@react-md/card'
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useEffect } from 'react';
 import moment from 'moment';
 
 import { BigSubheader, ForwardLink } from '../components/Common';
@@ -21,6 +21,13 @@ const IndexPage = ({ data }) => {
   const firstEventNode = data.events.edges.map(edge => edge.node)
     .find(node => moment().isBefore(moment(node.frontmatter.eventDate, 'MMMM DD, YYYY')));
   const { featuredService } = data;
+
+  // ensures FB widget reloads when navigating back home
+  useEffect(() => {
+    if (window.FB) {
+      window.FB.XFBML.parse();
+    }
+  }, []);
 
   return (
     <Layout

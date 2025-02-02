@@ -12,9 +12,7 @@ const ThumbnailCard = ({
     <div className="thumbnail-text">
       <p className="thumbnail-text--title">{title}</p>
       <p className="thumbnail-text--subtitle">
-Posted on:
-        {' '}
-        <span style={{ fontWeight: 'bold', color: 'rgba(0, 0, 0, 0.87)' }}>{caption}</span>
+        {caption}
       </p>
     </div>
   </TouchableLink>
