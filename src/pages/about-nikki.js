@@ -10,7 +10,7 @@ import SidebarContents from '../components/SidebarContents';
 import SidebarHeader from '../components/SidebarHeader';
 import TwitterIcon from '../images/iconmonstr-twitter-4.svg';
 
-const AboutNikki = () => (
+const AboutNikki = (props) => (
   <Layout
     title="About Nikki"
     sidebarChildren={(
@@ -27,6 +27,7 @@ const AboutNikki = () => (
         <SidebarContents eventsQuantity={2} postsQuantity={2} />
       </Fragment>
     )}
+    pageProps={props}
   >
     <BackLink to="/" title="Home" />
     <Grid>

@@ -16,7 +16,8 @@ import ServiceCard from '../components/ServiceCard';
 import SidebarHeader from '../components/SidebarHeader';
 import ThumbnailCard from '../components/ThumbnailCard';
 
-const IndexPage = ({ data }) => {
+const IndexPage = (props) => {
+  const { data } = props;
   const [firstBlogNode, ...otherBlogNodes] = data.blog.edges.map(edge => edge.node);
   const firstEventNode = data.events.edges.map(edge => edge.node)
     .find(node => moment().isBefore(moment(node.frontmatter.eventDate, 'MMMM DD, YYYY')));
@@ -49,6 +50,7 @@ const IndexPage = ({ data }) => {
           </GridCell>
         </Grid>
       )}
+      pageProps={props}
     >
       <Grid className="separated--grid">
         <GridCell colSpan={12}>

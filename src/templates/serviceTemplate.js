@@ -9,9 +9,8 @@ import ServicesArchive from '../components/ServicesArchive';
 import SidebarContents from '../components/SidebarContents';
 
 
-function ServiceTemplate({
-  data, // this prop will be injected by the GraphQL query below.
-}) {
+function ServiceTemplate(props) {
+  const { data } = props;
   const { markdownRemark } = data; // data.markdownRemark holds our post data
   const {
     frontmatter, html, fields, description,
@@ -28,7 +27,8 @@ function ServiceTemplate({
           <ServicesArchive />
           <SidebarContents eventsQuantity={2} postsQuantity={2} />
         </Fragment>
-    )}
+      )}
+      pageProps={props}
     >
       <BackLink to="/services" title="All Services" />
       <ServicePage

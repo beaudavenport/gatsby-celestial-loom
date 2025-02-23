@@ -37,7 +37,8 @@ export const query = graphql`
    }
  `;
 
-const Posts = ({ data }) => {
+const Posts = (props) => {
+  const { data } = props;
   const first3Nodes = data.allMarkdownRemark.edges.map(edge => edge.node);
 
   return (
@@ -49,6 +50,7 @@ const Posts = ({ data }) => {
           <SidebarContents eventsQuantity={2} postsQuantity={0} />
         </Fragment>
       )}
+      pageProps={props}
     >
       <BackLink to="/" title="Home" />
       <Grid>

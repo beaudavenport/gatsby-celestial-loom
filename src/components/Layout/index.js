@@ -35,8 +35,9 @@ const SiteLayout = ({
   seoImage,
   seoPathname,
   isArticle,
+  pageProps
 }) => {
-
+  const { location } = pageProps;
   return (
     <Configuration>
       <Layout
@@ -48,7 +49,7 @@ const SiteLayout = ({
         landscapeTabletLayout={"temporary"}
         desktopLayout={"temporary"}
         treeProps={{
-          ...useLayoutNavigation(navItems, window.location.pathname, Link),
+          ...useLayoutNavigation(navItems, location?.pathname, Link),
           style: { backgroundColor: "#2f2f2f", color: "white"}
         }}
         appBarProps={{

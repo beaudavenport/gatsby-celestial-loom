@@ -26,7 +26,8 @@ import SidebarHeader from '../components/SidebarHeader';
 import ThumbnailCard from '../components/ThumbnailCard';
 import ThumbnailEventCard from '../components/ThumbnailCard/ThumbnailEventCard';
 
-const GettingStarted = ({ data }) => {
+const GettingStarted = (props) => {
+  const { data } = props;
   const [firstBlogNode] = data.blog.edges.map(edge => edge.node);
   const firstEventNode = data.events.edges.map(edge => edge.node)
     .find(node => moment().isBefore(moment(node.frontmatter.eventDate, 'MMMM DD, YYYY')));
@@ -53,6 +54,7 @@ const GettingStarted = ({ data }) => {
           <SidebarContents eventsQuantity={2} postsQuantity={2} />
         </Fragment>
       )}
+      pageProps={props}
     >
       <BackLink to="/" title="Home" />
       <Grid>

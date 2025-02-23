@@ -8,9 +8,8 @@ import EventsArchive from '../components/EventsArchive';
 import Layout from '../components/Layout';
 import SidebarContents from '../components/SidebarContents';
 
-function EventTemplate({
-  data, // this prop will be injected by the GraphQL query below.
-}) {
+function EventTemplate(props) {
+  const { data } = props;
   const { markdownRemark } = data; // data.markdownRemark holds our post data
   const {
     frontmatter, html, fields, description,
@@ -27,7 +26,8 @@ function EventTemplate({
           <EventsArchive />
           <SidebarContents eventsQuantity={0} postsQuantity={2} />
         </Fragment>
-    )}
+      )}
+      pageProps={props}
     >
       <BackLink to="/events" title="All Events" />
       <EventPage

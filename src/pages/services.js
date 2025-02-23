@@ -11,7 +11,8 @@ import ServiceCard from '../components/ServiceCard';
 import ServicesArchive from '../components/ServicesArchive';
 import SidebarContents from '../components/SidebarContents';
 
-const Services = ({ data }) => {
+const Services = (props) => {
+  const { data } = props;
   const { natalChart, otherServices } = data;
   const otherServiceNodes = otherServices.edges.map(edge => edge.node);
 
@@ -23,8 +24,8 @@ const Services = ({ data }) => {
           <ServicesArchive />
           <SidebarContents eventsQuantity={1} postsQuantity={1} />
         </Fragment>
-  )}
-
+      )}
+      pageProps={props}
     >
       <BackLink to="/" title="Home" />
       <Grid>

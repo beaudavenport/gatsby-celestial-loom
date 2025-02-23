@@ -10,7 +10,7 @@ import SidebarContents from '../components/SidebarContents';
 import ToolboxArchive from '../components/ToolboxArchive';
 import ZodiacWheel from '../components/ZodiacWheel';
 
-const Toolbox = () => (
+const Toolbox = (props) => (
   <Layout
     title="Astro Toolbox"
     sidebarChildren={(
@@ -18,7 +18,8 @@ const Toolbox = () => (
         <ToolboxArchive />
         <SidebarContents eventsQuantity={2} postsQuantity={2} />
       </Fragment>
-  )}
+    )}
+    pageProps={props}
   >
     <BackLink to="/" title="Home" />
     <Grid>

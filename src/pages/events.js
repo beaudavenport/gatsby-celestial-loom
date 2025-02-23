@@ -11,7 +11,8 @@ import Layout from '../components/Layout';
 import SidebarContents from '../components/SidebarContents';
 import { isPastEvent } from './../helpers/dateHelper';
 
-const Events = ({ data }) => {
+const Events = (props) => {
+  const { data } = props;
   const nodes = data.allMarkdownRemark.edges.map(edge => edge.node);
   const [pastEvents, upcomingEvents] = partition(
     nodes,
@@ -27,6 +28,7 @@ const Events = ({ data }) => {
           <SidebarContents eventsQuantity={0} postsQuantity={2} />
         </Fragment>
       )}
+      pageProps={props}
     >
       <BackLink to="/" title="Home" />
       <Grid>
