@@ -31,7 +31,7 @@ const FeaturedCard = ({
         </h3>
       </div>
       <CardContent style={{ padding: 16 }}>
-        <div dangerouslySetInnerHTML={{ __html: excerpt }} />
+        <div className="body-copy" dangerouslySetInnerHTML={{ __html: excerpt }} />
         <TextWithChevron text="Read more" />
       </CardContent>
     </TouchableLink>

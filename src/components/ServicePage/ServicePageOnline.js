@@ -46,7 +46,7 @@ function ServicePage(props) {
           }}
           >
             <div>
-              <p className="service-price--description">Online Total</p>
+              <p className="service-price--description">Online Total:</p>
               <p className="service-price--price">{`$${Number(price).toFixed(2)}`}</p>
             </div>
             <AddToCartButton

@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import {
-  BigSubheader, ContentWithIcon, Subtitle, Title,
+  BigSubheaderPrimary, ContentWithIcon, Subtitle, Title,
 } from '../Common';
 import OriginHeader from '../OriginHeader';
 import TextWithChevron from '../TextWithChevron';
@@ -25,60 +25,60 @@ const ServicePage = ({
     <OriginHeader origin={origin} />
     <CardContent>
       <Title>{title}</Title>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <div className="body-copy" dangerouslySetInnerHTML={{ __html: html }} />
       <Grid>
         <GridCell colSpan={12}>
           <Subtitle>Choose an Option:</Subtitle>
         </GridCell>
         <GridCell colSpan={6} tabletSize={4}>
-          <TouchableLink to={`${slug}online`}>
-            <Card>
+          <Card>
+            <TouchableLink to={`${slug}online`} style={{ padding: 8}}>
               <div style={{ padding: 15 }}>
-                <BigSubheader>Online Consultation</BigSubheader>
+                <BigSubheaderPrimary>Online Consultation</BigSubheaderPrimary>
               </div>
               <div className="content-container">
-                <ContentWithIcon fontIconName="volume_up"><p className="service-info">60-Minute Audio MP3</p></ContentWithIcon>
-                <ContentWithIcon fontIconName="picture_as_pdf"><p className="service-info">Full-color PDF</p></ContentWithIcon>
+                <ContentWithIcon fontIconName="volume_up"><Subtitle>60-Minute Audio MP3</Subtitle></ContentWithIcon>
+                <ContentWithIcon fontIconName="picture_as_pdf"><Subtitle>Full-color PDF</Subtitle></ContentWithIcon>
                 <ContentWithIcon fontIconName="cloud_download">
-                  <p className="service-info">
+                  <Subtitle>
                     Easy email delivery via
                     {' '}
                     <a href="https://www.dropbox.com/">Dropbox</a>
-                  </p>
+                  </Subtitle>
                 </ContentWithIcon>
               </div>
               <Divider />
               <div className="service-option--container">
                 <div>
-                  <p className="service-price--description">Online Total</p>
+                  <p className="service-price--description">Online Total:</p>
                   <p className="service-price--price">{`$${Number(onlinePrice).toFixed(2)}`}</p>
                 </div>
                 <TextWithChevron text="Select" />
               </div>
-            </Card>
-          </TouchableLink>
+            </TouchableLink>
+          </Card>
         </GridCell>
         <GridCell colSpan={6} tabletSize={4}>
-          <TouchableLink to={`${slug}in-person`}>
-            <Card>
+          <Card>
+            <TouchableLink to={`${slug}in-person`} style={{ padding: 8}}>
               <div style={{ padding: 15 }}>
-                <BigSubheader>In-Person Consultation</BigSubheader>
+                <BigSubheaderPrimary>In-Person Consultation</BigSubheaderPrimary>
               </div>
               <div className="content-container">
-                <ContentWithIcon fontIconName="face"><p className="service-info">90-minute in-person discussion</p></ContentWithIcon>
-                <ContentWithIcon fontIconName="picture_as_pdf"><p className="service-info">Full-color PDF</p></ContentWithIcon>
-                <ContentWithIcon fontIconName="volume_up"><p className="service-info">Free live session recording</p></ContentWithIcon>
+                <ContentWithIcon fontIconName="face"><Subtitle>90-minute in-person discussion</Subtitle></ContentWithIcon>
+                <ContentWithIcon fontIconName="picture_as_pdf"><Subtitle>Full-color PDF</Subtitle></ContentWithIcon>
+                <ContentWithIcon fontIconName="volume_up"><Subtitle>Free live session recording</Subtitle></ContentWithIcon>
               </div>
               <Divider />
               <div className="service-option--container">
                 <div>
-                  <p className="service-price--description">In-Person Total</p>
+                  <p className="service-price--description">In-Person Total:</p>
                   <p className="service-price--price">{`$${Number(inPersonPrice).toFixed(2)}`}</p>
                 </div>
                 <TextWithChevron text="Select" />
               </div>
-            </Card>
-          </TouchableLink>
+            </TouchableLink>
+          </Card>
         </GridCell>
       </Grid>
     </CardContent>

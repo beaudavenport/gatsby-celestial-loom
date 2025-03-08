@@ -68,7 +68,7 @@ const SiteLayout = ({
           article={isArticle}
         />
         {jumbotron}
-        <Grid style={{ maxWidth: 1100, margin: "0 auto" }}>
+        <Grid style={{ maxWidth: 1300, margin: "0 auto" }}>
           <GridCell className="main-contents" colSpan={8}>
             {children}
           </GridCell>

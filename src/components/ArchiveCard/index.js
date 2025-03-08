@@ -52,7 +52,7 @@ const ArchiveCard = ({ sections, hideViewOlder = false }) => {
           </div>
         </ExpansionPanel>
       ))}
-      {!isViewOlderVisible && (
+      {!isViewOlderVisible && !hideViewOlder && (
         <div 
           className='view-older-button-container'
         >

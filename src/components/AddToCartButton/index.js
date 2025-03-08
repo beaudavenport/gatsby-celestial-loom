@@ -7,7 +7,8 @@ const AddToCartButton = ({
 }) => (
   <Button
     raised
-    primary
+    theme="warning"
+    themeType='contained'
     style={style}
     data-item-id={slug}
     className="snipcart-add-item"

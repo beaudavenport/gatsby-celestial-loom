@@ -48,6 +48,14 @@ BigSubheader.propTypes = {
   children: PropTypes.string.isRequired,
 };
 
+const BigSubheaderPrimary = ({ children }) => (
+  <p className="subheader primary" style={{ fontSize: '1.4rem', lineHeight: '1rem' }}>{children}</p>
+);
+
+BigSubheaderPrimary.propTypes = {
+  children: PropTypes.string.isRequired,
+};
+
 const JumboSubheader = ({ children }) => (
   <p className="subheader" style={{ fontSize: '2rem', lineHeight: '2.5rem' }}>{children}</p>
 );
@@ -151,6 +159,7 @@ export {
   BigSubtitle,
   Subheader,
   BigSubheader,
+  BigSubheaderPrimary,
   JumboSubheader,
   BackLink,
   ForwardLink,

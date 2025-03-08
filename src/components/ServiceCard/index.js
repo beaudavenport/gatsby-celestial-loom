@@ -16,14 +16,14 @@ const ServiceCard = ({
     <OriginHeader origin={origin} />
     <CardContent>
       <TitleH2>{title}</TitleH2>
-      <div className="service--excerpt" dangerouslySetInnerHTML={{ __html: excerpt }} />
+      <div className="service--excerpt body-copy" dangerouslySetInnerHTML={{ __html: excerpt }} />
       { showPrices && (
         <Fragment>
           <Divider />
           <div className="service--prices--container">
             <div>
-              <p className="service--price--description">Starting at</p>
-              <p className="service--price--price">{`$${Number(onlinePrice).toFixed(2)}`}</p>
+              <p className="service-price--description">Starting at</p>
+              <p className="service-price--price">{`$${Number(onlinePrice).toFixed(2)}`}</p>
             </div>
             <TextWithChevron text="Order Now" />
           </div>

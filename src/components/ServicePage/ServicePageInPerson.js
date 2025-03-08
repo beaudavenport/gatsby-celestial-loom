@@ -3,7 +3,7 @@ import { Divider } from '@react-md/divider';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import { BigSubheader, ContentWithIcon, Title } from '../Common';
+import { BigSubheaderPrimary, ContentWithIcon, Title } from '../Common';
 import AddToCartButton from '../AddToCartButton';
 import ServiceCard from '../ServiceCard';
 
@@ -28,7 +28,7 @@ function ServicePage(props) {
       </GridCell>
       <GridCell colSpan={6} style={{ display: 'flex', alignItems: 'center' }}>
         <div style={{ width: '100%' }}>
-          <BigSubheader>In-Person Consultation</BigSubheader>
+          <BigSubheaderPrimary>In-Person Consultation</BigSubheaderPrimary>
           <div className="content-container">
             <ContentWithIcon fontIconName="face"><p className="service-info">90-minute in-person discussion</p></ContentWithIcon>
             <ContentWithIcon fontIconName="picture_as_pdf"><p className="service-info">Full-color PDF</p></ContentWithIcon>
@@ -40,7 +40,7 @@ function ServicePage(props) {
           }}
           >
             <div>
-              <p className="service-price--description">In-Person Total</p>
+              <p className="service-price--description">In-Person Total:</p>
               <p className="service-price--price">{`$${Number(price).toFixed(2)}`}</p>
             </div>
             <AddToCartButton

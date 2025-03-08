@@ -27,7 +27,7 @@ function BlogEntry({
       )}
       <div className="content-container">
         <CardContent>
-          <div dangerouslySetInnerHTML={{ __html: html }} />
+          <div className="body-copy" dangerouslySetInnerHTML={{ __html: html }} />
         </CardContent>
       </div>
     </div>
