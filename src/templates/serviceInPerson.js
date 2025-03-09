@@ -8,9 +8,8 @@ import ServicePageInPerson from '../components/ServicePage/ServicePageInPerson';
 import ServicesArchive from '../components/ServicesArchive';
 import SidebarContents from '../components/SidebarContents';
 
-function ServiceTemplate({
-  data, // this prop will be injected by the GraphQL query below.
-}) {
+function ServiceTemplate(props) {
+  const { data } = props;
   const { markdownRemark } = data; // data.markdownRemark holds our post data
   const { frontmatter, fields, excerpt } = markdownRemark;
   return (
@@ -21,7 +20,8 @@ function ServiceTemplate({
           <ServicesArchive />
           <SidebarContents eventsQuantity={1} postsQuantity={1} />
         </Fragment>
-    )}
+      )}
+      pageProps={props}
     >
       <BackLink to={fields.slug} title="Back to Details" />
       <ServicePageInPerson

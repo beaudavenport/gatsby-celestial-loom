@@ -1,4 +1,5 @@
-import { Card, Cell, Grid } from 'react-md';
+import { GridCell, Grid } from '@react-md/utils';
+import { Card } from '@react-md/card';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -21,7 +22,7 @@ function ToolboxPage(props) {
   } = props;
   return (
     <Grid>
-      <Cell size={12}>
+      <GridCell colSpan={12}>
         <div style={{ textAlign: 'center', marginBottom: 20 }}>
           <Subtitle>
             {toolboxType}
@@ -62,7 +63,7 @@ function ToolboxPage(props) {
           ))
          }
         </div>
-      </Cell>
+      </GridCell>
     </Grid>
   );
 }

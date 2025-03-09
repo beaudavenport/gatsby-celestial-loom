@@ -1,8 +1,9 @@
-import { CardText } from 'react-md';
+import { CardContent } from "@react-md/card";
 import PropTypes from 'prop-types';
 import React from 'react';
+import moment from 'moment';
 
-import { Subheader, Title } from '../Common';
+import { Subheader, TitleH2 } from '../Common';
 import CardCornerHighlight from '../CardCornerHighlight';
 import TextWithChevron from '../TextWithChevron';
 import TouchableLink from '../TouchableLink';
@@ -24,15 +25,15 @@ const FeaturedCard = ({
         {cornerIconName && <CardCornerHighlight iconName={cornerIconName} title={cornerTitle} />}
       </div>
       <div style={{ padding: 16 }}>
-        <Title>{title}</Title>
+        <h2 className="big-title">{title}</h2>
         <h3 className="featured-card--publish-date">
           {publishDate}
         </h3>
       </div>
-      <CardText style={{ padding: 16 }}>
-        <div dangerouslySetInnerHTML={{ __html: excerpt }} />
+      <CardContent style={{ padding: 16 }}>
+        <div className="body-copy" dangerouslySetInnerHTML={{ __html: excerpt }} />
         <TextWithChevron text="Read more" />
-      </CardText>
+      </CardContent>
     </TouchableLink>
     { relatedItemChips && (
     <div className="padded-section">
@@ -49,7 +50,6 @@ FeaturedCard.propTypes = {
   title: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   excerpt: PropTypes.string.isRequired,
-  publishDate: PropTypes.string.isRequired,
   cornerIconName: PropTypes.string,
   cornerTitle: PropTypes.string,
   relatedItemChips: PropTypes.node,

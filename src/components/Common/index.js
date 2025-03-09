@@ -1,10 +1,14 @@
-import { FontIcon } from 'react-md';
+import { FontIcon } from '@react-md/icon';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 import TouchableLink from '../TouchableLink';
 
 const Title = ({ children }) => (
+  <h1 className="title">{children}</h1>
+);
+
+const TitleH2 = ({ children }) => (
   <h2 className="title">{children}</h2>
 );
 
@@ -37,10 +41,18 @@ Subheader.propTypes = {
 };
 
 const BigSubheader = ({ children }) => (
-  <p className="subheader" style={{ fontSize: '1.5rem', lineHeight: '1.5rem' }}>{children}</p>
+  <p className="subheader" style={{ fontSize: '1rem', lineHeight: '1rem' }}>{children}</p>
 );
 
 BigSubheader.propTypes = {
+  children: PropTypes.string.isRequired,
+};
+
+const BigSubheaderPrimary = ({ children }) => (
+  <p className="subheader primary" style={{ fontSize: '1.6rem', lineHeight: '1.6rem' }}>{children}</p>
+);
+
+BigSubheaderPrimary.propTypes = {
   children: PropTypes.string.isRequired,
 };
 
@@ -66,7 +78,7 @@ const BackLink = ({
   <div className={`link--container ${alignRight && 'link--container__right'}`}>
     <TouchableLink to={to}>
       <div className="flex-center">
-        <FontIcon style={{ color: '#ec6602', fontSize: '2rem', marginRight: 5 }}>arrow_back</FontIcon>
+        <FontIcon style={{ color: '#ec6602', fontSize: '2rem', marginRight: 5 }}>chevron_left</FontIcon>
         <p className="back-title" style={titleStyle}>{title}</p>
       </div>
     </TouchableLink>
@@ -91,8 +103,8 @@ const ForwardLink = ({
     <TouchableLink to={to}>
       <div className="flex-center">
         <p className="back-title" style={titleStyle}>{title}</p>
-        <FontIcon style={{ color: '#ec6602', fontSize: '2rem', marginLeft: 5 }}>arrow_forward</FontIcon>
-      </div>
+        <FontIcon className="chevron-text--chevron">chevron_right</FontIcon>
+        </div>
     </TouchableLink>
   </div>
 );
@@ -142,10 +154,12 @@ const TwitterIcon = props => (
 
 export {
   Title,
+  TitleH2,
   Subtitle,
   BigSubtitle,
   Subheader,
   BigSubheader,
+  BigSubheaderPrimary,
   JumboSubheader,
   BackLink,
   ForwardLink,

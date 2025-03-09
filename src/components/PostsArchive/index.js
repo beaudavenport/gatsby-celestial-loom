@@ -1,4 +1,5 @@
-import { Avatar, FontIcon } from 'react-md';
+import { FontIcon } from '@react-md/icon';
+import { Avatar } from '@react-md/avatar';
 import { StaticQuery, graphql } from 'gatsby';
 import { uniq } from 'lodash';
 import React from 'react';
@@ -44,7 +45,7 @@ const PostsArchive = () => (
             primaryText: node.frontmatter.title,
             secondaryText: node.frontmatter.publishDate,
             slug: node.fields.slug,
-            avatar: (<Avatar icon={<FontIcon>create</FontIcon>} />),
+            avatar: (<Avatar><FontIcon>create</FontIcon></Avatar>),
           })),
         };
       });

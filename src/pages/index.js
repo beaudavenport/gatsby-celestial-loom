@@ -1,7 +1,8 @@
-import { Card, Cell, Grid } from 'react-md';
+import { Grid, GridCell } from "@react-md/utils"
+import { Card } from '@react-md/card'
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useEffect } from 'react';
 import moment from 'moment';
 
 import { BigSubheader, ForwardLink } from '../components/Common';
@@ -15,11 +16,19 @@ import ServiceCard from '../components/ServiceCard';
 import SidebarHeader from '../components/SidebarHeader';
 import ThumbnailCard from '../components/ThumbnailCard';
 
-const IndexPage = ({ data }) => {
+const IndexPage = (props) => {
+  const { data } = props;
   const [firstBlogNode, ...otherBlogNodes] = data.blog.edges.map(edge => edge.node);
   const firstEventNode = data.events.edges.map(edge => edge.node)
     .find(node => moment().isBefore(moment(node.frontmatter.eventDate, 'MMMM DD, YYYY')));
   const { featuredService } = data;
+
+  // ensures FB widget reloads when navigating back home
+  useEffect(() => {
+    if (window.FB) {
+      window.FB.XFBML.parse();
+    }
+  }, []);
 
   return (
     <Layout
@@ -27,34 +36,27 @@ const IndexPage = ({ data }) => {
       jumbotron={<Jumbotron />}
       sidebarChildren={(
         <Grid noSpacing>
-          <Cell size={12}>
+          <GridCell colSpan={12}>
             <SidebarHeader title="About Nikki" />
-          </Cell>
-          <Cell size={12} tabletSize={4} className="about-nikki--card">
+          </GridCell>
+          <GridCell colSpan={12} tabletSize={4} className="about-nikki--card">
             <AboutNikkiCard />
-          </Cell>
-          <Cell size={12}>
+          </GridCell>
+          <GridCell colSpan={12}>
             <SidebarHeader title="Stay Connected" />
-          </Cell>
-          <Cell size={12} tabletSize={4}>
-            <div style={{ paddingRight: 1 }}>
-              <a
-                className="twitter-timeline"
-                href="https://twitter.com/nikiastro?ref_src=twsrc%5Etfw"
-                data-tweet-limit="1"
-              >
-                  Tweets by nikiastro
-              </a>
-            </div>
-          </Cell>
+          </GridCell>
+          <GridCell colSpan={12} tabletSize={4}>
+          <div class="fb-page" data-href="https://www.facebook.com/celestialloom" data-tabs="timeline,events" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
+          </GridCell>
         </Grid>
       )}
+      pageProps={props}
     >
       <Grid className="separated--grid">
-        <Cell size={12}>
+        <GridCell colSpan={12}>
           <BigSubheader>Featured Post</BigSubheader>
-        </Cell>
-        <Cell size={12} style={{ marginBottom: 10 }}>
+        </GridCell>
+        <GridCell colSpan={12} style={{ marginBottom: 10 }}>
           <FeaturedCard
             path={firstBlogNode.fields.slug}
             title={firstBlogNode.frontmatter.title}
@@ -67,17 +69,17 @@ const IndexPage = ({ data }) => {
               )
             }
           />
-        </Cell>
+        </GridCell>
       </Grid>
       <Grid className="separated--grid">
-        <Cell size={12}>
+        <GridCell colSpan={12}>
           <div className="homepage--header">
             <BigSubheader>Previous Posts</BigSubheader>
             <ForwardLink to="/posts" title="All Posts" />
           </div>
-        </Cell>
+        </GridCell>
         { otherBlogNodes && otherBlogNodes.map(node => (
-          <Cell key={node.frontmatter.title} size={6} tabletSize={4} className="content-container">
+          <GridCell key={node.frontmatter.title} colSpan={6} tabletSize={4} className="content-container">
             <ThumbnailCard
               style={{ marginBottom: 10 }}
               path={node.fields.slug}
@@ -85,19 +87,19 @@ const IndexPage = ({ data }) => {
               caption={node.frontmatter.publishDate}
               image={node.frontmatter.image}
             />
-          </Cell>
+          </GridCell>
         ))
           }
       </Grid>
       { firstEventNode && (
         <Grid className="separated--grid">
-          <Cell size={12}>
+          <GridCell colSpan={12}>
             <div className="homepage--header">
               <BigSubheader>Next Event</BigSubheader>
               <ForwardLink to="/events" title="All Events" />
             </div>
-          </Cell>
-          <Cell size={12}>
+          </GridCell>
+          <GridCell colSpan={12}>
             <FeaturedEventCard
               path={firstEventNode.fields.slug}
               title={firstEventNode.frontmatter.title}
@@ -109,17 +111,17 @@ const IndexPage = ({ data }) => {
               priceDescription={firstEventNode.frontmatter.priceDescription}
               location={firstEventNode.frontmatter.location}
             />
-          </Cell>
+          </GridCell>
         </Grid>
       )}
       <Grid className="separated--grid">
-        <Cell size={12}>
+        <GridCell colSpan={12}>
           <div className="homepage--header">
             <BigSubheader>Featured Service</BigSubheader>
             <ForwardLink to="/services" title="All Services" />
           </div>
-        </Cell>
-        <Cell size={12}>
+        </GridCell>
+        <GridCell colSpan={12}>
           <Card>
             <ServiceCard
               path={featuredService.fields.slug}
@@ -130,7 +132,7 @@ const IndexPage = ({ data }) => {
               excerpt={featuredService.excerpt}
             />
           </Card>
-        </Cell>
+        </GridCell>
       </Grid>
     </Layout>
   );

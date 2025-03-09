@@ -1,4 +1,5 @@
-import { Avatar, FontIcon } from 'react-md';
+import { FontIcon } from '@react-md/icon';
+import { Avatar } from "@react-md/avatar";
 import { StaticQuery, graphql } from 'gatsby';
 import { uniq } from 'lodash';
 import React from 'react';
@@ -22,7 +23,7 @@ const EventsArchive = () => (
                  title
                  image
                  eventMonthAndYear: eventDate(formatString: "MMMM YYYY")
-                 eventDateShort: eventDate(formatString: "MMM DD")
+                 eventDateShort: eventDate(formatString: "MMMM DD, YYYY")
                  location
                }
                excerpt(format: HTML, pruneLength: 250)
@@ -47,7 +48,7 @@ const EventsArchive = () => (
             primaryText: node.frontmatter.title,
             secondaryText: `${node.frontmatter.eventDateShort} - ${node.frontmatter.location}`,
             slug: node.fields.slug,
-            avatar: (<Avatar icon={<FontIcon>event</FontIcon>} />),
+            avatar: (<Avatar><FontIcon>event</FontIcon></Avatar>),
           })),
         };
       });

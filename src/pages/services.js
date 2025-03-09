@@ -1,4 +1,5 @@
-import { Card, Cell, Grid } from 'react-md';
+import { Grid, GridCell } from "@react-md/utils"
+import { Card } from "@react-md/card";
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
@@ -10,7 +11,8 @@ import ServiceCard from '../components/ServiceCard';
 import ServicesArchive from '../components/ServicesArchive';
 import SidebarContents from '../components/SidebarContents';
 
-const Services = ({ data }) => {
+const Services = (props) => {
+  const { data } = props;
   const { natalChart, otherServices } = data;
   const otherServiceNodes = otherServices.edges.map(edge => edge.node);
 
@@ -22,25 +24,23 @@ const Services = ({ data }) => {
           <ServicesArchive />
           <SidebarContents eventsQuantity={1} postsQuantity={1} />
         </Fragment>
-  )}
-
+      )}
+      pageProps={props}
     >
       <BackLink to="/" title="Home" />
       <Grid>
-        <Cell size={12}>
+        <GridCell colSpan={12}>
           <Card>
             <Grid>
               <CenteredCell
-                title="Your Astrological Foundation - Online or In-Person!"
-                fontIconName="person"
+                title="New to Astrology? Start here!"
               >
                 <p style={{ fontWeight: 'bold' }}>
-                  Build the foundation of your astrological understanding with a
-                  <span className="subheader"> Natal Chart analysis!</span>
+                  Build the foundation of your astrological understanding with a <span className="big-body-highlight">Natal Chart</span> consultation!
                 </p>
-                <p style={{ fontWeight: 'bold' }}>See how the lifelong insights gained from this service can help enrich your life...</p>
+                <p style={{ fontStyle: 'italic' }}>See how the lifelong insights gained from this service can help enrich your life...</p>
               </CenteredCell>
-              <Cell size={6} tabletSize={4}>
+              <GridCell colSpan={6}>
                 <ServiceCard
                   path={natalChart.fields.slug}
                   title={natalChart.frontmatter.title}
@@ -49,14 +49,14 @@ const Services = ({ data }) => {
                   inPersonPrice={natalChart.frontmatter.inPersonPrice}
                   excerpt={natalChart.excerpt}
                 />
-              </Cell>
+              </GridCell>
             </Grid>
           </Card>
-        </Cell>
+        </GridCell>
       </Grid>
       <Grid>
         { otherServiceNodes && otherServiceNodes.map(node => (
-          <Cell size={6} tabletSize={4}>
+          <GridCell colSpan={6}>
             <Card>
               <ServiceCard
                 path={node.fields.slug}
@@ -67,7 +67,7 @@ const Services = ({ data }) => {
                 excerpt={node.excerpt}
               />
             </Card>
-          </Cell>
+          </GridCell>
         ))
             }
       </Grid>

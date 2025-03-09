@@ -1,8 +1,9 @@
-import { Cell, Divider, Grid } from 'react-md';
+import { GridCell, Grid } from '@react-md/utils';
+import { Divider } from '@react-md/divider';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import { BigSubheader, ContentWithIcon, Title } from '../Common';
+import { BigSubheaderPrimary, ContentWithIcon, Title, Subtitle } from '../Common';
 import AddToCartButton from '../AddToCartButton';
 import ServiceCard from '../ServiceCard';
 
@@ -16,7 +17,7 @@ function ServicePage(props) {
   } = props;
   return (
     <Grid>
-      <Cell size={6} tabletSize={4} style={{ paddingRight: 10 }}>
+      <GridCell colSpan={6} style={{ paddingRight: 10 }}>
         <ServiceCard
           path={slug}
           title={title}
@@ -24,14 +25,16 @@ function ServicePage(props) {
           excerpt={excerpt}
           showPrices={false}
         />
-      </Cell>
-      <Cell size={6} tabletSize={4} style={{ display: 'flex', alignItems: 'center' }}>
+      </GridCell>
+      <GridCell colSpan={6} style={{ display: 'flex', alignItems: 'center' }}>
         <div style={{ width: '100%' }}>
-          <BigSubheader>In-Person Consultation</BigSubheader>
+          <div style={{ padding: 15 }}>
+            <BigSubheaderPrimary>In-Person Consultation</BigSubheaderPrimary>
+          </div>
           <div className="content-container">
-            <ContentWithIcon fontIconName="face"><p className="service-info">90-minute in-person discussion</p></ContentWithIcon>
-            <ContentWithIcon fontIconName="picture_as_pdf"><p className="service-info">Full-color PDF</p></ContentWithIcon>
-            <ContentWithIcon fontIconName="volume_up"><p className="service-info">Free live session recording</p></ContentWithIcon>
+            <ContentWithIcon fontIconName="face"><Subtitle>90-minute in-person discussion</Subtitle></ContentWithIcon>
+            <ContentWithIcon fontIconName="picture_as_pdf"><Subtitle>Full-color PDF</Subtitle></ContentWithIcon>
+            <ContentWithIcon fontIconName="volume_up"><Subtitle>Free live session recording</Subtitle></ContentWithIcon>
           </div>
           <Divider />
           <div style={{
@@ -39,19 +42,19 @@ function ServicePage(props) {
           }}
           >
             <div>
-              <p className="service-price--description">In-Person Total</p>
+              <p className="service-price--description">In-Person Total:</p>
               <p className="service-price--price">{`$${Number(price).toFixed(2)}`}</p>
             </div>
             <AddToCartButton
               title={title}
               price={price}
               description="In-Person Consultation"
-              slug={`${slug}/in-person`}
+              slug={`${slug}in-person`}
             />
           </div>
         </div>
-      </Cell>
-      <Cell size={12} style={{ marginTop: 20 }}>
+      </GridCell>
+      <GridCell colSpan={12} style={{ marginTop: 20 }}>
         <ContentWithIcon fontIconName="search" fontIconStyle={{ fontSize: '2rem' }}>
           <Title>About In-Person Services</Title>
         </ContentWithIcon>
@@ -67,7 +70,7 @@ function ServicePage(props) {
           {' '}
           <a href="mailto: nikiastro@att.net"> nikiastro@att.net!</a>
         </p>
-      </Cell>
+      </GridCell>
     </Grid>
   );
 }

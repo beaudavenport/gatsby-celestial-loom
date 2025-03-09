@@ -1,6 +1,7 @@
-import { CardText } from 'react-md';
+import { CardContent } from '@react-md/card';
 import PropTypes from 'prop-types';
 import React from 'react';
+import moment from 'moment';
 
 import {
   PageImage, Subheader, Subtitle, Title,
@@ -12,8 +13,8 @@ function BlogEntry({
   return (
     <div>
       <div className="content-container">
-        <Title>{title}</Title>
-        <Subtitle>{publishDate}</Subtitle>
+        <h1 className='big-title'>{title}</h1>
+        <h3 className='featured-card--publish-date'>{moment(publishDate).format('MMMM Do, YYYY')}</h3>
       </div>
       <div className="content-container">
         <PageImage image={image} alt="Blog" />
@@ -25,9 +26,9 @@ function BlogEntry({
         </div>
       )}
       <div className="content-container">
-        <CardText>
-          <div dangerouslySetInnerHTML={{ __html: html }} />
-        </CardText>
+        <CardContent>
+          <div className="body-copy" dangerouslySetInnerHTML={{ __html: html }} />
+        </CardContent>
       </div>
     </div>
   );
@@ -36,7 +37,6 @@ function BlogEntry({
 BlogEntry.propTypes = {
   title: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
-  publishDate: PropTypes.string.isRequired,
   html: PropTypes.string.isRequired,
   relatedItemChips: PropTypes.node,
 };

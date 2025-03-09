@@ -1,4 +1,4 @@
-import { Avatar } from 'react-md';
+import { Avatar } from '@react-md/avatar';
 import { uniq } from 'lodash';
 import React from 'react';
 
@@ -26,7 +26,7 @@ const ToolboxArchive = () => {
     <div className="archive--container">
       <SidebarHeader title="Elements of the Zodiac" />
       <div>
-        <ArchiveCard sections={sections} />
+        <ArchiveCard sections={sections} hideViewOlder={true} />
       </div>
     </div>
   );

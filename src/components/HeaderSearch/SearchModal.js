@@ -1,17 +1,15 @@
-import {
-  Avatar,
-  Button,
-  DialogContainer,
-  FontIcon,
-  List,
-  ListItem,
-  TextField,
-} from 'react-md';
+import { TextField } from "@react-md/form";
+import { List, ListItemLink } from "@react-md/list";
+import { Dialog, DialogContent } from "@react-md/dialog";
+import { Avatar } from "@react-md/avatar";
+import { FontIcon } from "@react-md/icon";
+import { Button } from "@react-md/button";
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { findDOMNode } from 'react-dom';
 import moment from 'moment';
+import { TextContainer } from "@react-md/typography";
 
 import { Index } from 'elasticlunr';
 
@@ -24,7 +22,7 @@ avatarMap.set('events', 'event');
 avatarMap.set('services', 'shopping_cart');
 
 const getAvatar = type => (
-  <Avatar icon={<FontIcon>{avatarMap.get(type) || 'work'}</FontIcon>} />
+  <Avatar><FontIcon>{avatarMap.get(type) || 'work'}</FontIcon></Avatar>
 );
 
 class SearchModal extends React.PureComponent {
@@ -41,12 +39,13 @@ class SearchModal extends React.PureComponent {
     return this.index ? this.index : Index.load(searchIndex);
   }
 
-  search = (query) => {
+  search = (event) => {
+    const query = event.target.value;
     this.index = this.getOrCreateIndex();
     const results = this.index
-      .search(query, { expand: true })
-      .map(({ ref }) => this.index.documentStore.getDoc(ref));
-
+    .search(query, { expand: true })
+    .map(({ ref }) => this.index.documentStore.getDoc(ref));
+    
     this.setState({
       query,
       results,
@@ -64,14 +63,14 @@ class SearchModal extends React.PureComponent {
     const { query, results } = this.state;
     const { visible, onClose } = this.props;
     return (
-      <DialogContainer
+      <Dialog
         id="search-dialog"
         visible={visible}
         dialogClassName="dialog-container-style"
-        autosizeContent={false}
+        autosizeContent={true}
         focusOnMount={false}
         onHide={onClose}
-        fullPage
+        type="full-page"
       >
         <div className="search-modal--header">
           <h3 className="search-modal--header--text">Search</h3>
@@ -79,36 +78,41 @@ class SearchModal extends React.PureComponent {
             <FontIcon style={{ fontSize: 30 }}>close</FontIcon>
           </Button>
         </div>
-        <div style={{ maxWidth: 800, margin: '0 auto' }}>
+        <DialogContent>
           <div className="search-modal--input">
-            <FontIcon style={{ color: '#ec6602', marginRight: 10 }}>search</FontIcon>
-            <TextField
-              ref={(input) => {
-                if (input) {
-                  findDOMNode(input).scrollIntoView();
-                  input.focus();
-                }
-              }}
-              type="text"
-              style={{ color: 'black' }}
-              placeholder="Try searching for 'Aries'"
-              value={query}
-              onChange={this.search}
-            />
+            <TextContainer>
+              <div className="search-input-container">
+                <FontIcon style={{ color: '#ec6602', marginRight: 10 }}>search</FontIcon>
+                <TextField
+                  ref={(input) => {
+                    if (input) {
+                      findDOMNode(input).scrollIntoView();
+                      input.focus();
+                    }
+                  }}
+                  type="text"
+                  style={{ color: 'black', width: '100%'}}
+                  placeholder="Try searching for 'Aries'"
+                  value={query}
+                  onChange={this.search}
+                />
+              </div>
+            </TextContainer>
           </div>
           { results.length ? (
             <div style={{ padding: '10px 30px' }}>
               <BigSubheader>{`${results.length} results found:`}</BigSubheader>
-              <List className="search-modal--results" onClick={onClose}>
+              <List className="search-modal--results">
                 {results.map(page => (
-                  <ListItem
+                  <ListItemLink
                     style={{ paddingLeft: 10, paddingRight: 10 }}
                     primaryText={page.title}
                     primaryTextStyle={{ fontWeight: 'bold' }}
-                    leftAvatar={page.type === 'toolbox' ? <Avatar>{getSymbolSpan(page.title)}</Avatar> : getAvatar(page.type)}
+                    leftAddon={page.type === 'toolbox' ? <Avatar>{getSymbolSpan(page.title)}</Avatar> : getAvatar(page.type)}
+                    leftAddonType="avatar"
                     secondaryText={`Posted on: ${moment(page.publishDate).format('MMM DD, YYYY')}`}
                     component={Link}
-                    to={`/${page.path}`}
+                    to={page.path}
                   />
                 ))}
               </List>
@@ -119,8 +123,8 @@ class SearchModal extends React.PureComponent {
             </div>
           )
           }
-        </div>
-      </DialogContainer>
+        </DialogContent>
+      </Dialog>
     );
   }
 }

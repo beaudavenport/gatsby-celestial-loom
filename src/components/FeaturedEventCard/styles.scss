@@ -15,6 +15,7 @@
 
 .event-detail {
   display: flex;
+  align-items: center;
   justify-content: flex-start;
   padding: 5px;
   font-size: 1.1rem;
@@ -30,12 +31,14 @@
 .event-signup--price-description {
   font-weight: bold;
   font-size: 1.1rem;
+  margin: 0;
 }
 
 .event-signup--price {
   font-weight: bold;
   font-size: 1.6rem;
   color: $md-primary-color;
+  margin: 0;
 }
 
 .event-signup-thumbnail {
@@ -50,10 +53,16 @@
 .event-signup-thumbnail--price-description {
   font-weight: bold;
   font-size: 1.1rem;
+  margin: 0;
 }
 
 .event-signup-thumbnail--price {
   font-weight: bold;
   font-size: 1.3rem;
   color: $md-primary-color;
+  margin: 0;
+}
+
+.event-signup-cta {
+  text-align: right;
 }

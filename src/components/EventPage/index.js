@@ -1,4 +1,4 @@
-import { FontIcon } from 'react-md';
+import { FontIcon } from '@react-md/icon';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -34,11 +34,11 @@ function EventPage(props) {
         <div className="flex-column flex-center">
           <div className="event-detail">
             <FontIcon style={{ marginRight: 5 }}>place</FontIcon>
-            <a href={mapsLink}>{location}</a>
+            <p className="event-page-detail"><a href={mapsLink}>{location}</a></p>
           </div>
           <div className="event-detail">
             <FontIcon style={{ marginRight: 5 }}>event</FontIcon>
-            <p style={{ fontSize: '1.1rem' }}>{`${eventDate} • ${eventTime}`}</p>
+            <p className="event-page-detail">{`${eventDate} • ${eventTime}`}</p>
           </div>
         </div>
         <div className="bordered-content" dangerouslySetInnerHTML={{ __html: html }} />

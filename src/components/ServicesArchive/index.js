@@ -1,4 +1,5 @@
-import { Avatar, FontIcon } from 'react-md';
+import { FontIcon } from '@react-md/icon';
+import { Avatar } from '@react-md/avatar';
 import { StaticQuery, graphql } from 'gatsby';
 import { uniq } from 'lodash';
 import React from 'react';
@@ -47,7 +48,7 @@ const ServicesArchive = () => (
             primaryText: node.frontmatter.title,
             secondaryText: `Online: $${Number(node.frontmatter.onlinePrice).toFixed(2)} | In-person: $${Number(node.frontmatter.inPersonPrice).toFixed(2)} `,
             slug: node.fields.slug,
-            avatar: (<Avatar icon={<FontIcon>shopping_cart</FontIcon>} />),
+            avatar: (<Avatar><FontIcon>shopping_cart</FontIcon></Avatar>),
           })),
         };
       });
@@ -56,7 +57,7 @@ const ServicesArchive = () => (
         <div className="archive--container">
           <SidebarHeader title="Services by Origin" />
           <div>
-            <ArchiveCard sections={sections} />
+            <ArchiveCard sections={sections} hideViewOlder={true} />
           </div>
         </div>
       );

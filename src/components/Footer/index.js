@@ -1,4 +1,6 @@
-import { Cell, FontIcon, Grid } from 'react-md';
+import { Grid, GridCell } from "@react-md/utils"
+import { FontIcon } from "@react-md/icon"
+
 import { Link } from 'gatsby';
 import React from 'react';
 
@@ -7,7 +9,7 @@ import CelestialLogo from '../../images/celestial-logo-no-bg.png';
 
 const Footer = () => (
   <Grid className="footer--grid">
-    <Cell size={6} tabletSize={8}>
+    <GridCell colSpan={6} tabletSize={8}>
       <div className="flex-center">
         <div style={{ marginRight: 10 }}>
           <img src={CelestialLogo} alt="Celestial Loom Logo" style={{ width: 50 }} />
@@ -22,11 +24,11 @@ const Footer = () => (
         <p className="footer--text">Cover photography by Photo by Anastasia Dulgier on Unsplash.</p>
         <p className="footer--text">Built with Gatsby and Netflify CMS.</p>
       </div>
-    </Cell>
-    <Cell size={6} tabletSize={8}>
+    </GridCell>
+    <GridCell colSpan={6} tabletSize={8}>
       <Grid>
-        <Cell size={6} tabletSize={4}>
-          <Subheader>Links</Subheader>
+        <GridCell colSpan={6} tabletSize={4}>
+          <p className="subheader primary">Links</p>
           <ul className="footer--list">
             <li className="footer--line-item">
               <Link to="/home/" style={{ color: 'white' }}>Home</Link>
@@ -50,9 +52,9 @@ const Footer = () => (
               <Link to="/toolbox/" style={{ color: 'white' }}>Astro Toolbox</Link>
             </li>
           </ul>
-        </Cell>
-        <Cell size={6} tabletSize={4}>
-          <Subheader>Contact</Subheader>
+        </GridCell>
+        <GridCell colSpan={6} tabletSize={4}>
+          <p className="subheader primary">Contact</p>
           <ul className="footer--list">
             <li>
               <div className="footer--link">
@@ -79,9 +81,9 @@ const Footer = () => (
               </div>
             </li>
           </ul>
-        </Cell>
+        </GridCell>
       </Grid>
-    </Cell>
+    </GridCell>
   </Grid>
 );
 

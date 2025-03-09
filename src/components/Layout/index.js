@@ -1,53 +1,31 @@
 import '../main.scss';
-
-import {
-  Cell, FontIcon, Grid, ListItem, NavigationDrawer,
-} from 'react-md';
-import { Link } from 'gatsby';
+import { Grid, GridCell } from "@react-md/utils"
 import PropTypes from 'prop-types';
 import React from 'react';
+import {
+  DEFAULT_PHONE_LAYOUT,
+  Layout,
+  useLayoutNavigation,
+  Configuration
+} from "@react-md/layout";
+import { Link } from 'gatsby';
+import { FontIcon } from '@react-md/icon';
 
 import Footer from '../Footer';
 import HeaderCart from '../HeaderCart';
 import HeaderSearch from '../HeaderSearch';
 import SEOAndScripts from '../SEOAndScripts';
 
-const navItems = [
-  { icon: 'home', to: '/', title: 'Home' },
-  { icon: 'info', to: '/getting-started', title: 'Getting Started' },
-  { icon: 'create', to: '/posts', title: 'Posts' },
-  { icon: 'event', to: '/events', title: 'Events' },
-  { icon: 'shopping_cart', to: '/services', title: 'Services' },
-  { icon: 'build', to: '/toolbox', title: 'Astro Toolbox' },
-];
+const navItems = {
+  "/": { itemId: "/", children: "Home", to: '/', parentId: null, leftAddon: <FontIcon className='nav-icon'>home</FontIcon> },
+  "/info": { itemId: "/getting-started", children: "Getting Started", to: '/getting-started', parentId: null, leftAddon: <FontIcon className='nav-icon'>info</FontIcon> },
+  "/posts": { itemId: "/posts", children: "Posts", to: '/posts', parentId: null, leftAddon: <FontIcon className='nav-icon'>create</FontIcon> },
+  "/events": { itemId: "/events", children: "Events", to: '/events', parentId: null, leftAddon: <FontIcon className='nav-icon'>event</FontIcon> },
+  "/services": { itemId: "/services", children: "Services", to: '/services', parentId: null, leftAddon: <FontIcon className='nav-icon'>shopping_cart</FontIcon> },
+  "/toolbox": { itemId: "/toolbox", children: "Astro Toolbox", to: '/toolbox', parentId: null, leftAddon: <FontIcon className='nav-icon'>build</FontIcon> }
+}
 
-const getNavItem = ({ divider, subheader, ...route }) => {
-  if (divider || subheader) {
-    return { divider, subheader, ...route };
-  }
-
-  return (
-    <ListItem
-      key={route.title}
-      primaryText={route.title}
-      primaryTextStyle={{ color: 'white' }}
-      leftIcon={<FontIcon style={{ color: 'white' }}>{route.icon}</FontIcon>}
-      component={Link}
-      to={route.to}
-    />
-  );
-};
-
-const DrawerTitle = () => (
-  <div style={{
-    height: 64, paddingTop: '10px', display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: 'rgb(247, 105, 0)',
-  }}
-  >
-    <h1 className="md-headline" style={{ fontFamily: 'Berkshire Swash', fontStyle: 'italic', color: 'white' }}>The Celestial Loom</h1>
-  </div>
-);
-
-const Layout = ({
+const SiteLayout = ({
   jumbotron,
   children,
   sidebarChildren,
@@ -57,51 +35,54 @@ const Layout = ({
   seoImage,
   seoPathname,
   isArticle,
-}) => (
-  <NavigationDrawer
-    desktopDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY}
-    tabletDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY}
-    mobileDrawerType={NavigationDrawer.DrawerTypes.TEMPORARY}
-    position="left"
-    drawerStyle={{ backgroundColor: 'rgb(47, 47, 47)' }}
-    defaultVisible={false}
-    temporaryIcon={(<FontIcon iconClassName="material-icons">menu</FontIcon>)}
-    navStyle={{ backgroundColor: 'rgb(47, 47, 47)' }}
-    toolbarTitle={title}
-    toolbarActions={(
-      <div className="header-icons-container">
-        <HeaderCart />
-        <HeaderSearch />
-      </div>
-        )}
-    drawerHeader={<DrawerTitle />}
-    toolbarTitleStyle={{ fontFamily: 'Berkshire Swash', fontStyle: 'italic' }}
-    drawerTitleStyle={{ fontFamily: 'Berkshire Swash', fontStyle: 'italic' }}
-    toolbarSingleColor
-    toolbarStyle={{ backgroundColor: 'rgb(47, 47, 47)' }}
-    navItems={navItems.map(getNavItem)}
-  >
-    <SEOAndScripts
-      title={seoTitle}
-      description={seoDescription || ''}
-      image={seoImage}
-      pathname={seoPathname}
-      article={isArticle}
-    />
-    {jumbotron}
-    <Grid style={{ maxWidth: 1100 }} noSpacing>
-      <Cell className="main-contents" size={8}>
-        {children}
-      </Cell>
-      <Cell size={4} tabletSize={8} className="sidebar-contents">
-        {sidebarChildren}
-      </Cell>
-    </Grid>
-    <Footer />
-  </NavigationDrawer>
-);
+  pageProps
+}) => {
+  const { location } = pageProps;
+  return (
+    <Configuration>
+      <Layout
+        id="configurable-layout"
+        title={title}
+        navHeaderTitle="The Celestial Loom"
+        phoneLayout={DEFAULT_PHONE_LAYOUT}
+        tabletLayout={"temporary"}
+        landscapeTabletLayout={"temporary"}
+        desktopLayout={"temporary"}
+        treeProps={{
+          ...useLayoutNavigation(navItems, location?.pathname, Link),
+          style: { backgroundColor: "#2f2f2f", color: "white"}
+        }}
+        appBarProps={{
+          children: 
+            <div className="header-icons-container">
+              <HeaderCart />
+              <HeaderSearch />
+            </div>
+        }}
+      >
+        <SEOAndScripts
+          title={seoTitle}
+          description={seoDescription || ''}
+          image={seoImage}
+          pathname={seoPathname}
+          article={isArticle}
+        />
+        {jumbotron}
+        <Grid style={{ maxWidth: 1300, margin: "0 auto" }}>
+          <GridCell className="main-contents" colSpan={8}>
+            {children}
+          </GridCell>
+          <GridCell colSpan={4} className="sidebar-contents">
+            {sidebarChildren}
+          </GridCell>
+        </Grid>
+        <Footer />
+      </Layout>
+    </Configuration>
+  )
+};
 
-Layout.propTypes = {
+SiteLayout.propTypes = {
   jumbotron: PropTypes.node,
   children: PropTypes.node.isRequired,
   sidebarChildren: PropTypes.node.isRequired,
@@ -113,7 +94,7 @@ Layout.propTypes = {
   isArticle: PropTypes.bool,
 };
 
-Layout.defaultProps = {
+SiteLayout.defaultProps = {
   jumbotron: null,
   seoTitle: null,
   seoDescription: null,
@@ -122,4 +103,4 @@ Layout.defaultProps = {
   isArticle: false,
 };
 
-export default Layout;
+export default SiteLayout;

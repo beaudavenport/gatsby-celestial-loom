@@ -1,9 +1,9 @@
-import { Cell, Grid } from 'react-md';
+import { Grid, GridCell } from "@react-md/utils"
 import PropTypes from 'prop-types';
 import React from 'react';
 
 import {
-  ContentWithIcon, Subheader, Subtitle, Title,
+  ContentWithIcon, Subheader, Subtitle, TitleH2,
 } from '../Common';
 import CardCornerHighlight from '../CardCornerHighlight';
 import TextWithChevron from '../TextWithChevron';
@@ -26,16 +26,16 @@ const FeaturedEventCard = ({
   return (
     <TouchableLink to={path} style={style}>
       <Grid>
-        <Cell size={6} tabletSize={4}>
+        <GridCell colSpan={6}>
           <div className="image-container">
             <img className="image-container--image" src={image} alt="Preview of featured post" />
             <CardCornerHighlight iconName="event" title={eventDateShort} isExpired={isExpired} />
           </div>
-        </Cell>
-        <Cell size={6} tabletSize={4}>
+        </GridCell>
+        <GridCell colSpan={6}>
           <div style={{ padding: 16 }}>
             {isExpired ? <Subtitle>Past Event</Subtitle> : <Subheader>Upcoming Event</Subheader>}
-            <Title>{title}</Title>
+            <TitleH2>{title}</TitleH2>
           </div>
           <div className="event-detail-container">
             <ContentWithIcon fontIconName="place"><p className="info-text">{location}</p></ContentWithIcon>
@@ -48,11 +48,11 @@ const FeaturedEventCard = ({
                 <p className="event-signup-thumbnail--price">{`$${Number(eventPrice).toFixed(2)}`}</p>
               </div>
             )}
-            <div>
+            <div className="event-signup-cta">
               <TextWithChevron text={isExpired ? 'View Details' : 'Sign Up'} />
             </div>
           </div>
-        </Cell>
+        </GridCell>
       </Grid>
     </TouchableLink>
   );

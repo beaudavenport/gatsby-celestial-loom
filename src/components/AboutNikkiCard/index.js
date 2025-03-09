@@ -1,32 +1,26 @@
-import { Button, CardText, Media } from 'react-md';
-import { Link } from 'gatsby';
+import { CardContent } from "@react-md/card";
+import { MediaContainer } from "@react-md/media";
 import React from 'react';
 
 import Nikki from '../../images/nikki.jpg';
+import { ForwardLink } from '../Common';
 
 const AboutNikkiCard = () => (
   <div>
     <div className="about-nikki--container">
-      <Media aspectRatio="1-1" className="about-nikki--avatar">
-        <img src={Nikki} alt="at da club" />
-      </Media>
+      <MediaContainer height={1} width={1} className="about-nikki--avatar">
+        <img src={Nikki} alt="nikki-profile-picture" />
+      </MediaContainer>
     </div>
-    <CardText className="flex-column">
-      <p className="about-nikki--text">
-      Nikki Davenport, astrological consultant, has been a professional
-      astrologer for over 35 years.
+    <CardContent className="flex-column">
+      <p className="subheader">
+        Nikki Davenport, astrological consultant, has been a professional
+        astrologer for over 35 years.
       </p>
-      <Button
-        flat
-        primary
-        className="about-nikki--button"
-        to="/about-nikki"
-        type={null}
-        component={Link}
-      >
-      About Nikki
-      </Button>
-    </CardText>
+      <div className="about-nikki--link-container">
+        <ForwardLink to="/about-nikki" title="Learn more" />
+      </div>
+    </CardContent>
   </div>
 );
 

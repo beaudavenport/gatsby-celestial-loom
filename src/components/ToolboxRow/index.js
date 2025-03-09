@@ -1,16 +1,17 @@
 import { Link } from 'gatsby';
-import { ListItem } from 'react-md';
+import { ListItemLink } from "@react-md/list";
 import PropTypes from 'prop-types';
 import React from 'react';
 
 const ToolboxRow = ({
   path, title, excerpt, avatar,
 }) => (
-  <ListItem
+  <ListItemLink
     primaryTextStyle={{ fontWeight: 'bold' }}
     primaryText={title}
     secondaryText={excerpt}
-    leftAvatar={avatar}
+    leftAddon={avatar}
+    leftAddonType="avatar"
     component={Link}
     to={path}
   />

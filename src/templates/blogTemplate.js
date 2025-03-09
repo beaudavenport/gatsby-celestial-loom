@@ -9,7 +9,8 @@ import PostsArchive from '../components/PostsArchive';
 import RelatedItemChipList from '../components/RelatedItemChipList';
 import SidebarContents from '../components/SidebarContents';
 
-export default function BlogTemplate({ data }) {
+export default function BlogTemplate(props) {
+  const { data } = props;
   const { markdownRemark } = data; // data.markdownRemark holds our post data
   const {
     frontmatter, html, description, fields,
@@ -26,9 +27,10 @@ export default function BlogTemplate({ data }) {
       sidebarChildren={(
         <Fragment>
           <PostsArchive />
-          <SidebarContents eventsQuantity={2} postsQuantity={0} />
+          <SidebarContents eventsQuantity={2} postsQuantity={1} />
         </Fragment>
       )}
+      pageProps={props}
     >
       <BackLink to="/posts" title="All Posts" />
       <BlogEntry

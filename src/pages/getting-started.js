@@ -1,6 +1,8 @@
-import {
-  Avatar, Card, Cell, FontIcon, Grid, List, ListItem,
-} from 'react-md';
+import { Avatar } from "@react-md/avatar";
+import { Grid, GridCell } from "@react-md/utils"
+import { List, ListItemLink } from "@react-md/list";
+import { FontIcon } from '@react-md/icon';
+import { Card } from "@react-md/card"
 import { Link, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
@@ -24,7 +26,8 @@ import SidebarHeader from '../components/SidebarHeader';
 import ThumbnailCard from '../components/ThumbnailCard';
 import ThumbnailEventCard from '../components/ThumbnailCard/ThumbnailEventCard';
 
-const GettingStarted = ({ data }) => {
+const GettingStarted = (props) => {
+  const { data } = props;
   const [firstBlogNode] = data.blog.edges.map(edge => edge.node);
   const firstEventNode = data.events.edges.map(edge => edge.node)
     .find(node => moment().isBefore(moment(node.frontmatter.eventDate, 'MMMM DD, YYYY')));
@@ -51,23 +54,24 @@ const GettingStarted = ({ data }) => {
           <SidebarContents eventsQuantity={2} postsQuantity={2} />
         </Fragment>
       )}
+      pageProps={props}
     >
       <BackLink to="/" title="Home" />
       <Grid>
-        <Cell size={12}>
+        <GridCell colSpan={12}>
           <Title>Welcome to The Celestial Loom!</Title>
-        </Cell>
-        <Cell size={12}>
+        </GridCell>
+        <GridCell colSpan={12}>
           <BigSubheader>New to Astrology? Here's how to get started:</BigSubheader>
-        </Cell>
-        <Cell size={12}>
+        </GridCell>
+        <GridCell colSpan={12}>
           <Card>
             <Grid>
               <CenteredCell fontIconName="person" title="Order an Astrological Consultation">
                 <Caption>Select an online or in-person astrological consultation from a wide array of astrological origins.</Caption>
                 <ForwardLink title="View all Services" to="/services" />
               </CenteredCell>
-              <Cell size={6} tabletSize={4}>
+              <GridCell colSpan={6} tabletSize={4}>
                 <Subheader>Get your first chart:</Subheader>
                 <ServiceCard
                   path={natalChart.fields.slug}
@@ -78,11 +82,11 @@ const GettingStarted = ({ data }) => {
                   excerpt={natalChart.excerpt}
                   showPrices={false}
                 />
-              </Cell>
+              </GridCell>
             </Grid>
           </Card>
-        </Cell>
-        <Cell size={12}>
+        </GridCell>
+        <GridCell colSpan={12}>
           <Card>
             <Grid>
               <CenteredCell fontIconName="create" title="Read the Latest Post">
@@ -101,8 +105,8 @@ const GettingStarted = ({ data }) => {
               </CenteredCell>
             </Grid>
           </Card>
-        </Cell>
-        <Cell size={12}>
+        </GridCell>
+        <GridCell colSpan={12}>
           <Card>
             <Grid>
               <CenteredCell fontIconName="event" title="Attend an Event">
@@ -125,8 +129,8 @@ const GettingStarted = ({ data }) => {
             }
             </Grid>
           </Card>
-        </Cell>
-        <Cell size={12}>
+        </GridCell>
+        <GridCell colSpan={12}>
           <Card>
             <Grid>
               <CenteredCell fontIconName="build" title="Explore your Astrological Toolbox">
@@ -137,11 +141,12 @@ const GettingStarted = ({ data }) => {
                 <Subheader>Learn about Planets, Houses, and Signs:</Subheader>
                 <List>
                   {toolboxNodes.map(item => (
-                    <ListItem
+                    <ListItemLink
                       style={{ paddingLeft: 10, paddingRight: 10 }}
                       primaryText={item.frontmatter.title}
                       primaryTextStyle={{ fontWeight: 'bold' }}
-                      leftAvatar={<Avatar icon={<FontIcon>{getSymbolSpan(item.frontmatter.title)}</FontIcon>} />}
+                      leftAddon={<Avatar><FontIcon>{getSymbolSpan(item.frontmatter.title)}</FontIcon></Avatar>}
+                      leftAddonType="avatar"
                       secondaryText={item.frontmatter.toolboxType}
                       component={Link}
                       to={item.fields.slug}
@@ -151,7 +156,7 @@ const GettingStarted = ({ data }) => {
               </CenteredCell>
             </Grid>
           </Card>
-        </Cell>
+        </GridCell>
       </Grid>
     </Layout>
   );

@@ -1,11 +1,23 @@
 import React from 'react';
-import Layout from '../components/Layout';
+import { BackLink } from '../components/Common';
+import CelestialLogo from '../images/celestial-logo-no-bg.png';
 
-const NotFoundPage = () => (
-  <Layout>
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </Layout>
+const NotFoundPage = (props) => (
+  <div className='notfound--grid'>
+    <div className="flex-center">
+      <div style={{ marginRight: 10 }}>
+        <img src={CelestialLogo} alt="Celestial Loom Logo" style={{ width: 50 }} />
+      </div>
+      <h3 className="footer--title">The Celestial Loom</h3>
+    </div>
+    <div className="content-container">
+      <h1 className="footer--text">
+        Page "Void of Course" (not found!)
+      </h1>
+      <p className='footer--text'>Follow the zodiac back home to get started!</p>
+      <BackLink to="/" title="Home" />
+    </div>
+  </div>
 );
 
 export default NotFoundPage;

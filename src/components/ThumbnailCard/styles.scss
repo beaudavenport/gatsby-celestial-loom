@@ -11,6 +11,7 @@
    background-position: center;
    height: 100px;
    background-size: cover;
+   align-self: center;
 }
 
 .thumbnail-day {
@@ -32,19 +33,21 @@
   width: 65%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 0px 10px;
 }
 
 .thumbnail-text--title {
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   color: rgb(47, 47, 47);
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .thumbnail-text--subtitle {
   font-weight: bold;
   font-size: 0.8rem;
   color: rgba(0, 0, 0, 0.54);
+  text-transform: uppercase;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }

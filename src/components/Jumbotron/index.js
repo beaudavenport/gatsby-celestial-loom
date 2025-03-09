@@ -1,11 +1,10 @@
-import { Paper } from 'react-md';
 import React from 'react';
 
 import { ForwardLink } from '../Common';
 import Astroglobe from '../../images/astroglobe.jpg';
 
 const Jumbotron = () => (
-  <Paper className="jumbotron--bg" style={{ backgroundImage: `url(${Astroglobe})` }} zDepth={0}>
+  <div className="jumbotron--bg" style={{ backgroundImage: `url(${Astroglobe})` }} zDepth={0}>
     <div className="jumbotron--container">
       <div style={{ display: 'flex', alignItems: 'center', marginBottom: 30 }}>
         <div>
@@ -23,7 +22,7 @@ const Jumbotron = () => (
         </div>
       </div>
     </div>
-  </Paper>
+  </div>
 );
 
 export default Jumbotron;

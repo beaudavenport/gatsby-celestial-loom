@@ -1,7 +1,7 @@
-import { Cell, Grid } from 'react-md';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
+import { Grid, GridCell } from "@react-md/utils"
 
 import { BackLink, BigSubheader } from '../components/Common';
 import FeaturedCard from '../components/FeaturedCard';
@@ -37,7 +37,8 @@ export const query = graphql`
    }
  `;
 
-const Posts = ({ data }) => {
+const Posts = (props) => {
+  const { data } = props;
   const first3Nodes = data.allMarkdownRemark.edges.map(edge => edge.node);
 
   return (
@@ -46,14 +47,15 @@ const Posts = ({ data }) => {
       sidebarChildren={(
         <Fragment>
           <PostsArchive />
-          <SidebarContents eventsQuantity={2} postsQuantity={0} />
+          <SidebarContents eventsQuantity={2} postsQuantity={1} />
         </Fragment>
       )}
+      pageProps={props}
     >
       <BackLink to="/" title="Home" />
       <Grid>
         { first3Nodes.map(node => (
-          <Cell size={12} style={{ marginBottom: 30 }}>
+          <GridCell colSpan={12} style={{ marginBottom: 30 }}>
             <FeaturedCard
               path={node.fields.slug}
               title={node.frontmatter.title}
@@ -62,14 +64,14 @@ const Posts = ({ data }) => {
               relatedItemChips={node.frontmatter.relatedItems && <RelatedItemChipList relatedItems={node.frontmatter.relatedItems} />}
               excerpt={node.excerpt}
             />
-          </Cell>
+          </GridCell>
         ))
       }
-        <Cell size={12}>
+        <GridCell colSpan={12}>
           <div style={{ padding: 20 }}>
             <BigSubheader>Browse older posts by month in the Posts Archive.</BigSubheader>
           </div>
-        </Cell>
+        </GridCell>
       </Grid>
     </Layout>
   );

@@ -8,9 +8,8 @@ import SidebarContents from '../components/SidebarContents';
 import ToolboxArchive from '../components/ToolboxArchive';
 import ToolboxPage from '../components/ToolboxPage';
 
-function ToolboxTemplate({
-  data, // this prop will be injected by the GraphQL query below.
-}) {
+function ToolboxTemplate(props) {
+  const { data } = props;
   const { markdownRemark, blog, events } = data;
   const blogNodes = blog.edges.map(edge => edge.node)
     .filter((node) => {
@@ -40,6 +39,7 @@ function ToolboxTemplate({
           <SidebarContents eventsQuantity={2} postsQuantity={2} />
         </Fragment>
       )}
+      pageProps={props}
     >
       <BackLink to="/toolbox" title="Astro Toolbox" />
       <ToolboxPage

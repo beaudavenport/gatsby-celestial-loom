@@ -1,4 +1,4 @@
-import { Button } from 'react-md';
+import { Button } from '@react-md/button';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -7,7 +7,8 @@ const AddToCartButton = ({
 }) => (
   <Button
     raised
-    primary
+    theme="warning"
+    themeType='contained'
     style={style}
     data-item-id={slug}
     className="snipcart-add-item"
