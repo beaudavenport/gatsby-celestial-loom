@@ -49,7 +49,7 @@ BigSubheader.propTypes = {
 };
 
 const BigSubheaderPrimary = ({ children }) => (
-  <p className="subheader primary" style={{ fontSize: '1.6rem', lineHeight: '1rem' }}>{children}</p>
+  <p className="subheader primary" style={{ fontSize: '1.6rem', lineHeight: '1.6rem' }}>{children}</p>
 );
 
 BigSubheaderPrimary.propTypes = {
