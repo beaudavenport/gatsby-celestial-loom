@@ -1,7 +1,7 @@
 {
   "name": "gatsby-celestial-loom",
   "description": "Celestial Loom Astrology Services Gatsby site",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Beau Davenport <davenportbeau@gmail.com>",
   "dependencies": {
     "@gatsby-contrib/gatsby-plugin-elasticlunr-search": "^3.0.2",
