@@ -1,7 +1,7 @@
 ---
 templateKey: blogTemplate
 type: blog
-publishDate: '2023-11-26T12:00:00-06:00'
+publishDate: '2024-11-29T12:00:00-06:00'
 title: The Pleiades
 image: /assets/pleiades.jpg
 relatedItems:
