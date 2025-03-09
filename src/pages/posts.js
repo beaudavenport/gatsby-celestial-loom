@@ -47,7 +47,7 @@ const Posts = (props) => {
       sidebarChildren={(
         <Fragment>
           <PostsArchive />
-          <SidebarContents eventsQuantity={2} postsQuantity={0} />
+          <SidebarContents eventsQuantity={2} postsQuantity={1} />
         </Fragment>
       )}
       pageProps={props}

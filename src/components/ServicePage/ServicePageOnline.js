@@ -3,7 +3,7 @@ import { Divider } from '@react-md/divider';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import { BigSubheader, ContentWithIcon, Title } from '../Common';
+import { BigSubheaderPrimary, ContentWithIcon, Title, Subtitle } from '../Common';
 import AddToCartButton from '../AddToCartButton';
 import ServiceCard from '../ServiceCard';
 
@@ -28,16 +28,18 @@ function ServicePage(props) {
       </GridCell>
       <GridCell colSpan={6} style={{ display: 'flex', alignItems: 'center' }}>
         <div style={{ width: '100%' }}>
-          <BigSubheader>Online Consultation</BigSubheader>
-          <div className="content-container">
-            <ContentWithIcon fontIconName="volume_up"><p className="service-info">60-Minute Audio MP3</p></ContentWithIcon>
-            <ContentWithIcon fontIconName="picture_as_pdf"><p className="service-info">Full-color PDF</p></ContentWithIcon>
+          <div style={{ padding: 15 }}>
+            <BigSubheaderPrimary>Online Consultation</BigSubheaderPrimary>
+          </div>
+         <div className="content-container">
+            <ContentWithIcon fontIconName="volume_up"><Subtitle>60-Minute Audio MP3</Subtitle></ContentWithIcon>
+            <ContentWithIcon fontIconName="picture_as_pdf"><Subtitle>Full-color PDF</Subtitle></ContentWithIcon>
             <ContentWithIcon fontIconName="cloud_download">
-              <p className="service-info">
-              Easy email delivery via
+              <Subtitle>
+                Easy email delivery via
                 {' '}
                 <a href="https://www.dropbox.com/">Dropbox</a>
-              </p>
+              </Subtitle>
             </ContentWithIcon>
           </div>
           <Divider />

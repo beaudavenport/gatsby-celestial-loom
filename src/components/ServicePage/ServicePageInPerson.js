@@ -3,7 +3,7 @@ import { Divider } from '@react-md/divider';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import { BigSubheaderPrimary, ContentWithIcon, Title } from '../Common';
+import { BigSubheaderPrimary, ContentWithIcon, Title, Subtitle } from '../Common';
 import AddToCartButton from '../AddToCartButton';
 import ServiceCard from '../ServiceCard';
 
@@ -28,11 +28,13 @@ function ServicePage(props) {
       </GridCell>
       <GridCell colSpan={6} style={{ display: 'flex', alignItems: 'center' }}>
         <div style={{ width: '100%' }}>
-          <BigSubheaderPrimary>In-Person Consultation</BigSubheaderPrimary>
+          <div style={{ padding: 15 }}>
+            <BigSubheaderPrimary>In-Person Consultation</BigSubheaderPrimary>
+          </div>
           <div className="content-container">
-            <ContentWithIcon fontIconName="face"><p className="service-info">90-minute in-person discussion</p></ContentWithIcon>
-            <ContentWithIcon fontIconName="picture_as_pdf"><p className="service-info">Full-color PDF</p></ContentWithIcon>
-            <ContentWithIcon fontIconName="volume_up"><p className="service-info">Free live session recording</p></ContentWithIcon>
+            <ContentWithIcon fontIconName="face"><Subtitle>90-minute in-person discussion</Subtitle></ContentWithIcon>
+            <ContentWithIcon fontIconName="picture_as_pdf"><Subtitle>Full-color PDF</Subtitle></ContentWithIcon>
+            <ContentWithIcon fontIconName="volume_up"><Subtitle>Free live session recording</Subtitle></ContentWithIcon>
           </div>
           <Divider />
           <div style={{

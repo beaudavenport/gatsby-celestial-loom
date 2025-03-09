@@ -28,7 +28,7 @@ const Footer = () => (
     <GridCell colSpan={6} tabletSize={8}>
       <Grid>
         <GridCell colSpan={6} tabletSize={4}>
-          <Subheader>Links</Subheader>
+          <p className="subheader primary">Links</p>
           <ul className="footer--list">
             <li className="footer--line-item">
               <Link to="/home/" style={{ color: 'white' }}>Home</Link>
@@ -54,7 +54,7 @@ const Footer = () => (
           </ul>
         </GridCell>
         <GridCell colSpan={6} tabletSize={4}>
-          <Subheader>Contact</Subheader>
+          <p className="subheader primary">Contact</p>
           <ul className="footer--list">
             <li>
               <div className="footer--link">
