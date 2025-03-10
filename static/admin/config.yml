@@ -3,7 +3,7 @@ backend:
   repo: beaudavenport/gatsby-celestial-loom
 
 media_folder: static/assets
-public_folder: assets
+public_folder: /assets
 site_url: https://boring-einstein-e60f31.netlify.com
 
 collections:
@@ -15,7 +15,7 @@ collections:
     fields:
       - { name: 'templateKey', label: 'Template Key', widget: 'hidden', default: 'blogTemplate'}
       - { name: 'type', label: 'type', widget: 'hidden', default: 'blog'}
-      - { name: 'publishDate', label: 'Publish Date', widget: 'datetime', format: "Y-MM-DDThh:mm:ssZ" }
+      - { name: 'publishDate', label: 'Publish Date', widget: 'datetime' }
       - { name: title, label: Title }
       - { name: 'image', label: 'Image', widget: 'image' }
       - label: "Related Signs/Planets/Houses"
@@ -36,7 +36,7 @@ collections:
       - { name: 'templateKey', label: 'Template Key', widget: 'hidden', default: 'eventTemplate'}
       - { name: 'priceDescription', label: 'Price Description'}
       - { name: 'type', label: 'type', widget: 'hidden', default: 'events'}
-      - { name: 'eventDate', label: 'Event Date', widget: "datetime", format: "Y-MM-DDThh:mm:ssZ" }
+      - { name: 'eventDate', label: 'Event Date', widget: "datetime" }
       - { name: 'eventTime', label: 'Event Time' }
       - { name: 'image', label: 'Image', widget: 'image' }
       - { name: 'title', label: 'Title' }
@@ -44,7 +44,7 @@ collections:
       - { name: 'location', label: 'Name of Venue' }
       - { name: 'mapsLink', label: 'Google Maps Link' }
       - { name: 'eventPrice', label: 'Price (increments of $5.00)', widget: 'number', default: '5', min: 0, valueType: 'float', step: 5.00 }
-      - { name: 'publishDate', label: 'Publish Date', widget: 'datetime', format: "Y-MM-DDThh:mm:ssZ" }
+      - { name: 'publishDate', label: 'Publish Date', widget: 'datetime' }
       - { name: 'body', label: 'Body', widget: 'markdown' }
 
   - name: 'services'
