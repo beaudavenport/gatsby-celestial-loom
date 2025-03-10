@@ -1,7 +1,7 @@
 ---
 templateKey: blogTemplate
 type: blog
-publishDate: -0500-03-09T07:03:27-05:00
+publishDate: '2025-03-09T12:00:00-06:00'
 title: SEDNA, Inuit Creation Goddess-Mother of the Sea, 2025 Movement
 image: assets/sedna.jpg
 relatedItems:
