@@ -3,7 +3,7 @@ templateKey: blogTemplate
 type: blog
 publishDate: '2025-03-09T12:00:00-05:00'
 title: SEDNA, Inuit Creation Goddess-Mother of the Sea, 2025 Movement
-image: assets/sedna.jpg
+image: /assets/sedna.jpg
 relatedItems:
   - Gemini
 ---
