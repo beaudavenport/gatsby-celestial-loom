@@ -46,6 +46,7 @@
     "last 2 versions"
   ],
   "devDependencies": {
+    "@netlify/plugin-gatsby": "^3.8.4",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^29.7.0",
     "babel-preset-gatsby": "^3.13.1",
