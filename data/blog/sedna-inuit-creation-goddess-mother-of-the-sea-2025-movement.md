@@ -1,27 +1,13 @@
 ---
 templateKey: blogTemplate
 type: blog
-publishDate: '2025-03-09T12:00:00-05:00'
-title: SEDNA, Inuit Creation Goddess-Mother of the Sea, 2025 Movement
+publishDate: 2026-04-25T18:45:44.976Z
+title: SEDNA, Inuit Creation Goddess-Mother of the Sea, 2026 Movement
 image: /assets/sedna.jpg
 relatedItems:
   - Gemini
 ---
-
-
-**In the year 2025, we have a Uranus-Sedna conjunction. This transit is going to bring transcendent change to our lives over the next couple of years. Uranus and Sedna will be close together through 2025 and exact conjunction will come in May, 2026.**
-
-1-1-2025        Sedna Resides at 0 Gemini Retrograde
-
-2-12-2025      Sedna Stations Direct at 0 Gemini
-
-5-25-2025      Sedna Resides at 1 Gemini
-
-9-3-2025        Sedna Stations Retrograde at 1 Gemini
-
-12-24-2025   Sedna Resides at 0 Gemini Retrograde
-
-1-1-2026        Sedna Resides at 0 Gemini Retrograde
+**In the year 2026, we have a Uranus-Sedna conjunction. This transit is going to bring transcendent change to our lives over the next couple of years. Uranus and Sedna will be close together through 2025 and exact conjunction will come in May, 2026.**
 
 **Sedna promises: “You are supplied for today and all of your tomorrows!”**
 
